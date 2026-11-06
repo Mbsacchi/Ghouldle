@@ -262,7 +262,7 @@ export function generateShareSummary({ mode, isDaily, editionNumber, guesses, ta
     });
 
     const prefix = chronological.length > 8 ? `(... +${chronological.length - 8} palpites)\n` : '';
-    return `${header}\n${attemptsLine}\n\n${prefix}${gridLines.join('\n')}\n\n☕ Jogue em: Ghouldle`;
+    return `${header}\n${attemptsLine}\n\n${prefix}${gridLines.join('\n')}\n\n☕ Jogue em: https://ghouldle.vercel.app`;
   }
 
   // Visual / Quote modes: show attempt trail
@@ -271,5 +271,5 @@ export function generateShareSummary({ mode, isDaily, editionNumber, guesses, ta
     .map((gId) => (gId === target.id ? '🟩' : '🟥'))
     .join('');
 
-  return `${header}\n${attemptsLine}\n\n${trail}\n\n☕ Jogue em: Ghouldle`;
+  return `${header}\n${attemptsLine}\n\n${trail}\n\n☕ Jogue em: https://ghouldle.vercel.app`;
 }
