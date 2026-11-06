@@ -1,0 +1,3567 @@
+[
+  {
+    "id": "ken-kaneki",
+    "name": "Ken Kaneki",
+    "aliases": [
+      "Tapa-Olho",
+      "Centopeia",
+      "Rei de Um Olho",
+      "Ceifador Negro"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul de Um Olho (Artificial)"
+    ],
+    "affiliations": [
+      "Anteiku",
+      "Aogiri Tree",
+      "CCG",
+      "Goat"
+    ],
+    "rcTypes": [
+      "Rinkaku"
+    ],
+    "rank": "Rank SSS",
+    "debutArc": "Arco da Intro",
+    "debutArcOrder": 1,
+    "epithet": "Tapa-Olho / Rei de Um Olho",
+    "imageUrl": "/characters/ken-kaneki.jpg",
+    "kaguneOrQuinque": {
+      "name": "Rinkaku de Rize & Kakuja Centopeia",
+      "category": "Kagune / Kakuja",
+      "imageUrl": "",
+      "preset": "centipede-rinkaku",
+      "primaryColor": "#e60000",
+      "secondaryColor": "#4a0404",
+      "focalPoint": {
+        "x": 62,
+        "y": 38
+      }
+    },
+    "quote": {
+      "text": "Eu não sou o protagonista de um romance ou qualquer coisa assim... Sou apenas um universitário que gosta de ler. Mas... se por acaso você fosse escrever uma história comigo como protagonista, certamente seria... uma tragédia.",
+      "arc": "Arco da Intro",
+      "recipient": "Monólogo interno sobre o mundo entre Humanos e Ghouls"
+    },
+    "maskOrEye": {
+      "title": "Kakugan Esquerdo Escarlate & Cabelos Brancos",
+      "type": "Máscara & Kakugan",
+      "imageUrl": "/characters/ken-kaneki.jpg",
+      "preset": "eyepatch-zipper",
+      "focalPoint": {
+        "x": 63,
+        "y": 35
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#f4f4f6",
+      "hairSecondary": "#18181b",
+      "hairStyle": "messy-bangs",
+      "skinTone": "#f3dfd3",
+      "eyeColor": "#71717a",
+      "kakugan": "left",
+      "accessory": "eyepatch",
+      "outfit": "goat",
+      "accentColor": "#e60000"
+    },
+    "imagePosition": "54% 24%"
+  },
+  {
+    "id": "haise-sasaki",
+    "name": "Haise Sasaki",
+    "aliases": [
+      "Sasaki Haise",
+      "Mentor dos Quinx",
+      "Maman",
+      "Número 240"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul de Um Olho (Artificial)"
+    ],
+    "affiliations": [
+      "CCG",
+      "Esquadrão Quinx"
+    ],
+    "rcTypes": [
+      "Rinkaku",
+      "Quinque"
+    ],
+    "rank": "Primeira Classe",
+    "debutArc": "Leilão (:re)",
+    "debutArcOrder": 7,
+    "epithet": "Mentor do Esquadrão Quinx",
+    "imageUrl": "/characters/haise-sasaki.jpg",
+    "imagePosition": "center 35%",
+    "kaguneOrQuinque": {
+      "name": "Quinque Yukimura 1/3 & Kagune Rinkaku",
+      "category": "Quinque",
+      "imageUrl": "",
+      "preset": "ixa-narukami",
+      "primaryColor": "#e2e8f0",
+      "secondaryColor": "#dc2626",
+      "focalPoint": {
+        "x": 48,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Mesmo que eu desapareça no dia em que minhas memórias voltarem... eu sou grato por cada dia que pude viver ao lado do Esquadrão Quinx.",
+      "arc": "Leilão (:re)",
+      "recipient": "Reflexão sobre Akira Mado, Kishou Arima e o Esquadrão Quinx"
+    },
+    "maskOrEye": {
+      "title": "Cabelos Bicolores & Olhar Cinzento de Sasaki",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/haise-sasaki.jpg",
+      "preset": "arima-glasses",
+      "focalPoint": {
+        "x": 50,
+        "y": 39
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#f4f4f5",
+      "hairSecondary": "#18181b",
+      "hairStyle": "messy-bangs",
+      "skinTone": "#f3dfd3",
+      "eyeColor": "#71717a",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "ccg",
+      "accentColor": "#94a3b8"
+    }
+  },
+  {
+    "id": "touka-kirishima",
+    "name": "Touka Kirishima",
+    "aliases": [
+      "Rabbit",
+      "Coelho",
+      "Gerente da :re"
+    ],
+    "gender": "Feminino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Anteiku",
+      ":re",
+      "Goat"
+    ],
+    "rcTypes": [
+      "Ukaku"
+    ],
+    "rank": "Rank S",
+    "debutArc": "Arco da Intro",
+    "debutArcOrder": 1,
+    "epithet": "Rabbit (Coelho)",
+    "imageUrl": "/characters/touka-kirishima.jpg",
+    "kaguneOrQuinque": {
+      "name": "Asa Flamejante Ukaku Assimétrica",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "blaze-wing-ukaku",
+      "primaryColor": "#ff1e56",
+      "secondaryColor": "#7c3aed",
+      "focalPoint": {
+        "x": 68,
+        "y": 34
+      }
+    },
+    "quote": {
+      "text": "Tudo o que você faz é pensar em si mesmo! Se você ficar tentando carregar tudo sozinho para parecer nobre, quem sobra para caminhar ao seu lado?",
+      "arc": "Pós-Aogiri",
+      "recipient": "Dita para Ken Kaneki na ponte sobre o rio"
+    },
+    "maskOrEye": {
+      "title": "Franja Violeta & Olhar da Gerente",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/touka-kirishima.jpg",
+      "preset": "rabbit-mask",
+      "focalPoint": {
+        "x": 56,
+        "y": 26
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#312e81",
+      "hairSecondary": "#4f46e5",
+      "hairStyle": "side-bang-bob",
+      "skinTone": "#f7e5da",
+      "eyeColor": "#6366f1",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "anteiku",
+      "accentColor": "#ec4899"
+    },
+    "imagePosition": "center 18%"
+  },
+  {
+    "id": "kishou-arima",
+    "name": "Kishou Arima",
+    "aliases": [
+      "Ceifador da CCG",
+      "Deus da Morte",
+      "Rei de Um Olho Anterior"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Meio-Humano"
+    ],
+    "affiliations": [
+      "CCG",
+      "V"
+    ],
+    "rcTypes": [
+      "Quinque"
+    ],
+    "rank": "Classe Especial",
+    "debutArc": "Ataque à Anteiku",
+    "debutArcOrder": 6,
+    "epithet": "Ceifador Branco da CCG",
+    "imageUrl": "/characters/kishou-arima.jpg",
+    "kaguneOrQuinque": {
+      "name": "IXA, Narukami & Owl (Quinques S+/SSS)",
+      "category": "Quinque",
+      "imageUrl": "",
+      "preset": "ixa-narukami",
+      "primaryColor": "#e2e8f0",
+      "secondaryColor": "#38bdf8",
+      "focalPoint": {
+        "x": 45,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Mais de seiscentas e quarenta e cinco vezes... eu poderia tê-lo matado. E mesmo assim, eu odiava o fato de tudo o que eu sempre fiz ter sido apenas tirar vidas.",
+      "arc": "Ilha Rue (:re)",
+      "recipient": "Dita para Ken Kaneki nos momentos finais em Cochlea"
+    },
+    "maskOrEye": {
+      "title": "Óculos Sem Aro & Olhar Gélido do Ceifador",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/kishou-arima.jpg",
+      "preset": "arima-glasses",
+      "focalPoint": {
+        "x": 50,
+        "y": 39
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#f8fafc",
+      "hairSecondary": "#cbd5e1",
+      "hairStyle": "parted-neat",
+      "skinTone": "#f5e9e2",
+      "eyeColor": "#64748b",
+      "kakugan": "none",
+      "accessory": "glasses",
+      "outfit": "ccg",
+      "accentColor": "#94a3b8"
+    },
+    "imagePosition": "center 30%"
+  },
+  {
+    "id": "juuzou-suzuya",
+    "name": "Juuzou Suzuya",
+    "aliases": [
+      "Rei Suzuya",
+      "Coringa da CCG",
+      "XIII",
+      "13"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Humano"
+    ],
+    "affiliations": [
+      "CCG"
+    ],
+    "rcTypes": [
+      "Quinque"
+    ],
+    "rank": "Classe Especial",
+    "debutArc": "Arco Aogiri",
+    "debutArcOrder": 4,
+    "epithet": "Coringa da CCG / XIII",
+    "imageUrl": "/characters/juuzou-suzuya.jpg",
+    "kaguneOrQuinque": {
+      "name": "13's Jason & Armadura Arata Joker",
+      "category": "Quinque",
+      "imageUrl": "",
+      "preset": "jasons-scythe",
+      "primaryColor": "#ef4444",
+      "secondaryColor": "#d4d4d8",
+      "focalPoint": {
+        "x": 58,
+        "y": 30
+      }
+    },
+    "quote": {
+      "text": "Por que eu deveria sentir pena de um monstro? Boas maneiras não significam nada quando estamos prestes a caçar.",
+      "arc": "Arco Aogiri",
+      "recipient": "Dita ao confrontar Yamori (Jason) na fortaleza da Aogiri"
+    },
+    "maskOrEye": {
+      "title": "Grampos Vermelhos XIII & Costuras Corporais",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/juuzou-suzuya.jpg",
+      "preset": "juuzou-stitches",
+      "focalPoint": {
+        "x": 45,
+        "y": 32
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#fafafa",
+      "hairSecondary": "#18181b",
+      "hairStyle": "pinned-messy",
+      "skinTone": "#faf0eb",
+      "eyeColor": "#dc2626",
+      "kakugan": "none",
+      "accessory": "stitches",
+      "outfit": "ccg",
+      "accentColor": "#ef4444"
+    },
+    "imagePosition": "52% 26%"
+  },
+  {
+    "id": "eto-yoshimura",
+    "name": "Eto Yoshimura",
+    "aliases": [
+      "Sen Takatsuki",
+      "Coruja de Um Olho",
+      "Garota Enfaixada"
+    ],
+    "gender": "Feminino",
+    "species": [
+      "Ghoul de Um Olho (Natural)"
+    ],
+    "affiliations": [
+      "Aogiri Tree"
+    ],
+    "rcTypes": [
+      "Ukaku"
+    ],
+    "rank": "Rank SSS",
+    "debutArc": "Arco Aogiri",
+    "debutArcOrder": 4,
+    "epithet": "Coruja de Um Olho (One-Eyed Owl)",
+    "imageUrl": "/characters/eto-yoshimura.jpg",
+    "kaguneOrQuinque": {
+      "name": "Kakuja Monstruosa da Coruja de Um Olho",
+      "category": "Kagune / Kakuja",
+      "imageUrl": "",
+      "preset": "owl-kakuja",
+      "primaryColor": "#dc2626",
+      "secondaryColor": "#fde047",
+      "focalPoint": {
+        "x": 50,
+        "y": 36
+      }
+    },
+    "quote": {
+      "text": "Este mundo está podre até a medula. Para reconstruir uma gaiola distorcida, primeiro você precisa quebrá-la por inteiro.",
+      "arc": "Ilha Rue (:re)",
+      "recipient": "Dita para Ken Kaneki sobre o trono do Rei de Um Olho"
+    },
+    "maskOrEye": {
+      "title": "Cabelos Verdes de Sen Takatsuki & Sorriso Enigmático",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/eto-yoshimura.jpg",
+      "preset": "eto-bandages",
+      "focalPoint": {
+        "x": 51,
+        "y": 27
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#3f6212",
+      "hairSecondary": "#4d7c0f",
+      "hairStyle": "long-wild",
+      "skinTone": "#f6e7dc",
+      "eyeColor": "#65a30d",
+      "kakugan": "right",
+      "accessory": "bandages",
+      "outfit": "aogiri",
+      "accentColor": "#dc2626"
+    },
+    "imagePosition": "center 18%"
+  },
+  {
+    "id": "kuzen-yoshimura",
+    "name": "Kuzen Yoshimura",
+    "aliases": [
+      "Gerente da Anteiku",
+      "Coruja Não-Matadora"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Anteiku",
+      "V"
+    ],
+    "rcTypes": [
+      "Ukaku"
+    ],
+    "rank": "Rank SSS",
+    "debutArc": "Arco da Intro",
+    "debutArcOrder": 1,
+    "epithet": "Coruja Não-Matadora",
+    "imageUrl": "/characters/kuzen-yoshimura.jpg",
+    "kaguneOrQuinque": {
+      "name": "Armadura Kakuja de Sabres Ukaku",
+      "category": "Kagune / Kakuja",
+      "imageUrl": "",
+      "preset": "yoshimura-owl",
+      "primaryColor": "#b91c1c",
+      "secondaryColor": "#27272a",
+      "focalPoint": {
+        "x": 48,
+        "y": 35
+      }
+    },
+    "quote": {
+      "text": "Nós somos os únicos que podem viver tanto no mundo dos humanos quanto no dos Ghouls. Na Anteiku, sempre haverá uma xícara de café esperando por aqueles que perderam o rumo.",
+      "arc": "Arco da Intro",
+      "recipient": "Dita para Ken Kaneki ao acolhê-lo na cafeteria Anteiku"
+    },
+    "maskOrEye": {
+      "title": "Semblante Sereno do Gerente da Anteiku",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/kuzen-yoshimura.jpg",
+      "preset": "yoshimura-eyes",
+      "focalPoint": {
+        "x": 49,
+        "y": 28
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#d4d4d8",
+      "hairSecondary": "#a1a1aa",
+      "hairStyle": "slick-elder",
+      "skinTone": "#ebd5c5",
+      "eyeColor": "#3f3f46",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "anteiku",
+      "accentColor": "#991b1b"
+    },
+    "imagePosition": "center 22%"
+  },
+  {
+    "id": "renji-yomo",
+    "name": "Renji Yomo",
+    "aliases": [
+      "Raven",
+      "Corvo",
+      "Tio da Touka"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Anteiku",
+      ":re",
+      "Goat"
+    ],
+    "rcTypes": [
+      "Ukaku"
+    ],
+    "rank": "Rank SS",
+    "debutArc": "Arco dos Pombos",
+    "debutArcOrder": 2,
+    "epithet": "Raven (Corvo da 4ª Ala)",
+    "imageUrl": "/characters/renji-yomo.jpg",
+    "kaguneOrQuinque": {
+      "name": "Ukaku Relâmpago do Corvo",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "lightning-ukaku",
+      "primaryColor": "#facc15",
+      "secondaryColor": "#b91c1c",
+      "focalPoint": {
+        "x": 55,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Tudo o que podemos fazer é viver enquanto perdemos as coisas. Mesmo assim, proteja o lugar para onde seus sobrinhos e amigos possam voltar.",
+      "arc": "Ataque à Anteiku",
+      "recipient": "Dita para Ken Kaneki e Touka Kirishima"
+    },
+    "maskOrEye": {
+      "title": "Cabelos Prateados & Sorriso Sutil de Renji Yomo",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/renji-yomo.jpg",
+      "preset": "raven-beak",
+      "focalPoint": {
+        "x": 48,
+        "y": 42
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#e4e4e7",
+      "hairSecondary": "#a1a1aa",
+      "hairStyle": "long-parted",
+      "skinTone": "#ead7c8",
+      "eyeColor": "#52525b",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "goat",
+      "accentColor": "#eab308"
+    },
+    "imagePosition": "center 35%"
+  },
+  {
+    "id": "uta",
+    "name": "Uta",
+    "aliases": [
+      "No Face",
+      "Sem Rosto",
+      "Artesão do HySy ArtMask"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Palhaços (Pierrot)"
+    ],
+    "rcTypes": [
+      "Rinkaku"
+    ],
+    "rank": "Rank SS",
+    "debutArc": "Arco dos Pombos",
+    "debutArcOrder": 2,
+    "epithet": "No Face (Sem Rosto)",
+    "imageUrl": "/characters/uta.jpg",
+    "kaguneOrQuinque": {
+      "name": "Kagune Metamórfica & Kakuja Multi-Braços",
+      "category": "Kagune / Kakuja",
+      "imageUrl": "",
+      "preset": "noface-tentacles",
+      "primaryColor": "#991b1b",
+      "secondaryColor": "#52525b",
+      "focalPoint": {
+        "x": 45,
+        "y": 42
+      }
+    },
+    "quote": {
+      "text": "Nec possum tecum vivere, nec sine te... Não posso viver nem com você, nem sem você. Máscaras revelam mais sobre alguém do que o próprio rosto.",
+      "arc": "Arco dos Pombos",
+      "recipient": "Dita para Ken Kaneki no estúdio HySy ArtMask"
+    },
+    "maskOrEye": {
+      "title": "Tatuagens Latinas no Pescoço & Piercings de Uta",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/uta.jpg",
+      "preset": "uta-noface",
+      "focalPoint": {
+        "x": 44,
+        "y": 35
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#18181b",
+      "hairSecondary": "#3f3f46",
+      "hairStyle": "undercut-long",
+      "skinTone": "#efe2d8",
+      "eyeColor": "#ef4444",
+      "kakugan": "both",
+      "accessory": "mask_uta",
+      "outfit": "clown",
+      "accentColor": "#dc2626"
+    },
+    "imagePosition": "center 24%"
+  },
+  {
+    "id": "shuu-tsukiyama",
+    "name": "Shuu Tsukiyama",
+    "aliases": [
+      "Gourmet",
+      "MM",
+      "Senhor Shuu"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Família Tsukiyama",
+      "Goat"
+    ],
+    "rcTypes": [
+      "Koukaku"
+    ],
+    "rank": "Rank S",
+    "debutArc": "Arco Gourmet",
+    "debutArcOrder": 3,
+    "epithet": "Gourmet",
+    "imageUrl": "/characters/shuu-tsukiyama.jpg",
+    "kaguneOrQuinque": {
+      "name": "Espada Espiral Carmesim Koukaku",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "spiral-koukaku",
+      "primaryColor": "#db2777",
+      "secondaryColor": "#991b1b",
+      "focalPoint": {
+        "x": 60,
+        "y": 45
+      }
+    },
+    "quote": {
+      "text": "Très bien! Harmonioso, sublime, um aroma que faz cada célula do meu corpo estremecer de êxtase!",
+      "arc": "Arco Gourmet",
+      "recipient": "Exclamada ao sentir o aroma do sangue de Ken Kaneki"
+    },
+    "maskOrEye": {
+      "title": "Máscara Veneziana de Lua Crescente do Gourmet",
+      "type": "Máscara de Ghoul",
+      "imageUrl": "/characters/shuu-tsukiyama.jpg",
+      "preset": "crescent-moon-mask",
+      "focalPoint": {
+        "x": 28,
+        "y": 36
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#6d28d9",
+      "hairSecondary": "#8b5cf6",
+      "hairStyle": "slick-aristocrat",
+      "skinTone": "#f6e7dc",
+      "eyeColor": "#7c3aed",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "suit",
+      "accentColor": "#db2777"
+    },
+    "imagePosition": "28% 22%"
+  },
+  {
+    "id": "hideyoshi-nagachika",
+    "name": "Hideyoshi Nagachika",
+    "aliases": [
+      "Hide",
+      "Espantalho (Scarecrow)"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Humano"
+    ],
+    "affiliations": [
+      "CCG",
+      "Goat"
+    ],
+    "rcTypes": [
+      "Nenhuma"
+    ],
+    "rank": "Civil",
+    "debutArc": "Arco da Intro",
+    "debutArcOrder": 1,
+    "epithet": "Scarecrow (Espantalho) / Melhor Amigo",
+    "imageUrl": "/characters/hideyoshi-nagachika.jpg",
+    "kaguneOrQuinque": {
+      "name": "Dossiê de Inteligência, Rádio & Fones de Hide",
+      "category": "Tática / Rastreamento",
+      "imageUrl": "",
+      "preset": "hide-intel",
+      "primaryColor": "#f59e0b",
+      "secondaryColor": "#3f3f46",
+      "focalPoint": {
+        "x": 50,
+        "y": 48
+      }
+    },
+    "quote": {
+      "text": "Eu já sabia, Kaneki... Vamos voltar para casa juntos.",
+      "arc": "Ataque à Anteiku",
+      "recipient": "Dita para Ken Kaneki nos subterrâneos durante o cerco à Anteiku"
+    },
+    "maskOrEye": {
+      "title": "Cabelos Loiros Bicolores & Olhar Leal de Hide",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/hideyoshi-nagachika.jpg",
+      "preset": "scarecrow-hide",
+      "focalPoint": {
+        "x": 50,
+        "y": 35
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#f59e0b",
+      "hairSecondary": "#78350f",
+      "hairStyle": "sunny-spiky",
+      "skinTone": "#f5e1d2",
+      "eyeColor": "#b45309",
+      "kakugan": "none",
+      "accessory": "headphones",
+      "outfit": "casual",
+      "accentColor": "#f59e0b"
+    },
+    "imagePosition": "center 22%"
+  },
+  {
+    "id": "rize-kamishiro",
+    "name": "Rize Kamishiro",
+    "aliases": [
+      "Binge Eater",
+      "Devoradora Compulsiva",
+      "Núcleo do Dragão"
+    ],
+    "gender": "Feminino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "V"
+    ],
+    "rcTypes": [
+      "Rinkaku"
+    ],
+    "rank": "Rank S",
+    "debutArc": "Arco da Intro",
+    "debutArcOrder": 1,
+    "epithet": "Binge Eater (Devoradora Compulsiva)",
+    "imageUrl": "/characters/rize-kamishiro.jpg",
+    "kaguneOrQuinque": {
+      "name": "Quatro Tentáculos Escarlates Rinkaku",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "rize-rinkaku",
+      "primaryColor": "#dc2626",
+      "secondaryColor": "#9333ea",
+      "focalPoint": {
+        "x": 54,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Há momentos em que você precisa desistir de uma coisa para salvar a outra. Sua gentileza nada mais é do que medo de escolher.",
+      "arc": "Arco Aogiri",
+      "recipient": "Alucinação de Rize falando com Ken Kaneki durante a tortura"
+    },
+    "maskOrEye": {
+      "title": "Óculos Vermelhos & Olhar Violeta da Devoradora",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/rize-kamishiro.jpg",
+      "preset": "rize-glasses",
+      "focalPoint": {
+        "x": 50,
+        "y": 38
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#7e22ce",
+      "hairSecondary": "#a855f7",
+      "hairStyle": "long-flowing",
+      "skinTone": "#f8e8de",
+      "eyeColor": "#9333ea",
+      "kakugan": "both",
+      "accessory": "glasses",
+      "outfit": "casual",
+      "accentColor": "#c026d3"
+    },
+    "imagePosition": "center 22%"
+  },
+  {
+    "id": "kotaro-amon",
+    "name": "Kotaro Amon",
+    "aliases": [
+      "Koutarou Amon",
+      "Floppy",
+      "Coruja Artificial"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Humano",
+      "Ghoul de Um Olho (Artificial)"
+    ],
+    "affiliations": [
+      "CCG",
+      "Goat"
+    ],
+    "rcTypes": [
+      "Quinque",
+      "Ukaku"
+    ],
+    "rank": "Primeira Classe",
+    "debutArc": "Arco dos Pombos",
+    "debutArcOrder": 2,
+    "epithet": "Floppy / Investigador Justo",
+    "imageUrl": "/characters/kotaro-amon.jpg",
+    "kaguneOrQuinque": {
+      "name": "Doujima 1/2, Kura & Kakuja Ukaku",
+      "category": "Quinque",
+      "imageUrl": "",
+      "preset": "doujima-kura",
+      "primaryColor": "#94a3b8",
+      "secondaryColor": "#b91c1c",
+      "focalPoint": {
+        "x": 46,
+        "y": 38
+      }
+    },
+    "quote": {
+      "text": "O que distorce este mundo? Eu não quero desviar os olhos até entender por que você escolheu não me matar naquela noite.",
+      "arc": "Arco dos Pombos",
+      "recipient": "Dita para Ken Kaneki (Tapa-Olho) em seu primeiro duelo"
+    },
+    "maskOrEye": {
+      "title": "Olhar Determinado do Investigador Amon",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/kotaro-amon.jpg",
+      "preset": "amon-eye",
+      "focalPoint": {
+        "x": 50,
+        "y": 25
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#27272a",
+      "hairSecondary": "#3f3f46",
+      "hairStyle": "short-spiky",
+      "skinTone": "#eed7c5",
+      "eyeColor": "#475569",
+      "kakugan": "right",
+      "accessory": "none",
+      "outfit": "ccg",
+      "accentColor": "#64748b"
+    },
+    "imagePosition": "center 18%"
+  },
+  {
+    "id": "akira-mado",
+    "name": "Akira Mado",
+    "aliases": [
+      "Mentora do Esquadrão Quinx"
+    ],
+    "gender": "Feminino",
+    "species": [
+      "Humano"
+    ],
+    "affiliations": [
+      "CCG",
+      "Goat"
+    ],
+    "rcTypes": [
+      "Quinque"
+    ],
+    "rank": "Primeira Classe",
+    "debutArc": "Pós-Aogiri",
+    "debutArcOrder": 5,
+    "epithet": "Prodígio da Família Mado",
+    "imageUrl": "/characters/akira-mado.png",
+    "kaguneOrQuinque": {
+      "name": "Fueguchi One & Amatsu (Quinque Quimera)",
+      "category": "Quinque",
+      "imageUrl": "",
+      "preset": "whip-quinque",
+      "primaryColor": "#cbd5e1",
+      "secondaryColor": "#e11d48",
+      "focalPoint": {
+        "x": 56,
+        "y": 42
+      }
+    },
+    "quote": {
+      "text": "Eu carreguei o ódio do meu pai por tanto tempo que esqueci como era simplesmente sentir falta de alguém.",
+      "arc": "Ilha Rue (:re)",
+      "recipient": "Dita ao reencontrar Hinami Fueguchi e Kotaro Amon"
+    },
+    "maskOrEye": {
+      "title": "Tranças Loiras & Olhar Analítico da Família Mado",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/akira-mado.png",
+      "preset": "akira-gaze",
+      "focalPoint": {
+        "x": 38,
+        "y": 38
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#fde68a",
+      "hairSecondary": "#eab308",
+      "hairStyle": "side-bang-bob",
+      "skinTone": "#f7e6da",
+      "eyeColor": "#7e22ce",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "ccg",
+      "accentColor": "#a855f7"
+    },
+    "imagePosition": "center 24%"
+  },
+  {
+    "id": "kureo-mado",
+    "name": "Kureo Mado",
+    "aliases": [
+      "Caçador Obsessivo de Quinques",
+      "Pomba Branca"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Humano"
+    ],
+    "affiliations": [
+      "CCG"
+    ],
+    "rcTypes": [
+      "Quinque"
+    ],
+    "rank": "Primeira Classe",
+    "debutArc": "Arco dos Pombos",
+    "debutArcOrder": 2,
+    "epithet": "Colecionador de Quinques da 20ª Ala",
+    "imageUrl": "/characters/kureo-mado.jpg",
+    "kaguneOrQuinque": {
+      "name": "Fueguchi One & Fueguchi Two",
+      "category": "Quinque",
+      "imageUrl": "",
+      "preset": "fueguchi-quinque",
+      "primaryColor": "#f59e0b",
+      "secondaryColor": "#dc2626",
+      "focalPoint": {
+        "x": 52,
+        "y": 44
+      }
+    },
+    "quote": {
+      "text": "Escória imunda que imita humanos... Mostre-me a sua Kagune! Ela dará uma Quinque magnífica!",
+      "arc": "Arco dos Pombos",
+      "recipient": "Dita para Touka Kirishima e Hinami Fueguchi"
+    },
+    "maskOrEye": {
+      "title": "Olhar Obscuro Assimétrico & Cabelos Prateados de Kureo Mado",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/kureo-mado.jpg",
+      "preset": "kureo-asymmetric",
+      "focalPoint": {
+        "x": 50,
+        "y": 35
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#e4e4e7",
+      "hairSecondary": "#a1a1aa",
+      "hairStyle": "unkempt-silver",
+      "skinTone": "#ead7c8",
+      "eyeColor": "#52525b",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "ccg",
+      "accentColor": "#d4d4d8"
+    },
+    "imagePosition": "center 26%"
+  },
+  {
+    "id": "hinami-fueguchi",
+    "name": "Hinami Fueguchi",
+    "aliases": [
+      "Yotsume",
+      "Quatro Olhos",
+      "No. 745"
+    ],
+    "gender": "Feminino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Anteiku",
+      "Aogiri Tree",
+      "Goat"
+    ],
+    "rcTypes": [
+      "Chimera",
+      "Koukaku",
+      "Rinkaku"
+    ],
+    "rank": "Rank SS",
+    "debutArc": "Arco dos Pombos",
+    "debutArcOrder": 2,
+    "epithet": "Yotsume (Quimera Dupla)",
+    "imageUrl": "/characters/hinami-fueguchi.jpg",
+    "kaguneOrQuinque": {
+      "name": "Kagune Quimera Borboleta (Koukaku + Rinkaku)",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "butterfly-chimera",
+      "primaryColor": "#f59e0b",
+      "secondaryColor": "#ef4444",
+      "focalPoint": {
+        "x": 50,
+        "y": 38
+      }
+    },
+    "quote": {
+      "text": "Eu não quero matar o senhor... Eu só estou muito triste porque quero ficar com o meu pai e a minha mãe.",
+      "arc": "Arco dos Pombos",
+      "recipient": "Dita em lágrimas diante de Kureo Mado"
+    },
+    "maskOrEye": {
+      "title": "Presilha de Flor & Olhar Gentil de Hinami",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/hinami-fueguchi.jpg",
+      "preset": "hinami-yotsume",
+      "focalPoint": {
+        "x": 56,
+        "y": 31
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#78350f",
+      "hairSecondary": "#92400e",
+      "hairStyle": "cute-bob",
+      "skinTone": "#f8e6da",
+      "eyeColor": "#b45309",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "anteiku",
+      "accentColor": "#f59e0b"
+    },
+    "imagePosition": "56% 22%"
+  },
+  {
+    "id": "ayato-kirishima",
+    "name": "Ayato Kirishima",
+    "aliases": [
+      "Black Rabbit",
+      "Coelho Negro"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Aogiri Tree",
+      "Goat"
+    ],
+    "rcTypes": [
+      "Ukaku"
+    ],
+    "rank": "Rank SS",
+    "debutArc": "Arco Aogiri",
+    "debutArcOrder": 4,
+    "epithet": "Black Rabbit (Coelho Negro)",
+    "imageUrl": "/characters/ayato-kirishima.jpg",
+    "kaguneOrQuinque": {
+      "name": "Duas Asas Cristalinas Escarlates Ukaku",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "twin-ukaku-wings",
+      "primaryColor": "#e11d48",
+      "secondaryColor": "#4c1d95",
+      "focalPoint": {
+        "x": 58,
+        "y": 35
+      }
+    },
+    "quote": {
+      "text": "Os fracos são pisoteados e perdem tudo, exatamente como o nosso pai! É por isso que eu escolhi me tornar a força que protege de longe.",
+      "arc": "Arco Aogiri",
+      "recipient": "Dita para sua irmã Touka Kirishima"
+    },
+    "maskOrEye": {
+      "title": "Máscara Metálica do Coelho Negro & Cabelos Azulados",
+      "type": "Máscara de Ghoul",
+      "imageUrl": "/characters/ayato-kirishima.jpg",
+      "preset": "black-rabbit-mask",
+      "focalPoint": {
+        "x": 50,
+        "y": 38
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#312e81",
+      "hairSecondary": "#4338ca",
+      "hairStyle": "messy-bangs",
+      "skinTone": "#f5e2d5",
+      "eyeColor": "#4f46e5",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "aogiri",
+      "accentColor": "#e11d48"
+    },
+    "imagePosition": "center 26%"
+  },
+  {
+    "id": "nishiki-nishio",
+    "name": "Nishiki Nishio",
+    "aliases": [
+      "Serpent",
+      "Serpente",
+      "Orochi"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Anteiku",
+      ":re",
+      "Goat"
+    ],
+    "rcTypes": [
+      "Bikaku"
+    ],
+    "rank": "Rank S",
+    "debutArc": "Arco da Intro",
+    "debutArcOrder": 1,
+    "epithet": "Serpent / Orochi (Serpente)",
+    "imageUrl": "/characters/nishiki-nishio.jpg",
+    "kaguneOrQuinque": {
+      "name": "Cauda Gigante Escamosa Bikaku de Orochi",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "serpent-bikaku",
+      "primaryColor": "#ea580c",
+      "secondaryColor": "#0284c7",
+      "focalPoint": {
+        "x": 45,
+        "y": 45
+      }
+    },
+    "quote": {
+      "text": "Não pise no meu território sem permissão... e não ouse encostar um único dedo na Kimi!",
+      "arc": "Arco Gourmet",
+      "recipient": "Dita ao defender Kimi Nishino contra Shuu Tsukiyama"
+    },
+    "maskOrEye": {
+      "title": "Capuz de Orochi & Olhar Afiado de Nishiki",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/nishiki-nishio.jpg",
+      "preset": "serpent-mask",
+      "focalPoint": {
+        "x": 44,
+        "y": 31
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#9a3412",
+      "hairSecondary": "#c2410c",
+      "hairStyle": "parted-neat",
+      "skinTone": "#f3dfd1",
+      "eyeColor": "#92400e",
+      "kakugan": "both",
+      "accessory": "glasses",
+      "outfit": "anteiku",
+      "accentColor": "#ea580c"
+    },
+    "imagePosition": "45% 28%"
+  },
+  {
+    "id": "seidou-takizawa",
+    "name": "Seidou Takizawa",
+    "aliases": [
+      "Owl",
+      "Coruja T-Owl"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Humano",
+      "Ghoul de Um Olho (Artificial)"
+    ],
+    "affiliations": [
+      "CCG",
+      "Aogiri Tree",
+      "Goat"
+    ],
+    "rcTypes": [
+      "Ukaku",
+      "Quinque"
+    ],
+    "rank": "Rank SS",
+    "debutArc": "Arco Aogiri",
+    "debutArcOrder": 4,
+    "epithet": "Owl (Coruja Artificial)",
+    "imageUrl": "/characters/seidou-takizawa.jpg",
+    "kaguneOrQuinque": {
+      "name": "Cristais Ukaku & Máscara Kakuja de Owl",
+      "category": "Kagune / Kakuja",
+      "imageUrl": "",
+      "preset": "takizawa-owl",
+      "primaryColor": "#dc2626",
+      "secondaryColor": "#e4e4e7",
+      "focalPoint": {
+        "x": 52,
+        "y": 38
+      }
+    },
+    "quote": {
+      "text": "Ninguém quer morrer sem deixar um testamento! Agora olhem para o que sobrou de mim... geleia de abacaxi!",
+      "arc": "Leilão (:re)",
+      "recipient": "Dita para Haise Sasaki e os investigadores da CCG no Leilão"
+    },
+    "maskOrEye": {
+      "title": "Kakugan Esquerdo & Sorriso Insano de Owl",
+      "type": "Máscara & Kakugan",
+      "imageUrl": "/characters/seidou-takizawa.jpg",
+      "preset": "takizawa-kakugan",
+      "focalPoint": {
+        "x": 52,
+        "y": 36
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#e4e4e7",
+      "hairSecondary": "#71717a",
+      "hairStyle": "long-wild",
+      "skinTone": "#e5e5e5",
+      "eyeColor": "#52525b",
+      "kakugan": "left",
+      "accessory": "none",
+      "outfit": "aogiri",
+      "accentColor": "#b91c1c"
+    },
+    "imagePosition": "center 30%"
+  },
+  {
+    "id": "kuki-urie",
+    "name": "Kuki Urie",
+    "aliases": [
+      "Líder do Esquadrão Quinx"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Quinx"
+    ],
+    "affiliations": [
+      "CCG",
+      "Esquadrão Quinx"
+    ],
+    "rcTypes": [
+      "Koukaku"
+    ],
+    "rank": "Classe Especial",
+    "debutArc": "Leilão (:re)",
+    "debutArcOrder": 7,
+    "epithet": "Comandante do Esquadrão Quinx",
+    "imageUrl": "/characters/kuki-urie.png",
+    "kaguneOrQuinque": {
+      "name": "Lâmina Escudo Koukaku Quinx & Quinque Tsunagi",
+      "category": "Quinx Kagune",
+      "imageUrl": "",
+      "preset": "urie-koukaku",
+      "primaryColor": "#7c3aed",
+      "secondaryColor": "#e11d48",
+      "focalPoint": {
+        "x": 56,
+        "y": 42
+      }
+    },
+    "quote": {
+      "text": "Mérito e promoção eram tudo o que eu enxergava... até o dia em que Shirazu morreu nos meus braços por causa da minha falta de força.",
+      "arc": "Extermínio dos Tsukiyama (:re)",
+      "recipient": "Pensamento interno sobre Ginshi Shirazu e o Esquadrão Quinx"
+    },
+    "maskOrEye": {
+      "title": "Sinais Sob o Olho Esquerdo & Luva Preta Quinx",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/kuki-urie.png",
+      "preset": "urie-moles",
+      "focalPoint": {
+        "x": 49,
+        "y": 30
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#2e1065",
+      "hairSecondary": "#4c1d95",
+      "hairStyle": "undercut-long",
+      "skinTone": "#f3e2d6",
+      "eyeColor": "#581c87",
+      "kakugan": "left",
+      "accessory": "mole",
+      "outfit": "ccg",
+      "accentColor": "#7c3aed"
+    },
+    "imagePosition": "center 16%"
+  },
+  {
+    "id": "saiko-yonebayashi",
+    "name": "Saiko Yonebayashi",
+    "aliases": [
+      "Saiko-chan",
+      "Prodígio RC Quinx"
+    ],
+    "gender": "Feminino",
+    "species": [
+      "Quinx"
+    ],
+    "affiliations": [
+      "CCG",
+      "Esquadrão Quinx"
+    ],
+    "rcTypes": [
+      "Rinkaku"
+    ],
+    "rank": "Primeira Classe",
+    "debutArc": "Leilão (:re)",
+    "debutArcOrder": 7,
+    "epithet": "Maior Aptidão RC dos Quinx",
+    "imageUrl": "/characters/saiko-yonebayashi.jpg",
+    "kaguneOrQuinque": {
+      "name": "Punhos Colossais Rinkaku Moldáveis",
+      "category": "Quinx Kagune",
+      "imageUrl": "",
+      "preset": "saiko-colossal",
+      "primaryColor": "#ec4899",
+      "secondaryColor": "#dc2626",
+      "focalPoint": {
+        "x": 50,
+        "y": 42
+      }
+    },
+    "quote": {
+      "text": "Maman nos ensinou a sobreviver... mas eu luto porque amo você, Urie! Não se atreva a se perder de nós!",
+      "arc": "Dragon (:re)",
+      "recipient": "Dita em lágrimas para deter a fúria de Kuki Urie"
+    },
+    "maskOrEye": {
+      "title": "Maria-Chiquinhas Azuis & Kakugan Esquerdo Quinx",
+      "type": "Máscara & Kakugan",
+      "imageUrl": "/characters/saiko-yonebayashi.jpg",
+      "preset": "saiko-twintails",
+      "focalPoint": {
+        "x": 52,
+        "y": 43
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#0284c7",
+      "hairSecondary": "#38bdf8",
+      "hairStyle": "cute-bob",
+      "skinTone": "#f9ebe2",
+      "eyeColor": "#0369a1",
+      "kakugan": "left",
+      "accessory": "hairpins",
+      "outfit": "ccg",
+      "accentColor": "#38bdf8"
+    },
+    "imagePosition": "center 34%"
+  },
+  {
+    "id": "tooru-mutsuki",
+    "name": "Tooru Mutsuki",
+    "aliases": [
+      "Mutsuki do Tapa-Olho",
+      "Mentora do Oggai"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Quinx"
+    ],
+    "affiliations": [
+      "CCG",
+      "Esquadrão Quinx"
+    ],
+    "rcTypes": [
+      "Bikaku"
+    ],
+    "rank": "Classe Especial",
+    "debutArc": "Leilão (:re)",
+    "debutArcOrder": 7,
+    "epithet": "Especialista em Adagas Duplas Quinx",
+    "imageUrl": "/characters/tooru-mutsuki.jpg",
+    "kaguneOrQuinque": {
+      "name": "Caudas Bikaku & Adagas Quinque Abukuma",
+      "category": "Quinx Kagune",
+      "imageUrl": "",
+      "preset": "mutsuki-daggers",
+      "primaryColor": "#10b981",
+      "secondaryColor": "#dc2626",
+      "focalPoint": {
+        "x": 52,
+        "y": 44
+      }
+    },
+    "quote": {
+      "text": "Professor Sasaki foi a primeira pessoa que me deu um lar... Sem essa luz, tudo o que resta dentro de mim são cicatrizes.",
+      "arc": "Ilha Rue (:re)",
+      "recipient": "Confissão sobre Haise Sasaki e o Esquadrão Quinx"
+    },
+    "maskOrEye": {
+      "title": "Tapa-Olho Negro & Cabelos Brancos de Mutsuki",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/tooru-mutsuki.jpg",
+      "preset": "mutsuki-patch",
+      "focalPoint": {
+        "x": 49,
+        "y": 27
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#f4f4f5",
+      "hairSecondary": "#166534",
+      "hairStyle": "short-spiky",
+      "skinTone": "#f3e1d3",
+      "eyeColor": "#15803d",
+      "kakugan": "right",
+      "accessory": "eyepatch",
+      "outfit": "ccg",
+      "accentColor": "#10b981"
+    },
+    "imagePosition": "48% 24%"
+  },
+  {
+    "id": "ginshi-shirazu",
+    "name": "Ginshi Shirazu",
+    "aliases": [
+      "Shira-gin",
+      "Ex-Líder do Esquadrão Quinx"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Quinx"
+    ],
+    "affiliations": [
+      "CCG",
+      "Esquadrão Quinx"
+    ],
+    "rcTypes": [
+      "Ukaku"
+    ],
+    "rank": "Rank 1 (Investigador)",
+    "debutArc": "Leilão (:re)",
+    "debutArcOrder": 7,
+    "epithet": "Pilar do Esquadrão Quinx",
+    "imageUrl": "/characters/ginshi-shirazu.png",
+    "kaguneOrQuinque": {
+      "name": "Projéteis Ukaku & Quinque Quimera Nutcracker",
+      "category": "Quinx Kagune",
+      "imageUrl": "",
+      "preset": "shirazu-nutcracker",
+      "primaryColor": "#f97316",
+      "secondaryColor": "#dc2626",
+      "focalPoint": {
+        "x": 54,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Sasaki... Urie... Eu não estou enxergando direito nem ouvindo nada. Fiquem aqui perto até eu apagar...",
+      "arc": "Extermínio dos Tsukiyama (:re)",
+      "recipient": "Últimas palavras para o Esquadrão Quinx após derrotar Noro"
+    },
+    "maskOrEye": {
+      "title": "Sorriso Dente-de-Tubarão & Piercings de Shirazu",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/ginshi-shirazu.png",
+      "preset": "shirazu-grin",
+      "focalPoint": {
+        "x": 64,
+        "y": 26
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#fb923c",
+      "hairSecondary": "#ea580c",
+      "hairStyle": "sunny-spiky",
+      "skinTone": "#f4dfd0",
+      "eyeColor": "#c2410c",
+      "kakugan": "right",
+      "accessory": "none",
+      "outfit": "ccg",
+      "accentColor": "#f97316"
+    },
+    "imagePosition": "62% 18%"
+  },
+  {
+    "id": "nimura-furuta",
+    "name": "Nimura Furuta",
+    "aliases": [
+      "Kichimura Washuu",
+      "Souta",
+      "Diretor da CCG"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Meio-Humano",
+      "Ghoul de Um Olho (Artificial)"
+    ],
+    "affiliations": [
+      "CCG",
+      "Palhaços (Pierrot)",
+      "V"
+    ],
+    "rcTypes": [
+      "Rinkaku"
+    ],
+    "rank": "Classe Especial",
+    "debutArc": "Extermínio dos Tsukiyama (:re)",
+    "debutArcOrder": 8,
+    "epithet": "Souta (Palhaço) / Rei Washuu",
+    "imageUrl": "/characters/nimura-furuta.jpg",
+    "kaguneOrQuinque": {
+      "name": "Rinkaku de Rize & Kakuja Negra Washuu",
+      "category": "Kagune / Kakuja",
+      "imageUrl": "",
+      "preset": "furuta-dragon",
+      "primaryColor": "#be123c",
+      "secondaryColor": "#18181b",
+      "focalPoint": {
+        "x": 48,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Super Paz! No fim das contas, este mundo inteiro não passa de uma caixa de brinquedos quebrável.",
+      "arc": "Dragon (:re)",
+      "recipient": "Dita para Ken Kaneki durante o confronto final no subterrâneo"
+    },
+    "maskOrEye": {
+      "title": "Sinal Sob o Olho Direito & Sorriso Washuu",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/nimura-furuta.jpg",
+      "preset": "furuta-wink",
+      "focalPoint": {
+        "x": 46,
+        "y": 38
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#18181b",
+      "hairSecondary": "#27272a",
+      "hairStyle": "parted-neat",
+      "skinTone": "#f4e3d7",
+      "eyeColor": "#27272a",
+      "kakugan": "right",
+      "accessory": "mole",
+      "outfit": "suit",
+      "accentColor": "#be123c"
+    },
+    "imagePosition": "center 32%"
+  },
+  {
+    "id": "tatara",
+    "name": "Tatara",
+    "aliases": [
+      "Comandante da Aogiri",
+      "Herdado da Chi She Lian"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Aogiri Tree"
+    ],
+    "rcTypes": [
+      "Bikaku"
+    ],
+    "rank": "Rank SS",
+    "debutArc": "Arco Aogiri",
+    "debutArcOrder": 4,
+    "epithet": "Comandante Pirocinético da Aogiri",
+    "imageUrl": "/characters/tatara.jpg",
+    "kaguneOrQuinque": {
+      "name": "Armadura Kakuja Incandescente de 4.000°C",
+      "category": "Kagune / Kakuja",
+      "imageUrl": "",
+      "preset": "tatara-inferno",
+      "primaryColor": "#f97316",
+      "secondaryColor": "#dc2626",
+      "focalPoint": {
+        "x": 50,
+        "y": 36
+      }
+    },
+    "quote": {
+      "text": "Seu olho não presta para mim... Saia do meu caminho antes que até suas cinzas desapareçam.",
+      "arc": "Arco Aogiri",
+      "recipient": "Dita friamente ao inspecionar Ken Kaneki na base da Aogiri"
+    },
+    "maskOrEye": {
+      "title": "Máscara Respiradora Escarlate & Olhos Vermelhos de Tatara",
+      "type": "Máscara de Ghoul",
+      "imageUrl": "/characters/tatara.jpg",
+      "preset": "tatara-respirator",
+      "focalPoint": {
+        "x": 50,
+        "y": 35
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#f4f4f5",
+      "hairSecondary": "#a1a1aa",
+      "hairStyle": "short-spiky",
+      "skinTone": "#ebd8ca",
+      "eyeColor": "#dc2626",
+      "kakugan": "both",
+      "accessory": "mask_tatara",
+      "outfit": "aogiri",
+      "accentColor": "#ea580c"
+    },
+    "imagePosition": "center 32%"
+  },
+  {
+    "id": "noro",
+    "name": "Noro",
+    "aliases": [
+      "Noroi",
+      "Guardião de Eto"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Aogiri Tree"
+    ],
+    "rcTypes": [
+      "Bikaku"
+    ],
+    "rank": "Rank SS",
+    "debutArc": "Arco Aogiri",
+    "debutArcOrder": 4,
+    "epithet": "Boca Voraz da Aogiri",
+    "imageUrl": "/characters/noro.jpg",
+    "kaguneOrQuinque": {
+      "name": "Tentáculo Colossal Dentado Bikaku",
+      "category": "Kagune / Kakuja",
+      "imageUrl": "",
+      "preset": "noro-maw",
+      "primaryColor": "#991b1b",
+      "secondaryColor": "#fafafa",
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
+    },
+    "quote": {
+      "text": "...Estou indo na frente, Eto.",
+      "arc": "Extermínio dos Tsukiyama (:re)",
+      "recipient": "Única frase pronunciada ao despedir-se de Eto Yoshimura"
+    },
+    "maskOrEye": {
+      "title": "Máscara Branca Sem Olhos & Sorriso Pintado de Noro",
+      "type": "Máscara de Ghoul",
+      "imageUrl": "/characters/noro.jpg",
+      "preset": "noro-smile-mask",
+      "focalPoint": {
+        "x": 52,
+        "y": 28
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#1e1b4b",
+      "hairSecondary": "#312e81",
+      "hairStyle": "long-wild",
+      "skinTone": "#d4d4d8",
+      "eyeColor": "#18181b",
+      "kakugan": "both",
+      "accessory": "mask_noro",
+      "outfit": "aogiri",
+      "accentColor": "#991b1b"
+    },
+    "imagePosition": "52% 26%"
+  },
+  {
+    "id": "yakumo-oomori",
+    "name": "Yakumo Oomori",
+    "aliases": [
+      "Jason",
+      "Yamori",
+      "13's Jason"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Aogiri Tree"
+    ],
+    "rcTypes": [
+      "Rinkaku"
+    ],
+    "rank": "Rank S",
+    "debutArc": "Arco Aogiri",
+    "debutArcOrder": 4,
+    "epithet": "Jason da 13ª Ala (Yamori)",
+    "imageUrl": "/characters/yakumo-oomori.png",
+    "kaguneOrQuinque": {
+      "name": "Pinças Rinkaku & Meia-Kakuja de Yamori",
+      "category": "Kagune / Kakuja",
+      "imageUrl": "",
+      "preset": "yamori-kakuja",
+      "primaryColor": "#991b1b",
+      "secondaryColor": "#7f1d1d",
+      "focalPoint": {
+        "x": 55,
+        "y": 42
+      }
+    },
+    "quote": {
+      "text": "Quanto é mil menos sete? Conte em voz alta, devagar, para não perder a consciência!",
+      "arc": "Arco Aogiri",
+      "recipient": "Dita ao torturar Ken Kaneki na câmara xadrez da Aogiri"
+    },
+    "maskOrEye": {
+      "title": "Olhar Frio & Sorriso Ameaçador de Yamori",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/yakumo-oomori.png",
+      "preset": "hockey-mask",
+      "focalPoint": {
+        "x": 50,
+        "y": 35
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#f4f4f5",
+      "hairSecondary": "#d4d4d8",
+      "hairStyle": "slick-aristocrat",
+      "skinTone": "#ead4c3",
+      "eyeColor": "#71717a",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "suit",
+      "accentColor": "#b91c1c"
+    },
+    "imagePosition": "center 22%"
+  },
+  {
+    "id": "kurona-yasuhisa",
+    "name": "Kurona Yasuhisa",
+    "aliases": [
+      "Kuro",
+      "Floppy Negra"
+    ],
+    "gender": "Feminino",
+    "species": [
+      "Ghoul de Um Olho (Artificial)"
+    ],
+    "affiliations": [
+      "Goat"
+    ],
+    "rcTypes": [
+      "Rinkaku"
+    ],
+    "rank": "Rank SS",
+    "debutArc": "Pós-Aogiri",
+    "debutArcOrder": 5,
+    "epithet": "Kuro (Gêmea de Um Olho)",
+    "imageUrl": "/characters/kurona-yasuhisa.jpg",
+    "kaguneOrQuinque": {
+      "name": "Tentáculos Rinkaku Gêmeos & Kakuja Fusão",
+      "category": "Kagune / Kakuja",
+      "imageUrl": "",
+      "preset": "kurona-twin-rinkaku",
+      "primaryColor": "#dc2626",
+      "secondaryColor": "#18181b",
+      "focalPoint": {
+        "x": 48,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Shiro ainda vive aqui dentro de mim... E eu farei o Doutor Kanou pagar por cada pedaço da nossa vida que ele roubou.",
+      "arc": "Ilha Rue (:re)",
+      "recipient": "Dita ao confrontar Akihiro Kanou e Juuzou Suzuya"
+    },
+    "maskOrEye": {
+      "title": "Máscara Listrada Monocromática & Kakugan Esquerdo de Kuro",
+      "type": "Máscara & Kakugan",
+      "imageUrl": "/characters/kurona-yasuhisa.jpg",
+      "preset": "kurona-stripes",
+      "focalPoint": {
+        "x": 48,
+        "y": 32
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#18181b",
+      "hairSecondary": "#3f3f46",
+      "hairStyle": "long-flowing",
+      "skinTone": "#f6e7dc",
+      "eyeColor": "#27272a",
+      "kakugan": "left",
+      "accessory": "none",
+      "outfit": "goat",
+      "accentColor": "#dc2626"
+    },
+    "imagePosition": "center 24%"
+  },
+  {
+    "id": "roma-hoito",
+    "name": "Roma Hoito",
+    "aliases": [
+      "Mãe Escarlate",
+      "Fundadora dos Palhaços"
+    ],
+    "gender": "Feminino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Anteiku",
+      "Palhaços (Pierrot)"
+    ],
+    "rcTypes": [
+      "Rinkaku"
+    ],
+    "rank": "Rank SSS",
+    "debutArc": "Pós-Aogiri",
+    "debutArcOrder": 5,
+    "epithet": "Dodgy Mother (Mãe dos Palhaços)",
+    "imageUrl": "/characters/roma-hoito.jpg",
+    "kaguneOrQuinque": {
+      "name": "Kakuja Gigante do Palhaço Retorcido",
+      "category": "Kagune / Kakuja",
+      "imageUrl": "",
+      "preset": "clown-kakuja",
+      "primaryColor": "#e11d48",
+      "secondaryColor": "#facc15",
+      "focalPoint": {
+        "x": 52,
+        "y": 38
+      }
+    },
+    "quote": {
+      "text": "A tragédia do Kaneki-kun foi a melhor peça que eu já assisti em cinquenta anos! Que tédio seria viver sem caos!",
+      "arc": "Leilão (:re)",
+      "recipient": "Dita com euforia junto aos Palhaços durante o Leilão"
+    },
+    "maskOrEye": {
+      "title": "Sorriso Travesso & Presilha da Fundadora dos Palhaços",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/roma-hoito.jpg",
+      "preset": "pierrot-mask",
+      "focalPoint": {
+        "x": 35,
+        "y": 34
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#92400e",
+      "hairSecondary": "#b45309",
+      "hairStyle": "pinned-messy",
+      "skinTone": "#f8e8de",
+      "eyeColor": "#b45309",
+      "kakugan": "both",
+      "accessory": "hairpins",
+      "outfit": "clown",
+      "accentColor": "#e11d48"
+    },
+    "imagePosition": "38% 24%"
+  },
+  {
+    "id": "donato-porpora",
+    "name": "Donato Porpora",
+    "aliases": [
+      "Padre",
+      "Crown",
+      "Prisioneiro Russo"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Palhaços (Pierrot)"
+    ],
+    "rcTypes": [
+      "Koukaku"
+    ],
+    "rank": "Rank SS",
+    "debutArc": "Pós-Aogiri",
+    "debutArcOrder": 5,
+    "epithet": "Priest / Crown (Padre de Cochlea)",
+    "imageUrl": "/characters/donato-porpora.jpg",
+    "kaguneOrQuinque": {
+      "name": "Cruzes Koukaku & Clones de Sangue",
+      "category": "Kagune / Kakuja",
+      "imageUrl": "",
+      "preset": "cross-koukaku",
+      "primaryColor": "#991b1b",
+      "secondaryColor": "#d4d4d8",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Meu querido filho Kotaro... Você sempre fechou os olhos na porta do porão, fingindo não saber quem seu pai adotivo realmente era.",
+      "arc": "Dragon (:re)",
+      "recipient": "Dita para seu filho adotivo Kotaro Amon no duelo final"
+    },
+    "maskOrEye": {
+      "title": "Cavanhaque Branco & Olhar Penetrante do Padre Donato",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/donato-porpora.jpg",
+      "preset": "crown-priest",
+      "focalPoint": {
+        "x": 50,
+        "y": 34
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#d4d4d8",
+      "hairSecondary": "#71717a",
+      "hairStyle": "slick-elder",
+      "skinTone": "#ead7c8",
+      "eyeColor": "#52525b",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "clown",
+      "accentColor": "#991b1b"
+    },
+    "imagePosition": "center 26%"
+  },
+  {
+    "id": "karren-von-rosewald",
+    "name": "Karren von Rosewald",
+    "aliases": [
+      "Kanae von Rosewald",
+      "Servo de Shuu"
+    ],
+    "gender": "Feminino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Família Tsukiyama",
+      "Aogiri Tree"
+    ],
+    "rcTypes": [
+      "Rinkaku"
+    ],
+    "rank": "Rank S",
+    "debutArc": "Leilão (:re)",
+    "debutArcOrder": 7,
+    "epithet": "Kanae (Rosa Devota dos Tsukiyama)",
+    "imageUrl": "",
+    "kaguneOrQuinque": {
+      "name": "Rinkaku Carmesim Enxertada de Eto",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "rose-rinkaku",
+      "primaryColor": "#be123c",
+      "secondaryColor": "#881337",
+      "focalPoint": {
+        "x": 54,
+        "y": 42
+      }
+    },
+    "quote": {
+      "text": "Durma e viva, Senhor Shuu... Mesmo que meu nome seja esquecido, eu finalmente pude ser amada como quem eu sou.",
+      "arc": "Extermínio dos Tsukiyama (:re)",
+      "recipient": "Dita ao salvar Shuu Tsukiyama na queda do edifício Lunatic Eclipse"
+    },
+    "maskOrEye": {
+      "title": "Olhos Costurados por Eto & Rosa Sangrenta",
+      "type": "Máscara & Kakugan",
+      "imageUrl": "",
+      "preset": "rosewald-stitches",
+      "focalPoint": {
+        "x": 50,
+        "y": 46
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#881337",
+      "hairSecondary": "#9f1239",
+      "hairStyle": "parted-neat",
+      "skinTone": "#f7e7dc",
+      "eyeColor": "#9f1239",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "suit",
+      "accentColor": "#be123c"
+    }
+  },
+  {
+    "id": "touma-higemaru",
+    "name": "Touma Higemaru",
+    "aliases": [
+      "Higemaru",
+      "2ª Geração Quinx"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Quinx"
+    ],
+    "affiliations": [
+      "CCG",
+      "Esquadrão Quinx"
+    ],
+    "rcTypes": [
+      "Bikaku"
+    ],
+    "rank": "Rank 1 (Investigador)",
+    "debutArc": "Ilha Rue (:re)",
+    "debutArcOrder": 9,
+    "epithet": "Caçula Leal do Esquadrão Quinx",
+    "imageUrl": "/characters/touma-higemaru.png",
+    "imagePosition": "50% 34%",
+    "kaguneOrQuinque": {
+      "name": "Caudas Bikaku Quinx & Quinque Sentou",
+      "category": "Quinx Kagune",
+      "imageUrl": "",
+      "preset": "serpent-bikaku",
+      "primaryColor": "#ef4444",
+      "secondaryColor": "#71717a",
+      "focalPoint": {
+        "x": 48,
+        "y": 42
+      }
+    },
+    "quote": {
+      "text": "Mesmo que eu não seja o mais forte do Esquadrão Quinx, nunca deixarei um companheiro lutar sozinho!",
+      "arc": "Ilha Rue (:re)",
+      "recipient": "Apoiando Saiko Yonebayashi e Hsiao Ching-Li em operação da CCG"
+    },
+    "maskOrEye": {
+      "title": "Olhar Confiante de Touma Higemaru",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/touma-higemaru.png",
+      "preset": "scarecrow-hide",
+      "focalPoint": {
+        "x": 51,
+        "y": 47
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#78350f",
+      "hairSecondary": "#92400e",
+      "hairStyle": "parted-neat",
+      "skinTone": "#f5e4d7",
+      "eyeColor": "#52525b",
+      "kakugan": "left",
+      "accessory": "none",
+      "outfit": "ccg",
+      "accentColor": "#ef4444"
+    }
+  },
+  {
+    "id": "shinsanpei-aura",
+    "name": "Shinsanpei Aura",
+    "aliases": [
+      "Aura",
+      "Sobrinho de Kiyoko Aura",
+      "2ª Geração Quinx"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Quinx"
+    ],
+    "affiliations": [
+      "CCG",
+      "Esquadrão Quinx"
+    ],
+    "rcTypes": [
+      "Koukaku"
+    ],
+    "rank": "Rank 1 (Investigador)",
+    "debutArc": "Ilha Rue (:re)",
+    "debutArcOrder": 9,
+    "epithet": "Vingador da Família Aura (Quinx)",
+    "imageUrl": "/characters/shinsanpei-aura.jpg",
+    "imagePosition": "45% 24%",
+    "kaguneOrQuinque": {
+      "name": "Lâmina Koukaku Quinx & Quinque Zaki",
+      "category": "Quinx Kagune",
+      "imageUrl": "",
+      "preset": "urie-koukaku",
+      "primaryColor": "#dc2626",
+      "secondaryColor": "#3f3f46",
+      "focalPoint": {
+        "x": 52,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Eu jamais perdoarei o Rei de Um Olho pelo que aconteceu com a minha tia Kiyoko... Eu mesmo vou derrubá-lo!",
+      "arc": "Dragon (:re)",
+      "recipient": "Juramento de vingança ao lado de Tooru Mutsuki contra Ken Kaneki"
+    },
+    "maskOrEye": {
+      "title": "Rastro Luminoso do Kakugan Direito de Aura",
+      "type": "Máscara & Kakugan",
+      "imageUrl": "/characters/shinsanpei-aura.jpg",
+      "preset": "urie-moles",
+      "focalPoint": {
+        "x": 43,
+        "y": 24
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#18181b",
+      "hairSecondary": "#27272a",
+      "hairStyle": "messy-bangs",
+      "skinTone": "#e5e5e5",
+      "eyeColor": "#3f3f46",
+      "kakugan": "right",
+      "accessory": "none",
+      "outfit": "ccg",
+      "accentColor": "#dc2626"
+    }
+  },
+  {
+    "id": "hsiao-ching-li",
+    "name": "Hsiao Ching-Li",
+    "aliases": [
+      "Ching-Li Hsiao",
+      "Jardim Ensolarado",
+      "2ª Geração Quinx"
+    ],
+    "gender": "Feminino",
+    "species": [
+      "Meio-Humano",
+      "Quinx"
+    ],
+    "affiliations": [
+      "CCG",
+      "Esquadrão Quinx"
+    ],
+    "rcTypes": [
+      "Ukaku"
+    ],
+    "rank": "Primeira Classe",
+    "debutArc": "Ilha Rue (:re)",
+    "debutArcOrder": 9,
+    "epithet": "Especialista Marcial do Jardim Ensolarado",
+    "imageUrl": "/characters/hsiao-ching-li.png",
+    "imagePosition": "48% 22%",
+    "kaguneOrQuinque": {
+      "name": "Lâminas Duplas Ukaku & Combate Corpo a Corpo",
+      "category": "Quinx Kagune",
+      "imageUrl": "",
+      "preset": "twin-ukaku-wings",
+      "primaryColor": "#e11d48",
+      "secondaryColor": "#52525b",
+      "focalPoint": {
+        "x": 55,
+        "y": 36
+      }
+    },
+    "quote": {
+      "text": "Não se atreva a encostar na Saiko-senpai! Enquanto eu estiver aqui, ninguém tocará no Esquadrão Quinx!",
+      "arc": "Ilha Rue (:re)",
+      "recipient": "Protegendo Saiko Yonebayashi e Kuki Urie em combate"
+    },
+    "maskOrEye": {
+      "title": "Franja Reta & Olhar Intenso de Hsiao Ching-Li",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/hsiao-ching-li.png",
+      "preset": "akira-gaze",
+      "focalPoint": {
+        "x": 52,
+        "y": 26
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#18181b",
+      "hairSecondary": "#27272a",
+      "hairStyle": "cute-bob",
+      "skinTone": "#f4e4d7",
+      "eyeColor": "#27272a",
+      "kakugan": "left",
+      "accessory": "none",
+      "outfit": "ccg",
+      "accentColor": "#e11d48"
+    }
+  },
+  {
+    "id": "kaya-irimi",
+    "name": "Kaya Irimi",
+    "aliases": [
+      "Black Dobers",
+      "Dobermann Negra",
+      "Cão Negro"
+    ],
+    "gender": "Feminino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Anteiku",
+      "Goat"
+    ],
+    "rcTypes": [
+      "Ukaku"
+    ],
+    "rank": "Rank SS",
+    "debutArc": "Arco dos Pombos",
+    "debutArcOrder": 2,
+    "epithet": "Black Dobers (Dobermann Negra)",
+    "imageUrl": "/characters/kaya-irimi.jpg",
+    "imagePosition": "center 24%",
+    "kaguneOrQuinque": {
+      "name": "Asas Supersônicas Ukaku dos Black Dobers",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "twin-ukaku-wings",
+      "primaryColor": "#dc2626",
+      "secondaryColor": "#18181b",
+      "focalPoint": {
+        "x": 54,
+        "y": 36
+      }
+    },
+    "quote": {
+      "text": "O Gerente Yoshimura nos ensinou a viver com dignidade... Se a Anteiku cair hoje, lutarei para proteger a rota dos meus companheiros!",
+      "arc": "Ataque à Anteiku",
+      "recipient": "Enfrentando Chu Hachikawa e o esquadrão da CCG na 20ª Ala"
+    },
+    "maskOrEye": {
+      "title": "Olhar Sereno de Barista da Dobermann Negra",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/kaya-irimi.jpg",
+      "preset": "akira-gaze",
+      "focalPoint": {
+        "x": 46,
+        "y": 36
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#27272a",
+      "hairSecondary": "#18181b",
+      "hairStyle": "long-parted",
+      "skinTone": "#f5e3d6",
+      "eyeColor": "#27272a",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "anteiku",
+      "accentColor": "#dc2626"
+    }
+  },
+  {
+    "id": "enji-koma",
+    "name": "Enji Koma",
+    "aliases": [
+      "Devil Ape",
+      "Macaco Demônio",
+      "Mestre do Café"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Anteiku",
+      "Goat"
+    ],
+    "rcTypes": [
+      "Bikaku"
+    ],
+    "rank": "Rank SS",
+    "debutArc": "Arco Aogiri",
+    "debutArcOrder": 4,
+    "epithet": "Devil Ape (Macaco Demônio)",
+    "imageUrl": "/characters/enji-koma.jpg",
+    "imagePosition": "center 20%",
+    "kaguneOrQuinque": {
+      "name": "Cauda Pesada Bikaku dos Macacos Demônios",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "serpent-bikaku",
+      "primaryColor": "#b91c1c",
+      "secondaryColor": "#78350f",
+      "focalPoint": {
+        "x": 48,
+        "y": 42
+      }
+    },
+    "quote": {
+      "text": "O orgulhoso Macaco Demônio jamais abandona seu balcão! Venham provar a força da Anteiku, investigadores!",
+      "arc": "Ataque à Anteiku",
+      "recipient": "Enfrentando Mougan Tanakamaru na linha de frente da 20ª Ala"
+    },
+    "maskOrEye": {
+      "title": "Topete Castanho & Semblante do Mestre Barista",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/enji-koma.jpg",
+      "preset": "yoshimura-eyes",
+      "focalPoint": {
+        "x": 54,
+        "y": 28
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#92400e",
+      "hairSecondary": "#78350f",
+      "hairStyle": "slick-aristocrat",
+      "skinTone": "#f5e2d3",
+      "eyeColor": "#78350f",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "anteiku",
+      "accentColor": "#b91c1c"
+    }
+  },
+  {
+    "id": "kazuichi-banjou",
+    "name": "Kazuichi Banjou",
+    "aliases": [
+      "Banjou Kazuichi",
+      "Banjou",
+      "Líder da 11ª Ala"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Aogiri Tree",
+      "Goat"
+    ],
+    "rcTypes": [
+      "Ukaku"
+    ],
+    "rank": "Rank A",
+    "debutArc": "Arco Aogiri",
+    "debutArcOrder": 4,
+    "epithet": "Ex-Líder da 11ª Ala / Curandeiro de Goat",
+    "imageUrl": "/characters/kazuichi-banjou.jpg",
+    "imagePosition": "center 25%",
+    "kaguneOrQuinque": {
+      "name": "Kagune Ukaku Regenerativa",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "blaze-wing-ukaku",
+      "primaryColor": "#f59e0b",
+      "secondaryColor": "#10b981",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Kaneki-san... Mesmo que eu não seja forte em combate como você, eu jurei seguir seus passos e proteger aqueles que não podem lutar!",
+      "arc": "Arco Aogiri",
+      "recipient": "Declarando lealdade a Ken Kaneki após fugirem da fortaleza da Aogiri"
+    },
+    "maskOrEye": {
+      "title": "Cavanhaque Espiral & Olhar Leal de Banjou",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/kazuichi-banjou.jpg",
+      "preset": "scarecrow-hide",
+      "focalPoint": {
+        "x": 50,
+        "y": 32
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#a16207",
+      "hairSecondary": "#78350f",
+      "hairStyle": "short-spiky",
+      "skinTone": "#f5e2d5",
+      "eyeColor": "#71717a",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "casual",
+      "accentColor": "#eab308"
+    }
+  },
+  {
+    "id": "naki",
+    "name": "Naki",
+    "aliases": [
+      "Braço Direito de Yamori",
+      "Líder dos Ternos Brancos",
+      "White Suits"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Aogiri Tree",
+      "Goat"
+    ],
+    "rcTypes": [
+      "Koukaku"
+    ],
+    "rank": "Rank S",
+    "debutArc": "Pós-Aogiri",
+    "debutArcOrder": 5,
+    "epithet": "Líder dos Ternos Brancos (White Suits)",
+    "imageUrl": "/characters/naki.jpg",
+    "imagePosition": "center 30%",
+    "kaguneOrQuinque": {
+      "name": "Espada Espiral Koukaku de Naki",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "spiral-koukaku",
+      "primaryColor": "#facc15",
+      "secondaryColor": "#dc2626",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Irmão Yamori! Eu vou chorar quantas vezes forem precisas, mas nunca vou esquecer o que você me ensinou!",
+      "arc": "Pós-Aogiri",
+      "recipient": "Chorando e jurando lealdade à memória de Yakumo Oomori (Jason)"
+    },
+    "maskOrEye": {
+      "title": "Olhar em Pranto & Cabelos Loiros Penteados de Naki",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/naki.jpg",
+      "preset": "arima-glasses",
+      "focalPoint": {
+        "x": 45,
+        "y": 35
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#fde047",
+      "hairSecondary": "#ca8a04",
+      "hairStyle": "slick-aristocrat",
+      "skinTone": "#f5e6da",
+      "eyeColor": "#dc2626",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "suit",
+      "accentColor": "#eab308"
+    }
+  },
+  {
+    "id": "miza-kusakari",
+    "name": "Miza Kusakari",
+    "aliases": [
+      "Três Lâminas",
+      "Three Blades",
+      "Líder das Lâminas"
+    ],
+    "gender": "Feminino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Aogiri Tree",
+      "Goat"
+    ],
+    "rcTypes": [
+      "Bikaku"
+    ],
+    "rank": "Rank S",
+    "debutArc": "Leilão (:re)",
+    "debutArcOrder": 7,
+    "epithet": "Three Blades (Três Lâminas da 18ª Ala)",
+    "imageUrl": "/characters/miza-kusakari.jpg",
+    "imagePosition": "center 22%",
+    "kaguneOrQuinque": {
+      "name": "Três Lâminas Afiadas Bikaku",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "serpent-bikaku",
+      "primaryColor": "#a855f7",
+      "secondaryColor": "#7c3aed",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "O sangue dos meus ancestrais não aceitará fraqueza. Enquanto eu empunhar minhas três lâminas, protegerei o meu bando até o fim.",
+      "arc": "Ilha Rue (:re)",
+      "recipient": "Confrontando Hanbee Abara e os esquadrões da CCG na Ilha Rue"
+    },
+    "maskOrEye": {
+      "title": "Tranças Lilases & Olhar Calmo de Miza",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/miza-kusakari.jpg",
+      "preset": "akira-gaze",
+      "focalPoint": {
+        "x": 52,
+        "y": 35
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#a855f7",
+      "hairSecondary": "#7c3aed",
+      "hairStyle": "cute-bob",
+      "skinTone": "#f8e8de",
+      "eyeColor": "#581c87",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "aogiri",
+      "accentColor": "#a855f7"
+    }
+  },
+  {
+    "id": "nashiro-yasuhisa",
+    "name": "Nashiro Yasuhisa",
+    "aliases": [
+      "Shiro",
+      "Floppy Branca",
+      "Gêmea de Branco"
+    ],
+    "gender": "Feminino",
+    "species": [
+      "Ghoul de Um Olho (Artificial)"
+    ],
+    "affiliations": [
+      "Aogiri Tree"
+    ],
+    "rcTypes": [
+      "Rinkaku"
+    ],
+    "rank": "Rank SS",
+    "debutArc": "Pós-Aogiri",
+    "debutArcOrder": 5,
+    "epithet": "Shiro (Gêmea Branca de Um Olho)",
+    "imageUrl": "/characters/nashiro-yasuhisa.png",
+    "imagePosition": "center 24%",
+    "kaguneOrQuinque": {
+      "name": "Tentáculos Rinkaku Escarlates Enxertados de Rize",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "rize-rinkaku",
+      "primaryColor": "#dc2626",
+      "secondaryColor": "#e4e4e7",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Kurona e eu somos uma só... Ninguém jamais vai nos separar de novo, nem mesmo a CCG!",
+      "arc": "Pós-Aogiri",
+      "recipient": "Lutando em dupla com Kurona contra Juuzou Suzuya no laboratório de Kanou"
+    },
+    "maskOrEye": {
+      "title": "Cabelos Brancos & Kakugan Direito de Shiro",
+      "type": "Máscara & Kakugan",
+      "imageUrl": "/characters/nashiro-yasuhisa.png",
+      "preset": "kurona-stripes",
+      "focalPoint": {
+        "x": 51,
+        "y": 34
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#f4f4f5",
+      "hairSecondary": "#cbd5e1",
+      "hairStyle": "cute-bob",
+      "skinTone": "#f6e7dc",
+      "eyeColor": "#71717a",
+      "kakugan": "right",
+      "accessory": "none",
+      "outfit": "casual",
+      "accentColor": "#dc2626"
+    }
+  },
+  {
+    "id": "akihiro-kanou",
+    "name": "Akihiro Kanou",
+    "aliases": [
+      "Doutor Kanou",
+      "Dr. Kanou",
+      "O Cirurgião de Ghouls",
+      "Professor Kanou"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Humano"
+    ],
+    "affiliations": [
+      "Aogiri Tree",
+      "CCG"
+    ],
+    "rcTypes": [
+      "Nenhuma"
+    ],
+    "rank": "Civil",
+    "debutArc": "Arco da Intro",
+    "debutArcOrder": 1,
+    "epithet": "O Cirurgião dos Ghouls Artificiais",
+    "imageUrl": "/characters/akihiro-kanou.jpg",
+    "imagePosition": "center 22%",
+    "kaguneOrQuinque": {
+      "name": "Laboratório de Cirurgia & Enxerto de Kakuhou",
+      "category": "Biotecnologia RC",
+      "imageUrl": "",
+      "preset": "hide-intel",
+      "primaryColor": "#0284c7",
+      "secondaryColor": "#dc2626",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "O mundo dos humanos está enjaulado em uma mentira conveniente. Para libertar a humanidade, eu criei uma ponte de carne e sangue entre homem e monstro.",
+      "arc": "Pós-Aogiri",
+      "recipient": "Explicando seus experimentos a Ken Kaneki no laboratório subterrâneo"
+    },
+    "maskOrEye": {
+      "title": "Olhar Sorridente & Jaleco Médico do Dr. Kanou",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/akihiro-kanou.jpg",
+      "preset": "scarecrow-hide",
+      "focalPoint": {
+        "x": 50,
+        "y": 35
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#d4d4d8",
+      "hairSecondary": "#9ca3af",
+      "hairStyle": "parted-neat",
+      "skinTone": "#f5e6da",
+      "eyeColor": "#78350f",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "casual",
+      "accentColor": "#0284c7"
+    }
+  },
+  {
+    "id": "shachi",
+    "name": "Matasaka Kamishiro (Shachi)",
+    "aliases": [
+      "Shachi",
+      "Matasaka Kamishiro",
+      "Líder da 6ª Ala",
+      "Pai Adotivo de Rize"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Aogiri Tree"
+    ],
+    "rcTypes": [
+      "Bikaku"
+    ],
+    "rank": "Rank SS",
+    "debutArc": "Pós-Aogiri",
+    "debutArcOrder": 5,
+    "epithet": "Shachi (Orca da 6ª Ala / Mestre Marcial)",
+    "imageUrl": "/characters/shachi.jpg",
+    "imagePosition": "center 24%",
+    "kaguneOrQuinque": {
+      "name": "Cauda Poderosa Bikaku & Artes Marciais Supremas",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "serpent-bikaku",
+      "primaryColor": "#0f172a",
+      "secondaryColor": "#dc2626",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Seus movimentos são descuidados, garoto! Confiar apenas na força bruta da Kagune sem disciplina marcial não passa de vaidade vazia!",
+      "arc": "Pós-Aogiri",
+      "recipient": "Derrotando Ken Kaneki facilmente durante o confronto em Cochlea"
+    },
+    "maskOrEye": {
+      "title": "Bigode Longo & Olhar Severo do Mestre Shachi",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/shachi.jpg",
+      "preset": "yoshimura-eyes",
+      "focalPoint": {
+        "x": 53,
+        "y": 38
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#18181b",
+      "hairSecondary": "#27272a",
+      "hairStyle": "long-wild",
+      "skinTone": "#e5d5c5",
+      "eyeColor": "#18181b",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "casual",
+      "accentColor": "#1e293b"
+    }
+  },
+  {
+    "id": "itori",
+    "name": "Itori",
+    "aliases": [
+      "Informante dos Palhaços",
+      "Dona do Bar Helter Skelter"
+    ],
+    "gender": "Feminino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Palhaços (Pierrot)"
+    ],
+    "rcTypes": [
+      "Bikaku"
+    ],
+    "rank": "Rank SS",
+    "debutArc": "Arco Gourmet",
+    "debutArcOrder": 3,
+    "epithet": "Informante do Helter Skelter (Palhaços)",
+    "imageUrl": "/characters/itori.png",
+    "imagePosition": "center 24%",
+    "kaguneOrQuinque": {
+      "name": "Tentáculo Furtivo Bikaku dos Palhaços",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "serpent-bikaku",
+      "primaryColor": "#ea580c",
+      "secondaryColor": "#e11d48",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Informações nunca são de graça, Kaneki-kun... O que você tem para me oferecer em troca da verdade sobre a Rize?",
+      "arc": "Arco Gourmet",
+      "recipient": "Sussurrando segredos para Ken Kaneki no balcão do bar Helter Skelter"
+    },
+    "maskOrEye": {
+      "title": "Olhar Sedutor & Gargantilha de Itori",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/itori.png",
+      "preset": "akira-gaze",
+      "focalPoint": {
+        "x": 50,
+        "y": 38
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#ea580c",
+      "hairSecondary": "#c2410c",
+      "hairStyle": "long-flowing",
+      "skinTone": "#f8e7dc",
+      "eyeColor": "#9a3412",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "clown",
+      "accentColor": "#ea580c"
+    }
+  },
+  {
+    "id": "nico",
+    "name": "Nico",
+    "aliases": [
+      "Palhaço Nico",
+      "Pierrot Nico",
+      "Amigo de Yamori"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Palhaços (Pierrot)",
+      "Aogiri Tree"
+    ],
+    "rcTypes": [
+      "Rinkaku"
+    ],
+    "rank": "Rank A",
+    "debutArc": "Arco Aogiri",
+    "debutArcOrder": 4,
+    "epithet": "O Palhaço Extravagante (Pierrot)",
+    "imageUrl": "/characters/nico.jpg",
+    "imagePosition": "center 22%",
+    "kaguneOrQuinque": {
+      "name": "Kagune Rinkaku Curativa de Nico",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "centipede-rinkaku",
+      "primaryColor": "#ec4899",
+      "secondaryColor": "#7c3aed",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Ai, queridos... O mundo fica tão mais divertido quando a gente para de se preocupar e simplesmente assiste ao circo pegar fogo!",
+      "arc": "Arco Aogiri",
+      "recipient": "Conversando com Ken Kaneki e os membros da Aogiri Tree"
+    },
+    "maskOrEye": {
+      "title": "Óculos de Sol no Topo da Cabeça & Sorriso de Nico",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/nico.jpg",
+      "preset": "akira-gaze",
+      "focalPoint": {
+        "x": 55,
+        "y": 35
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#18181b",
+      "hairSecondary": "#27272a",
+      "hairStyle": "undercut-long",
+      "skinTone": "#f5e6da",
+      "eyeColor": "#18181b",
+      "kakugan": "both",
+      "accessory": "glasses",
+      "outfit": "clown",
+      "accentColor": "#ec4899"
+    }
+  },
+  {
+    "id": "yukinori-shinohara",
+    "name": "Yukinori Shinohara",
+    "aliases": [
+      "Investigador Shinohara",
+      "Mentor de Suzuya",
+      "Portador da Arata"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Humano"
+    ],
+    "affiliations": [
+      "CCG"
+    ],
+    "rcTypes": [
+      "Quinque"
+    ],
+    "rank": "Classe Especial",
+    "debutArc": "Arco Aogiri",
+    "debutArcOrder": 4,
+    "epithet": "Investigador de Classe Especial / Mentor de Juuzou",
+    "imageUrl": "/characters/yukinori-shinohara.jpg",
+    "imagePosition": "center 24%",
+    "kaguneOrQuinque": {
+      "name": "Demon Yamada 1 & Armadura Arata Proto",
+      "category": "Quinque",
+      "imageUrl": "",
+      "preset": "ixa-narukami",
+      "primaryColor": "#94a3b8",
+      "secondaryColor": "#dc2626",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Juuzou, você não é apenas uma arma... Se você morrer aqui, haverá pessoas que sentirão sua falta. Lembre-se sempre disso.",
+      "arc": "Ataque à Anteiku",
+      "recipient": "Aconselhando Juuzou Suzuya antes do cerco da CCG contra a Coruja Não-Matadora"
+    },
+    "maskOrEye": {
+      "title": "Cavanhaque Grisalho & Olhar Paternal de Shinohara",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/yukinori-shinohara.jpg",
+      "preset": "scarecrow-hide",
+      "focalPoint": {
+        "x": 50,
+        "y": 35
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#52525b",
+      "hairSecondary": "#3f3f46",
+      "hairStyle": "parted-neat",
+      "skinTone": "#f5e2d5",
+      "eyeColor": "#3f3f46",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "ccg",
+      "accentColor": "#64748b"
+    }
+  },
+  {
+    "id": "iwao-kuroiwa",
+    "name": "Iwao Kuroiwa",
+    "aliases": [
+      "Investigador Kuroiwa",
+      "Iwacho",
+      "Pai de Takeomi Kuroiwa"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Humano"
+    ],
+    "affiliations": [
+      "CCG"
+    ],
+    "rcTypes": [
+      "Quinque"
+    ],
+    "rank": "Classe Especial",
+    "debutArc": "Arco Aogiri",
+    "debutArcOrder": 4,
+    "epithet": "Veterano Inabalável da CCG / Classe Especial",
+    "imageUrl": "/characters/iwao-kuroiwa.png",
+    "imagePosition": "center 22%",
+    "kaguneOrQuinque": {
+      "name": "Armadura Arata Proto & Espada Pesada Kuroiwa Special",
+      "category": "Quinque",
+      "imageUrl": "",
+      "preset": "ixa-narukami",
+      "primaryColor": "#334155",
+      "secondaryColor": "#e2e8f0",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Mesmo que nossos ossos quebrem sob o peso da armadura Arata, o dever de um investigador de Classe Especial é permanecer de pé na frente de batalha!",
+      "arc": "Ataque à Anteiku",
+      "recipient": "Lutando ombro a ombro com Shinohara contra a Coruja Não-Matadora"
+    },
+    "maskOrEye": {
+      "title": "Sobrancelhas Espessas & Expressão Austera de Kuroiwa",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/iwao-kuroiwa.png",
+      "preset": "scarecrow-hide",
+      "focalPoint": {
+        "x": 58,
+        "y": 32
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#18181b",
+      "hairSecondary": "#27272a",
+      "hairStyle": "slick-elder",
+      "skinTone": "#e5d5c5",
+      "eyeColor": "#18181b",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "ccg",
+      "accentColor": "#334155"
+    }
+  },
+  {
+    "id": "ui-koori",
+    "name": "Koori Ui",
+    "aliases": [
+      "Ui Koori",
+      "Ui",
+      "Prodígio de Arima",
+      "Diretor de Assuntos Gerais"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Humano"
+    ],
+    "affiliations": [
+      "CCG"
+    ],
+    "rcTypes": [
+      "Quinque"
+    ],
+    "rank": "Classe Especial",
+    "debutArc": "Ataque à Anteiku",
+    "debutArcOrder": 6,
+    "epithet": "O Discípulo Pródigo de Arima / Classe Especial",
+    "imageUrl": "/characters/ui-koori.jpg",
+    "imagePosition": "center 22%",
+    "kaguneOrQuinque": {
+      "name": "Quinque Koukaku Taruhi",
+      "category": "Quinque",
+      "imageUrl": "",
+      "preset": "ixa-narukami",
+      "primaryColor": "#e2e8f0",
+      "secondaryColor": "#38bdf8",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Arima-san sempre carregou o fardo de ser o Ceifador invencível... Mas eu teria dado tudo para trazer Hairu de volta à vida.",
+      "arc": "Ilha Rue (:re)",
+      "recipient": "Desabafando sobre Hairu Ihei e Kishou Arima após a queda da CCG tradicional"
+    },
+    "maskOrEye": {
+      "title": "Corte Bob Bicolor & Olhar Solene de Koori Ui",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/ui-koori.jpg",
+      "preset": "akira-gaze",
+      "focalPoint": {
+        "x": 51,
+        "y": 22
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#18181b",
+      "hairSecondary": "#f4f4f5",
+      "hairStyle": "side-bang-bob",
+      "skinTone": "#f5e6da",
+      "eyeColor": "#27272a",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "ccg",
+      "accentColor": "#38bdf8"
+    }
+  },
+  {
+    "id": "itsuki-marude",
+    "name": "Itsuki Marude",
+    "aliases": [
+      "Comandante Marude",
+      "Marude",
+      "Diretor do Birô"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Humano"
+    ],
+    "affiliations": [
+      "CCG"
+    ],
+    "rcTypes": [
+      "Quinque"
+    ],
+    "rank": "Classe Especial",
+    "debutArc": "Arco Aogiri",
+    "debutArcOrder": 4,
+    "epithet": "Estrategista Supremo da CCG / Caçador de Washuu",
+    "imageUrl": "/characters/itsuki-marude.png",
+    "imagePosition": "center 24%",
+    "kaguneOrQuinque": {
+      "name": "Rifle Tático de Q-Bullets & Comando Estratégico",
+      "category": "Tática / Arma de Fogo",
+      "imageUrl": "",
+      "preset": "hide-intel",
+      "primaryColor": "#334155",
+      "secondaryColor": "#e2e8f0",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Eu não preciso de Quinques extravagantes quando posso meter uma bala de chumbo quente entre os olhos de um Washuu traidor!",
+      "arc": "Ilha Rue (:re)",
+      "recipient": "Confrontando Yoshitoki Washuu no quartel-general da CCG"
+    },
+    "maskOrEye": {
+      "title": "Sorriso Irônico & Olhar Cínico do Comandante Marude",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/itsuki-marude.png",
+      "preset": "scarecrow-hide",
+      "focalPoint": {
+        "x": 50,
+        "y": 32
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#1e293b",
+      "hairSecondary": "#0f172a",
+      "hairStyle": "parted-neat",
+      "skinTone": "#f5e4d7",
+      "eyeColor": "#1e293b",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "ccg",
+      "accentColor": "#334155"
+    }
+  },
+  {
+    "id": "tsuneyoshi-washuu",
+    "name": "Tsuneyoshi Washuu",
+    "aliases": [
+      "O Presidente Washuu",
+      "Patriarca do Clã Washuu",
+      "Pai de Arima e Furuta"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "CCG",
+      "V"
+    ],
+    "rcTypes": [
+      "Koukaku"
+    ],
+    "rank": "Classe Especial",
+    "debutArc": "Ataque à Anteiku",
+    "debutArcOrder": 6,
+    "epithet": "O Patriarca Supremo da CCG & Clã Washuu",
+    "imageUrl": "/characters/tsuneyoshi-washuu.jpg",
+    "imagePosition": "center 26%",
+    "kaguneOrQuinque": {
+      "name": "Kakuja Washuu Ancestral & Autoridade da CCG",
+      "category": "Kagune / Kakuja",
+      "imageUrl": "",
+      "preset": "owl-kakuja",
+      "primaryColor": "#b91c1c",
+      "secondaryColor": "#18181b",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "A CCG e o Clã Washuu são os pilares que sustentam a ordem sobre este tabuleiro. Nenhum ghoul ou humano escapará do nosso equilíbrio.",
+      "arc": "Ataque à Anteiku",
+      "recipient": "Discursando sobre o decreto de extermínio da Coruja da 20ª Ala"
+    },
+    "maskOrEye": {
+      "title": "Longa Barba Branca & Olhar Impiedoso do Patriarca Washuu",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/tsuneyoshi-washuu.jpg",
+      "preset": "yoshimura-eyes",
+      "focalPoint": {
+        "x": 50,
+        "y": 34
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#d4d4d8",
+      "hairSecondary": "#a1a1aa",
+      "hairStyle": "slick-elder",
+      "skinTone": "#e5d5c5",
+      "eyeColor": "#3f3f46",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "ccg",
+      "accentColor": "#991b1b"
+    }
+  },
+  {
+    "id": "yoshitoki-washuu",
+    "name": "Yoshitoki Washuu",
+    "aliases": [
+      "Diretor-Geral da CCG",
+      "Filho de Tsuneyoshi",
+      "Pai de Matsuri"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "CCG",
+      "V"
+    ],
+    "rcTypes": [
+      "Koukaku"
+    ],
+    "rank": "Classe Especial",
+    "debutArc": "Ataque à Anteiku",
+    "debutArcOrder": 6,
+    "epithet": "Diretor-Geral da CCG",
+    "imageUrl": "/characters/yoshitoki-washuu.jpg",
+    "imagePosition": "center 24%",
+    "kaguneOrQuinque": {
+      "name": "Kagune Kakuja Washuu Oculta & Quinque",
+      "category": "Kagune / Kakuja",
+      "imageUrl": "",
+      "preset": "spiral-koukaku",
+      "primaryColor": "#7f1d1d",
+      "secondaryColor": "#18181b",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Marude... Você foi um dos meus melhores amigos nesta instituição. É uma pena que tenhamos chegado a este ponto.",
+      "arc": "Ilha Rue (:re)",
+      "recipient": "Momentos antes de ser desmascarado como ghoul e morto por Marude"
+    },
+    "maskOrEye": {
+      "title": "Cavanhaque Discreto & Olhar Sereno de Yoshitoki Washuu",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/yoshitoki-washuu.jpg",
+      "preset": "scarecrow-hide",
+      "focalPoint": {
+        "x": 45,
+        "y": 38
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#18181b",
+      "hairSecondary": "#27272a",
+      "hairStyle": "long-parted",
+      "skinTone": "#f5e6da",
+      "eyeColor": "#27272a",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "ccg",
+      "accentColor": "#7f1d1d"
+    }
+  },
+  {
+    "id": "matsuri-washuu",
+    "name": "Matsuri Washuu",
+    "aliases": [
+      "Comandante Matsuri",
+      "Herdeiro dos Washuu",
+      "Diretor da 2ª Divisão"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "CCG",
+      "V"
+    ],
+    "rcTypes": [
+      "Koukaku"
+    ],
+    "rank": "Classe Especial",
+    "debutArc": "Leilão (:re)",
+    "debutArcOrder": 7,
+    "epithet": "O Herdeiro Ambicioso do Clã Washuu",
+    "imageUrl": "/characters/matsuri-washuu.jpg",
+    "imagePosition": "center 24%",
+    "kaguneOrQuinque": {
+      "name": "Espada Cerimonial Washuu & Armadura Quinque",
+      "category": "Quinque",
+      "imageUrl": "",
+      "preset": "ixa-narukami",
+      "primaryColor": "#475569",
+      "secondaryColor": "#991b1b",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Urie! Minha linhagem nobre não pode perecer! Eu preciso de você ao meu lado para governar a nova CCG!",
+      "arc": "Dragon (:re)",
+      "recipient": "Suplicando a Kuki Urie enquanto lutava sem roupas de forma cômica e desesperada"
+    },
+    "maskOrEye": {
+      "title": "Óculos Retangulares & Cabelos Puxados de Matsuri Washuu",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/matsuri-washuu.jpg",
+      "preset": "arima-glasses",
+      "focalPoint": {
+        "x": 50,
+        "y": 35
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#18181b",
+      "hairSecondary": "#27272a",
+      "hairStyle": "slick-aristocrat",
+      "skinTone": "#f5e4d7",
+      "eyeColor": "#18181b",
+      "kakugan": "both",
+      "accessory": "glasses",
+      "outfit": "ccg",
+      "accentColor": "#991b1b"
+    }
+  },
+  {
+    "id": "take-hirako",
+    "name": "Take Hirako",
+    "aliases": [
+      "Hirako",
+      "Parceiro de Arima",
+      "Líder do Esquadrão Hirako"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Humano"
+    ],
+    "affiliations": [
+      "CCG",
+      "Goat"
+    ],
+    "rcTypes": [
+      "Quinque"
+    ],
+    "rank": "Primeira Classe",
+    "debutArc": "Arco Aogiri",
+    "debutArcOrder": 4,
+    "epithet": "O Homem Sem Expressão / Seguidor de Arima",
+    "imageUrl": "/characters/take-hirako.jpg",
+    "imagePosition": "center 24%",
+    "kaguneOrQuinque": {
+      "name": "Quinque Koukaku Nagomi 1/3 & Yukimura 1/3",
+      "category": "Quinque",
+      "imageUrl": "",
+      "preset": "ixa-narukami",
+      "primaryColor": "#94a3b8",
+      "secondaryColor": "#38bdf8",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Arima-san me deixou apenas uma ordem antes de morrer: Apoie Ken Kaneki. Minha demissão da CCG já foi entregue.",
+      "arc": "Ilha Rue (:re)",
+      "recipient": "Confrontando Ui Koori em Cochlea para permitir a fuga do novo Rei de Um Olho"
+    },
+    "maskOrEye": {
+      "title": "Olhar Entediado & Cabelo Tijelinha de Take Hirako",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/take-hirako.jpg",
+      "preset": "arima-glasses",
+      "focalPoint": {
+        "x": 48,
+        "y": 28
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#a1a1aa",
+      "hairSecondary": "#71717a",
+      "hairStyle": "parted-neat",
+      "skinTone": "#f5e6da",
+      "eyeColor": "#52525b",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "ccg",
+      "accentColor": "#94a3b8"
+    }
+  },
+  {
+    "id": "takeomi-kuroiwa",
+    "name": "Takeomi Kuroiwa",
+    "aliases": [
+      "Takeomi",
+      "Kuroiwa Jr.",
+      "Filho de Iwao Kuroiwa"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Humano"
+    ],
+    "affiliations": [
+      "CCG"
+    ],
+    "rcTypes": [
+      "Quinque"
+    ],
+    "rank": "Primeira Classe",
+    "debutArc": "Leilão (:re)",
+    "debutArcOrder": 7,
+    "epithet": "O Prodígio de Força Bruta da CCG",
+    "imageUrl": "/characters/takeomi-kuroiwa.jpg",
+    "imagePosition": "center 22%",
+    "kaguneOrQuinque": {
+      "name": "Quinque Pesada Tsunagi & Força Sobre-humana",
+      "category": "Quinque",
+      "imageUrl": "",
+      "preset": "ixa-narukami",
+      "primaryColor": "#15803d",
+      "secondaryColor": "#e2e8f0",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Meu pai me ensinou que o dever de um investigador é ser o escudo inabalável da humanidade. Eu honrarei o nome dos Kuroiwa!",
+      "arc": "Leilão (:re)",
+      "recipient": "Lutando ao lado de Kuki Urie e Kuramoto Itou contra os Ghouls Palhaços"
+    },
+    "maskOrEye": {
+      "title": "Sobrancelhas Marcantes & Olhar Honesto de Takeomi",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/takeomi-kuroiwa.jpg",
+      "preset": "scarecrow-hide",
+      "focalPoint": {
+        "x": 50,
+        "y": 28
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#18181b",
+      "hairSecondary": "#27272a",
+      "hairStyle": "short-spiky",
+      "skinTone": "#f5e4d7",
+      "eyeColor": "#78350f",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "ccg",
+      "accentColor": "#15803d"
+    }
+  },
+  {
+    "id": "ryouko-fueguchi",
+    "name": "Ryouko Fueguchi",
+    "aliases": [
+      "Mãe de Hinami",
+      "Sra. Fueguchi"
+    ],
+    "gender": "Feminino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Anteiku"
+    ],
+    "rcTypes": [
+      "Koukaku"
+    ],
+    "rank": "Rank A",
+    "debutArc": "Arco dos Pombos",
+    "debutArcOrder": 2,
+    "epithet": "A Mãe Protetora da Anteiku",
+    "imageUrl": "/characters/ryouko-fueguchi.jpg",
+    "imagePosition": "center 22%",
+    "kaguneOrQuinque": {
+      "name": "Kagune Koukaku Pétalas Protetoras",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "butterfly-chimera",
+      "primaryColor": "#f59e0b",
+      "secondaryColor": "#dc2626",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Hinami... Corra! Não olhe para trás, apenas viva! Seja feliz...",
+      "arc": "Arco dos Pombos",
+      "recipient": "Suas últimas palavras para Hinami ao se sacrificar diante de Kureo Mado"
+    },
+    "maskOrEye": {
+      "title": "Olhar Materno & Cabelos Castanhos Presos da Sra. Fueguchi",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/ryouko-fueguchi.jpg",
+      "preset": "akira-gaze",
+      "focalPoint": {
+        "x": 50,
+        "y": 32
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#78350f",
+      "hairSecondary": "#92400e",
+      "hairStyle": "cute-bob",
+      "skinTone": "#f8e6da",
+      "eyeColor": "#78350f",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "anteiku",
+      "accentColor": "#f59e0b"
+    }
+  },
+  {
+    "id": "big-madam",
+    "name": "Big Madam",
+    "aliases": [
+      "Madame",
+      "Dona do Leilão",
+      "Mãe Adotiva de Juuzou"
+    ],
+    "gender": "Desconhecido/Outro",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Palhaços (Pierrot)"
+    ],
+    "rcTypes": [
+      "Bikaku"
+    ],
+    "rank": "Rank SS",
+    "debutArc": "Leilão (:re)",
+    "debutArcOrder": 7,
+    "epithet": "A Anfitriã dos Leilões de Ghouls",
+    "imageUrl": "/characters/big-madam.jpg",
+    "imagePosition": "center 28%",
+    "kaguneOrQuinque": {
+      "name": "Tentáculos Bikaku Rastejantes de Big Madam",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "serpent-bikaku",
+      "primaryColor": "#dc2626",
+      "secondaryColor": "#fde047",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Juuzou, meu pequeno bichinho de estimação! Você não teria coragem de levantar uma lâmina contra a sua própria mamãe, teria?!",
+      "arc": "Leilão (:re)",
+      "recipient": "Confrontando Juuzou Suzuya nos momentos finais do Leilão de Ghouls"
+    },
+    "maskOrEye": {
+      "title": "Óculos Escuros Redondos & Lábios Carmesim de Big Madam",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/big-madam.jpg",
+      "preset": "hockey-mask",
+      "focalPoint": {
+        "x": 50,
+        "y": 35
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#fde047",
+      "hairSecondary": "#ca8a04",
+      "hairStyle": "slick-elder",
+      "skinTone": "#f5e6da",
+      "eyeColor": "#dc2626",
+      "kakugan": "both",
+      "accessory": "glasses",
+      "outfit": "clown",
+      "accentColor": "#db2777"
+    }
+  },
+  {
+    "id": "torso",
+    "name": "Torso (Karao Saeki)",
+    "aliases": [
+      "Torso",
+      "Karao Saeki",
+      "O Taxista Assassino"
+    ],
+    "gender": "Masculino",
+    "species": [
+      "Ghoul"
+    ],
+    "affiliations": [
+      "Aogiri Tree"
+    ],
+    "rcTypes": [
+      "Bikaku"
+    ],
+    "rank": "Rank A",
+    "debutArc": "Leilão (:re)",
+    "debutArcOrder": 7,
+    "epithet": "Torso / O Colecionador de Cicatrizes",
+    "imageUrl": "/characters/torso.jpg",
+    "imagePosition": "center 24%",
+    "kaguneOrQuinque": {
+      "name": "Cauda Longa Bikaku de Torso",
+      "category": "Kagune",
+      "imageUrl": "",
+      "preset": "serpent-bikaku",
+      "primaryColor": "#334155",
+      "secondaryColor": "#dc2626",
+      "focalPoint": {
+        "x": 50,
+        "y": 40
+      }
+    },
+    "quote": {
+      "text": "Mutsuki... Seu corpo é tão perfeito, suas cicatrizes são a arte mais pura que eu já vi neste mundo podre!",
+      "arc": "Ilha Rue (:re)",
+      "recipient": "Aprisionando e torturando obsessivamente Tooru Mutsuki na caverna"
+    },
+    "maskOrEye": {
+      "title": "Olhos Arregalados Assombrados de Torso",
+      "type": "Olhos / Rosto",
+      "imageUrl": "/characters/torso.jpg",
+      "preset": "scarecrow-hide",
+      "focalPoint": {
+        "x": 53,
+        "y": 36
+      }
+    },
+    "avatarStyle": {
+      "hairColor": "#18181b",
+      "hairSecondary": "#27272a",
+      "hairStyle": "messy-bangs",
+      "skinTone": "#e5e5e5",
+      "eyeColor": "#18181b",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "casual",
+      "accentColor": "#475569"
+    }
+  }
+]
