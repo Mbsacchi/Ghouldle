@@ -37,7 +37,7 @@ export default function ArenaHeader({
       <div className="border-b border-[#efe9dd]/10 bg-[#070608] px-4 py-1 text-[10px] font-mono tracking-[0.2em] uppercase text-[#8d857b] flex items-center justify-between max-w-6xl mx-auto">
         <span>CCG // ARQUIVO DE INVESTIGAÇÃO — 20ª ALA</span>
         <span className="text-[#cfc6b6]">
-          {isDaily ? `EXPEDIENTE #${editionNumber} • ${countdown}` : 'SIMULAÇÃO INFINITA ATIVA'}
+          {isDaily ? `EXPEDIENTE DIÁRIO #${editionNumber} • NOVO ALVO EM ${countdown} (00:00 UTC)` : 'MODO INFINITO // TREINO INDIVIDUAL'}
         </span>
       </div>
 

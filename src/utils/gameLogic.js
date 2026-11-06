@@ -33,38 +33,42 @@ export const GAME_MODES = [
   },
 ];
 
-// Local YYYY-MM-DD key
+// Universal UTC YYYY-MM-DD key (Identical worldwide for all players at the exact same moment)
 export function getTodayKey() {
   const now = new Date();
-  const year = now.getFullYear();
-  const month = String(now.getMonth() + 1).padStart(2, '0');
-  const day = String(now.getDate()).padStart(2, '0');
-  return `${year}-${month}-${day}`;
+  return now.toISOString().slice(0, 10);
 }
 
 export function getYesterdayKey() {
-  const d = new Date();
-  d.setDate(d.getDate() - 1);
-  const year = d.getFullYear();
-  const month = String(d.getMonth() + 1).padStart(2, '0');
-  const day = String(d.getDate()).padStart(2, '0');
-  return `${year}-${month}-${day}`;
+  const now = new Date();
+  const yesterday = new Date(now.getTime() - 24 * 60 * 60 * 1000);
+  return yesterday.toISOString().slice(0, 10);
 }
 
-// Edition number since launch anchor
+// Universal edition number since launch anchor (UTC)
 export function getDailyEditionNumber() {
-  const anchor = new Date(2026, 0, 1);
+  const anchorTime = Date.UTC(2026, 0, 1, 0, 0, 0);
   const now = new Date();
-  const todayMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  const diffDays = Math.floor((todayMidnight - anchor) / (1000 * 60 * 60 * 24));
+  const currentUtcMidnight = Date.UTC(
+    now.getUTCFullYear(),
+    now.getUTCMonth(),
+    now.getUTCDate(),
+    0, 0, 0, 0
+  );
+  const diffDays = Math.floor((currentUtcMidnight - anchorTime) / (1000 * 60 * 60 * 24));
   return Math.max(1, diffDays + 1);
 }
 
-// Countdown until next local midnight
+// Global countdown until next 00:00:00 UTC rollover (Synchronized worldwide down to the second)
 export function getTimeUntilMidnight() {
   const now = new Date();
-  const midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
-  const diffMs = Math.max(0, midnight - now);
+  const nextUtcMidnight = new Date(Date.UTC(
+    now.getUTCFullYear(),
+    now.getUTCMonth(),
+    now.getUTCDate() + 1,
+    0, 0, 0, 0
+  ));
+  const diffMs = Math.max(0, nextUtcMidnight.getTime() - now.getTime());
   const hours = String(Math.floor(diffMs / (1000 * 60 * 60))).padStart(2, '0');
   const minutes = String(Math.floor((diffMs / (1000 * 60)) % 60)).padStart(2, '0');
   const seconds = String(Math.floor((diffMs / 1000) % 60)).padStart(2, '0');
@@ -92,20 +96,22 @@ function mulberry32(seed) {
 
 export function getDailyTargets(characters, dateKey = getTodayKey()) {
   const modeIds = ['classic', 'quote', 'mask'];
+  // Guarantee 100% deterministic ordering across all browsers, builds, and engines
+  const sortedCharacters = [...characters].sort((a, b) => a.id.localeCompare(b.id));
   const usedIndices = new Set();
   const result = {};
 
   modeIds.forEach((modeId, idx) => {
     const seed = hashString(`ghouldle-daily-${dateKey}-${modeId}-salt-${idx * 37}`);
     const rand = mulberry32(seed);
-    let candidateIdx = Math.floor(rand() * characters.length);
+    let candidateIdx = Math.floor(rand() * sortedCharacters.length);
     let guard = 0;
-    while (usedIndices.has(candidateIdx) && guard < characters.length) {
-      candidateIdx = (candidateIdx + 1) % characters.length;
+    while (usedIndices.has(candidateIdx) && guard < sortedCharacters.length) {
+      candidateIdx = (candidateIdx + 1) % sortedCharacters.length;
       guard++;
     }
     usedIndices.add(candidateIdx);
-    result[modeId] = characters[candidateIdx];
+    result[modeId] = sortedCharacters[candidateIdx];
   });
 
   return result;

@@ -200,7 +200,8 @@ export default function VictoryModal({
         {isDaily && (
           <div className="pt-3 border-t border-[#efe9dd]/15 text-center font-mono text-xs text-[#8d857b]">
             PRÓXIMO EXPEDIENTE DIÁRIO EM:{' '}
-            <strong className="text-[#efe9dd]">{countdown}</strong>
+            <strong className="text-[#efe9dd]">{countdown}</strong>{' '}
+            <span className="text-[10px]">(00:00 UTC)</span>
           </div>
         )}
       </div>

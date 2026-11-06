@@ -303,6 +303,8 @@ export default function App() {
                 target={currentTarget}
                 guesses={currentBoardState.guesses}
                 won={currentBoardState.won}
+                isDaily={isDaily}
+                editionNumber={editionNumber}
                 revealedHints={currentBoardState.revealedHints}
                 lastAnimatedGuessId={lastAnimatedGuessId}
                 onGuess={handleGuess}
@@ -318,6 +320,8 @@ export default function App() {
                 target={currentTarget}
                 guesses={currentBoardState.guesses}
                 won={currentBoardState.won}
+                isDaily={isDaily}
+                editionNumber={editionNumber}
                 onGuess={handleGuess}
                 onOpenVictoryModal={() => setVictoryModalOpen(true)}
               />
@@ -330,6 +334,8 @@ export default function App() {
                 target={currentTarget}
                 guesses={currentBoardState.guesses}
                 won={currentBoardState.won}
+                isDaily={isDaily}
+                editionNumber={editionNumber}
                 onGuess={handleGuess}
                 onOpenVictoryModal={() => setVictoryModalOpen(true)}
               />

@@ -31,6 +31,8 @@ export default function ClassicMode({
   target,
   guesses,
   won,
+  isDaily = true,
+  editionNumber = 1,
   revealedHints = [],
   lastAnimatedGuessId,
   onGuess,
@@ -58,7 +60,7 @@ export default function ClassicMode({
             </span>
           </div>
           <span className="font-mono text-[10px] tracking-widest uppercase text-[#cfc6b6]">
-            PALPITES: {guesses.length}
+            {isDaily ? `EXPEDIENTE GLOBAL #${editionNumber}` : 'TREINO LIVRE'} · {guesses.length} {guesses.length === 1 ? 'PALPITE' : 'PALPITES'}
           </span>
         </div>
 

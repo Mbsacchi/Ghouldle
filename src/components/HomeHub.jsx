@@ -369,16 +369,17 @@ export default function HomeHub({
             <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
               <div className="text-center sm:text-left">
                 <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#8d857b]">
-                  {isDaily ? 'RELATÓRIO DE EXTERMÍNIO DIÁRIO' : 'SIMULAÇÃO DE CAMPO'}
+                  {isDaily ? `EXPEDIENTE DIÁRIO GLOBAL #${editionNumber}` : 'SIMULAÇÃO DE CAMPO INFINITA'}
                 </p>
                 <p className="text-xs text-[#efe9dd] font-medium mt-0.5">
                   {isDaily ? (
                     <>
-                      Próxima atualização em{' '}
-                      <strong className="font-mono text-[#d9141e]">{countdown}</strong>
+                      Mesmo alvo para todos no mundo • Reinicia em{' '}
+                      <strong className="font-mono text-[#d9141e]">{countdown}</strong>{' '}
+                      <span className="text-[10px] font-mono text-[#8d857b]">(00:00 UTC)</span>
                     </>
                   ) : (
-                    <span>Alvos ilimitados liberados nos 3 modos</span>
+                    <span>Treino individual com alvos aleatórios liberados nos 3 modos</span>
                   )}
                 </p>
               </div>

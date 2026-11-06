@@ -9,6 +9,8 @@ export default function QuoteMode({
   target,
   guesses,
   won,
+  isDaily = true,
+  editionNumber = 1,
   onGuess,
   onOpenVictoryModal,
 }) {
@@ -31,7 +33,9 @@ export default function QuoteMode({
               TRANSCRIÇÃO LITERÁRIA // VOZES DA OBRA
             </span>
           </div>
-          <span className="font-serif text-xs text-[#cfc6b6]">東京喰種</span>
+          <span className="font-mono text-[10px] tracking-widest uppercase text-[#cfc6b6]">
+            {isDaily ? `EXPEDIENTE GLOBAL #${editionNumber}` : 'TREINO LIVRE'} · {guesses.length} {guesses.length === 1 ? 'PALPITE' : 'PALPITES'}
+          </span>
         </div>
 
         <div className="text-center space-y-1">

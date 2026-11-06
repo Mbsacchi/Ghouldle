@@ -12,6 +12,8 @@ export default function MaskMode({
   target,
   guesses,
   won,
+  isDaily = true,
+  editionNumber = 1,
   onGuess,
   onOpenVictoryModal,
 }) {
@@ -36,8 +38,8 @@ export default function MaskMode({
               CATÁLOGO HYSY ARTMASK // IDENTIFICAÇÃO FACIAL
             </span>
           </div>
-          <span className="font-mono text-[10px] uppercase tracking-widest text-[#d9141e]">
-            RECORTE {currentZoom.toFixed(2)}x
+          <span className="font-mono text-[10px] tracking-widest uppercase text-[#cfc6b6]">
+            {isDaily ? `EXPEDIENTE GLOBAL #${editionNumber}` : 'TREINO LIVRE'} · LENTE {currentZoom.toFixed(2)}x
           </span>
         </div>
 
