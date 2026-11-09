@@ -325,6 +325,180 @@ export default function MaskEyeVisualizer({
           </g>
         );
 
+      case 'tokio-vulture':
+        return (
+          <g>
+            {/* Tokio's Vulture Beast Mask: Dark feathers + Bone/Iron Beak + Blazing Acid-Gold Eyes */}
+            <path d="M70 240 L110 25 L240 12 L370 25 L410 240 Z" fill="#141712" stroke="#3f3f46" strokeWidth="3" />
+            {/* Jagged feather plumes */}
+            <path
+              d="M90 60 L140 30 L165 75 L240 20 L315 75 L340 30 L390 60"
+              fill="none"
+              stroke="#a3e635"
+              strokeWidth="2.2"
+              opacity="0.65"
+            />
+            {/* Central Vulture Skull & Curved Beak */}
+            <polygon
+              points="160,55 320,55 345,135 240,244 135,135"
+              fill="#e4e4e7"
+              stroke="#27272a"
+              strokeWidth="3.5"
+            />
+            <polygon
+              points="240,88 286,162 240,244 194,162"
+              fill="#27272a"
+              stroke="#a3e635"
+              strokeWidth="2"
+            />
+            {renderNormalEyeLarge(182, 112, '#a3e635')}
+            {renderNormalEyeLarge(298, 112, '#a3e635')}
+          </g>
+        );
+
+      case 'azuma-iron':
+        return (
+          <g>
+            {/* Azuma's White Cloth Hood + Heavy Iron Manacles & Glowing Blue/Gold Gaze */}
+            <path d="M95 18 L385 18 L415 242 L65 242 Z" fill="#f4f4f5" stroke="#a1a1aa" strokeWidth="3.5" />
+            {/* Cloth eye-slit shadow */}
+            <rect x="125" y="86" width="230" height="64" rx="8" fill="#09090b" stroke="#52525b" strokeWidth="3" />
+            {renderNormalEyeLarge(180, 118, '#38bdf8')}
+            {renderNormalEyeLarge(300, 118, '#facc15')}
+            {/* Iron Chains & Shackle Collar */}
+            <rect x="135" y="176" width="210" height="46" rx="6" fill="#3f3f46" stroke="#18181b" strokeWidth="3.5" />
+            {[165, 202, 240, 278, 315].map((x) => (
+              <circle key={x} cx={x} cy="199" r="6" fill="#facc15" />
+            ))}
+          </g>
+        );
+
+      case 'batista-noh':
+        return (
+          <g>
+            {/* Batista Hoshi's Porcelain Noh Mask + Stitched Eye Sockets */}
+            <ellipse cx="240" cy="130" rx="102" ry="110" fill="#f8fafc" stroke="#a1a1aa" strokeWidth="4" />
+            {/* Traditional Noh arched brows */}
+            <path d="M168 62 Q192 48 216 62" stroke="#52525b" strokeWidth="6" fill="none" strokeLinecap="round" />
+            <path d="M264 62 Q288 48 312 62" stroke="#52525b" strokeWidth="6" fill="none" strokeLinecap="round" />
+            {/* Narrow Noh eye slits with stitched Nue scars */}
+            <ellipse cx="192" cy="112" rx="28" ry="8" fill="#09090b" />
+            <circle cx="192" cy="112" r="5" fill="#a3e635" />
+            <ellipse cx="288" cy="112" rx="28" ry="8" fill="#09090b" />
+            <circle cx="288" cy="112" r="5" fill="#ef4444" />
+            <g stroke="#18181b" strokeWidth="2.5">
+              <line x1="175" y1="96" x2="175" y2="128" />
+              <line x1="208" y1="96" x2="208" y2="128" />
+              <line x1="272" y1="96" x2="272" y2="128" />
+              <line x1="305" y1="96" x2="305" y2="128" />
+            </g>
+            {/* Noh Mask Painted Smile */}
+            <path d="M202 182 Q240 202 278 182" stroke="#991b1b" strokeWidth="5" fill="none" strokeLinecap="round" />
+          </g>
+        );
+
+      case 'zora-hand-eyes':
+        return (
+          <g>
+            {/* Zora Siruha: Veiled face flanked by sacred palms with open crimson/gold eyes */}
+            <rect x="100" y="20" width="280" height="220" rx="36" fill="#1c1917" stroke="#dc2626" strokeWidth="3" />
+            <path d="M100 90 L380 90" stroke="#a8a29e" strokeWidth="4" strokeDasharray="10 6" />
+            {renderKakuganLarge(180, 128)}
+            {renderKakuganLarge(300, 128)}
+            {/* Forehead Choujin X Cross Mark */}
+            <path d="M222 44 L258 80 M258 44 L222 80" stroke="#facc15" strokeWidth="5" strokeLinecap="round" />
+          </g>
+        );
+
+      case 'ely-smoke':
+      case 'chandra-smoke': {
+        const isChandra = preset === 'chandra-smoke';
+        return (
+          <g>
+            <rect x="90" y="25" width="300" height="210" rx="28" fill={isChandra ? '#d6d3d1' : '#f6e5d7'} />
+            {/* Billowing smoke plumes */}
+            <path
+              d="M70 180 Q40 110 95 65 Q150 15 240 30 Q330 15 385 65 Q440 110 410 180"
+              fill="none"
+              stroke="#f97316"
+              strokeWidth="8"
+              opacity="0.75"
+            />
+            {renderNormalEyeLarge(175, 130, '#f97316')}
+            {renderNormalEyeLarge(305, 130, '#f97316')}
+          </g>
+        );
+      }
+
+      case 'palma-hyena':
+      case 'nari-snake': {
+        const isSnake = preset === 'nari-snake';
+        return (
+          <g>
+            <rect x="90" y="25" width="300" height="210" rx="30" fill={isSnake ? '#fafafa' : '#f5e6d8'} />
+            <path
+              d="M85 20 L395 20 L395 92 L320 60 L240 90 L160 60 L85 92 Z"
+              fill={isSnake ? '#e4e4e7' : '#fef08a'}
+            />
+            {renderNormalEyeLarge(175, 122, isSnake ? '#ec4899' : '#dc2626')}
+            {renderNormalEyeLarge(305, 122, isSnake ? '#ec4899' : '#dc2626')}
+            {/* Fangs / Bifid Tongue */}
+            <path d="M180 186 Q240 212 300 186" stroke="#18181b" strokeWidth="4" fill="none" />
+            <polygon points="198,190 208,212 218,192" fill="#ffffff" stroke="#18181b" strokeWidth="2" />
+            <polygon points="262,192 272,212 282,190" fill="#ffffff" stroke="#18181b" strokeWidth="2" />
+          </g>
+        );
+      }
+
+      case 'shiozaki-baseball':
+        return (
+          <g>
+            <circle cx="240" cy="130" r="102" fill="#f8fafc" stroke="#94a3b8" strokeWidth="4" />
+            {/* Curved red baseball seams across face */}
+            <path d="M168 42 Q212 130 168 218" fill="none" stroke="#dc2626" strokeWidth="4" />
+            <path d="M312 42 Q268 130 312 218" fill="none" stroke="#dc2626" strokeWidth="4" />
+            {[65, 95, 125, 155, 185].map((y) => (
+              <g key={y} stroke="#dc2626" strokeWidth="3">
+                <line x1="176" y1={y} x2="196" y2={y + 6} />
+                <line x1="284" y1={y + 6} x2="304" y2={y} />
+              </g>
+            ))}
+            {renderNormalEyeLarge(200, 125, '#ef4444')}
+            {renderNormalEyeLarge(280, 125, '#ef4444')}
+          </g>
+        );
+
+      case 'sandek-gravity':
+      case 'simon-blade':
+      case 'sato-psyche':
+      case 'ricardo-terror':
+      case 'yubiko-mandala':
+      case 'queem-war': {
+        return (
+          <g>
+            <rect x="85" y="25" width="310" height="210" rx="28" fill={st.skinTone || '#ead2c0'} />
+            <path
+              d="M80 20 L400 20 L400 92 L332 60 L268 92 L212 58 L148 92 L80 76 Z"
+              fill={st.hairColor || '#18181b'}
+            />
+            {renderNormalEyeLarge(175, 126, st.eyeColor || '#a3e635')}
+            {renderNormalEyeLarge(305, 126, st.eyeColor || '#a3e635')}
+            {preset === 'simon-blade' && (
+              <path d="M120 175 L360 175 L350 238 L130 238 Z" fill="#0f172a" stroke="#38bdf8" strokeWidth="2.5" />
+            )}
+            {preset === 'sandek-gravity' && (
+              <circle cx="240" cy="126" r="108" fill="none" stroke="#a855f7" strokeWidth="3" strokeDasharray="8 6" />
+            )}
+            {preset === 'ricardo-terror' && (
+              <>
+                {renderNormalEyeLarge(175, 78, '#fde047')}
+                {renderNormalEyeLarge(305, 78, '#fde047')}
+              </>
+            )}
+          </g>
+        );
+      }
+
       default: {
         const leftIsKakugan = st.kakugan === 'both' || st.kakugan === 'left';
         const rightIsKakugan = st.kakugan === 'both' || st.kakugan === 'right';

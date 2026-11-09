@@ -2,8 +2,9 @@ import React from 'react';
 import { X } from 'lucide-react';
 import { GAME_MODES } from '../utils/gameLogic';
 
-export default function StatsModal({ isOpen, onClose, stats }) {
+export default function StatsModal({ isOpen, onClose, stats, universe = 'tg' }) {
   if (!isOpen) return null;
+  const isChoujin = universe === 'cx';
 
   const winRate =
     stats.gamesPlayed > 0
@@ -34,7 +35,7 @@ export default function StatsModal({ isOpen, onClose, stats }) {
             </span>
             <div>
               <h2 className="font-display text-xl uppercase tracking-[0.08em] text-[#efe9dd] leading-none">
-                Histórico de Serviço — CCG
+                {isChoujin ? 'Histórico de Serviço — Yamato Mori' : 'Histórico de Serviço — CCG'}
               </h2>
               <p className="font-mono text-[10px] uppercase tracking-widest text-[#8d857b] mt-1">
                 Dados armazenados localmente neste terminal

@@ -1,0 +1,1172 @@
+[
+  {
+    "id": "tokio-kurohara",
+    "name": "Tokio Kurohara",
+    "aliases": ["Tokio", "Abutre", "Besta do Abutre", "Harpe", "Kurohara"],
+    "gender": "Masculino",
+    "species": ["Choujin Besta"],
+    "affiliations": ["Yamato Mori", "Colégio Yamato"],
+    "rcTypes": ["Besta (Zoan)", "Bélico / Criação"],
+    "rank": "Guardião",
+    "debutArc": "Prefeitura de Yamato (Intro)",
+    "debutArcOrder": 1,
+    "epithet": "Choujin Besta do Abutre",
+    "quote": {
+      "text": "Eu sempre caminhei dois passos atrás do Azuma... mas agora só eu posso carregar essas asas.",
+      "arc": "Arco Ilhas das Bestas",
+      "recipient": "Refletindo sobre seu papel como Besta"
+    },
+    "kaguneOrQuinque": {
+      "name": "Armadura Bestial do Abutre & Lâminas Harpe",
+      "category": "Besta / Lâminas de Ferro"
+    },
+    "maskOrEye": {
+      "type": "Bico de Abutre & Olhar Dourado no Caos",
+      "title": "Crânio emplumado do Choujin Abutre em estado de Caos",
+      "preset": "tokio-vulture",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#18181b",
+      "hairSecondary": "#27272a",
+      "hairStyle": "messy-bangs",
+      "skinTone": "#f1dfd2",
+      "eyeColor": "#a3e635",
+      "kakugan": "none",
+      "accessory": "beak_visor",
+      "outfit": "yamato",
+      "accentColor": "#a3e635"
+    }
+  },
+  {
+    "id": "azuma-higashi",
+    "name": "Azuma Higashi",
+    "aliases": ["Azuma", "Higashi", "Choujin do Ferro", "Choujin da Guerra"],
+    "gender": "Masculino",
+    "species": ["Choujin"],
+    "affiliations": ["Yamato Mori", "Colégio Yamato"],
+    "rcTypes": ["Bélico / Criação", "Força / Corpo"],
+    "rank": "Guardião Júnior",
+    "debutArc": "Prefeitura de Yamato (Intro)",
+    "debutArcOrder": 1,
+    "epithet": "Choujin do Ferro",
+    "quote": {
+      "text": "Se eu não for aquele que salva a todos, então quem sou eu diante do Tokio?",
+      "arc": "Arco Besta da Lua (Nari)",
+      "recipient": "Antes de despertar na praia da Lua"
+    },
+    "kaguneOrQuinque": {
+      "name": "Manto Branco & Arsenal Forjado em Ferro",
+      "category": "Forja Bélica / Algemas de Aço"
+    },
+    "maskOrEye": {
+      "type": "Capuz de Pano Branco & Algemas de Ferro",
+      "title": "Rosto coberto pelo manto de guerra do Choujin do Ferro",
+      "preset": "azuma-iron",
+      "focalPoint": { "x": 50, "y": 44 }
+    },
+    "avatarStyle": {
+      "hairColor": "#facc15",
+      "hairSecondary": "#ca8a04",
+      "hairStyle": "parted-neat",
+      "skinTone": "#f5e6d8",
+      "eyeColor": "#38bdf8",
+      "kakugan": "none",
+      "accessory": "iron_collar",
+      "outfit": "yamato",
+      "accentColor": "#facc15"
+    }
+  },
+  {
+    "id": "ely-otta",
+    "name": "Ely Otta",
+    "aliases": ["Ely", "Otta", "Choujin da Fumaça"],
+    "gender": "Feminino",
+    "species": ["Choujin"],
+    "affiliations": ["Yamato Mori"],
+    "rcTypes": ["Elemental / Fumaça"],
+    "rank": "Guardião Júnior",
+    "debutArc": "Prefeitura de Yamato (Intro)",
+    "debutArcOrder": 1,
+    "epithet": "Choujin da Fumaça & Colheita",
+    "quote": {
+      "text": "Eu vou trabalhar duro, juntar minha fortuna honesta e nunca deixar um amigo ser engolido pela escuridão!",
+      "arc": "Prefeitura de Yamato (Intro)",
+      "recipient": "Promessa a Tokio Kurohara"
+    },
+    "kaguneOrQuinque": {
+      "name": "Combustão de Fumaça & Roubo de Aptidão",
+      "category": "Chama Cinzenta / Absorção"
+    },
+    "maskOrEye": {
+      "type": "Coroa de Fumaça & Olhar Determinado",
+      "title": "Fumaça incandescente escapando das têmporas de Ely Otta",
+      "preset": "ely-smoke",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#3f2e21",
+      "hairSecondary": "#291d15",
+      "hairStyle": "cute-bob",
+      "skinTone": "#f6e5d7",
+      "eyeColor": "#f97316",
+      "kakugan": "none",
+      "accessory": "smoke_wisp",
+      "outfit": "yamato",
+      "accentColor": "#f97316"
+    }
+  },
+  {
+    "id": "hoshi-sandek",
+    "name": "Hoshi Sandek",
+    "aliases": ["Sandek", "Hoshi", "Choujin da Gravidade"],
+    "gender": "Masculino",
+    "species": ["Choujin"],
+    "affiliations": ["Yamato Mori"],
+    "rcTypes": ["Gravidade / Espaço"],
+    "rank": "Guardião Sênior",
+    "debutArc": "Prefeitura de Yamato (Intro)",
+    "debutArcOrder": 1,
+    "epithet": "Choujin da Gravidade",
+    "quote": {
+      "text": "O poder de um Choujin reflete a forma do seu coração. Não deixem que o medo dite quem vocês são.",
+      "arc": "Treinamento em Yamato Mori",
+      "recipient": "Tokio, Ely e Azuma"
+    },
+    "kaguneOrQuinque": {
+      "name": "Singularidade Gravitacional",
+      "category": "Esmagamento Espacial"
+    },
+    "maskOrEye": {
+      "type": "Queixo Marcado & Aura de Gravidade",
+      "title": "Olhar severo de Hoshi Sandek sob distorção gravitacional",
+      "preset": "sandek-gravity",
+      "focalPoint": { "x": 50, "y": 48 }
+    },
+    "avatarStyle": {
+      "hairColor": "#27272a",
+      "hairSecondary": "#18181b",
+      "hairStyle": "slick-aristocrat",
+      "skinTone": "#ead2c0",
+      "eyeColor": "#a855f7",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "yamato",
+      "accentColor": "#a855f7"
+    }
+  },
+  {
+    "id": "simon-kagomura",
+    "name": "Simon Kagomura",
+    "aliases": ["Simon", "Kagomura", "Choujin da Espada"],
+    "gender": "Masculino",
+    "species": ["Choujin"],
+    "affiliations": ["Yamato Mori"],
+    "rcTypes": ["Bélico / Criação"],
+    "rank": "Guardião",
+    "debutArc": "Arco Sinker (Beisebol)",
+    "debutArcOrder": 2,
+    "epithet": "Choujin da Espada",
+    "quote": {
+      "text": "O clã Kagomura foi massacrado... cada lâmina gravada na minha pele carrega o peso dos que caíram.",
+      "arc": "Arco Ilhas das Bestas",
+      "recipient": "Durante o combate contra os servos da Torre"
+    },
+    "kaguneOrQuinque": {
+      "name": "Tatuagens de Invocação — Cem Espadas Kagomura",
+      "category": "Arsenal de Lâminas"
+    },
+    "maskOrEye": {
+      "type": "Gola Alta & Tatuagem de Espada no Pescoço",
+      "title": "Olhar frio de Simon Kagomura com selos de lâminas no pescoço",
+      "preset": "simon-blade",
+      "focalPoint": { "x": 50, "y": 50 }
+    },
+    "avatarStyle": {
+      "hairColor": "#1e293b",
+      "hairSecondary": "#0f172a",
+      "hairStyle": "undercut-long",
+      "skinTone": "#f1dfd2",
+      "eyeColor": "#64748b",
+      "kakugan": "none",
+      "accessory": "mask_uta",
+      "outfit": "yamato",
+      "accentColor": "#38bdf8"
+    }
+  },
+  {
+    "id": "momoma-moegi",
+    "name": "Momoma Moegi",
+    "aliases": ["Momoma", "Moegi", "Choujin da Superforça"],
+    "gender": "Feminino",
+    "species": ["Choujin"],
+    "affiliations": ["Yamato Mori"],
+    "rcTypes": ["Força / Corpo"],
+    "rank": "Guardião",
+    "debutArc": "Arco Sinker (Beisebol)",
+    "debutArcOrder": 2,
+    "epithet": "Choujin da Força Hercúlea",
+    "quote": {
+      "text": "Se o problema for parar um arremesso mortal, basta rebater com o dobro de força!",
+      "arc": "Arco Sinker (Beisebol)",
+      "recipient": "Apoiando Simon e Tokio contra Shiozaki"
+    },
+    "kaguneOrQuinque": {
+      "name": "Punho Hercúleo Moegi",
+      "category": "Impacto Bruto"
+    },
+    "maskOrEye": {
+      "type": "Grampos Duplos & Olhar Calmo",
+      "title": "Franja presa com grampos de Momoma Moegi",
+      "preset": "default",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#451a03",
+      "hairSecondary": "#290f02",
+      "hairStyle": "side-bang-bob",
+      "skinTone": "#f6e5d7",
+      "eyeColor": "#10b981",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "casual",
+      "accentColor": "#10b981"
+    }
+  },
+  {
+    "id": "ichiiro-sato",
+    "name": "Ichiiro Sato",
+    "aliases": ["Sato", "Ichiiro", "Choujin da Psicocinese"],
+    "gender": "Masculino",
+    "species": ["Choujin"],
+    "affiliations": ["Yamato Mori"],
+    "rcTypes": ["Psíquico / Oráculo"],
+    "rank": "Guardião Sênior",
+    "debutArc": "Treinamento em Yamato Mori",
+    "debutArcOrder": 4,
+    "epithet": "Choujin da Transmissão Mental",
+    "quote": {
+      "text": "A mente humana quebra muito antes da carne quando você projeta o terror correto dentro dela.",
+      "arc": "Arco da Papoula (Opium)",
+      "recipient": "Interrogatório e treinamento de Tokio"
+    },
+    "kaguneOrQuinque": {
+      "name": "Projeção Psíquica de Imagem &Tortura Mental",
+      "category": "Telepatia / Ilusão"
+    },
+    "maskOrEye": {
+      "type": "SorrisoCalculista & Ondas Psíquicas",
+      "title": "Olhar hipnótico de Ichiiro Sato projetando visões mentais",
+      "preset": "sato-psyche",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#d6d3d1",
+      "hairSecondary": "#a8a29e",
+      "hairStyle": "parted-neat",
+      "skinTone": "#f5e6d8",
+      "eyeColor": "#eab308",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "suit",
+      "accentColor": "#eab308"
+    }
+  },
+  {
+    "id": "zora-siruha",
+    "name": "Zora Siruha",
+    "aliases": ["Zora", "Sora", "Sora Siruha", "Mãe das Bestas", "Dama da Torre"],
+    "gender": "Feminino",
+    "species": ["Choujin X", "Choujin Besta"],
+    "affiliations": ["Torre do Luto (Zora)", "Antiga Yamato"],
+    "rcTypes": ["Besta (Zoan)", "Psíquico / Oráculo", "Bélico / Criação"],
+    "rank": "Choujin X",
+    "debutArc": "Arco Ilhas das Bestas",
+    "debutArcOrder": 5,
+    "epithet": "Antiga Choujin X & Mãe das Bestas",
+    "quote": {
+      "text": "A Calamidade negra engolirá Yamato... Somente aquele que herdar a minha Marca poderá impedir o fim.",
+      "arc": "Arco Ilhas das Bestas",
+      "recipient": "Profecia na Torre do Luto"
+    },
+    "kaguneOrQuinque": {
+      "name": "Sangue XEMBE, Lâminas Harpe & Marca da Besta",
+      "category": "Poder Primordial Choujin X"
+    },
+    "maskOrEye": {
+      "type": "Mãos com Olhos & Véu da Torre do Luto",
+      "title": "Olhos abertos nas palmas das mãos sagradas de Zora Siruha",
+      "preset": "zora-hand-eyes",
+      "focalPoint": { "x": 50, "y": 48 }
+    },
+    "avatarStyle": {
+      "hairColor": "#f4f4f5",
+      "hairSecondary": "#d4d4d8",
+      "hairStyle": "long-flowing",
+      "skinTone": "#e7e5e4",
+      "eyeColor": "#dc2626",
+      "kakugan": "both",
+      "accessory": "bandages",
+      "outfit": "aogiri",
+      "accentColor": "#dc2626"
+    }
+  },
+  {
+    "id": "batista-hoshi",
+    "name": "Batista Hoshi",
+    "aliases": ["Batista", "Nue", "Máscara Noh", "Homem da Máscara Noh"],
+    "gender": "Masculino",
+    "species": ["Choujin"],
+    "affiliations": ["Torre do Luto (Zora)", "Yamato Mori"],
+    "rcTypes": ["Enxerto (Nue)", "Gravidade / Espaço"],
+    "rank": "Mestre da Torre",
+    "debutArc": "Arco Besta da Lua (Nari)",
+    "debutArcOrder": 3,
+    "epithet": "O Nue — Quimera de Enxertos",
+    "quote": {
+      "text": "O destino é apenas uma peça mal escrita... e eu costurei meu próprio corpo para reescrever o ato final.",
+      "arc": "Arco da Papoula (Opium)",
+      "recipient": "Revelando os olhos costurados sob a Máscara Noh"
+    },
+    "kaguneOrQuinque": {
+      "name": "Costura Quimérica Nue & Gravidade Hoshi",
+      "category": "Transplante de Órgãos Choujin"
+    },
+    "maskOrEye": {
+      "type": "Máscara Noh Tradicional & Costuras Nue",
+      "title": "Máscara Noh branca ocultando o rosto costurado de Batista Hoshi",
+      "preset": "batista-noh",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#18181b",
+      "hairSecondary": "#09090b",
+      "hairStyle": "long-parted",
+      "skinTone": "#e4e4e7",
+      "eyeColor": "#ef4444",
+      "kakugan": "left",
+      "accessory": "stitches",
+      "outfit": "clown",
+      "accentColor": "#a3e635"
+    }
+  },
+  {
+    "id": "chandra-hume",
+    "name": "Chandra Hume",
+    "aliases": ["Chandra", "Hume", "Choujin da Fumaça"],
+    "gender": "Masculino",
+    "species": ["Choujin"],
+    "affiliations": ["Torre do Luto (Zora)", "Independente"],
+    "rcTypes": ["Elemental / Fumaça"],
+    "rank": "Mestre da Torre",
+    "debutArc": "Prefeitura de Yamato (Intro)",
+    "debutArcOrder": 1,
+    "epithet": "Arauto da Fumaça Cinzenta",
+    "quote": {
+      "text": "Eu queimei aviões, cidades e até a mim mesmo procurando a Besta prometida pela Madre!",
+      "arc": "Prefeitura de Yamato (Intro)",
+      "recipient": "Caçando Tokio e Ely"
+    },
+    "kaguneOrQuinque": {
+      "name": "Incineração de Fumaça & Cinzas",
+      "category": "Combustão Térmica"
+    },
+    "maskOrEye": {
+      "type": "Olhos Esbugalhados em Fumaça & Terno Escuro",
+      "title": "Rosto fumegante e olhar insano de Chandra Hume",
+      "preset": "chandra-smoke",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#e4e4e7",
+      "hairSecondary": "#a1a1aa",
+      "hairStyle": "slick-elder",
+      "skinTone": "#d6d3d1",
+      "eyeColor": "#f97316",
+      "kakugan": "both",
+      "accessory": "smoke_wisp",
+      "outfit": "suit",
+      "accentColor": "#f97316"
+    }
+  },
+  {
+    "id": "palma-shishinegura",
+    "name": "Palma Shishinegura",
+    "aliases": ["Palma", "Choujin Hiena", "Shishinegura"],
+    "gender": "Feminino",
+    "species": ["Choujin Besta"],
+    "affiliations": ["Independente", "Yamato Mori"],
+    "rcTypes": ["Besta (Zoan)", "Sangue / Necromancia"],
+    "rank": "Infiltrado / Nômade",
+    "debutArc": "Arco da Papoula (Opium)",
+    "debutArcOrder": 6,
+    "epithet": "Choujin Besta da Hiena",
+    "quote": {
+      "text": "Os mortos sempre conversaram comigo... Eu só queria que eles não ficassem tão sozinhos no frio.",
+      "arc": "Arco da Papoula (Opium)",
+      "recipient": "Conversando com Tokio Kurohara"
+    },
+    "kaguneOrQuinque": {
+      "name": "Reanimação Sanguínea & Forma Bestial da Hiena",
+      "category": "Necromancia / Besta"
+    },
+    "maskOrEye": {
+      "type": "Presas da Hiena & Olheiras Profundas",
+      "title": "Olhar exausto e presas bestiais de Palma Shishinegura",
+      "preset": "palma-hyena",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#fef08a",
+      "hairSecondary": "#ca8a04",
+      "hairStyle": "long-wild",
+      "skinTone": "#f5e6d8",
+      "eyeColor": "#dc2626",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "casual",
+      "accentColor": "#ef4444"
+    }
+  },
+  {
+    "id": "nari-tsumuji",
+    "name": "Nari Tsumuji",
+    "aliases": ["Nari", "Cobra Branca", "Besta da Lua"],
+    "gender": "Feminino",
+    "species": ["Choujin Besta"],
+    "affiliations": ["Torre do Luto (Zora)", "Independente"],
+    "rcTypes": ["Besta (Zoan)"],
+    "rank": "Infiltrado / Nômade",
+    "debutArc": "Arco Besta da Lua (Nari)",
+    "debutArcOrder": 3,
+    "epithet": "Choujin Besta da Cobra Branca",
+    "quote": {
+      "text": "Venha, passarinho... vamos ver se suas penas conseguem escapar quando a serpente aperta!",
+      "arc": "Arco Besta da Lua (Nari)",
+      "recipient": "Encurralando Tokio e Ely no zoológico"
+    },
+    "kaguneOrQuinque": {
+      "name": "Escamas Albinas & Constrição da Serpente Gigante",
+      "category": "Metamorfose Ofídica"
+    },
+    "maskOrEye": {
+      "type": "Fenda Reptiliana & Língua Bífida",
+      "title": "Pupilas verticais de serpente branca de Nari Tsumuji",
+      "preset": "nari-snake",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#f4f4f5",
+      "hairSecondary": "#d4d4d8",
+      "hairStyle": "side-bang-bob",
+      "skinTone": "#fafafa",
+      "eyeColor": "#ec4899",
+      "kakugan": "none",
+      "accessory": "mole",
+      "outfit": "casual",
+      "accentColor": "#ec4899"
+    }
+  },
+  {
+    "id": "kouta-shiozaki",
+    "name": "Kouta Shiozaki",
+    "aliases": ["Shiozaki", "Sinker", "Choujin do Arremesso"],
+    "gender": "Masculino",
+    "species": ["Choujin"],
+    "affiliations": ["Independente", "Yamato Mori"],
+    "rcTypes": ["Gravidade / Espaço"],
+    "rank": "Infiltrado / Nômade",
+    "debutArc": "Arco Sinker (Beisebol)",
+    "debutArcOrder": 2,
+    "epithet": "Sinker — Choujin do Arremesso",
+    "quote": {
+      "text": "Mais um arremesso... só mais um inning! Eu ainda não saí do montinho!",
+      "arc": "Arco Sinker (Beisebol)",
+      "recipient": "Em estado de Chaos durante o confronto com Tokio"
+    },
+    "kaguneOrQuinque": {
+      "name": "Sinker Gravitacional — Esferas de QuedaLivre",
+      "category": "Balística Espacial"
+    },
+    "maskOrEye": {
+      "type": "Costuras de Bola de Beisebol no Rosto",
+      "title": "Cabeça transfigurada em bola de beisebol costurada no estado Sinker",
+      "preset": "shiozaki-baseball",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#27272a",
+      "hairSecondary": "#18181b",
+      "hairStyle": "short-spiky",
+      "skinTone": "#ead2c0",
+      "eyeColor": "#ef4444",
+      "kakugan": "none",
+      "accessory": "stitches",
+      "outfit": "casual",
+      "accentColor": "#ef4444"
+    }
+  },
+  {
+    "id": "ririka-umezawa",
+    "name": "Ririka Umezawa",
+    "aliases": ["Ririka", "Umezawa", "Choujin do Papel"],
+    "gender": "Feminino",
+    "species": ["Choujin"],
+    "affiliations": ["Torre do Luto (Zora)", "Independente"],
+    "rcTypes": ["Bélico / Criação"],
+    "rank": "Mercenário",
+    "debutArc": "Arco Besta da Lua (Nari)",
+    "debutArcOrder": 3,
+    "epithet": "Choujin do Papel",
+    "quote": {
+      "text": "Fininho como uma folha de papel... é assim que a gente desliza por qualquer fresta e corta sua garganta!",
+      "arc": "Arco Besta da Lua (Nari)",
+      "recipient": "Em parceria com Ricardo Terror"
+    },
+    "kaguneOrQuinque": {
+      "name": "Origami Cortante & Achatamento Bidimensional",
+      "category": "Manipulação de Papel"
+    },
+    "maskOrEye": {
+      "type": "Máscara de Papel Dobrado & Olhar Afiado",
+      "title": "Lâminas de papel branco envolvendo o rosto de Ririka Umezawa",
+      "preset": "default",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#ec4899",
+      "hairSecondary": "#be185d",
+      "hairStyle": "cute-bob",
+      "skinTone": "#f6e5d7",
+      "eyeColor": "#f43f5e",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "clown",
+      "accentColor": "#ec4899"
+    }
+  },
+  {
+    "id": "ricardo-terror",
+    "name": "Ricardo Terror",
+    "aliases": ["Ricardo", "Choujin do Terror"],
+    "gender": "Masculino",
+    "species": ["Choujin", "Choujin Besta"],
+    "affiliations": ["Torre do Luto (Zora)", "Independente"],
+    "rcTypes": ["Psíquico / Oráculo", "Besta (Zoan)"],
+    "rank": "Mercenário",
+    "debutArc": "Arco Besta da Lua (Nari)",
+    "debutArcOrder": 3,
+    "epithet": "Choujin do Terror Noturno",
+    "quote": {
+      "text": "Peço desculpas pelo susto... meu rosto assume a forma exata daquilo que você mais teme.",
+      "arc": "Arco Besta da Lua (Nari)",
+      "recipient": "Conversando educadamente com Azuma Higashi"
+    },
+    "kaguneOrQuinque": {
+      "name": "Metamorfose de Fobia & Tentáculos Cefálicos",
+      "category": "Indução de Pavor"
+    },
+    "maskOrEye": {
+      "type": "Quatro Olhos & Tentáculos Faciais",
+      "title": "Face tentacular de Ricardo Terror alimentada pelo medo",
+      "preset": "ricardo-terror",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#31102f",
+      "hairSecondary": "#180617",
+      "hairStyle": "slick-aristocrat",
+      "skinTone": "#c084fc",
+      "eyeColor": "#fde047",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "suit",
+      "accentColor": "#a855f7"
+    }
+  },
+  {
+    "id": "mado-oraculo",
+    "name": "Mado",
+    "aliases": ["Oráculo Mado", "Profetisa de Yamato Mori"],
+    "gender": "Feminino",
+    "species": ["Choujin"],
+    "affiliations": ["Yamato Mori", "Antiga Yamato"],
+    "rcTypes": ["Psíquico / Oráculo"],
+    "rank": "Guardião Sênior",
+    "debutArc": "Treinamento em Yamato Mori",
+    "debutArcOrder": 4,
+    "epithet": "Oráculo Supremo de Yamato Mori",
+    "quote": {
+      "text": "Meus sonhos mostram o que deve ser podado. Zora perdeu a razão e sua Torre precisa cair.",
+      "arc": "Arco Ilhas das Bestas",
+      "recipient": "Conselho de comando de Yamato Mori"
+    },
+    "kaguneOrQuinque": {
+      "name": "Clarividência Onírica & Decreto de Yamato",
+      "category": "Profecia / Futuro"
+    },
+    "maskOrEye": {
+      "type": "Véu Cerimonial & Olhos Cegos de Vidente",
+      "title": "Rosto enrugado e olhar profético de Mado",
+      "preset": "default",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#e4e4e7",
+      "hairSecondary": "#a1a1aa",
+      "hairStyle": "slick-elder",
+      "skinTone": "#d6d3d1",
+      "eyeColor": "#cbd5e1",
+      "kakugan": "none",
+      "accessory": "bandages",
+      "outfit": "anteiku",
+      "accentColor": "#94a3b8"
+    }
+  },
+  {
+    "id": "arthur-yamato",
+    "name": "Arthur",
+    "aliases": ["Instrutor Arthur", "Arthur de Yamato Mori"],
+    "gender": "Masculino",
+    "species": ["Choujin"],
+    "affiliations": ["Yamato Mori"],
+    "rcTypes": ["Bélico / Criação"],
+    "rank": "Guardião Sênior",
+    "debutArc": "Treinamento em Yamato Mori",
+    "debutArcOrder": 4,
+    "epithet": "Instrutor-Chefe de Yamato Mori",
+    "quote": {
+      "text": "Raise não é um milagre gratuito: toda vez que vocês levantam da morte, deixam um pedaço da humanidade para trás.",
+      "arc": "Treinamento em Yamato Mori",
+      "recipient": "Aula sobre o fenômeno Raise"
+    },
+    "kaguneOrQuinque": {
+      "name": "Armamento Tático de Instrução",
+      "category": "Combate de Campo"
+    },
+    "maskOrEye": {
+      "type": "Óculos Escuros & Queixo Quadrado",
+      "title": "Olhar disciplinador do instrutor Arthur em Yamato Mori",
+      "preset": "arima-glasses",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#78350f",
+      "hairSecondary": "#451a03",
+      "hairStyle": "short-spiky",
+      "skinTone": "#e5c5b0",
+      "eyeColor": "#475569",
+      "kakugan": "none",
+      "accessory": "glasses",
+      "outfit": "yamato",
+      "accentColor": "#f59e0b"
+    }
+  },
+  {
+    "id": "vlad-sangue",
+    "name": "Vlad",
+    "aliases": ["Choujin do Sangue", "Comandante Vlad"],
+    "gender": "Masculino",
+    "species": ["Choujin"],
+    "affiliations": ["Yamato Mori"],
+    "rcTypes": ["Sangue / Necromancia", "Força / Corpo"],
+    "rank": "Guardião Sênior",
+    "debutArc": "Invasão à Torre do Luto",
+    "debutArcOrder": 7,
+    "epithet": "Choujin Carmesim da Linha de Frente",
+    "quote": {
+      "text": "Abram caminho até o topo da Torre! O sangue derramado aqui será a nossa lança!",
+      "arc": "Invasão à Torre do Luto",
+      "recipient": "Tropas de assalto de Yamato Mori"
+    },
+    "kaguneOrQuinque": {
+      "name": "Cristalização Hemática & Empalamento",
+      "category": "Controle de Sangue"
+    },
+    "maskOrEye": {
+      "type": "Cicatrizes de Guerra & Olhar Sanguíneo",
+      "title": "Olhar feroz de Vlad durante o cerco à Torre do Luto",
+      "preset": "default",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#991b1b",
+      "hairSecondary": "#450a0a",
+      "hairStyle": "long-wild",
+      "skinTone": "#e7d0c2",
+      "eyeColor": "#ef4444",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "aogiri",
+      "accentColor": "#dc2626"
+    }
+  },
+  {
+    "id": "yubiko-guerra",
+    "name": "Yubiko",
+    "aliases": ["Yubiko da Mandala", "Mercenária Yubiko"],
+    "gender": "Feminino",
+    "species": ["Choujin"],
+    "affiliations": ["Torre do Luto (Zora)", "Guelra"],
+    "rcTypes": ["Força / Corpo"],
+    "rank": "Mercenário",
+    "debutArc": "Arco Ilhas das Bestas",
+    "debutArcOrder": 5,
+    "epithet": "Choujin da Multiplicação Corporal",
+    "quote": {
+      "text": "Que delícia de carnificina! Mais braços, mais pernas, mais guerra até o meu corpo transbordar!",
+      "arc": "Arco Ilhas das Bestas",
+      "recipient": "Enfrentando Azuma Higashi na praia"
+    },
+    "kaguneOrQuinque": {
+      "name": "Mandala Asura — Multiplicação de Membros",
+      "category": "Hipertrofia / Caos"
+    },
+    "maskOrEye": {
+      "type": "Sorriso Maníaco & Múltiplas Mãos em Mandala",
+      "title": "Rosto eufórico de Yubiko em transe de combate",
+      "preset": "yubiko-mandala",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#18181b",
+      "hairSecondary": "#27272a",
+      "hairStyle": "cute-bob",
+      "skinTone": "#f3dfd3",
+      "eyeColor": "#a3e635",
+      "kakugan": "both",
+      "accessory": "none",
+      "outfit": "clown",
+      "accentColor": "#a3e635"
+    }
+  },
+  {
+    "id": "queem-choujin-x",
+    "name": "Queem",
+    "aliases": ["Lorde Queem", "Choujin da Guerra", "Primeiro Choujin X"],
+    "gender": "Masculino",
+    "species": ["Choujin X"],
+    "affiliations": ["Guelra"],
+    "rcTypes": ["Bélico / Criação", "Força / Corpo"],
+    "rank": "Choujin X",
+    "debutArc": "Arco Ilhas das Bestas",
+    "debutArcOrder": 5,
+    "epithet": "Tirano Bélico de Guelra — Choujin X",
+    "quote": {
+      "text": "Deus não está nos céus, Zora... Deus é o rugido da artilharia que esmaga nações inteiras!",
+      "arc": "Arco Ilhas das Bestas",
+      "recipient": "Memórias da Grande Guerra contra Zora Siruha"
+    },
+    "kaguneOrQuinque": {
+      "name": "Encarnação Bélica Total — Couraçados e Bombardeiros",
+      "category": "Choujin X da Guerra"
+    },
+    "maskOrEye": {
+      "type": "Elmo Blindado de Artilharia & Visor de Guerra",
+      "title": "Couraça militar pesada de Queem, o Choujin X de Guelra",
+      "preset": "queem-war",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#52525b",
+      "hairSecondary": "#27272a",
+      "hairStyle": "slick-aristocrat",
+      "skinTone": "#d4d4d8",
+      "eyeColor": "#ef4444",
+      "kakugan": "both",
+      "accessory": "mask_tatara",
+      "outfit": "aogiri",
+      "accentColor": "#ef4444"
+    }
+  },
+  {
+    "id": "antitise-relampago",
+    "name": "Antitise",
+    "aliases": ["Rei Antitise", "Choujin do Relâmpago"],
+    "gender": "Masculino",
+    "species": ["Choujin X"],
+    "affiliations": ["Antiga Yamato"],
+    "rcTypes": ["Elemental / Fumaça"],
+    "rank": "Choujin X",
+    "debutArc": "Arco Ilhas das Bestas",
+    "debutArcOrder": 5,
+    "epithet": "Soberano do Relâmpago",
+    "quote": {
+      "text": "Mesmo diante do exército mecânico de Queem, o trovão soberano jamais se curvará.",
+      "arc": "Arco Ilhas das Bestas",
+      "recipient": "Registros históricos da Guerra Choujin"
+    },
+    "kaguneOrQuinque": {
+      "name": "Julgamento Elétrico Soberano",
+      "category": "Fulgor / Trovão"
+    },
+    "maskOrEye": {
+      "type": "Coroa de Raios & Olhos Fulgurantes",
+      "title": "Olhar eletrizado do lendário Antitise",
+      "preset": "default",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#fde047",
+      "hairSecondary": "#eab308",
+      "hairStyle": "long-wild",
+      "skinTone": "#f5e6d8",
+      "eyeColor": "#38bdf8",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "suit",
+      "accentColor": "#fde047"
+    }
+  },
+  {
+    "id": "bebe-ilha",
+    "name": "BB (Bebe)",
+    "aliases": ["BB", "Bebe", "Caçadora das Ilhas"],
+    "gender": "Feminino",
+    "species": ["Choujin"],
+    "affiliations": ["Yamato Mori", "Ilhas das Bestas"],
+    "rcTypes": ["Bélico / Criação", "Força / Corpo"],
+    "rank": "Guardião",
+    "debutArc": "Arco Ilhas das Bestas",
+    "debutArcOrder": 5,
+    "epithet": "Guardiã das Ilhas das Bestas",
+    "quote": {
+      "text": "Nas Ilhas das Bestas, quem hesita por um segundo vira jantar antes do pôr do sol!",
+      "arc": "Arco Ilhas das Bestas",
+      "recipient": "Guiando os recrutas de Yamato Mori"
+    },
+    "kaguneOrQuinque": {
+      "name": "Lança de Caça & Combate Insular",
+      "category": "Vanguarda Costeira"
+    },
+    "maskOrEye": {
+      "type": "Bandana de Caça & Olhar Selvagem",
+      "title": "Olhar aguerrido de BB nas Ilhas das Bestas",
+      "preset": "default",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#f97316",
+      "hairSecondary": "#c2410c",
+      "hairStyle": "sunny-spiky",
+      "skinTone": "#e0b89c",
+      "eyeColor": "#facc15",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "yamato",
+      "accentColor": "#f97316"
+    }
+  },
+  {
+    "id": "uru-yamato",
+    "name": "Uru",
+    "aliases": ["Guardião Uru"],
+    "gender": "Masculino",
+    "species": ["Choujin"],
+    "affiliations": ["Yamato Mori"],
+    "rcTypes": ["Força / Corpo"],
+    "rank": "Guardião",
+    "debutArc": "Treinamento em Yamato Mori",
+    "debutArcOrder": 4,
+    "epithet": "Guardião de Patrulha de Yamato Mori",
+    "quote": {
+      "text": "Mantenham a formação! Nenhum servo da Torre passará pelo perímetro de Yamato Mori!",
+      "arc": "Arco Ilhas das Bestas",
+      "recipient": "Esquadrão de contenção"
+    },
+    "kaguneOrQuinque": {
+      "name": "Revestimento de Impacto de Guarda",
+      "category": "Defesa / Contenção"
+    },
+    "maskOrEye": {
+      "type": "Uniforme de Guardião & Olhar Vigilante",
+      "title": "Rosto atento do guardião Uru em missão",
+      "preset": "default",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#334155",
+      "hairSecondary": "#1e293b",
+      "hairStyle": "parted-neat",
+      "skinTone": "#f1dfd2",
+      "eyeColor": "#94a3b8",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "yamato",
+      "accentColor": "#38bdf8"
+    }
+  },
+  {
+    "id": "roall-yamato",
+    "name": "Roall",
+    "aliases": ["Guardião Roall"],
+    "gender": "Masculino",
+    "species": ["Choujin"],
+    "affiliations": ["Yamato Mori"],
+    "rcTypes": ["Elemental / Fumaça"],
+    "rank": "Guardião",
+    "debutArc": "Arco Ilhas das Bestas",
+    "debutArcOrder": 5,
+    "epithet": "Guardião Tático de Yamato Mori",
+    "quote": {
+      "text": "Sinalizem para o grupo do Sandek! A presença da Zora está distorcendo toda a ilha!",
+      "arc": "Arco Ilhas das Bestas",
+      "recipient": "Operação nas Ilhas das Bestas"
+    },
+    "kaguneOrQuinque": {
+      "name": "Disparo de Supressão Tática",
+      "category": "Suporte de Esquadrão"
+    },
+    "maskOrEye": {
+      "type": "Visor de Patrulha & Cicatriz Nasal",
+      "title": "Perfil tático do guardião Roall",
+      "preset": "default",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#a16207",
+      "hairSecondary": "#713f12",
+      "hairStyle": "undercut-long",
+      "skinTone": "#ead2c0",
+      "eyeColor": "#22c55e",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "yamato",
+      "accentColor": "#22c55e"
+    }
+  },
+  {
+    "id": "takeru-monda",
+    "name": "Takeru Monda",
+    "aliases": ["Monda", "Takeru"],
+    "gender": "Masculino",
+    "species": ["Choujin"],
+    "affiliations": ["Yamato Mori"],
+    "rcTypes": ["Força / Corpo"],
+    "rank": "Guardião",
+    "debutArc": "Arco Ilhas das Bestas",
+    "debutArcOrder": 5,
+    "epithet": "Guardião de Escolta de Yamato Mori",
+    "quote": {
+      "text": "Protejam os recrutas! O inimigo conhece cada trilha desta costa!",
+      "arc": "Arco Ilhas das Bestas",
+      "recipient": "Defendendo os cadetes na expedição"
+    },
+    "kaguneOrQuinque": {
+      "name": "Escudo Corporal de Contenção",
+      "category": "Combate Corpo a Corpo"
+    },
+    "maskOrEye": {
+      "type": "Olhar Firme & Gola de Yamato Mori",
+      "title": "Retrato de serviço de Takeru Monda",
+      "preset": "default",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#18181b",
+      "hairSecondary": "#27272a",
+      "hairStyle": "short-spiky",
+      "skinTone": "#f1dfd2",
+      "eyeColor": "#71717a",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "yamato",
+      "accentColor": "#a1a1aa"
+    }
+  },
+  {
+    "id": "jing-guelra",
+    "name": "Jing",
+    "aliases": ["Jing da Guelra", "Cortador Espacial"],
+    "gender": "Masculino",
+    "species": ["Choujin"],
+    "affiliations": ["Guelra", "Torre do Luto (Zora)"],
+    "rcTypes": ["Gravidade / Espaço"],
+    "rank": "Mercenário",
+    "debutArc": "Arco da Papoula (Opium)",
+    "debutArcOrder": 6,
+    "epithet": "Executor do Corte Espacial",
+    "quote": {
+      "text": "Não importa a dureza da sua armadura quando é o próprio espaço ao seu redor que se divide em dois.",
+      "arc": "Arco da Papoula (Opium)",
+      "recipient": "Emboscando os agentes de Yamato Mori"
+    },
+    "kaguneOrQuinque": {
+      "name": "Guilhotina Dimensional",
+      "category": "Fatiamento Espacial"
+    },
+    "maskOrEye": {
+      "type": "Olhar Gélido & Fenda no Espaço",
+      "title": "Distorção linear cortando o quadro diante do olhar de Jing",
+      "preset": "default",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#0f172a",
+      "hairSecondary": "#1e293b",
+      "hairStyle": "slick-aristocrat",
+      "skinTone": "#f1dfd2",
+      "eyeColor": "#38bdf8",
+      "kakugan": "none",
+      "accessory": "glasses",
+      "outfit": "suit",
+      "accentColor": "#38bdf8"
+    }
+  },
+  {
+    "id": "bacie-gelo",
+    "name": "Bacie",
+    "aliases": ["Bacie da Torre", "Choujin do Gelo"],
+    "gender": "Feminino",
+    "species": ["Choujin"],
+    "affiliations": ["Torre do Luto (Zora)"],
+    "rcTypes": ["Elemental / Fumaça"],
+    "rank": "Mestre da Torre",
+    "debutArc": "Arco da Papoula (Opium)",
+    "debutArcOrder": 6,
+    "epithet": "Sentinela Glacial da Torre do Luto",
+    "quote": {
+      "text": "Aquele que profanar os degraus da Madre Zora terá o sangue congelado antes de dar o segundo passo.",
+      "arc": "Invasão à Torre do Luto",
+      "recipient": "Defendendo os salões da Torre do Luto"
+    },
+    "kaguneOrQuinque": {
+      "name": "Zero Absoluto & Estalactites da Torre",
+      "category": "Criocinese"
+    },
+    "maskOrEye": {
+      "type": "Cílios Congelados & Véu da Torre",
+      "title": "Olhar glacial de Bacie nos salões de Zora",
+      "preset": "default",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#bae6fd",
+      "hairSecondary": "#38bdf8",
+      "hairStyle": "long-flowing",
+      "skinTone": "#f8fafc",
+      "eyeColor": "#0284c7",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "aogiri",
+      "accentColor": "#38bdf8"
+    }
+  },
+  {
+    "id": "soya-maestro",
+    "name": "Soya (Maestro)",
+    "aliases": ["Maestro", "Soya Kagomura"],
+    "gender": "Masculino",
+    "species": ["Choujin"],
+    "affiliations": ["Torre do Luto (Zora)"],
+    "rcTypes": ["Psíquico / Oráculo", "Bélico / Criação"],
+    "rank": "Mestre da Torre",
+    "debutArc": "Invasão à Torre do Luto",
+    "debutArcOrder": 7,
+    "epithet": "Maestro da Torre do Luto",
+    "quote": {
+      "text": "Ouçam o réquiem dos Kagomura... cada lâmina dança conforme a batuta da Torre!",
+      "arc": "Invasão à Torre do Luto",
+      "recipient": "Confrontando Simon Kagomura"
+    },
+    "kaguneOrQuinque": {
+      "name": "Regência de Lâminas & Sinfonia da Torre",
+      "category": "Controle Remoto / Espadas"
+    },
+    "maskOrEye": {
+      "type": "Meia-Máscara Teatral & Olhar de Regente",
+      "title": "Rosto cerimonial do Maestro na Torre do Luto",
+      "preset": "crescent-moon-mask",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#e4e4e7",
+      "hairSecondary": "#71717a",
+      "hairStyle": "long-parted",
+      "skinTone": "#e4e4e7",
+      "eyeColor": "#dc2626",
+      "kakugan": "right",
+      "accessory": "eyepatch",
+      "outfit": "suit",
+      "accentColor": "#dc2626"
+    }
+  },
+  {
+    "id": "johnny-flex",
+    "name": "Johnny Kiyoshi",
+    "aliases": ["Johnny", "Choujin da Elasticidade"],
+    "gender": "Masculino",
+    "species": ["Choujin"],
+    "affiliations": ["Independente"],
+    "rcTypes": ["Força / Corpo"],
+    "rank": "Civil",
+    "debutArc": "Prefeitura de Yamato (Intro)",
+    "debutArcOrder": 1,
+    "epithet": "Choujin dos Membros Elásticos",
+    "quote": {
+      "text": "Ei, garoto! Não se meta no nosso território se não quiser ser dobrado ao meio!",
+      "arc": "Prefeitura de Yamato (Intro)",
+      "recipient": "Atacando Azuma e Tokio no primeiro capítulo"
+    },
+    "kaguneOrQuinque": {
+      "name": "Extensão Corporal de Borracha",
+      "category": "Deformação Física"
+    },
+    "maskOrEye": {
+      "type": "Pescoço Alongado & Sorriso Debochado",
+      "title": "Rosto distorcido de Johnny no início do surto em Yamato",
+      "preset": "default",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#eab308",
+      "hairSecondary": "#a16207",
+      "hairStyle": "sunny-spiky",
+      "skinTone": "#ead2c0",
+      "eyeColor": "#71717a",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "casual",
+      "accentColor": "#eab308"
+    }
+  },
+  {
+    "id": "gori-besta",
+    "name": "Gori",
+    "aliases": ["Choujin Gorila", "Besta Gori"],
+    "gender": "Masculino",
+    "species": ["Choujin Besta"],
+    "affiliations": ["Independente"],
+    "rcTypes": ["Besta (Zoan)", "Força / Corpo"],
+    "rank": "Infiltrado / Nômade",
+    "debutArc": "Arco Besta da Lua (Nari)",
+    "debutArcOrder": 3,
+    "epithet": "Choujin Besta do Gorila",
+    "quote": {
+      "text": "A jaula quebrou! Agora a selva inteira pertence às Bestas!",
+      "arc": "Arco Besta da Lua (Nari)",
+      "recipient": "Incidente no Zoológico de Yamato"
+    },
+    "kaguneOrQuinque": {
+      "name": "Braços Colossais de Primate",
+      "category": "Besta / Esmagamento"
+    },
+    "maskOrEye": {
+      "type": "Mandíbula de Primate & Sobrancelha Franzida",
+      "title": "Focinho bestial de Gori durante o ataque noturno",
+      "preset": "default",
+      "focalPoint": { "x": 50, "y": 46 }
+    },
+    "avatarStyle": {
+      "hairColor": "#292524",
+      "hairSecondary": "#1c1917",
+      "hairStyle": "short-spiky",
+      "skinTone": "#a8a29e",
+      "eyeColor": "#f59e0b",
+      "kakugan": "none",
+      "accessory": "none",
+      "outfit": "goat",
+      "accentColor": "#f59e0b"
+    }
+  }
+]

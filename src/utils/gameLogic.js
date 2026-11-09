@@ -12,6 +12,16 @@ export const ARCS_CHRONOLOGY = [
   { order: 10, name: 'Dragon (:re)', part: 'Tokyo Ghoul:re' },
 ];
 
+export const CHOUJIN_ARCS_CHRONOLOGY = [
+  { order: 1, name: 'Prefeitura de Yamato (Intro)', part: 'Choujin X' },
+  { order: 2, name: 'Arco Sinker (Beisebol)', part: 'Choujin X' },
+  { order: 3, name: 'Arco Besta da Lua (Nari)', part: 'Choujin X' },
+  { order: 4, name: 'Treinamento em Yamato Mori', part: 'Choujin X' },
+  { order: 5, name: 'Arco Ilhas das Bestas', part: 'Choujin X' },
+  { order: 6, name: 'Arco da Papoula (Opium)', part: 'Choujin X' },
+  { order: 7, name: 'Invasão à Torre do Luto', part: 'Choujin X' },
+];
+
 export const GAME_MODES = [
   {
     id: 'classic',
@@ -94,15 +104,16 @@ function mulberry32(seed) {
   };
 }
 
-export function getDailyTargets(characters, dateKey = getTodayKey()) {
+export function getDailyTargets(characters, dateKey = getTodayKey(), universe = 'tg') {
   const modeIds = ['classic', 'quote', 'mask'];
+  const prefix = universe === 'cx' ? 'choujindle-daily' : 'ghouldle-daily';
   // Guarantee 100% deterministic ordering across all browsers, builds, and engines
   const sortedCharacters = [...characters].sort((a, b) => a.id.localeCompare(b.id));
   const usedIndices = new Set();
   const result = {};
 
   modeIds.forEach((modeId, idx) => {
-    const seed = hashString(`ghouldle-daily-${dateKey}-${modeId}-salt-${idx * 37}`);
+    const seed = hashString(`${prefix}-${dateKey}-${modeId}-salt-${idx * 37}`);
     const rand = mulberry32(seed);
     let candidateIdx = Math.floor(rand() * sortedCharacters.length);
     let guard = 0;
@@ -227,16 +238,32 @@ export function normalizeSearch(text) {
 }
 
 // Generate Wordle / Narutodle emoji grid for clipboard sharing
-export function generateShareSummary({ mode, isDaily, editionNumber, guesses, target, charactersById }) {
-  const modeNames = {
-    classic: 'Clássico',
-    quote: 'Citação',
-    mask: 'Máscara & Olho',
-  };
+export function generateShareSummary({
+  mode,
+  isDaily,
+  editionNumber,
+  guesses,
+  target,
+  charactersById,
+  universe = 'tg',
+}) {
+  const modeNames =
+    universe === 'cx'
+      ? {
+          classic: 'Clássico',
+          quote: 'Citação',
+          mask: 'Forma & Olhar',
+        }
+      : {
+          classic: 'Clássico',
+          quote: 'Citação',
+          mask: 'Máscara & Olho',
+        };
 
+  const gameTag = universe === 'cx' ? '⚡ CHOUJINDLE' : '🩸 GHOULDLE';
   const header = isDaily
-    ? `🩸 GHOULDLE #${editionNumber} — Modo ${modeNames[mode]}`
-    : `🩸 GHOULDLE (Infinito) — Modo ${modeNames[mode]}`;
+    ? `${gameTag} #${editionNumber} — Modo ${modeNames[mode]}`
+    : `${gameTag} (Infinito) — Modo ${modeNames[mode]}`;
 
   const attemptsLine = `🎯 Acertou em ${guesses.length} ${guesses.length === 1 ? 'tentativa' : 'tentativas'}!`;
 

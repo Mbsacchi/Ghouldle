@@ -4,13 +4,23 @@ import CharacterSearch from './CharacterSearch';
 import CharacterAvatar from './visuals/CharacterAvatar';
 import { compareCharacters } from '../utils/gameLogic';
 
-const COLUMNS = [
+const TG_COLUMNS = [
   { key: 'character', title: 'Alvo' },
   { key: 'gender', title: 'Gênero' },
   { key: 'species', title: 'Espécie' },
   { key: 'affiliations', title: 'Afiliação' },
   { key: 'rcTypes', title: 'Células RC' },
   { key: 'rank', title: 'Classificação' },
+  { key: 'debutArc', title: 'Arco de Estreia' },
+];
+
+const CX_COLUMNS = [
+  { key: 'character', title: 'Alvo' },
+  { key: 'gender', title: 'Gênero' },
+  { key: 'species', title: 'Natureza' },
+  { key: 'affiliations', title: 'Afiliação' },
+  { key: 'rcTypes', title: 'Aptidão Choujin' },
+  { key: 'rank', title: 'Classe' },
   { key: 'debutArc', title: 'Arco de Estreia' },
 ];
 
@@ -26,6 +36,7 @@ function getCellStampStyle(status) {
 }
 
 export default function ClassicMode({
+  universe = 'tg',
   characters,
   charactersById,
   target,
@@ -39,6 +50,8 @@ export default function ClassicMode({
   onRevealHint,
   onOpenVictoryModal,
 }) {
+  const isChoujin = universe === 'cx';
+  const columns = isChoujin ? CX_COLUMNS : TG_COLUMNS;
   const wrongGuessesCount = guesses.filter((id) => id !== target.id).length;
   const hint1Unlocked = wrongGuessesCount >= 5 || won;
   const hint2Unlocked = wrongGuessesCount >= 8 || won;
@@ -56,7 +69,9 @@ export default function ClassicMode({
               壱
             </span>
             <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#8d857b]">
-              DOSSIÊ DE COMPARAÇÃO // ATRIBUTOS DA CCG
+              {isChoujin
+                ? 'DOSSIÊ DE COMPARAÇÃO // ATRIBUTOS DE YAMATO MORI'
+                : 'DOSSIÊ DE COMPARAÇÃO // ATRIBUTOS DA CCG'}
             </span>
           </div>
           <span className="font-mono text-[10px] tracking-widest uppercase text-[#cfc6b6]">
@@ -205,7 +220,7 @@ export default function ClassicMode({
           <div className="min-w-[840px] space-y-2">
             {/* Sharp Column Headers */}
             <div className="grid grid-cols-7 gap-2">
-              {COLUMNS.map((col) => (
+              {columns.map((col) => (
                 <div
                   key={col.key}
                   className="py-2 px-2 text-center font-display text-xs uppercase tracking-[0.12em] text-[#efe9dd] bg-[#0e0d12] border-y border-x border-[#efe9dd]/25 border-b-2 border-b-[#b80f17]"

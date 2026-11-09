@@ -8,6 +8,7 @@ import {
 } from '../utils/gameLogic';
 
 export default function VictoryModal({
+  universe = 'tg',
   isOpen,
   onClose,
   mode,
@@ -47,6 +48,7 @@ export default function VictoryModal({
     guesses,
     target,
     charactersById,
+    universe,
   });
 
   const handleCopy = async () => {

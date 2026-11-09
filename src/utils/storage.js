@@ -1,8 +1,17 @@
 import { getTodayKey, getYesterdayKey, pickRandomCharacter } from './gameLogic';
 
-const DAILY_STORAGE_KEY = 'ghouldle_daily_progress_v1';
-const INFINITE_STORAGE_KEY = 'ghouldle_infinite_progress_v1';
-const STATS_STORAGE_KEY = 'ghouldle_player_stats_v1';
+const STORAGE_KEYS = {
+  tg: {
+    daily: 'ghouldle_daily_progress_v1',
+    infinite: 'ghouldle_infinite_progress_v1',
+    stats: 'ghouldle_player_stats_v1',
+  },
+  cx: {
+    daily: 'choujindle_daily_progress_v1',
+    infinite: 'choujindle_infinite_progress_v1',
+    stats: 'choujindle_player_stats_v1',
+  },
+};
 
 const DEFAULT_MODE_STATE = {
   guesses: [], // Stored newest-first for UI display
@@ -18,17 +27,18 @@ export function createEmptyModesMap() {
   };
 }
 
-export function loadDailyState() {
+export function loadDailyState(universe = 'tg') {
+  const key = STORAGE_KEYS[universe]?.daily || STORAGE_KEYS.tg.daily;
   const today = getTodayKey();
   try {
-    const raw = localStorage.getItem(DAILY_STORAGE_KEY);
+    const raw = localStorage.getItem(key);
     if (!raw) {
       return { dateKey: today, modes: createEmptyModesMap() };
     }
     const parsed = JSON.parse(raw);
     if (parsed.dateKey !== today) {
       const fresh = { dateKey: today, modes: createEmptyModesMap() };
-      localStorage.setItem(DAILY_STORAGE_KEY, JSON.stringify(fresh));
+      localStorage.setItem(key, JSON.stringify(fresh));
       return fresh;
     }
     const base = createEmptyModesMap();
@@ -45,15 +55,17 @@ export function loadDailyState() {
   }
 }
 
-export function saveDailyState(state) {
+export function saveDailyState(state, universe = 'tg') {
+  const key = STORAGE_KEYS[universe]?.daily || STORAGE_KEYS.tg.daily;
   try {
-    localStorage.setItem(DAILY_STORAGE_KEY, JSON.stringify(state));
+    localStorage.setItem(key, JSON.stringify(state));
   } catch {
     // Ignore storage quota errors
   }
 }
 
-export function loadInfiniteState(characters) {
+export function loadInfiniteState(characters, universe = 'tg') {
+  const key = STORAGE_KEYS[universe]?.infinite || STORAGE_KEYS.tg.infinite;
   const fallback = {
     modes: {
       classic: { targetId: pickRandomCharacter(characters).id, guesses: [], won: false, revealedHints: [] },
@@ -63,7 +75,7 @@ export function loadInfiniteState(characters) {
   };
 
   try {
-    const raw = localStorage.getItem(INFINITE_STORAGE_KEY);
+    const raw = localStorage.getItem(key);
     if (raw) {
       const parsed = JSON.parse(raw);
       if (parsed && parsed.modes) {
@@ -80,13 +92,14 @@ export function loadInfiniteState(characters) {
     // Fallback below
   }
 
-  saveInfiniteState(fallback);
+  saveInfiniteState(fallback, universe);
   return fallback;
 }
 
-export function saveInfiniteState(state) {
+export function saveInfiniteState(state, universe = 'tg') {
+  const key = STORAGE_KEYS[universe]?.infinite || STORAGE_KEYS.tg.infinite;
   try {
-    localStorage.setItem(INFINITE_STORAGE_KEY, JSON.stringify(state));
+    localStorage.setItem(key, JSON.stringify(state));
   } catch {
     // Ignore storage quota errors
   }
@@ -113,9 +126,10 @@ const DEFAULT_STATS = {
   },
 };
 
-export function loadPlayerStats() {
+export function loadPlayerStats(universe = 'tg') {
+  const key = STORAGE_KEYS[universe]?.stats || STORAGE_KEYS.tg.stats;
   try {
-    const raw = localStorage.getItem(STATS_STORAGE_KEY);
+    const raw = localStorage.getItem(key);
     if (!raw) return { ...DEFAULT_STATS };
     const parsed = JSON.parse(raw);
     return {
@@ -133,7 +147,8 @@ export function loadPlayerStats() {
   }
 }
 
-export function recordGameVictory({ stats, mode, attempts, isDaily }) {
+export function recordGameVictory({ stats, mode, attempts, isDaily, universe = 'tg' }) {
+  const key = STORAGE_KEYS[universe]?.stats || STORAGE_KEYS.tg.stats;
   const next = {
     ...stats,
     gamesPlayed: stats.gamesPlayed + 1,
@@ -174,7 +189,7 @@ export function recordGameVictory({ stats, mode, attempts, isDaily }) {
   }
 
   try {
-    localStorage.setItem(STATS_STORAGE_KEY, JSON.stringify(next));
+    localStorage.setItem(key, JSON.stringify(next));
   } catch {
     // Ignore storage quota errors
   }

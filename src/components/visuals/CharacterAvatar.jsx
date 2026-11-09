@@ -138,6 +138,14 @@ export default function CharacterAvatar({
             <path d="M42 90 Q60 106 78 90" fill="#27272a" />
           </g>
         );
+      case 'yamato':
+        return (
+          <g>
+            <path d="M16 120 L28 88 L60 96 L92 88 L104 120 Z" fill="#141812" />
+            <path d="M42 88 L60 116 L78 88 Z" fill="#e4e4e7" />
+            <path d="M36 90 L48 120 M84 90 L72 120" stroke="#a3e635" strokeWidth="2" />
+          </g>
+        );
       default:
         return (
           <g>
@@ -305,6 +313,27 @@ export default function CharacterAvatar({
             <circle cx="31" cy="60" r="1.6" fill="#d4d4d8" />
             <circle cx="89" cy="60" r="1.6" fill="#d4d4d8" />
             <path d="M52 90 L68 90" stroke="#18181b" strokeWidth="2.5" />
+          </g>
+        );
+      case 'beak_visor':
+        return (
+          <g>
+            <polygon points="48,60 60,78 72,60 60,64" fill="#27272a" stroke="#a3e635" strokeWidth="1.2" />
+          </g>
+        );
+      case 'iron_collar':
+        return (
+          <g>
+            <rect x="44" y="82" width="32" height="9" rx="2" fill="#52525b" stroke="#facc15" strokeWidth="1.2" />
+            <line x1="52" y1="82" x2="52" y2="91" stroke="#18181b" strokeWidth="1.5" />
+            <line x1="68" y1="82" x2="68" y2="91" stroke="#18181b" strokeWidth="1.5" />
+          </g>
+        );
+      case 'smoke_wisp':
+        return (
+          <g fill="none" stroke="#f97316" strokeWidth="1.8" opacity="0.85">
+            <path d="M24 68 Q16 54 26 42" />
+            <path d="M96 68 Q104 54 94 42" />
           </g>
         );
       default:

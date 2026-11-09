@@ -7,6 +7,7 @@ import MaskEyeVisualizer from './visuals/MaskEyeVisualizer';
 const MASK_ZOOM_STEPS = [3.15, 2.55, 2.05, 1.65, 1.32, 1.1, 1.0];
 
 export default function MaskMode({
+  universe = 'tg',
   characters,
   charactersById,
   target,
@@ -17,6 +18,7 @@ export default function MaskMode({
   onGuess,
   onOpenVictoryModal,
 }) {
+  const isChoujin = universe === 'cx';
   const wrongCount = guesses.filter((id) => id !== target.id).length;
   const currentZoom = won
     ? 1.0
@@ -35,7 +37,9 @@ export default function MaskMode({
               参
             </span>
             <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#8d857b]">
-              CATÁLOGO HYSY ARTMASK // IDENTIFICAÇÃO FACIAL
+              {isChoujin
+                ? 'REGISTRO DE CAOS & RAISE // IDENTIFICAÇÃO VISUAL'
+                : 'CATÁLOGO HYSY ARTMASK // IDENTIFICAÇÃO FACIAL'}
             </span>
           </div>
           <span className="font-mono text-[10px] tracking-widest uppercase text-[#cfc6b6]">
@@ -45,10 +49,15 @@ export default function MaskMode({
 
         <div className="text-center space-y-1">
           <h2 className="font-display text-2xl sm:text-3xl uppercase tracking-[0.06em] text-[#efe9dd]">
-            Reconheça a <span className="text-[#d9141e]">Máscara ou Olhar</span>
+            Reconheça a{' '}
+            <span className="text-[#d9141e]">
+              {isChoujin ? 'Forma ou Olhar' : 'Máscara ou Olhar'}
+            </span>
           </h2>
           <p className="font-serif text-xs sm:text-sm text-[#cfc6b6]/80">
-            Examine o fragmento fotográfico do disfarce ou Kakugan. O quadro se expande a cada erro.
+            {isChoujin
+              ? 'Examine o fragmento da forma Choujin, máscara ou olhar. O quadro se expande a cada erro.'
+              : 'Examine o fragmento fotográfico do disfarce ou Kakugan. O quadro se expande a cada erro.'}
           </p>
         </div>
 

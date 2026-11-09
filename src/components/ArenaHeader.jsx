@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowLeft, RotateCcw } from 'lucide-react';
 import { GhouldleCrestLogo, ModeEmblem } from './visuals/TgArtwork';
+import { ChoujindleCrestLogo, ChoujinModeEmblem } from './visuals/ChoujinArtwork';
 import { GAME_MODES, getTimeUntilMidnight } from '../utils/gameLogic';
 
 const MODE_KANJI = {
@@ -10,6 +11,7 @@ const MODE_KANJI = {
 };
 
 export default function ArenaHeader({
+  universe = 'tg',
   activeMode,
   onSelectMode,
   onBackToHub,
@@ -23,6 +25,7 @@ export default function ArenaHeader({
   onOpenHelp,
 }) {
   const [countdown, setCountdown] = useState(getTimeUntilMidnight());
+  const isChoujin = universe === 'cx';
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -35,7 +38,11 @@ export default function ArenaHeader({
     <header className="relative z-30 border-b border-[#efe9dd]/18 bg-[#0b0a0e]">
       {/* Top Hairline Info Strip */}
       <div className="border-b border-[#efe9dd]/10 bg-[#070608] px-4 py-1 text-[10px] font-mono tracking-[0.2em] uppercase text-[#8d857b] flex items-center justify-between max-w-6xl mx-auto">
-        <span>CCG // ARQUIVO DE INVESTIGAÇÃO — 20ª ALA</span>
+        <span>
+          {isChoujin
+            ? 'YAMATO MORI // ARQUIVO DE INVESTIGAÇÃO — PREFEITURA DE YAMATO'
+            : 'CCG // ARQUIVO DE INVESTIGAÇÃO — 20ª ALA'}
+        </span>
         <span className="text-[#cfc6b6]">
           {isDaily ? `EXPEDIENTE DIÁRIO #${editionNumber} • NOVO ALVO EM ${countdown} (00:00 UTC)` : 'MODO INFINITO // TREINO INDIVIDUAL'}
         </span>
@@ -62,7 +69,7 @@ export default function ArenaHeader({
               className="focus:outline-none"
               title="Voltar à Entrada Principal"
             >
-              <GhouldleCrestLogo compact />
+              {isChoujin ? <ChoujindleCrestLogo compact /> : <GhouldleCrestLogo compact />}
             </button>
           </div>
 
@@ -104,15 +111,24 @@ export default function ArenaHeader({
                     : 'bg-[#121116] border-[#efe9dd]/20 text-[#8d857b] hover:text-[#efe9dd] hover:border-[#efe9dd]/50'
                 }`}
               >
-                <ModeEmblem
-                  modeId={mode.id}
-                  className={`w-5 h-5 shrink-0 ${
-                    isActive ? 'text-[#efe9dd]' : 'text-[#8d857b] group-hover:text-[#efe9dd]'
-                  }`}
-                />
+                {isChoujin ? (
+                  <ChoujinModeEmblem
+                    modeId={mode.id}
+                    className={`w-5 h-5 shrink-0 ${
+                      isActive ? 'text-[#efe9dd]' : 'text-[#8d857b] group-hover:text-[#efe9dd]'
+                    }`}
+                  />
+                ) : (
+                  <ModeEmblem
+                    modeId={mode.id}
+                    className={`w-5 h-5 shrink-0 ${
+                      isActive ? 'text-[#efe9dd]' : 'text-[#8d857b] group-hover:text-[#efe9dd]'
+                    }`}
+                  />
+                )}
                 <div className="hidden sm:block text-left min-w-0">
                   <span className="block font-display text-xs uppercase tracking-[0.08em] leading-none truncate">
-                    {mode.label}
+                    {isChoujin && mode.id === 'mask' ? 'Forma & Olhar' : mode.label}
                   </span>
                 </div>
                 <span className="sm:hidden font-serif text-[11px] font-bold">

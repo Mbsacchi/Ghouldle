@@ -1,9 +1,11 @@
 import React from 'react';
 import { X, ArrowUp, ArrowDown } from 'lucide-react';
-import { ARCS_CHRONOLOGY } from '../utils/gameLogic';
+import { ARCS_CHRONOLOGY, CHOUJIN_ARCS_CHRONOLOGY } from '../utils/gameLogic';
 
-export default function HelpModal({ isOpen, onClose }) {
+export default function HelpModal({ isOpen, onClose, universe = 'tg' }) {
   if (!isOpen) return null;
+  const isChoujin = universe === 'cx';
+  const arcsList = isChoujin ? CHOUJIN_ARCS_CHRONOLOGY : ARCS_CHRONOLOGY;
 
   return (
     <div
@@ -21,7 +23,7 @@ export default function HelpModal({ isOpen, onClose }) {
             </span>
             <div>
               <h2 className="font-display text-xl uppercase tracking-[0.08em] text-[#efe9dd] leading-none">
-                Manual de Investigação — CCG
+                {isChoujin ? 'Manual de Investigação — Yamato Mori' : 'Manual de Investigação — CCG'}
               </h2>
               <p className="font-mono text-[10px] uppercase tracking-widest text-[#8d857b] mt-1">
                 Critérios de convergência e linha temporal dos arcos
@@ -79,7 +81,7 @@ export default function HelpModal({ isOpen, onClose }) {
             CRONOLOGIA OFICIAL DOS ARCOS DE ESTREIA
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {ARCS_CHRONOLOGY.map((arc) => (
+            {arcsList.map((arc) => (
               <div
                 key={arc.order}
                 className="flex items-center justify-between px-3 py-2 bg-[#080709] border border-[#efe9dd]/15 text-xs"
