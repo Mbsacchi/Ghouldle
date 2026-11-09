@@ -35,38 +35,56 @@
   background-size: 5px 5px;
 }
 
-/* Choujin X Pop-Art & Punk Zine Textures */
-.bg-cx-halftone-dark {
-  background-image: radial-gradient(rgba(11, 11, 14, 0.16) 1.25px, transparent 1.25px);
+/* ============================================================================
+   CHOUJIN X — POP-PUNK / NEO-BRUTALIST / STREET-ART ZINE UTILITIES
+   ============================================================================ */
+
+/* Primary .bg-halftone class requested for Choujin X backgrounds and cards */
+.bg-halftone {
+  background-image: radial-gradient(rgba(255, 230, 0, 0.14) 1.5px, transparent 1.5px);
+  background-size: 8px 8px;
+}
+
+.bg-halftone-dark {
+  background-image: radial-gradient(rgba(10, 10, 12, 0.22) 1.5px, transparent 1.5px);
   background-size: 7px 7px;
 }
 
-.bg-cx-halftone-magenta {
-  background-image: radial-gradient(rgba(255, 30, 86, 0.22) 1.5px, transparent 1.5px);
+.bg-halftone-magenta {
+  background-image: radial-gradient(rgba(255, 0, 85, 0.2) 1.5px, transparent 1.5px);
   background-size: 8px 8px;
 }
 
 .bg-cx-hazard {
   background-image: repeating-linear-gradient(
     -45deg,
-    #0b0b0e,
-    #0b0b0e 10px,
-    #eaff00 10px,
-    #eaff00 20px
+    #0a0a0c,
+    #0a0a0c 12px,
+    #FFE600 12px,
+    #FFE600 24px
   );
 }
 
-.clip-zine-torn {
-  clip-path: polygon(
-    0% 2%,
-    4% 0%,
-    97% 1%,
-    100% 6%,
-    99% 96%,
-    95% 100%,
-    2% 99%,
-    0% 93%
-  );
+/* Choujin X Neo-Brutalist Dossier / Zine Cutout Box */
+.cx-brutal-box {
+  background-color: #16161a;
+  border: 3px solid #f4f1ea;
+  box-shadow: 6px 6px 0px #FFE600;
+}
+
+.cx-brutal-paper {
+  background-color: #f4f1ea;
+  color: #0a0a0c;
+  border: 3px solid #0a0a0c;
+  box-shadow: 6px 6px 0px #FF0055;
+}
+
+.cx-skew-badge {
+  transform: skewX(-3deg) rotate(-1deg);
+}
+
+.cx-raise-btn {
+  animation: raisePulse 1.8s ease-in-out infinite;
 }
 
 /* Diagonal Manga Ink Hatching */
@@ -106,7 +124,7 @@
   background-position: 0 0, 0 28px, 28px -28px, -28px 0;
 }
 
-/* Razor Chamfered & Manga Slash Geometries (Zero Bubbly Border-Radius) */
+/* Razor Chamfered & Manga Slash Geometries */
 .clip-quinque-plate {
   clip-path: polygon(
     14px 0%,
@@ -155,6 +173,19 @@
 
 .clip-manga-right {
   clip-path: polygon(8% 4%, 100% 0, 100% 96%, 0 100%);
+}
+
+.clip-zine-torn {
+  clip-path: polygon(
+    0% 2%,
+    4% 0%,
+    97% 1%,
+    100% 5%,
+    99% 96%,
+    95% 100%,
+    2% 99%,
+    0% 94%
+  );
 }
 
 /* CCG Classified Paper Sheet */

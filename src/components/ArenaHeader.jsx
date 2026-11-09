@@ -34,15 +34,185 @@ export default function ArenaHeader({
     return () => clearInterval(interval);
   }, []);
 
+  if (isChoujin) {
+    return (
+      <header className="relative z-30 border-b-[3px] border-[#FFE600] bg-[#0a0a0c] bg-halftone select-none">
+        {/* Top Hazard Strip */}
+        <div className="border-b-2 border-[#0a0a0c] bg-[#FFE600] text-[#0a0a0c] px-4 py-1 text-[10px] font-mono font-extrabold tracking-[0.2em] uppercase flex flex-wrap items-center justify-between max-w-6xl mx-auto">
+          <span>⚡ YAMATO MORI // ARQUIVO DE CAMPO — ESTADO DE CAOS</span>
+          <span>
+            {isDaily
+              ? `EDIÇÃO #${editionNumber} • NOVO ALVO EM ${countdown} (00:00 UTC)`
+              : 'MODO INFINITO // CAOS LIVRE'}
+          </span>
+        </div>
+
+        {/* Main Neo-Brutalist Control Strip */}
+        <div className="max-w-6xl mx-auto px-4 py-3.5 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+          {/* Left: Back to Hub + Compact Emblem */}
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <button
+                type="button"
+                onClick={onBackToHub}
+                className="inline-flex items-center gap-1.5 px-3 py-2 bg-[#f4f1ea] hover:bg-[#FFE600] border-2 border-[#0a0a0c] text-[#0a0a0c] text-xs font-mono font-extrabold uppercase tracking-wider transition-transform hover:-translate-y-0.5 shadow-[3px_3px_0_#FF0055] -skew-x-3"
+                title="Voltar à Entrada de ChoujinXdle"
+              >
+                <ArrowLeft className="w-3.5 h-3.5 stroke-[2.8]" />
+                <span className="hidden sm:inline">Zine</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={onBackToHub}
+                className="focus:outline-none"
+                title="Voltar à Entrada de ChoujinXdle"
+              >
+                <ChoujindleCrestLogo compact />
+              </button>
+            </div>
+
+            {/* Mobile Quick Seals */}
+            <div className="flex items-center gap-2 lg:hidden">
+              <button
+                type="button"
+                onClick={onOpenStats}
+                className="px-2.5 py-1.5 bg-[#16161a] border-2 border-[#FFE600] text-xs font-mono font-bold text-[#FFE600] shadow-[2px_2px_0_#FF0055] -skew-x-3"
+              >
+                録 {streak > 0 ? `(${streak})` : ''}
+              </button>
+              <button
+                type="button"
+                onClick={onOpenHelp}
+                className="px-2.5 py-1.5 bg-[#16161a] border-2 border-[#00F0FF] text-xs font-mono font-bold text-[#00F0FF] shadow-[2px_2px_0_#FFE600] -skew-x-3"
+              >
+                則
+              </button>
+            </div>
+          </div>
+
+          {/* Center: 3-Mode Neo-Brutalist Switcher */}
+          <nav aria-label="Alternar Modo Choujin X" className="grid grid-cols-3 gap-2">
+            {GAME_MODES.map((mode) => {
+              const isActive = activeMode === mode.id;
+              const isSolved = Boolean(completedModes[mode.id]);
+              const modeLabel =
+                mode.id === 'mask' ? 'Forma / Caos' : mode.label;
+
+              return (
+                <button
+                  key={mode.id}
+                  type="button"
+                  onClick={() => onSelectMode(mode.id)}
+                  className={`group relative flex items-center justify-center sm:justify-start gap-2 px-3 py-2 border-2 transition-all -skew-x-3 ${
+                    isActive
+                      ? 'bg-[#FFE600] border-[#0a0a0c] text-[#0a0a0c] shadow-[4px_4px_0_#FF0055] -translate-y-0.5 font-extrabold'
+                      : 'bg-[#16161a] border-[#f4f1ea]/40 text-[#f4f1ea] hover:border-[#FFE600] hover:text-[#FFE600]'
+                  }`}
+                >
+                  <ChoujinModeEmblem
+                    modeId={mode.id}
+                    className={`w-5 h-5 shrink-0 ${
+                      isActive ? 'text-[#0a0a0c]' : 'text-[#FFE600]'
+                    }`}
+                  />
+                  <div className="hidden sm:block text-left min-w-0">
+                    <span className="block font-display text-xs uppercase tracking-[0.06em] leading-none truncate">
+                      {modeLabel}
+                    </span>
+                  </div>
+                  <span className="sm:hidden font-serif text-[11px] font-bold">
+                    {MODE_KANJI[mode.id]}
+                  </span>
+
+                  {isSolved && (
+                    <span
+                      title="Concluído"
+                      className="absolute -top-2 -right-2 px-1 bg-[#A3FF00] border-2 border-[#0a0a0c] text-[9px] font-mono font-black text-[#0a0a0c] leading-tight"
+                    >
+                      ✓
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </nav>
+
+          {/* Right: Daily/Infinite Controls + Seals */}
+          <div className="flex flex-wrap items-center justify-between lg:justify-end gap-2.5">
+            <div className="inline-flex border-2 border-[#f4f1ea] bg-[#16161a] p-0.5 shadow-[3px_3px_0_#FFE600] -skew-x-3">
+              <button
+                type="button"
+                onClick={() => onTogglePlayType(true)}
+                className={`px-2.5 py-1 text-[11px] font-display font-bold uppercase tracking-[0.12em] transition-colors ${
+                  isDaily
+                    ? 'bg-[#FFE600] text-[#0a0a0c]'
+                    : 'text-[#f4f1ea]/70 hover:text-[#FFE600]'
+                }`}
+              >
+                Diário
+              </button>
+              <button
+                type="button"
+                onClick={() => onTogglePlayType(false)}
+                className={`px-2.5 py-1 text-[11px] font-display font-bold uppercase tracking-[0.12em] transition-colors ${
+                  !isDaily
+                    ? 'bg-[#00F0FF] text-[#0a0a0c]'
+                    : 'text-[#f4f1ea]/70 hover:text-[#00F0FF]'
+                }`}
+              >
+                Infinito
+              </button>
+            </div>
+
+            {!isDaily && (
+              <button
+                type="button"
+                onClick={onNewInfiniteRound}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FF0055] hover:bg-[#FFE600] hover:text-[#0a0a0c] border-2 border-[#0a0a0c] text-[11px] font-mono font-extrabold uppercase tracking-wider text-[#f4f1ea] shadow-[3px_3px_0_#A3FF00] -skew-x-3 transition-colors"
+                title="Sortear outro Choujin neste modo"
+              >
+                <RotateCcw className="w-3.5 h-3.5 stroke-[2.5]" />
+                <span>Novo Alvo</span>
+              </button>
+            )}
+
+            <div className="hidden lg:flex items-center gap-2">
+              <button
+                type="button"
+                onClick={onOpenStats}
+                className="px-3 py-1.5 bg-[#16161a] hover:bg-[#FFE600] hover:text-[#0a0a0c] border-2 border-[#f4f1ea] text-xs font-mono font-bold uppercase tracking-wider text-[#f4f1ea] shadow-[3px_3px_0_#FF0055] -skew-x-3 transition-colors flex items-center gap-1.5"
+              >
+                <span>Registro</span>
+                {streak > 0 && (
+                  <span className="px-1.5 py-0.2 bg-[#A3FF00] text-[#0a0a0c] text-[10px] font-black">
+                    {streak}
+                  </span>
+                )}
+              </button>
+
+              <button
+                type="button"
+                onClick={onOpenHelp}
+                className="px-2.5 py-1.5 bg-[#f4f1ea] hover:bg-[#00F0FF] border-2 border-[#0a0a0c] text-xs font-mono font-extrabold text-[#0a0a0c] shadow-[3px_3px_0_#FFE600] -skew-x-3 transition-colors"
+              >
+                則 Guia
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+    );
+  }
+
+  // ===========================================================================
+  // TOKYO GHOUL HEADER (100% IDENTICAL)
+  // ===========================================================================
   return (
     <header className="relative z-30 border-b border-[#efe9dd]/18 bg-[#0b0a0e]">
       {/* Top Hairline Info Strip */}
       <div className="border-b border-[#efe9dd]/10 bg-[#070608] px-4 py-1 text-[10px] font-mono tracking-[0.2em] uppercase text-[#8d857b] flex items-center justify-between max-w-6xl mx-auto">
-        <span>
-          {isChoujin
-            ? 'YAMATO MORI // ARQUIVO DE INVESTIGAÇÃO — PREFEITURA DE YAMATO'
-            : 'CCG // ARQUIVO DE INVESTIGAÇÃO — 20ª ALA'}
-        </span>
+        <span>CCG // ARQUIVO DE INVESTIGAÇÃO — 20ª ALA</span>
         <span className="text-[#cfc6b6]">
           {isDaily ? `EXPEDIENTE DIÁRIO #${editionNumber} • NOVO ALVO EM ${countdown} (00:00 UTC)` : 'MODO INFINITO // TREINO INDIVIDUAL'}
         </span>
@@ -69,7 +239,7 @@ export default function ArenaHeader({
               className="focus:outline-none"
               title="Voltar à Entrada Principal"
             >
-              {isChoujin ? <ChoujindleCrestLogo compact /> : <GhouldleCrestLogo compact />}
+              <GhouldleCrestLogo compact />
             </button>
           </div>
 
@@ -111,24 +281,15 @@ export default function ArenaHeader({
                     : 'bg-[#121116] border-[#efe9dd]/20 text-[#8d857b] hover:text-[#efe9dd] hover:border-[#efe9dd]/50'
                 }`}
               >
-                {isChoujin ? (
-                  <ChoujinModeEmblem
-                    modeId={mode.id}
-                    className={`w-5 h-5 shrink-0 ${
-                      isActive ? 'text-[#efe9dd]' : 'text-[#8d857b] group-hover:text-[#efe9dd]'
-                    }`}
-                  />
-                ) : (
-                  <ModeEmblem
-                    modeId={mode.id}
-                    className={`w-5 h-5 shrink-0 ${
-                      isActive ? 'text-[#efe9dd]' : 'text-[#8d857b] group-hover:text-[#efe9dd]'
-                    }`}
-                  />
-                )}
+                <ModeEmblem
+                  modeId={mode.id}
+                  className={`w-5 h-5 shrink-0 ${
+                    isActive ? 'text-[#efe9dd]' : 'text-[#8d857b] group-hover:text-[#efe9dd]'
+                  }`}
+                />
                 <div className="hidden sm:block text-left min-w-0">
                   <span className="block font-display text-xs uppercase tracking-[0.08em] leading-none truncate">
-                    {isChoujin && mode.id === 'mask' ? 'Forma & Olhar' : mode.label}
+                    {mode.label}
                   </span>
                 </div>
                 <span className="sm:hidden font-serif text-[11px] font-bold">

@@ -252,7 +252,7 @@ export function generateShareSummary({
       ? {
           classic: 'Clássico',
           quote: 'Citação',
-          mask: 'Forma & Olhar',
+          mask: 'Forma Choujin / Estado de Caos',
         }
       : {
           classic: 'Clássico',

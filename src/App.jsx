@@ -419,43 +419,52 @@ export default function App() {
       />
 
       {view === 'lobby' ? (
-        <SuiIshidaLobby
-          onEnterUniverseHub={handleSelectUniverse}
-          onEnterUniverseMode={handleEnterUniverseMode}
-          isDaily={isDaily}
-          onTogglePlayType={handleTogglePlayType}
-          editionNumber={editionNumber}
-          tgCompletedModes={tgCompletedModes}
-          cxCompletedModes={cxCompletedModes}
-          tgStats={statsByUniverse.tg}
-          cxStats={statsByUniverse.cx}
-        />
+        <div key="lobby-stage" className="flex-1 flex flex-col animate-universe-switch">
+          <SuiIshidaLobby
+            onEnterUniverseHub={handleSelectUniverse}
+            onEnterUniverseMode={handleEnterUniverseMode}
+            isDaily={isDaily}
+            onTogglePlayType={handleTogglePlayType}
+            editionNumber={editionNumber}
+            tgCompletedModes={tgCompletedModes}
+            cxCompletedModes={cxCompletedModes}
+            tgStats={statsByUniverse.tg}
+            cxStats={statsByUniverse.cx}
+          />
+        </div>
       ) : view === 'hub' ? (
-        universe === 'cx' ? (
-          <ChoujinHub
-            onEnterMode={handleEnterMode}
-            isDaily={isDaily}
-            onTogglePlayType={handleTogglePlayType}
-            editionNumber={editionNumber}
-            completedModes={completedModes}
-            stats={stats}
-            onOpenStats={() => setStatsModalOpen(true)}
-            onOpenHelp={() => setHelpModalOpen(true)}
-          />
-        ) : (
-          <HomeHub
-            onEnterMode={handleEnterMode}
-            isDaily={isDaily}
-            onTogglePlayType={handleTogglePlayType}
-            editionNumber={editionNumber}
-            completedModes={completedModes}
-            stats={stats}
-            onOpenStats={() => setStatsModalOpen(true)}
-            onOpenHelp={() => setHelpModalOpen(true)}
-          />
-        )
+        <div key={`hub-${universe}`} className="flex-1 flex flex-col animate-universe-switch">
+          {universe === 'cx' ? (
+            <ChoujinHub
+              onEnterMode={handleEnterMode}
+              isDaily={isDaily}
+              onTogglePlayType={handleTogglePlayType}
+              editionNumber={editionNumber}
+              completedModes={completedModes}
+              stats={stats}
+              onOpenStats={() => setStatsModalOpen(true)}
+              onOpenHelp={() => setHelpModalOpen(true)}
+            />
+          ) : (
+            <HomeHub
+              onEnterMode={handleEnterMode}
+              isDaily={isDaily}
+              onTogglePlayType={handleTogglePlayType}
+              editionNumber={editionNumber}
+              completedModes={completedModes}
+              stats={stats}
+              onOpenStats={() => setStatsModalOpen(true)}
+              onOpenHelp={() => setHelpModalOpen(true)}
+            />
+          )}
+        </div>
       ) : (
-        <div className="min-h-screen flex flex-col bg-kaneki-subtle">
+        <div
+          key={`game-${universe}`}
+          className={`min-h-screen flex flex-col animate-universe-switch ${
+            universe === 'cx' ? 'bg-[#0a0a0c] bg-halftone text-[#f4f1ea]' : 'bg-kaneki-subtle'
+          }`}
+        >
           <ArenaHeader
             universe={universe}
             activeMode={activeMode}
@@ -492,6 +501,7 @@ export default function App() {
 
             {activeMode === 'quote' && (
               <QuoteMode
+                universe={universe}
                 characters={activeCharacters}
                 charactersById={charactersById}
                 target={currentTarget}
@@ -520,11 +530,19 @@ export default function App() {
             )}
           </main>
 
-          <footer className="border-t border-[#efe9dd]/12 py-4 px-4 text-center text-xs text-[#8d857b] bg-[#080709]">
+          <footer
+            className={
+              universe === 'cx'
+                ? 'border-t-[3px] border-[#FFE600] py-4 px-4 text-center text-xs text-[#f4f1ea] bg-[#0a0a0c]'
+                : 'border-t border-[#efe9dd]/12 py-4 px-4 text-center text-xs text-[#8d857b] bg-[#080709]'
+            }
+          >
             {universe === 'cx' ? (
-              <p className="font-serif">
-                <strong className="font-display tracking-[0.12em] text-[#efe9dd]">CHOUJINXDLE</strong>{' '}
-                — Arquivo não-oficial de <em className="text-[#a3e635]">Choujin X</em> (Sui Ishida Dle)
+              <p className="font-mono font-bold uppercase tracking-wider">
+                <strong className="px-2 py-0.5 bg-[#FFE600] text-[#0a0a0c] font-display tracking-[0.14em] mr-1">
+                  CHOUJINXDLE
+                </strong>{' '}
+                — Zine Pop-Punk de <em className="text-[#A3FF00] not-italic">Choujin X</em> (Sui Ishida Dle)
               </p>
             ) : (
               <p className="font-serif">
