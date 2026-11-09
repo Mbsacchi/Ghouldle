@@ -305,6 +305,8 @@
     "debutArc": "Arco Ilhas das Bestas",
     "debutArcOrder": 5,
     "epithet": "Antiga Choujin X & Mãe das Bestas",
+    "imageUrl": "/characters/zora-siruha.png",
+    "imagePosition": "center 12%",
     "quote": {
       "text": "A Calamidade negra engolirá Yamato... Somente aquele que herdar a minha Marca poderá impedir o fim.",
       "arc": "Arco Ilhas das Bestas",
@@ -317,8 +319,9 @@
     "maskOrEye": {
       "type": "Mãos com Olhos & Véu da Torre do Luto",
       "title": "Olhos abertos nas palmas das mãos sagradas de Zora Siruha",
+      "imageUrl": "/characters/zora-siruha.png",
       "preset": "zora-hand-eyes",
-      "focalPoint": { "x": 50, "y": 48 }
+      "focalPoint": { "x": 52, "y": 14 }
     },
     "avatarStyle": {
       "hairColor": "#f4f4f5",
@@ -344,6 +347,8 @@
     "debutArc": "Arco Besta da Lua (Nari)",
     "debutArcOrder": 3,
     "epithet": "O Nue — Quimera de Enxertos",
+    "imageUrl": "/characters/batista-hoshi.jpg",
+    "imagePosition": "center 18%",
     "quote": {
       "text": "O destino é apenas uma peça mal escrita... e eu costurei meu próprio corpo para reescrever o ato final.",
       "arc": "Arco da Papoula (Opium)",
@@ -356,8 +361,9 @@
     "maskOrEye": {
       "type": "Máscara Noh Tradicional & Costuras Nue",
       "title": "Máscara Noh branca ocultando o rosto costurado de Batista Hoshi",
+      "imageUrl": "/characters/batista-hoshi.jpg",
       "preset": "batista-noh",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 50, "y": 20 }
     },
     "avatarStyle": {
       "hairColor": "#18181b",
@@ -383,6 +389,8 @@
     "debutArc": "Prefeitura de Yamato (Intro)",
     "debutArcOrder": 1,
     "epithet": "Arauto da Fumaça Cinzenta",
+    "imageUrl": "/characters/chandra-hume.png",
+    "imagePosition": "center 18%",
     "quote": {
       "text": "Eu queimei aviões, cidades e até a mim mesmo procurando a Besta prometida pela Madre!",
       "arc": "Prefeitura de Yamato (Intro)",
@@ -395,8 +403,9 @@
     "maskOrEye": {
       "type": "Olhos Esbugalhados em Fumaça & Terno Escuro",
       "title": "Rosto fumegante e olhar insano de Chandra Hume",
+      "imageUrl": "/characters/chandra-hume.png",
       "preset": "chandra-smoke",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 54, "y": 22 }
     },
     "avatarStyle": {
       "hairColor": "#e4e4e7",
@@ -743,6 +752,8 @@
     "debutArc": "Arco Ilhas das Bestas",
     "debutArcOrder": 5,
     "epithet": "Choujin da Multiplicação Corporal",
+    "imageUrl": "/characters/yubiko-guerra.jpg",
+    "imagePosition": "center 22%",
     "quote": {
       "text": "Que delícia de carnificina! Mais braços, mais pernas, mais guerra até o meu corpo transbordar!",
       "arc": "Arco Ilhas das Bestas",
@@ -755,8 +766,9 @@
     "maskOrEye": {
       "type": "Sorriso Maníaco & Múltiplas Mãos em Mandala",
       "title": "Rosto eufórico de Yubiko em transe de combate",
+      "imageUrl": "/characters/yubiko-guerra.jpg",
       "preset": "yubiko-mandala",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 48, "y": 30 }
     },
     "avatarStyle": {
       "hairColor": "#18181b",
@@ -851,7 +863,7 @@
   {
     "id": "bebe-ilha",
     "name": "BB (Bebe)",
-    "aliases": ["BB", "Bebe", "Caçadora das Ilhas"],
+    "aliases": ["BB", "Bebe", "BB Banshee", "Caçadora das Ilhas"],
     "gender": "Feminino",
     "species": ["Choujin"],
     "affiliations": ["Yamato Mori", "Ilhas das Bestas"],
@@ -860,6 +872,8 @@
     "debutArc": "Arco Ilhas das Bestas",
     "debutArcOrder": 5,
     "epithet": "Guardiã das Ilhas das Bestas",
+    "imageUrl": "/characters/bebe-ilha.jpg",
+    "imagePosition": "center 12%",
     "quote": {
       "text": "Nas Ilhas das Bestas, quem hesita por um segundo vira jantar antes do pôr do sol!",
       "arc": "Arco Ilhas das Bestas",
@@ -872,8 +886,9 @@
     "maskOrEye": {
       "type": "Bandana de Caça & Olhar Selvagem",
       "title": "Olhar aguerrido de BB nas Ilhas das Bestas",
+      "imageUrl": "/characters/bebe-ilha.jpg",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 52, "y": 18 }
     },
     "avatarStyle": {
       "hairColor": "#f97316",
