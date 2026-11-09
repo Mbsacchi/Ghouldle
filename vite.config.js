@@ -260,6 +260,9 @@ function seoMultiRouteHtmlPlugin() {
 
 export default defineConfig({
   plugins: [react(), seoMultiRouteHtmlPlugin()],
+  build: {
+    sourcemap: false,
+  },
   server: {
     host: true,
     port: 5173,

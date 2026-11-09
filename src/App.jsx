@@ -26,7 +26,13 @@ import {
   saveInfiniteState,
   loadPlayerStats,
   recordGameVictory,
+  loadSessionPrefs,
+  saveSessionPrefs,
+  deepFreeze,
 } from './utils/storage';
+
+deepFreeze(tgCharactersData);
+deepFreeze(cxCharactersData);
 
 const VALID_MODES = ['classic', 'quote', 'mask'];
 
@@ -96,11 +102,11 @@ export default function App() {
   const [universe, setUniverse] = useState(initialRoute.universe);
   const [view, setView] = useState(initialRoute.view);
   const [activeMode, setActiveMode] = useState(initialRoute.mode);
-  const [isDaily, setIsDaily] = useState(true);
+  const [isDaily, setIsDaily] = useState(() => loadSessionPrefs().isDaily);
 
   const [dailyStates, setDailyStates] = useState(() => ({
-    tg: loadDailyState('tg'),
-    cx: loadDailyState('cx'),
+    tg: loadDailyState('tg', tgCharactersData),
+    cx: loadDailyState('cx', cxCharactersData),
   }));
   const [infiniteStates, setInfiniteStates] = useState(() => ({
     tg: loadInfiniteState(tgCharactersData, 'tg'),
@@ -154,18 +160,47 @@ export default function App() {
     syncDocumentSeo({ view, universe, mode: activeMode });
   }, [view, universe, activeMode]);
 
-  // Re-check midnight UTC rollover automatically for both games
+  // Re-check midnight UTC rollover & cross-tab storage synchronization
   useEffect(() => {
+    try {
+      if (typeof document !== 'undefined') {
+        document.designMode = 'off';
+      }
+    } catch {
+      // Ignore
+    }
+
     const checkRollover = setInterval(() => {
       const currentKey = getTodayKey();
       if (dailyStates.tg.dateKey !== currentKey || dailyStates.cx.dateKey !== currentKey) {
         setDailyStates({
-          tg: loadDailyState('tg'),
-          cx: loadDailyState('cx'),
+          tg: loadDailyState('tg', tgCharactersData),
+          cx: loadDailyState('cx', cxCharactersData),
         });
       }
     }, 15000);
-    return () => clearInterval(checkRollover);
+
+    const handleStorageSync = () => {
+      setDailyStates({
+        tg: loadDailyState('tg', tgCharactersData),
+        cx: loadDailyState('cx', cxCharactersData),
+      });
+      setInfiniteStates({
+        tg: loadInfiniteState(tgCharactersData, 'tg'),
+        cx: loadInfiniteState(cxCharactersData, 'cx'),
+      });
+      setStatsByUniverse({
+        tg: loadPlayerStats('tg'),
+        cx: loadPlayerStats('cx'),
+      });
+      setIsDaily(loadSessionPrefs().isDaily);
+    };
+
+    window.addEventListener('storage', handleStorageSync);
+    return () => {
+      clearInterval(checkRollover);
+      window.removeEventListener('storage', handleStorageSync);
+    };
   }, [dailyStates.tg.dateKey, dailyStates.cx.dateKey]);
 
   const dailyTargets = useMemo(
@@ -280,6 +315,7 @@ export default function App() {
     setVictoryModalOpen(false);
     setLastAnimatedGuessId(null);
     setIsDaily(nextIsDaily);
+    saveSessionPrefs({ isDaily: nextIsDaily });
   };
 
   const handleGuess = (chosenCharacter) => {
