@@ -431,6 +431,8 @@
     "debutArc": "Arco da Papoula (Opium)",
     "debutArcOrder": 6,
     "epithet": "Choujin Besta da Hiena",
+    "imageUrl": "/characters/palma-shishinegura.jpg",
+    "imagePosition": "center 16%",
     "quote": {
       "text": "Os mortos sempre conversaram comigo... Eu só queria que eles não ficassem tão sozinhos no frio.",
       "arc": "Arco da Papoula (Opium)",
@@ -443,8 +445,9 @@
     "maskOrEye": {
       "type": "Presas da Hiena & Olheiras Profundas",
       "title": "Olhar exausto e presas bestiais de Palma Shishinegura",
+      "imageUrl": "/characters/palma-shishinegura.jpg",
       "preset": "palma-hyena",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 50, "y": 20 }
     },
     "avatarStyle": {
       "hairColor": "#fef08a",
@@ -503,7 +506,7 @@
   {
     "id": "kouta-shiozaki",
     "name": "Kouta Shiozaki",
-    "aliases": ["Shiozaki", "Sinker", "Choujin do Arremesso"],
+    "aliases": ["Shiozaki", "Tezuya Shiozaki", "Tetsuya Shiozaki", "Sinker", "Choujin do Arremesso"],
     "gender": "Masculino",
     "species": ["Choujin"],
     "affiliations": ["Independente", "Yamato Mori"],
@@ -512,6 +515,8 @@
     "debutArc": "Arco Sinker (Beisebol)",
     "debutArcOrder": 2,
     "epithet": "Sinker — Choujin do Arremesso",
+    "imageUrl": "/characters/kouta-shiozaki.png",
+    "imagePosition": "center 18%",
     "quote": {
       "text": "Mais um arremesso... só mais um inning! Eu ainda não saí do montinho!",
       "arc": "Arco Sinker (Beisebol)",
@@ -524,8 +529,9 @@
     "maskOrEye": {
       "type": "Costuras de Bola de Beisebol no Rosto",
       "title": "Cabeça transfigurada em bola de beisebol costurada no estado Sinker",
+      "imageUrl": "/characters/kouta-shiozaki.png",
       "preset": "shiozaki-baseball",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 46, "y": 20 }
     },
     "avatarStyle": {
       "hairColor": "#27272a",
@@ -803,6 +809,8 @@
     "debutArc": "Arco Ilhas das Bestas",
     "debutArcOrder": 5,
     "epithet": "Tirano Bélico de Guelra — Choujin X",
+    "imageUrl": "/characters/queem-choujin-x.jpg",
+    "imagePosition": "center 16%",
     "quote": {
       "text": "Deus não está nos céus, Zora... Deus é o rugido da artilharia que esmaga nações inteiras!",
       "arc": "Arco Ilhas das Bestas",
@@ -815,8 +823,9 @@
     "maskOrEye": {
       "type": "Elmo Blindado de Artilharia & Visor de Guerra",
       "title": "Couraça militar pesada de Queem, o Choujin X de Guelra",
+      "imageUrl": "/characters/queem-choujin-x.jpg",
       "preset": "queem-war",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 64, "y": 14 }
     },
     "avatarStyle": {
       "hairColor": "#52525b",
