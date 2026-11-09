@@ -2,9 +2,22 @@ import React from 'react';
 import { X } from 'lucide-react';
 import { GAME_MODES } from '../utils/gameLogic';
 
-export default function StatsModal({ isOpen, onClose, stats, universe = 'tg' }) {
+export default function StatsModal({ isOpen, onClose, stats, universe = 'tg', lang = 'pt' }) {
   if (!isOpen) return null;
   const isChoujin = universe === 'cx';
+  const isEn = lang === 'en';
+
+  const getModeLabel = (modeObj) => {
+    if (modeObj.id === 'classic') return isEn ? 'Classic' : 'Clássico';
+    if (modeObj.id === 'quote') return isEn ? 'Quote' : 'Citação';
+    return isChoujin
+      ? isEn
+        ? 'Choujin Form'
+        : 'Forma / Caos'
+      : isEn
+      ? 'Mask & Eye'
+      : 'Máscara & Olho';
+  };
 
   const winRate =
     stats.gamesPlayed > 0
@@ -35,10 +48,18 @@ export default function StatsModal({ isOpen, onClose, stats, universe = 'tg' }) 
             </span>
             <div>
               <h2 className="font-display text-xl uppercase tracking-[0.08em] text-[#efe9dd] leading-none">
-                {isChoujin ? 'Histórico de Serviço — Yamato Mori' : 'Histórico de Serviço — CCG'}
+                {isChoujin
+                  ? isEn
+                    ? 'Service Record — Yamato Mori'
+                    : 'Histórico de Serviço — Yamato Mori'
+                  : isEn
+                  ? 'Service Record — CCG'
+                  : 'Histórico de Serviço — CCG'}
               </h2>
               <p className="font-mono text-[10px] uppercase tracking-widest text-[#8d857b] mt-1">
-                Dados armazenados localmente neste terminal
+                {isEn
+                  ? 'Data stored locally on this device'
+                  : 'Dados armazenados localmente neste terminal'}
               </p>
             </div>
           </div>
@@ -47,7 +68,7 @@ export default function StatsModal({ isOpen, onClose, stats, universe = 'tg' }) 
             type="button"
             onClick={onClose}
             className="p-1.5 border border-[#efe9dd]/25 hover:border-[#d9141e] text-[#cfc6b6] hover:text-[#efe9dd] transition-colors"
-            aria-label="Fechar registro"
+            aria-label={isEn ? 'Close records' : 'Fechar registro'}
           >
             <X className="w-4 h-4" />
           </button>
@@ -57,28 +78,37 @@ export default function StatsModal({ isOpen, onClose, stats, universe = 'tg' }) 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center">
           <div className="p-3 bg-[#080709] border border-[#efe9dd]/20">
             <p className="font-display text-2xl text-[#efe9dd]">{stats.gamesPlayed}</p>
-            <p className="font-mono text-[10px] uppercase text-[#8d857b]">Casos</p>
+            <p className="font-mono text-[10px] uppercase text-[#8d857b]">
+              {isEn ? 'Cases' : 'Casos'}
+            </p>
           </div>
           <div className="p-3 bg-[#080709] border border-[#efe9dd]/20">
             <p className="font-display text-2xl text-[#86efac]">{winRate}%</p>
-            <p className="font-mono text-[10px] uppercase text-[#8d857b]">Taxa Êxito</p>
+            <p className="font-mono text-[10px] uppercase text-[#8d857b]">
+              {isEn ? 'Win Rate' : 'Taxa Êxito'}
+            </p>
           </div>
           <div className="p-3 bg-[#080709] border border-[#efe9dd]/20">
             <p className="font-display text-2xl text-[#f59e0b]">{stats.currentStreak}</p>
-            <p className="font-mono text-[10px] uppercase text-[#8d857b]">Sequência</p>
+            <p className="font-mono text-[10px] uppercase text-[#8d857b]">
+              {isEn ? 'Streak' : 'Sequência'}
+            </p>
           </div>
           <div className="p-3 bg-[#080709] border border-[#efe9dd]/20">
             <p className="font-display text-2xl text-[#d9141e]">{stats.maxStreak}</p>
-            <p className="font-mono text-[10px] uppercase text-[#8d857b]">Recorde</p>
+            <p className="font-mono text-[10px] uppercase text-[#8d857b]">
+              {isEn ? 'Best Streak' : 'Recorde'}
+            </p>
           </div>
         </div>
 
         {/* Distribution Bars */}
         <div className="space-y-2.5">
           <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-[#8d857b]">
-            <span>Distribuição de Tentativas</span>
+            <span>{isEn ? 'Guess Distribution' : 'Distribuição de Tentativas'}</span>
             <span>
-              Média: <strong className="text-[#efe9dd]">{avgAttempts}</strong>
+              {isEn ? 'Average: ' : 'Média: '}
+              <strong className="text-[#efe9dd]">{avgAttempts}</strong>
             </span>
           </div>
           <div className="space-y-2">
@@ -104,7 +134,7 @@ export default function StatsModal({ isOpen, onClose, stats, universe = 'tg' }) 
         {/* Per Mode Breakdown */}
         <div className="space-y-2">
           <h3 className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#8d857b]">
-            DESEMPENHO POR DIVISÃO
+            {isEn ? 'PERFORMANCE BY DIVISION' : 'DESEMPENHO POR DIVISÃO'}
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
             {GAME_MODES.map((m) => {
@@ -116,15 +146,16 @@ export default function StatsModal({ isOpen, onClose, stats, universe = 'tg' }) 
                 >
                   <div>
                     <p className="font-display text-sm uppercase tracking-wide text-[#efe9dd]">
-                      {m.label}
+                      {getModeLabel(m)}
                     </p>
                     <p className="font-mono text-[10px] text-[#8d857b]">
-                      Solucionados: <strong className="text-[#cfc6b6]">{mStat.won}</strong>
+                      {isEn ? 'Solved: ' : 'Solucionados: '}
+                      <strong className="text-[#cfc6b6]">{mStat.won}</strong>
                     </p>
                   </div>
                   <div className="text-right">
                     <span className="font-mono text-[9px] uppercase text-[#8d857b] block">
-                      Melhor
+                      {isEn ? 'Best' : 'Melhor'}
                     </span>
                     <span className="font-mono text-xs font-bold text-[#86efac]">
                       {mStat.bestAttempts ? `${mStat.bestAttempts}x` : '—'}

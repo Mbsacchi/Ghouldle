@@ -1,3 +1,5 @@
+import { translateAttr } from './i18n';
+
 // Chronological list of arcs for reference in UI / Help Modal
 export const ARCS_CHRONOLOGY = [
   { order: 1, name: 'Arco da Intro', part: 'Tokyo Ghoul' },
@@ -186,16 +188,18 @@ function compareSets(guessArr, targetArr, subcategoryMatcher = null) {
 }
 
 // Format RC Types cleanly (e.g., Chimera)
-export function formatRcTypes(rcTypes) {
+export function formatRcTypes(rcTypes, lang = 'pt') {
   if (rcTypes.includes('Chimera')) {
-    const others = rcTypes.filter((t) => t !== 'Chimera');
+    const others = rcTypes
+      .filter((t) => t !== 'Chimera')
+      .map((t) => translateAttr(t, lang));
     return others.length > 0 ? `Chimera (${others.join(' / ')})` : 'Chimera';
   }
-  return rcTypes.join(' / ');
+  return rcTypes.map((t) => translateAttr(t, lang)).join(' / ');
 }
 
 // Full 7-column comparison for Classic Mode
-export function compareCharacters(guess, target, universe = 'tg') {
+export function compareCharacters(guess, target, universe = 'tg', lang = 'pt') {
   const speciesStatus = compareSets(guess.species, target.species, (gList, tList) => {
     const gOneEyed = gList.some((s) => s.startsWith('Ghoul de Um Olho'));
     const tOneEyed = tList.some((s) => s.startsWith('Ghoul de Um Olho'));
@@ -235,33 +239,33 @@ export function compareCharacters(guess, target, universe = 'tg') {
       },
       {
         key: 'gender',
-        label: guess.gender,
+        label: translateAttr(guess.gender, lang),
         status: guess.gender === target.gender ? 'correct' : 'wrong',
       },
       {
         key: 'species',
-        label: guess.species.join(' • '),
+        label: guess.species.map((s) => translateAttr(s, lang)).join(' • '),
         status: speciesStatus,
       },
       {
         key: 'affiliations',
-        label: guess.affiliations.join(', '),
+        label: guess.affiliations.map((a) => translateAttr(a, lang)).join(', '),
         status: affiliationStatus,
       },
       {
         key: 'rcTypes',
-        label: formatRcTypes(guess.rcTypes),
+        label: formatRcTypes(guess.rcTypes, lang),
         status: rcStatus,
       },
       {
         key: 'rank',
-        label: guess.rank,
+        label: translateAttr(guess.rank, lang),
         status: guess.rank === target.rank ? 'correct' : 'wrong',
         direction: rankDirection,
       },
       {
         key: 'debutArc',
-        label: guess.debutArc,
+        label: translateAttr(guess.debutArc, lang),
         status: guess.debutArcOrder === target.debutArcOrder ? 'correct' : 'wrong',
         direction: arcDirection,
       },
@@ -287,18 +291,20 @@ export function generateShareSummary({
   target,
   charactersById,
   universe = 'tg',
+  lang = 'pt',
 }) {
+  const isEn = lang === 'en';
   const modeNames =
     universe === 'cx'
       ? {
-          classic: 'Clássico',
-          quote: 'Citação',
-          mask: 'Forma Choujin / Estado de Caos',
+          classic: isEn ? 'Classic' : 'Clássico',
+          quote: isEn ? 'Quote' : 'Citação',
+          mask: isEn ? 'Choujin Form / Chaos State' : 'Forma Choujin / Estado de Caos',
         }
       : {
-          classic: 'Clássico',
-          quote: 'Citação',
-          mask: 'Máscara & Olho',
+          classic: isEn ? 'Classic' : 'Clássico',
+          quote: isEn ? 'Quote' : 'Citação',
+          mask: isEn ? 'Mask & Eye' : 'Máscara & Olho',
         };
 
   const gameTag = universe === 'cx' ? '⚡ CHOUJINXDLE' : '🩸 GHOULDLE';
@@ -307,19 +313,25 @@ export function generateShareSummary({
       ? 'https://suiichidadle.vercel.app/choujinxdle'
       : 'https://suiichidadle.vercel.app/ghouldle';
   const header = isDaily
-    ? `${gameTag} #${editionNumber} — Modo ${modeNames[mode]}`
+    ? isEn
+      ? `${gameTag} #${editionNumber} — ${modeNames[mode]} Mode`
+      : `${gameTag} #${editionNumber} — Modo ${modeNames[mode]}`
+    : isEn
+    ? `${gameTag} (Infinite) — ${modeNames[mode]} Mode`
     : `${gameTag} (Infinito) — Modo ${modeNames[mode]}`;
 
-  const attemptsLine = `🎯 Acertou em ${guesses.length} ${guesses.length === 1 ? 'tentativa' : 'tentativas'}!`;
+  const attemptsLine = isEn
+    ? `🎯 Solved in ${guesses.length} ${guesses.length === 1 ? 'try' : 'tries'}!`
+    : `🎯 Acertou em ${guesses.length} ${guesses.length === 1 ? 'tentativa' : 'tentativas'}!`;
+
+  const playFooter = isEn ? `☕ Play at: ${shareUrl}` : `☕ Jogue em: ${shareUrl}`;
 
   if (mode === 'classic') {
-    // Most recent guess at top or chronological? Chronological from 1st guess to winning guess reads great!
     const chronological = [...guesses].reverse();
     const gridLines = chronological.slice(-8).map((gId) => {
       const gChar = charactersById[gId];
       if (!gChar) return '';
-      const comp = compareCharacters(gChar, target, universe);
-      // Skip column 0 (portrait) or include columns 1..6 (6 attributes) -> let's include all 6 attributes!
+      const comp = compareCharacters(gChar, target, universe, lang);
       return comp.cells
         .slice(1)
         .map((cell) => {
@@ -336,8 +348,13 @@ export function generateShareSummary({
         .join('');
     });
 
-    const prefix = chronological.length > 8 ? `(... +${chronological.length - 8} palpites)\n` : '';
-    return `${header}\n${attemptsLine}\n\n${prefix}${gridLines.join('\n')}\n\n☕ Jogue em: ${shareUrl}`;
+    const prefix =
+      chronological.length > 8
+        ? isEn
+          ? `(... +${chronological.length - 8} guesses)\n`
+          : `(... +${chronological.length - 8} palpites)\n`
+        : '';
+    return `${header}\n${attemptsLine}\n\n${prefix}${gridLines.join('\n')}\n\n${playFooter}`;
   }
 
   // Visual / Quote modes: show attempt trail
@@ -346,5 +363,5 @@ export function generateShareSummary({
     .map((gId) => (gId === target.id ? '🟩' : '🟥'))
     .join('');
 
-  return `${header}\n${attemptsLine}\n\n${trail}\n\n☕ Jogue em: ${shareUrl}`;
+  return `${header}\n${attemptsLine}\n\n${trail}\n\n${playFooter}`;
 }

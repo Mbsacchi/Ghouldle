@@ -93,8 +93,36 @@ export default function HomeHub({
   stats,
   onOpenStats,
   onOpenHelp,
+  lang = 'pt',
 }) {
   const [countdown, setCountdown] = useState(getTimeUntilMidnight());
+  const isEn = lang === 'en';
+
+  const hubModes = isEn
+    ? [
+        {
+          id: 'classic',
+          kanji: '壱',
+          code: 'DOSSIER-01',
+          title: 'Classic',
+          tagline: 'Uncover attribute clues with each guess',
+        },
+        {
+          id: 'quote',
+          kanji: '弐',
+          code: 'VOICES-02',
+          title: 'Quote',
+          tagline: 'Identify who spoke the line in the manga',
+        },
+        {
+          id: 'mask',
+          kanji: '参',
+          code: 'HYSY-03',
+          title: 'Mask & Eye',
+          tagline: 'Recognize by gaze, Kakugan, or mask',
+        },
+      ]
+    : HUB_MODES;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -109,12 +137,18 @@ export default function HomeHub({
     <div className="relative min-h-screen w-full overflow-hidden bg-[#080709] text-[#efe9dd] flex flex-col justify-between select-none">
       {/* Subtle Top Crimson & Bone Ink Rule */}
       <div className="relative z-30 flex items-center justify-between px-4 sm:px-8 py-2 border-b border-[#efe9dd]/12 bg-[#080709]/95 text-[10px] font-mono tracking-[0.22em] text-[#8d857b] uppercase">
-        <span>東京喰種 // ARQUIVOS DA 20ª ALA</span>
+        <span>{isEn ? '東京喰種 // 20TH WARD ARCHIVES' : '東京喰種 // ARQUIVOS DA 20ª ALA'}</span>
         <span className="hidden sm:inline text-[#cfc6b6]">
           1000 − 7 = 993 · 986 · 979 · 972
         </span>
         <span className="text-[#d9141e]">
-          {isDaily ? `EDIÇÃO #${editionNumber}` : 'TREINO LIVRE'}
+          {isDaily
+            ? isEn
+              ? `EDITION #${editionNumber}`
+              : `EDIÇÃO #${editionNumber}`
+            : isEn
+            ? 'FREE PRACTICE'
+            : 'TREINO LIVRE'}
         </span>
       </div>
 
@@ -167,7 +201,7 @@ export default function HomeHub({
           <div className="flex items-center gap-2 mb-0.5">
             <span className="w-2 h-2 bg-[#d9141e]" />
             <span className="font-mono text-[10px] tracking-[0.24em] uppercase text-[#d9141e]">
-              喰種 // NOITE DA 20ª ALA
+              {isEn ? '喰種 // 20TH WARD NIGHT' : '喰種 // NOITE DA 20ª ALA'}
             </span>
           </div>
 
@@ -215,7 +249,7 @@ export default function HomeHub({
             <button
               type="button"
               onClick={onOpenStats}
-              title="Registro da CCG (Estatísticas)"
+              title={isEn ? 'CCG Record (Statistics)' : 'Registro da CCG (Estatísticas)'}
               className="group relative w-11 h-11 bg-[#111015] border border-[#efe9dd]/35 hover:border-[#d9141e] shadow-[3px_3px_0_#000] flex flex-col items-center justify-center transition-all hover:-translate-y-0.5"
             >
               <span className="font-serif text-sm font-bold text-[#efe9dd] group-hover:text-[#d9141e] leading-none">
@@ -233,14 +267,14 @@ export default function HomeHub({
             <button
               type="button"
               onClick={onOpenHelp}
-              title="Manual de Extermínio (Como Jogar)"
+              title={isEn ? 'Field Manual (How to Play)' : 'Manual de Extermínio (Como Jogar)'}
               className="group relative w-11 h-11 bg-[#111015] border border-[#efe9dd]/35 hover:border-[#d9141e] shadow-[3px_3px_0_#000] flex flex-col items-center justify-center transition-all hover:-translate-y-0.5"
             >
               <span className="font-serif text-sm font-bold text-[#efe9dd] group-hover:text-[#d9141e] leading-none">
                 則
               </span>
               <span className="font-mono text-[8px] uppercase tracking-wider text-[#8d857b] mt-0.5">
-                GUIA
+                {isEn ? 'GUIDE' : 'GUIA'}
               </span>
             </button>
           </div>
@@ -250,7 +284,7 @@ export default function HomeHub({
             <div className="flex items-center justify-center gap-3">
               <span className="h-[1px] w-8 sm:w-12 bg-gradient-to-r from-transparent to-[#b80f17]" />
               <p className="font-display text-sm sm:text-base tracking-[0.18em] uppercase text-[#efe9dd]">
-                Adivinhe os personagens de{' '}
+                {isEn ? 'Guess the characters of ' : 'Adivinhe os personagens de '}
                 <span className="text-[#d9141e] underline decoration-[#b80f17] underline-offset-4">
                   Tokyo Ghoul
                 </span>
@@ -258,7 +292,9 @@ export default function HomeHub({
               <span className="h-[1px] w-8 sm:w-12 bg-gradient-to-l from-transparent to-[#b80f17]" />
             </div>
             <p className="font-serif text-xs italic text-[#cfc6b6]/80">
-              「Entre o aroma do café da Anteiku e o aço frio das Quinques」
+              {isEn
+                ? '「Between the aroma of Anteiku coffee and the cold steel of Quinques」'
+                : '「Entre o aroma do café da Anteiku e o aço frio das Quinques」'}
             </p>
           </div>
 
@@ -274,7 +310,7 @@ export default function HomeHub({
                     : 'text-[#8d857b] hover:text-[#efe9dd]'
                 }`}
               >
-                Expediente Diário #{editionNumber}
+                {isEn ? `Daily Dossier #${editionNumber}` : `Expediente Diário #${editionNumber}`}
               </button>
               <button
                 type="button"
@@ -285,14 +321,14 @@ export default function HomeHub({
                     : 'text-[#8d857b] hover:text-[#efe9dd]'
                 }`}
               >
-                Caçada Infinita
+                {isEn ? 'Infinite Hunt' : 'Caçada Infinita'}
               </button>
             </div>
           </div>
 
           {/* 4 Stacked Asymmetric Mode Banners */}
           <nav aria-label="Escolha o Modo de Jogo" className="w-full space-y-3.5">
-            {HUB_MODES.map((mode) => {
+            {hubModes.map((mode) => {
               const isSolved = Boolean(completedModes[mode.id]);
 
               return (
@@ -369,31 +405,54 @@ export default function HomeHub({
             <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
               <div className="text-center sm:text-left">
                 <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#8d857b]">
-                  {isDaily ? `EXPEDIENTE DIÁRIO GLOBAL #${editionNumber}` : 'SIMULAÇÃO DE CAMPO INFINITA'}
+                  {isDaily
+                    ? isEn
+                      ? `GLOBAL DAILY DOSSIER #${editionNumber}`
+                      : `EXPEDIENTE DIÁRIO GLOBAL #${editionNumber}`
+                    : isEn
+                    ? 'INFINITE FIELD SIMULATION'
+                    : 'SIMULAÇÃO DE CAMPO INFINITA'}
                 </p>
                 <p className="text-xs text-[#efe9dd] font-medium mt-0.5">
                   {isDaily ? (
-                    <>
-                      Mesmo alvo para todos no mundo • Reinicia em{' '}
-                      <strong className="font-mono text-[#d9141e]">{countdown}</strong>{' '}
-                      <span className="text-[10px] font-mono text-[#8d857b]">(00:00 UTC)</span>
-                    </>
+                    isEn ? (
+                      <>
+                        Same target worldwide • Resets in{' '}
+                        <strong className="font-mono text-[#d9141e]">{countdown}</strong>{' '}
+                        <span className="text-[10px] font-mono text-[#8d857b]">(00:00 UTC)</span>
+                      </>
+                    ) : (
+                      <>
+                        Mesmo alvo para todos no mundo • Reinicia em{' '}
+                        <strong className="font-mono text-[#d9141e]">{countdown}</strong>{' '}
+                        <span className="text-[10px] font-mono text-[#8d857b]">(00:00 UTC)</span>
+                      </>
+                    )
                   ) : (
-                    <span>Treino individual com alvos aleatórios liberados nos 3 modos</span>
+                    <span>
+                      {isEn
+                        ? 'Unlimited training with random targets across all 3 modes'
+                        : 'Treino individual com alvos aleatórios liberados nos 3 modos'}
+                    </span>
                   )}
                 </p>
               </div>
 
               {/* 3 Hanko Progress Seals */}
-              <div className="flex items-center gap-1.5" title={`${solvedCount}/3 modos concluídos`}>
-                {HUB_MODES.map((m) => {
+              <div
+                className="flex items-center gap-1.5"
+                title={
+                  isEn ? `${solvedCount}/3 modes solved` : `${solvedCount}/3 modos concluídos`
+                }
+              >
+                {hubModes.map((m) => {
                   const done = Boolean(completedModes[m.id]);
                   return (
                     <button
                       key={m.id}
                       type="button"
                       onClick={() => onEnterMode(m.id)}
-                      title={`${m.title}: ${done ? 'Concluído' : 'Pendente'}`}
+                      title={`${m.title}: ${done ? (isEn ? 'Solved' : 'Concluído') : isEn ? 'Pending' : 'Pendente'}`}
                       className={`w-8 h-8 border flex items-center justify-center font-serif text-xs font-bold transition-colors ${
                         done
                           ? 'bg-[#b80f17] border-[#efe9dd] text-[#efe9dd]'
@@ -439,7 +498,7 @@ export default function HomeHub({
         >
           <div className="flex items-center justify-end gap-2 mb-0.5">
             <span className="font-mono text-[10px] tracking-[0.24em] uppercase text-[#cfc6b6]">
-              CCG // POMBOS DE AÇO
+              {isEn ? 'CCG // STEEL DOVES' : 'CCG // POMBOS DE AÇO'}
             </span>
             <span className="w-2 h-2 bg-[#efe9dd]" />
           </div>
@@ -486,7 +545,7 @@ export default function HomeHub({
             onClick={onOpenHelp}
             className="hover:text-[#efe9dd] font-mono uppercase tracking-wider transition-colors"
           >
-            [Manual &amp; Arcos]
+            {isEn ? '[Manual & Arcs]' : '[Manual & Arcos]'}
           </button>
           <span>•</span>
           <button
@@ -494,12 +553,13 @@ export default function HomeHub({
             onClick={onOpenStats}
             className="hover:text-[#efe9dd] font-mono uppercase tracking-wider transition-colors"
           >
-            [Registro ({stats.gamesWon}V)]
+            {isEn ? `[Records (${stats.gamesWon}W)]` : `[Registro (${stats.gamesWon}V)]`}
           </button>
         </div>
         <span className="hidden sm:inline text-[#efe9dd]/20">|</span>
         <p className="font-serif text-xs text-[#8d857b]">
-          GHOULDLE — Tributo não-oficial à obra <em className="text-[#cfc6b6]">Tokyo Ghoul</em> de Sui Ishida
+          GHOULDLE — {isEn ? 'Unofficial tribute to' : 'Tributo não-oficial à obra'}{' '}
+          <em className="text-[#cfc6b6]">Tokyo Ghoul</em> {isEn ? 'by Sui Ishida' : 'de Sui Ishida'}
         </p>
       </footer>
     </div>

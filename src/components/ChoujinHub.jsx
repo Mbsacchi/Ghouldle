@@ -68,8 +68,36 @@ export default function ChoujinHub({
   stats,
   onOpenStats,
   onOpenHelp,
+  lang = 'pt',
 }) {
   const [countdown, setCountdown] = useState(getTimeUntilMidnight());
+  const isEn = lang === 'en';
+
+  const zineModes = isEn
+    ? [
+        {
+          ...ZINE_MODES[0],
+          title: 'CLASSIC',
+          subtitle: 'CHOUJIN TYPE · AFFILIATION · CHAOS STATE',
+          desc: 'Compare Choujin Type/Complex, Affiliation (Yamato Mori, Tower of Mourning / Noh Mask, Independent), and Chaos State.',
+          tags: ['TYPE / COMPLEX', 'YAMATO MORI', 'TOWER OF MOURNING', 'CHAOS STATE'],
+        },
+        {
+          ...ZINE_MODES[1],
+          title: 'QUOTE',
+          subtitle: 'VOICES OF CHAOS & ORACLE MADO',
+          desc: 'Identify which Choujin spoke the line in Yamato and use the ⚡ RAISE! system to unlock hints.',
+          tags: ['DIALOGUE', '⚡ RAISE! HINTS'],
+        },
+        {
+          ...ZINE_MODES[2],
+          title: 'CHOUJIN FORM / CHAOS STATE',
+          subtitle: 'BEAST METAMORPHOSIS & NOH MASK',
+          desc: 'Recognize the Choujin Form, Chaos State, or Noh Mask from a zoomed-in manga panel.',
+          tags: ['CHAOS STATE', 'ZOOM LENS'],
+        },
+      ]
+    : ZINE_MODES;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -101,15 +129,25 @@ export default function ChoujinHub({
               超人X // 1998
             </span>
             <span className="text-[#f4f1ea]">
-              PREFEITURA DE YAMATO // YAMATO MORI VS. TORRE DO LUTO
+              {isEn
+                ? 'YAMATO PREFECTURE // YAMATO MORI VS. TOWER OF MOURNING'
+                : 'PREFEITURA DE YAMATO // YAMATO MORI VS. TORRE DO LUTO'}
             </span>
           </div>
           <div className="flex items-center gap-3">
             <span className="hidden md:inline text-[#A3FF00]">
-              ⚡ SISTEMA RAISE! ATIVO · XEMBER · ESTADO DE CAOS
+              {isEn
+                ? '⚡ RAISE! SYSTEM ACTIVE · XEMBER · CHAOS STATE'
+                : '⚡ SISTEMA RAISE! ATIVO · XEMBER · ESTADO DE CAOS'}
             </span>
             <span className="px-2 py-0.5 bg-[#FF0055] text-[#f4f1ea] border border-[#f4f1ea] -skew-x-6 shadow-[2px_2px_0_#FFE600]">
-              {isDaily ? `EDIÇÃO #${editionNumber}` : 'ZINE INFINITO'}
+              {isDaily
+                ? isEn
+                  ? `EDITION #${editionNumber}`
+                  : `EDIÇÃO #${editionNumber}`
+                : isEn
+                ? 'INFINITE ZINE'
+                : 'ZINE INFINITO'}
             </span>
           </div>
         </div>
@@ -138,7 +176,7 @@ export default function ChoujinHub({
                 YAMATO MORI
               </span>
               <span className="font-display text-base uppercase tracking-wider font-bold">
-                {stats.gamesWon} Vitórias
+                {stats.gamesWon} {isEn ? 'Wins' : 'Vitórias'}
               </span>
             </button>
 
@@ -148,19 +186,19 @@ export default function ChoujinHub({
               className="p-2.5 bg-[#f4f1ea] hover:bg-[#FFE600] text-[#0a0a0c] border-[2.5px] border-[#0a0a0c] shadow-[4px_4px_0_#00F0FF] -skew-x-3 text-left transition-all hover:-translate-y-0.5"
             >
               <span className="block font-mono text-[9px] uppercase tracking-widest text-[#FF0055] font-extrabold">
-                7 ARCOS
+                {isEn ? '7 ARCS' : '7 ARCOS'}
               </span>
               <span className="font-display text-base uppercase tracking-wider font-bold">
-                Guia &amp; Regras
+                {isEn ? 'Guide & Rules' : 'Guia & Regras'}
               </span>
             </button>
 
             <div className="p-2.5 bg-[#A3FF00] text-[#0a0a0c] border-[2.5px] border-[#0a0a0c] shadow-[4px_4px_0_#FF0055] -skew-x-3">
               <span className="block font-mono text-[9px] uppercase tracking-widest font-extrabold">
-                PROGRESSO
+                {isEn ? 'PROGRESS' : 'PROGRESSO'}
               </span>
               <span className="font-display text-base uppercase tracking-wider font-bold">
-                {solvedCount}/3 Modos
+                {solvedCount}/3 {isEn ? 'Modes' : 'Modos'}
               </span>
             </div>
           </div>
@@ -188,7 +226,7 @@ export default function ChoujinHub({
                       : 'text-[#f4f1ea] hover:text-[#FFE600]'
                   }`}
                 >
-                  Diário #{editionNumber}
+                  {isEn ? `Daily #${editionNumber}` : `Diário #${editionNumber}`}
                 </button>
                 <button
                   type="button"
@@ -199,7 +237,7 @@ export default function ChoujinHub({
                       : 'text-[#f4f1ea] hover:text-[#00F0FF]'
                   }`}
                 >
-                  Caçada Infinita
+                  {isEn ? 'Infinite Hunt' : 'Caçada Infinita'}
                 </button>
               </div>
             </div>
@@ -207,7 +245,7 @@ export default function ChoujinHub({
             {/* Off-White Manga Paper Banner with Xember Syringe */}
             <div className="relative bg-[#f4f1ea] bg-halftone-dark text-[#0a0a0c] border-[3px] border-[#0a0a0c] p-5 shadow-[7px_7px_0_#FFE600] -rotate-[0.4deg]">
               <span className="absolute -top-3.5 right-4 px-3 py-0.5 bg-[#A3FF00] border-[2.5px] border-[#0a0a0c] font-mono text-[10px] font-black text-[#0a0a0c] uppercase tracking-widest rotate-2 shadow-[3px_3px_0_#0a0a0c]">
-                ⚡ ATIVAR RAISE!
+                {isEn ? '⚡ ACTIVATE RAISE!' : '⚡ ATIVAR RAISE!'}
               </span>
 
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -217,7 +255,7 @@ export default function ChoujinHub({
                   </div>
                   <div>
                     <p className="font-mono text-[11px] font-black uppercase tracking-[0.2em] text-[#FF0055]">
-                      DESPERTE SEU ESTADO DE CAOS
+                      {isEn ? 'AWAKEN YOUR CHAOS STATE' : 'DESPERTE SEU ESTADO DE CAOS'}
                     </p>
                     <h1 className="font-display text-4xl sm:text-5xl font-bold uppercase tracking-[0.04em] text-[#0a0a0c] leading-none mt-0.5">
                       CHOUJINX<span className="text-[#FF0055]">DLE</span>
@@ -227,7 +265,13 @@ export default function ChoujinHub({
 
                 <div className="text-left sm:text-right font-mono text-xs text-[#0a0a0c]">
                   <span className="block font-extrabold uppercase text-[10px] tracking-wider">
-                    {isDaily ? 'ALVO GLOBAL (00:00 UTC)' : 'MODO TREINO LIVRE'}
+                    {isDaily
+                      ? isEn
+                        ? 'GLOBAL TARGET (00:00 UTC)'
+                        : 'ALVO GLOBAL (00:00 UTC)'
+                      : isEn
+                      ? 'FREE PRACTICE MODE'
+                      : 'MODO TREINO LIVRE'}
                   </span>
                   {isDaily ? (
                     <span className="inline-block mt-1 px-2.5 py-1 bg-[#0a0a0c] text-[#FFE600] border border-[#0a0a0c] font-bold shadow-[3px_3px_0_#FF0055]">
@@ -235,7 +279,7 @@ export default function ChoujinHub({
                     </span>
                   ) : (
                     <span className="inline-block mt-1 px-2.5 py-1 bg-[#0a0a0c] text-[#00F0FF] font-bold">
-                      MODO INFINITO
+                      {isEn ? 'INFINITE MODE' : 'MODO INFINITO'}
                     </span>
                   )}
                 </div>
@@ -248,7 +292,7 @@ export default function ChoujinHub({
             aria-label="Modos de Jogo ChoujinXdle"
             className="grid grid-cols-1 sm:grid-cols-2 gap-5"
           >
-            {ZINE_MODES.map((mode) => {
+            {zineModes.map((mode) => {
               const isSolved = Boolean(completedModes[mode.id]);
 
               return (
@@ -273,7 +317,7 @@ export default function ChoujinHub({
 
                     {isSolved ? (
                       <span className="px-2.5 py-0.5 bg-[#0a0a0c] text-[#A3FF00] border-2 border-[#0a0a0c] font-mono text-[10px] font-black uppercase tracking-widest -rotate-3">
-                        ⚡ RAISE! CONCLUÍDO
+                        {isEn ? '⚡ RAISE! SOLVED' : '⚡ RAISE! CONCLUÍDO'}
                       </span>
                     ) : (
                       <ChoujinModeEmblem
@@ -310,7 +354,7 @@ export default function ChoujinHub({
                     </div>
 
                     <span className="px-3 py-1 bg-[#0a0a0c] text-[#FFE600] font-mono text-xs font-black uppercase tracking-widest group-hover:bg-[#f4f1ea] group-hover:text-[#0a0a0c] border-2 border-[#0a0a0c] transition-colors -skew-x-6">
-                      ENTRAR »
+                      {isEn ? 'PLAY »' : 'ENTRAR »'}
                     </span>
                   </div>
                 </button>
@@ -327,7 +371,8 @@ export default function ChoujinHub({
             CHOUJINXDLE
           </span>
           <span className="text-[#f4f1ea]/80">
-            Zine Pop-Punk / Neo-Brutalista inspirado em <em>Choujin X</em> (Sui Ishida)
+            {isEn ? 'Pop-Punk / Neo-Brutalist Zine inspired by' : 'Zine Pop-Punk / Neo-Brutalista inspirado em'}{' '}
+            <em>Choujin X</em> (Sui Ishida)
           </span>
         </div>
         <div className="flex items-center gap-4 text-[11px]">
@@ -336,14 +381,14 @@ export default function ChoujinHub({
             onClick={onOpenHelp}
             className="text-[#A3FF00] hover:underline uppercase font-extrabold"
           >
-            [Manual &amp; Arcos]
+            {isEn ? '[Manual & Arcs]' : '[Manual & Arcos]'}
           </button>
           <button
             type="button"
             onClick={onOpenStats}
             className="text-[#00F0FF] hover:underline uppercase font-extrabold"
           >
-            [Estatísticas ({stats.gamesWon}V)]
+            {isEn ? `[Statistics (${stats.gamesWon}W)]` : `[Estatísticas (${stats.gamesWon}V)]`}
           </button>
         </div>
       </footer>

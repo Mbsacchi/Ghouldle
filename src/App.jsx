@@ -103,6 +103,7 @@ export default function App() {
   const [view, setView] = useState(initialRoute.view);
   const [activeMode, setActiveMode] = useState(initialRoute.mode);
   const [isDaily, setIsDaily] = useState(() => loadSessionPrefs().isDaily);
+  const [lang, setLang] = useState(() => loadSessionPrefs().lang || 'pt');
 
   const [dailyStates, setDailyStates] = useState(() => ({
     tg: loadDailyState('tg', tgCharactersData),
@@ -193,7 +194,9 @@ export default function App() {
         tg: loadPlayerStats('tg'),
         cx: loadPlayerStats('cx'),
       });
-      setIsDaily(loadSessionPrefs().isDaily);
+      const prefs = loadSessionPrefs();
+      setIsDaily(prefs.isDaily);
+      if (prefs.lang) setLang(prefs.lang);
     };
 
     window.addEventListener('storage', handleStorageSync);
@@ -315,7 +318,13 @@ export default function App() {
     setVictoryModalOpen(false);
     setLastAnimatedGuessId(null);
     setIsDaily(nextIsDaily);
-    saveSessionPrefs({ isDaily: nextIsDaily });
+    saveSessionPrefs({ isDaily: nextIsDaily, lang });
+  };
+
+  const handleChangeLang = (nextLang) => {
+    if (nextLang !== 'pt' && nextLang !== 'en') return;
+    setLang(nextLang);
+    saveSessionPrefs({ isDaily, lang: nextLang });
   };
 
   const handleGuess = (chosenCharacter) => {
@@ -446,6 +455,8 @@ export default function App() {
         onSelectUniverse={handleSelectUniverse}
         tgCompletedCount={tgCompletedCount}
         cxCompletedCount={cxCompletedCount}
+        lang={lang}
+        onChangeLang={handleChangeLang}
       />
 
       {view === 'lobby' ? (
@@ -460,6 +471,7 @@ export default function App() {
             cxCompletedModes={cxCompletedModes}
             tgStats={statsByUniverse.tg}
             cxStats={statsByUniverse.cx}
+            lang={lang}
           />
         </div>
       ) : view === 'hub' ? (
@@ -474,6 +486,7 @@ export default function App() {
               stats={stats}
               onOpenStats={() => setStatsModalOpen(true)}
               onOpenHelp={() => setHelpModalOpen(true)}
+              lang={lang}
             />
           ) : (
             <HomeHub
@@ -485,6 +498,7 @@ export default function App() {
               stats={stats}
               onOpenStats={() => setStatsModalOpen(true)}
               onOpenHelp={() => setHelpModalOpen(true)}
+              lang={lang}
             />
           )}
         </div>
@@ -508,6 +522,7 @@ export default function App() {
             streak={stats.currentStreak}
             onOpenStats={() => setStatsModalOpen(true)}
             onOpenHelp={() => setHelpModalOpen(true)}
+            lang={lang}
           />
 
           <main className="flex-1 pb-14">
@@ -526,6 +541,7 @@ export default function App() {
                 onGuess={handleGuess}
                 onRevealHint={handleRevealHint}
                 onOpenVictoryModal={() => setVictoryModalOpen(true)}
+                lang={lang}
               />
             )}
 
@@ -541,6 +557,7 @@ export default function App() {
                 editionNumber={editionNumber}
                 onGuess={handleGuess}
                 onOpenVictoryModal={() => setVictoryModalOpen(true)}
+                lang={lang}
               />
             )}
 
@@ -556,6 +573,7 @@ export default function App() {
                 editionNumber={editionNumber}
                 onGuess={handleGuess}
                 onOpenVictoryModal={() => setVictoryModalOpen(true)}
+                lang={lang}
               />
             )}
           </main>
@@ -572,12 +590,14 @@ export default function App() {
                 <strong className="px-2 py-0.5 bg-[#FFE600] text-[#0a0a0c] font-display tracking-[0.14em] mr-1">
                   CHOUJINXDLE
                 </strong>{' '}
-                — Zine Pop-Punk de <em className="text-[#A3FF00] not-italic">Choujin X</em> (Sui Ishida Dle)
+                — {lang === 'en' ? 'Pop-Punk Zine of' : 'Zine Pop-Punk de'}{' '}
+                <em className="text-[#A3FF00] not-italic">Choujin X</em> (Sui Ishida Dle)
               </p>
             ) : (
               <p className="font-serif">
                 <strong className="font-display tracking-[0.12em] text-[#efe9dd]">GHOULDLE</strong>{' '}
-                — Arquivo não-oficial de <em className="text-[#cfc6b6]">Tokyo Ghoul &amp; :re</em> (Sui Ishida Dle)
+                — {lang === 'en' ? 'Unofficial Archive of' : 'Arquivo não-oficial de'}{' '}
+                <em className="text-[#cfc6b6]">Tokyo Ghoul &amp; :re</em> (Sui Ishida Dle)
               </p>
             )}
           </footer>
@@ -599,6 +619,7 @@ export default function App() {
         completedModes={completedModes}
         onSelectMode={handleEnterMode}
         onNewInfiniteRound={handleNewInfiniteRound}
+        lang={lang}
       />
 
       <StatsModal
@@ -606,12 +627,14 @@ export default function App() {
         isOpen={statsModalOpen}
         onClose={() => setStatsModalOpen(false)}
         stats={stats}
+        lang={lang}
       />
 
       <HelpModal
         universe={universe}
         isOpen={helpModalOpen}
         onClose={() => setHelpModalOpen(false)}
+        lang={lang}
       />
     </div>
   );

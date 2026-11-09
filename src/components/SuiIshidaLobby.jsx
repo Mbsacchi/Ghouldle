@@ -57,8 +57,47 @@ export default function SuiIshidaLobby({
   cxCompletedModes = {},
   tgStats,
   cxStats,
+  lang = 'pt',
 }) {
   const [countdown, setCountdown] = useState(getTimeUntilMidnight());
+  const isEn = lang === 'en';
+
+  const tgModes = isEn
+    ? [
+        { id: 'classic', kanji: '壱', label: 'Classic', desc: 'CCG Attributes' },
+        { id: 'quote', kanji: '弐', label: 'Quote', desc: 'Iconic Lines' },
+        { id: 'mask', kanji: '参', label: 'Mask & Eye', desc: 'Kakugan & Hysy' },
+      ]
+    : TG_MODES;
+
+  const cxModes = isEn
+    ? [
+        {
+          id: 'classic',
+          issue: '#01',
+          label: 'CLASSIC',
+          desc: 'Complex & Chaos',
+          bg: 'bg-[#FFE600] hover:bg-[#A3FF00] text-[#0a0a0c]',
+          shadow: 'shadow-[4px_4px_0_#FF0055]',
+        },
+        {
+          id: 'quote',
+          issue: '#02',
+          label: 'QUOTE',
+          desc: 'Voices of Yamato',
+          bg: 'bg-[#FF0055] hover:bg-[#ff2970] text-[#f4f1ea]',
+          shadow: 'shadow-[4px_4px_0_#FFE600]',
+        },
+        {
+          id: 'mask',
+          issue: '#03',
+          label: 'CHOUJIN FORM',
+          desc: 'Chaos & Raise',
+          bg: 'bg-[#00F0FF] hover:bg-[#A3FF00] text-[#0a0a0c]',
+          shadow: 'shadow-[4px_4px_0_#FFE600]',
+        },
+      ]
+    : CX_MODES;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -129,7 +168,7 @@ export default function SuiIshidaLobby({
               </span>
             </div>
             <span className="px-2.5 py-0.5 bg-[#1b080b] border border-[#dc2626]/70 font-mono text-[10px] text-[#efe9dd]">
-              {tgSolvedCount}/3 HOJE • {tgStats.gamesWon}V
+              {tgSolvedCount}/3 {isEn ? 'TODAY' : 'HOJE'} • {tgStats.gamesWon}{isEn ? 'W' : 'V'}
             </span>
           </div>
 
@@ -137,22 +176,39 @@ export default function SuiIshidaLobby({
           <div className="relative z-10 my-auto py-6 max-w-lg mx-auto w-full space-y-5">
             <div className="flex flex-col items-center text-center space-y-2">
               <div className="inline-flex items-center gap-2 px-3 py-0.5 bg-[#140709]/90 border border-[#dc2626]/45 text-[10px] font-mono uppercase tracking-[0.25em] text-[#f87171]">
-                <span>☕ CAFETERIA ANTEIKU</span>
+                <span>{isEn ? '☕ ANTEIKU CAFE' : '☕ CAFETERIA ANTEIKU'}</span>
                 <span>•</span>
-                <span>VIDRO ESTILHAÇADO &amp; HIGANBANA</span>
+                <span>{isEn ? 'SHATTERED GLASS & HIGANBANA' : 'VIDRO ESTILHAÇADO & HIGANBANA'}</span>
               </div>
               <GhouldleCrestLogo />
               <p className="font-serif text-xs sm:text-sm italic text-[#cfc6b6]/90 pt-1">
-                「Eu não sou o protagonista de um romance... Sou um universitário que gosta de ler, como qualquer outro. Mas... se você fosse escrever uma história comigo como protagonista, certamente seria... uma tragédia.」
+                {isEn
+                  ? '「I am not the protagonist of a novel or anything... I am just a college student who likes to read, like you could find anywhere. But... if for argument’s sake you were to write a story with me in the lead role, it would certainly be... a tragedy.」'
+                  : '「Eu não sou o protagonista de um romance... Sou um universitário que gosta de ler, como qualquer outro. Mas... se você fosse escrever uma história comigo como protagonista, certamente seria... uma tragédia.」'}
               </p>
             </div>
 
             {/* 3 Manga Portrait Panels */}
             <div className="grid grid-cols-3 gap-2.5">
               {[
-                { name: 'Ken Kaneki', tag: 'SS // TAPA-OLHO', img: '/characters/ken-kaneki.jpg', pos: '54% 22%' },
-                { name: 'Kishou Arima', tag: 'CCG // CEIFADOR', img: '/characters/kishou-arima.jpg', pos: 'center 26%' },
-                { name: 'Eto Yoshimura', tag: 'SSS // CORUJA', img: '/characters/eto-yoshimura.jpg', pos: 'center 18%' },
+                {
+                  name: 'Ken Kaneki',
+                  tag: isEn ? 'SS // EYEPATCH' : 'SS // TAPA-OLHO',
+                  img: '/characters/ken-kaneki.jpg',
+                  pos: '54% 22%',
+                },
+                {
+                  name: 'Kishou Arima',
+                  tag: isEn ? 'CCG // REAPER' : 'CCG // CEIFADOR',
+                  img: '/characters/kishou-arima.jpg',
+                  pos: 'center 26%',
+                },
+                {
+                  name: 'Eto Yoshimura',
+                  tag: isEn ? 'SSS // OWL' : 'SSS // CORUJA',
+                  img: '/characters/eto-yoshimura.jpg',
+                  pos: 'center 18%',
+                },
               ].map((p) => (
                 <div
                   key={p.name}
@@ -186,17 +242,19 @@ export default function SuiIshidaLobby({
               }}
               className="w-full py-3.5 px-5 bg-[#dc2626] hover:bg-[#b91c1c] border-2 border-[#efe9dd] text-[#efe9dd] font-display text-base uppercase tracking-[0.16em] shadow-[5px_5px_0_#000] flex items-center justify-between transition-all hover:-translate-y-0.5"
             >
-              <span>🩸 ENTRAR EM /GHOULDLE</span>
+              <span>{isEn ? '🩸 ENTER /GHOULDLE' : '🩸 ENTRAR EM /GHOULDLE'}</span>
               <span className="font-mono text-xl">»</span>
             </a>
 
             {/* Quick Mode Selector for Ghouldle */}
             <div className="space-y-1.5">
               <span className="block font-mono text-[9px] uppercase tracking-[0.22em] text-[#8d857b]">
-                ATALHO DIRETO PARA OS MODOS DE TOKYO GHOUL:
+                {isEn
+                  ? 'DIRECT SHORTCUT TO TOKYO GHOUL MODES:'
+                  : 'ATALHO DIRETO PARA OS MODOS DE TOKYO GHOUL:'}
               </span>
               <div className="grid grid-cols-3 gap-2">
-                {TG_MODES.map((m) => {
+                {tgModes.map((m) => {
                   const done = Boolean(tgCompletedModes[m.id]);
                   return (
                     <button
@@ -230,8 +288,12 @@ export default function SuiIshidaLobby({
 
           {/* Bottom Gothic Caption */}
           <div className="relative z-10 pt-3 border-t border-[#dc2626]/25 flex items-center justify-between text-[10px] font-mono text-[#8d857b] uppercase tracking-widest">
-            <span>ARQUIVO CCG &amp; ANTEIKU // 20ª ALA</span>
-            <span className="text-[#dc2626]">ROTA: /GHOULDLE</span>
+            <span>
+              {isEn ? 'CCG & ANTEIKU ARCHIVE // 20TH WARD' : 'ARQUIVO CCG & ANTEIKU // 20ª ALA'}
+            </span>
+            <span className="text-[#dc2626]">
+              {isEn ? 'ROUTE: /GHOULDLE' : 'ROTA: /GHOULDLE'}
+            </span>
           </div>
         </section>
 
@@ -263,11 +325,13 @@ export default function SuiIshidaLobby({
                 超人X
               </span>
               <span className="font-mono text-[10px] font-black tracking-[0.2em] uppercase text-[#FFE600]">
-                2021–PRESENTE // CHOUJIN X (YAMATO 1998)
+                {isEn
+                  ? '2021–PRESENT // CHOUJIN X (YAMATO 1998)'
+                  : '2021–PRESENTE // CHOUJIN X (YAMATO 1998)'}
               </span>
             </div>
             <span className="px-2.5 py-0.5 bg-[#FF0055] border-2 border-[#0a0a0c] font-mono text-[10px] font-black text-[#f4f1ea] shadow-[3px_3px_0_#FFE600] -skew-x-3">
-              {cxSolvedCount}/3 HOJE • {cxStats.gamesWon}V
+              {cxSolvedCount}/3 {isEn ? 'TODAY' : 'HOJE'} • {cxStats.gamesWon}{isEn ? 'W' : 'V'}
             </span>
           </div>
 
@@ -276,7 +340,9 @@ export default function SuiIshidaLobby({
             <div className="flex flex-col items-center text-center space-y-2">
               <ChoujindleCrestLogo />
               <p className="font-mono text-xs font-black uppercase tracking-wider text-[#0a0a0c] bg-[#A3FF00] border-[2.5px] border-[#0a0a0c] px-3 py-0.5 shadow-[4px_4px_0_#FF0055] -skew-x-3">
-                ⚡ ATIVAR RAISE! • POP-PUNK NEO-BRUTALIST ZINE
+                {isEn
+                  ? '⚡ ACTIVATE RAISE! • POP-PUNK NEO-BRUTALIST ZINE'
+                  : '⚡ ATIVAR RAISE! • POP-PUNK NEO-BRUTALIST ZINE'}
               </p>
             </div>
 
@@ -291,10 +357,10 @@ export default function SuiIshidaLobby({
               <div className="col-span-7 flex flex-col justify-between gap-2">
                 <div className="p-3 bg-[#f4f1ea] bg-halftone-dark text-[#0a0a0c] border-[3px] border-[#0a0a0c] shadow-[5px_5px_0_#FFE600] -rotate-[0.5deg]">
                   <span className="inline-block px-1.5 py-0.5 bg-[#FF0055] text-[#f4f1ea] font-mono text-[9px] font-black uppercase tracking-widest -skew-x-3">
-                    SERINGA XEMBER &amp; ESTADO DE CAOS
+                    {isEn ? 'XEMBER SYRINGE & CHAOS STATE' : 'SERINGA XEMBER & ESTADO DE CAOS'}
                   </span>
                   <p className="font-display text-lg font-bold uppercase tracking-wide leading-tight mt-1 text-[#0a0a0c]">
-                    YAMATO MORI VS. TORRE DO LUTO
+                    {isEn ? 'YAMATO MORI VS. TOWER OF MOURNING' : 'YAMATO MORI VS. TORRE DO LUTO'}
                   </p>
                   <div className="grid grid-cols-3 gap-1.5 mt-2">
                     {[
@@ -332,7 +398,7 @@ export default function SuiIshidaLobby({
                         : 'bg-[#16161a] text-[#f4f1ea]/75 border-[#f4f1ea]/35 hover:border-[#FFE600] hover:text-[#FFE600]'
                     }`}
                   >
-                    Diário #{editionNumber}
+                    {isEn ? `Daily #${editionNumber}` : `Diário #${editionNumber}`}
                   </button>
                   <button
                     type="button"
@@ -343,7 +409,7 @@ export default function SuiIshidaLobby({
                         : 'bg-[#16161a] text-[#f4f1ea]/75 border-[#f4f1ea]/35 hover:border-[#A3FF00] hover:text-[#A3FF00]'
                     }`}
                   >
-                    Modo Infinito
+                    {isEn ? 'Infinite Mode' : 'Modo Infinito'}
                   </button>
                 </div>
               </div>
@@ -358,17 +424,19 @@ export default function SuiIshidaLobby({
               }}
               className="w-full py-3.5 px-5 bg-[#FFE600] hover:bg-[#A3FF00] text-[#0a0a0c] border-[3px] border-[#0a0a0c] font-display font-bold text-base uppercase tracking-[0.16em] shadow-[6px_6px_0_#FF0055] flex items-center justify-between transition-all hover:-translate-y-0.5 -skew-x-2"
             >
-              <span>⚡ ABRIR ZINE /CHOUJINXDLE</span>
+              <span>{isEn ? '⚡ OPEN /CHOUJINXDLE ZINE' : '⚡ ABRIR ZINE /CHOUJINXDLE'}</span>
               <span className="font-mono text-xl font-black">»</span>
             </a>
 
             {/* Quick Mode Cutouts for ChoujinXdle */}
             <div className="space-y-1.5">
               <span className="block font-mono text-[9px] font-black uppercase tracking-[0.22em] text-[#FFE600]">
-                ATALHO DIRETO PARA OS MODOS DE CHOUJIN X:
+                {isEn
+                  ? 'DIRECT SHORTCUT TO CHOUJIN X MODES:'
+                  : 'ATALHO DIRETO PARA OS MODOS DE CHOUJIN X:'}
               </span>
               <div className="grid grid-cols-3 gap-2.5">
-                {CX_MODES.map((m) => {
+                {cxModes.map((m) => {
                   const done = Boolean(cxCompletedModes[m.id]);
                   return (
                     <button
@@ -404,7 +472,7 @@ export default function SuiIshidaLobby({
           <div className="relative z-10 pt-3 border-t-[3px] border-[#FFE600] flex items-center justify-between text-[10px] font-mono font-black text-[#f4f1ea] uppercase tracking-widest">
             <span>YAMATO PREFECTURE // 1998 • XEMBER</span>
             <span className="px-2 py-0.5 bg-[#FFE600] text-[#0a0a0c] border border-[#0a0a0c] -skew-x-3">
-              ROTA: /CHOUJINXDLE
+              {isEn ? 'ROUTE: /CHOUJINXDLE' : 'ROTA: /CHOUJINXDLE'}
             </span>
           </div>
         </section>
@@ -417,7 +485,8 @@ export default function SuiIshidaLobby({
       >
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
           <h1 className="text-[11px] font-mono font-semibold text-[#cfc6b6]">
-            <strong>Sui Ichida Dle (Sui Ishida Dle)</strong> — Jogos Diários e Infinitos de{' '}
+            <strong>Sui Ichida Dle (Sui Ishida Dle)</strong> —{' '}
+            {isEn ? 'Daily & Infinite Games of' : 'Jogos Diários e Infinitos de'}{' '}
             <em>Tokyo Ghoul</em> &amp; <em>Choujin X</em>:
           </h1>
           <nav aria-label="Links Diretos dos Jogos" className="flex flex-wrap items-center justify-center gap-3">

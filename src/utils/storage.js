@@ -320,25 +320,46 @@ export function recordGameVictory({ stats, mode, attempts, isDaily, universe = '
   return next;
 }
 
+function detectDefaultLang() {
+  try {
+    if (typeof navigator !== 'undefined' && typeof navigator.language === 'string') {
+      const lower = navigator.language.toLowerCase();
+      if (lower.startsWith('pt')) return 'pt';
+      if (lower.startsWith('en')) return 'en';
+    }
+  } catch {
+    // Ignore
+  }
+  return 'pt';
+}
+
 export function loadSessionPrefs() {
+  const defaultLang = detectDefaultLang();
   try {
     const raw = localStorage.getItem(STORAGE_KEYS.session);
-    if (!raw) return { isDaily: true };
+    if (!raw) return { isDaily: true, lang: defaultLang };
     const parsed = JSON.parse(raw);
     return {
       isDaily: typeof parsed?.isDaily === 'boolean' ? parsed.isDaily : true,
+      lang: parsed?.lang === 'en' || parsed?.lang === 'pt' ? parsed.lang : defaultLang,
     };
   } catch {
-    return { isDaily: true };
+    return { isDaily: true, lang: defaultLang };
   }
 }
 
 export function saveSessionPrefs(prefs) {
   try {
+    const current = loadSessionPrefs();
+    const nextIsDaily =
+      typeof prefs?.isDaily === 'boolean' ? prefs.isDaily : current.isDaily;
+    const nextLang =
+      prefs?.lang === 'en' || prefs?.lang === 'pt' ? prefs.lang : current.lang;
     localStorage.setItem(
       STORAGE_KEYS.session,
       JSON.stringify({
-        isDaily: typeof prefs?.isDaily === 'boolean' ? prefs.isDaily : true,
+        isDaily: nextIsDaily,
+        lang: nextLang,
       })
     );
   } catch {

@@ -3,8 +3,9 @@ import { ArrowUp, ArrowDown } from 'lucide-react';
 import CharacterSearch from './CharacterSearch';
 import CharacterAvatar from './visuals/CharacterAvatar';
 import { compareCharacters } from '../utils/gameLogic';
+import { localizeCharacter } from '../utils/i18n';
 
-const TG_COLUMNS = [
+const TG_COLUMNS_PT = [
   { key: 'character', title: 'Alvo' },
   { key: 'gender', title: 'Gênero' },
   { key: 'species', title: 'Espécie' },
@@ -14,7 +15,17 @@ const TG_COLUMNS = [
   { key: 'debutArc', title: 'Arco de Estreia' },
 ];
 
-const CX_COLUMNS = [
+const TG_COLUMNS_EN = [
+  { key: 'character', title: 'Target' },
+  { key: 'gender', title: 'Gender' },
+  { key: 'species', title: 'Species' },
+  { key: 'affiliations', title: 'Affiliation' },
+  { key: 'rcTypes', title: 'RC Cells' },
+  { key: 'rank', title: 'Rating' },
+  { key: 'debutArc', title: 'Debut Arc' },
+];
+
+const CX_COLUMNS_PT = [
   { key: 'character', title: 'Alvo' },
   { key: 'gender', title: 'Gênero' },
   { key: 'species', title: 'Estado de Caos' },
@@ -22,6 +33,16 @@ const CX_COLUMNS = [
   { key: 'rcTypes', title: 'Tipo / Complexo' },
   { key: 'rank', title: 'Patente / Status' },
   { key: 'debutArc', title: 'Arco de Estreia' },
+];
+
+const CX_COLUMNS_EN = [
+  { key: 'character', title: 'Target' },
+  { key: 'gender', title: 'Gender' },
+  { key: 'species', title: 'Chaos State' },
+  { key: 'affiliations', title: 'Affiliation' },
+  { key: 'rcTypes', title: 'Type / Complex' },
+  { key: 'rank', title: 'Rank / Status' },
+  { key: 'debutArc', title: 'Debut Arc' },
 ];
 
 function getTgCellStampStyle(status) {
@@ -60,9 +81,18 @@ export default function ClassicMode({
   onGuess,
   onRevealHint,
   onOpenVictoryModal,
+  lang = 'pt',
 }) {
   const isChoujin = universe === 'cx';
-  const columns = isChoujin ? CX_COLUMNS : TG_COLUMNS;
+  const isEn = lang === 'en';
+  const columns = isChoujin
+    ? isEn
+      ? CX_COLUMNS_EN
+      : CX_COLUMNS_PT
+    : isEn
+    ? TG_COLUMNS_EN
+    : TG_COLUMNS_PT;
+  const localizedTarget = localizeCharacter(target, lang);
   const wrongGuessesCount = guesses.filter((id) => id !== target.id).length;
   const hint1Unlocked = wrongGuessesCount >= 5 || won;
   const hint2Unlocked = wrongGuessesCount >= 8 || won;
@@ -101,7 +131,11 @@ export default function ClassicMode({
               }`}
             >
               {isChoujin
-                ? 'ZINE DE CAMPO // TIPO DE CHOUJIN & ESTADO DE CAOS'
+                ? isEn
+                  ? 'FIELD ZINE // CHOUJIN TYPE & CHAOS STATE'
+                  : 'ZINE DE CAMPO // TIPO DE CHOUJIN & ESTADO DE CAOS'
+                : isEn
+                ? 'COMPARISON DOSSIER // CCG ATTRIBUTES'
                 : 'DOSSIÊ DE COMPARAÇÃO // ATRIBUTOS DA CCG'}
             </span>
           </div>
@@ -110,16 +144,39 @@ export default function ClassicMode({
               isChoujin ? 'text-[#00F0FF] font-bold' : 'text-[#cfc6b6]'
             }`}
           >
-            {isDaily ? `EXPEDIENTE GLOBAL #${editionNumber}` : 'TREINO LIVRE'} · {guesses.length}{' '}
-            {guesses.length === 1 ? 'PALPITE' : 'PALPITES'}
+            {isDaily
+              ? isEn
+                ? `GLOBAL DOSSIER #${editionNumber}`
+                : `EXPEDIENTE GLOBAL #${editionNumber}`
+              : isEn
+              ? 'FREE PRACTICE'
+              : 'TREINO LIVRE'}{' '}
+            · {guesses.length}{' '}
+            {guesses.length === 1
+              ? isEn
+                ? 'GUESS'
+                : 'PALPITE'
+              : isEn
+              ? 'GUESSES'
+              : 'PALPITES'}
           </span>
         </div>
 
         <div className="text-center space-y-1">
           <h2 className="font-display text-2xl sm:text-3xl uppercase tracking-[0.06em] text-[#efe9dd]">
             {isChoujin ? (
+              isEn ? (
+                <>
+                  Identify the <span className="text-[#FFE600] underline decoration-[#FF0055]">Registered Choujin</span>
+                </>
+              ) : (
+                <>
+                  Identifique o <span className="text-[#FFE600] underline decoration-[#FF0055]">Choujin Registrado</span>
+                </>
+              )
+            ) : isEn ? (
               <>
-                Identifique o <span className="text-[#FFE600] underline decoration-[#FF0055]">Choujin Registrado</span>
+                Identify the <span className="text-[#d9141e]">Registered Individual</span>
               </>
             ) : (
               <>
@@ -129,7 +186,11 @@ export default function ClassicMode({
           </h2>
           <p className="font-serif text-xs sm:text-sm text-[#cfc6b6]/85">
             {isChoujin
-              ? 'Compare Estado de Caos, Afiliação (Yamato Mori, Torre do Luto / Noh Mask, Independente) e Tipo/Complexo.'
+              ? isEn
+                ? 'Compare Chaos State, Affiliation (Yamato Mori, Tower of Mourning / Noh Mask, Independent), and Type/Complex.'
+                : 'Compare Estado de Caos, Afiliação (Yamato Mori, Torre do Luto / Noh Mask, Independente) e Tipo/Complexo.'
+              : isEn
+              ? 'Submit a name from the archive. Each column reveals the degree of convergence with the hidden target.'
               : 'Submeta um nome do arquivo. Cada coluna revelará o grau de convergência com o alvo oculto.'}
           </p>
         </div>
@@ -168,18 +229,34 @@ export default function ClassicMode({
                     : 'text-[#d9141e]'
                 }`}
               >
-                {isChoujin ? '⚡ ATIVAR RAISE! (Dica I)' : 'ANEXO CONFIDENCIAL I'}
+                {isChoujin
+                  ? isEn
+                    ? '⚡ ACTIVATE RAISE! (Hint I)'
+                    : '⚡ ATIVAR RAISE! (Dica I)'
+                  : isEn
+                  ? 'CONFIDENTIAL ANNEX I'
+                  : 'ANEXO CONFIDENCIAL I'}
               </span>
               <span className="font-display text-xs uppercase tracking-[0.08em] font-bold">
-                {isChoujin ? 'Alcunha Choujin & Voz' : 'Epíteto & Registro de Voz'}
+                {isChoujin
+                  ? isEn
+                    ? 'Choujin Alias & Voice'
+                    : 'Alcunha Choujin & Voz'
+                  : isEn
+                  ? 'Epithet & Voice Record'
+                  : 'Epíteto & Registro de Voz'}
               </span>
             </div>
             <span className="font-mono text-[11px] font-bold px-2 py-0.5 border border-current/40">
               {hint1Unlocked
                 ? hint1Open
-                  ? 'RAISE ATIVO'
+                  ? isEn
+                    ? 'RAISE ACTIVE'
+                    : 'RAISE ATIVO'
                   : isChoujin
                   ? '⚡ RAISE!'
+                  : isEn
+                  ? 'OPEN'
                   : 'ABRIR'
                 : `${wrongGuessesCount}/5`}
             </span>
@@ -217,18 +294,34 @@ export default function ClassicMode({
                     : 'text-[#d9141e]'
                 }`}
               >
-                {isChoujin ? '⚡ ATIVAR RAISE! (Dica II)' : 'ANEXO CONFIDENCIAL II'}
+                {isChoujin
+                  ? isEn
+                    ? '⚡ ACTIVATE RAISE! (Hint II)'
+                    : '⚡ ATIVAR RAISE! (Dica II)'
+                  : isEn
+                  ? 'CONFIDENTIAL ANNEX II'
+                  : 'ANEXO CONFIDENCIAL II'}
               </span>
               <span className="font-display text-xs uppercase tracking-[0.08em] font-bold">
-                {isChoujin ? 'Habilidade / Arma & Inicial' : 'Arma / Quinque & Inicial'}
+                {isChoujin
+                  ? isEn
+                    ? 'Ability / Weapon & Initial'
+                    : 'Habilidade / Arma & Inicial'
+                  : isEn
+                  ? 'Weapon / Quinque & Initial'
+                  : 'Arma / Quinque & Inicial'}
               </span>
             </div>
             <span className="font-mono text-[11px] font-bold px-2 py-0.5 border border-current/40">
               {hint2Unlocked
                 ? hint2Open
-                  ? 'RAISE ATIVO'
+                  ? isEn
+                    ? 'RAISE ACTIVE'
+                    : 'RAISE ATIVO'
                   : isChoujin
                   ? '⚡ RAISE!'
+                  : isEn
+                  ? 'OPEN'
                   : 'ABRIR'
                 : `${wrongGuessesCount}/8`}
             </span>
@@ -251,13 +344,19 @@ export default function ClassicMode({
                     isChoujin ? 'text-[#A3FF00]' : 'text-[#d9141e]'
                   }`}
                 >
-                  {isChoujin ? '⚡ RAISE I // ALCUNHA & VOZ' : 'CODINOME // VOZ'}
+                  {isChoujin
+                    ? isEn
+                      ? '⚡ RAISE I // ALIAS & VOICE'
+                      : '⚡ RAISE I // ALCUNHA & VOZ'
+                    : isEn
+                    ? 'CODENAME // VOICE'
+                    : 'CODINOME // VOZ'}
                 </p>
                 <p className="font-display text-sm uppercase tracking-wide text-[#efe9dd]">
-                  {target.epithet}
+                  {localizedTarget.epithet}
                 </p>
                 <p className="font-serif text-xs italic text-[#cfc6b6] line-clamp-2">
-                  「{target.quote.text}」
+                  「{localizedTarget.quote.text}」
                 </p>
               </div>
             )}
@@ -275,13 +374,19 @@ export default function ClassicMode({
                     isChoujin ? 'text-[#FFE600]' : 'text-[#d9141e]'
                   }`}
                 >
-                  {isChoujin ? '⚡ RAISE II // COMPLEXO & INICIAL' : 'ARSENAL // INICIAL'}
+                  {isChoujin
+                    ? isEn
+                      ? '⚡ RAISE II // COMPLEX & INITIAL'
+                      : '⚡ RAISE II // COMPLEXO & INICIAL'
+                    : isEn
+                    ? 'ARSENAL // INITIAL'
+                    : 'ARSENAL // INICIAL'}
                 </p>
                 <p className="font-display text-sm uppercase tracking-wide text-[#efe9dd]">
-                  {target.kaguneOrQuinque.name} ({target.kaguneOrQuinque.category})
+                  {localizedTarget.kaguneOrQuinque.name} ({localizedTarget.kaguneOrQuinque.category})
                 </p>
                 <p className="font-mono text-[11px] text-[#cfc6b6]">
-                  Inicial do Registro:{' '}
+                  {isEn ? 'Record Initial: ' : 'Inicial do Registro: '}
                   <strong className={isChoujin ? 'text-[#A3FF00]' : 'text-[#d9141e]'}>
                     {target.name[0]}.
                   </strong>
@@ -308,8 +413,9 @@ export default function ClassicMode({
                     isChoujin ? 'text-[#0a0a0c]' : 'text-[#86efac]'
                   }`}
                 >
-                  [ALVO IDENTIFICADO EM {guesses.length}{' '}
-                  {guesses.length === 1 ? 'TENTATIVA' : 'TENTATIVAS'}]
+                  {isEn
+                    ? `[TARGET IDENTIFIED IN ${guesses.length} ${guesses.length === 1 ? 'TRY' : 'TRIES'}]`
+                    : `[ALVO IDENTIFICADO EM ${guesses.length} ${guesses.length === 1 ? 'TENTATIVA' : 'TENTATIVAS'}]`}
                 </span>
                 <p
                   className={`font-display text-xl uppercase tracking-wide font-bold ${
@@ -329,7 +435,7 @@ export default function ClassicMode({
                   : 'px-4 py-2.5 bg-[#efe9dd] hover:bg-white text-[#080709] font-display text-xs uppercase tracking-[0.14em] transition-colors shadow-[3px_3px_0_#000]'
               }
             >
-              Relatório &amp; Cópia »
+              {isEn ? 'Report & Share »' : 'Relatório & Cópia »'}
             </button>
           </div>
         ) : (
@@ -338,6 +444,8 @@ export default function ClassicMode({
             guessedIds={guesses}
             disabled={won}
             onSelectCharacter={onGuess}
+            lang={lang}
+            universe={universe}
           />
         )}
       </div>
@@ -367,7 +475,7 @@ export default function ClassicMode({
               const guessChar = charactersById[guessId];
               if (!guessChar) return null;
 
-              const comparison = compareCharacters(guessChar, target, universe);
+              const comparison = compareCharacters(guessChar, target, universe, lang);
               const shouldAnimate = lastAnimatedGuessId === guessId;
 
               return (
@@ -444,12 +552,12 @@ export default function ClassicMode({
                                     {cell.direction === 'up' ? (
                                       <>
                                         <ArrowUp className="w-3 h-3 stroke-[2.8]" />
-                                        <span>Depois</span>
+                                        <span>{isEn ? 'Later' : 'Depois'}</span>
                                       </>
                                     ) : (
                                       <>
                                         <ArrowDown className="w-3 h-3 stroke-[2.8]" />
-                                        <span>Antes</span>
+                                        <span>{isEn ? 'Earlier' : 'Antes'}</span>
                                       </>
                                     )}
                                   </div>
@@ -471,12 +579,12 @@ export default function ClassicMode({
                                     {cell.direction === 'up' ? (
                                       <>
                                         <ArrowUp className="w-3.5 h-3.5 stroke-[3] text-[#ef4444]" />
-                                        <span>Maior</span>
+                                        <span>{isEn ? 'Higher' : 'Maior'}</span>
                                       </>
                                     ) : (
                                       <>
                                         <ArrowDown className="w-3.5 h-3.5 stroke-[3] text-[#ef4444]" />
-                                        <span>Menor</span>
+                                        <span>{isEn ? 'Lower' : 'Menor'}</span>
                                       </>
                                     )}
                                   </div>
@@ -518,7 +626,7 @@ export default function ClassicMode({
                 : 'w-3.5 h-3.5 bg-[#0e2a19] border border-[#4ade80] inline-block'
             }
           />
-          <span>Exato</span>
+          <span>{isEn ? 'Exact' : 'Exato'}</span>
         </span>
         <span className="inline-flex items-center gap-2">
           <span
@@ -528,7 +636,7 @@ export default function ClassicMode({
                 : 'w-3.5 h-3.5 bg-[#3d2307] border border-[#f59e0b] inline-block'
             }
           />
-          <span>Parcial</span>
+          <span>{isEn ? 'Partial' : 'Parcial'}</span>
         </span>
         <span className="inline-flex items-center gap-2">
           <span
@@ -538,15 +646,15 @@ export default function ClassicMode({
                 : 'w-3.5 h-3.5 bg-[#2c070a] border border-[#dc2626] inline-block'
             }
           />
-          <span>Divergente</span>
+          <span>{isEn ? 'Wrong' : 'Divergente'}</span>
         </span>
         <span className="inline-flex items-center gap-1 text-[#cfc6b6]">
           <ArrowUp className={`w-3.5 h-3.5 ${isChoujin ? 'text-[#FFE600]' : 'text-[#d9141e]'}`} />
-          <span>Depois / Patente Maior</span>
+          <span>{isEn ? 'Later / Higher Rank' : 'Depois / Patente Maior'}</span>
         </span>
         <span className="inline-flex items-center gap-1 text-[#cfc6b6]">
           <ArrowDown className={`w-3.5 h-3.5 ${isChoujin ? 'text-[#FFE600]' : 'text-[#d9141e]'}`} />
-          <span>Antes / Patente Menor</span>
+          <span>{isEn ? 'Earlier / Lower Rank' : 'Antes / Patente Menor'}</span>
         </span>
       </div>
     </section>

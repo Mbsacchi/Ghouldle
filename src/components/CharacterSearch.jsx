@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import CharacterAvatar from './visuals/CharacterAvatar';
 import { normalizeSearch } from '../utils/gameLogic';
+import { localizeCharacter, translateAttr } from '../utils/i18n';
 
 export default function CharacterSearch({
   characters,
@@ -8,13 +9,25 @@ export default function CharacterSearch({
   disabled = false,
   hideAvatars = false,
   onSelectCharacter,
-  placeholder = 'Digite o nome de um Ghoul ou Investigador da CCG...',
+  placeholder,
+  lang = 'pt',
+  universe = 'tg',
 }) {
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [highlightedIdx, setHighlightedIdx] = useState(0);
   const containerRef = useRef(null);
   const inputRef = useRef(null);
+  const isEn = lang === 'en';
+  const defaultPlaceholder =
+    universe === 'cx'
+      ? isEn
+        ? 'Type the name of a Choujin or Yamato Mori keeper...'
+        : 'Digite o nome de um Choujin ou Guardião de Yamato Mori...'
+      : isEn
+      ? 'Type the name of a Ghoul or CCG Investigator...'
+      : 'Digite o nome de um Ghoul ou Investigador da CCG...';
+  const resolvedPlaceholder = placeholder || defaultPlaceholder;
 
   const guessedSet = useMemo(() => new Set(guessedIds), [guessedIds]);
 
@@ -32,7 +45,10 @@ export default function CharacterSearch({
     return availableCharacters
       .map((char) => {
         const normName = normalizeSearch(char.name);
-        const matchedAlias = (char.aliases || []).find((al) =>
+        const locChar = localizeCharacter(char, 'en');
+        const extraAliases = locChar?.epithet ? [locChar.epithet] : [];
+        const allAliases = [...(char.aliases || []), ...extraAliases];
+        const matchedAlias = allAliases.find((al) =>
           normalizeSearch(al).includes(q)
         );
         const startsWith =
@@ -132,8 +148,10 @@ export default function CharacterSearch({
           onKeyDown={handleKeyDown}
           placeholder={
             disabled
-              ? 'Caso encerrado. Abra o relatório ou alterne de modo.'
-              : placeholder
+              ? isEn
+                ? 'Case closed. Open the report or switch modes.'
+                : 'Caso encerrado. Abra o relatório ou alterne de modo.'
+              : resolvedPlaceholder
           }
           className="w-full px-3.5 py-3 bg-transparent text-sm sm:text-base text-[#efe9dd] placeholder-[#8d857b] focus:outline-none"
           autoComplete="off"
@@ -149,7 +167,7 @@ export default function CharacterSearch({
             }
             className="px-4 bg-[#b80f17] hover:bg-[#d9141e] text-[#efe9dd] font-display text-xs uppercase tracking-[0.14em] shrink-0 transition-colors border-l border-[#efe9dd]/25"
           >
-            Confirmar ↵
+            {isEn ? 'Submit ↵' : 'Confirmar ↵'}
           </button>
         )}
       </div>
@@ -159,7 +177,7 @@ export default function CharacterSearch({
         <div className="absolute left-0 right-0 mt-1.5 max-h-72 overflow-y-auto bg-[#0e0d11] border border-[#efe9dd]/65 shadow-[6px_6px_0_#000] divide-y divide-[#efe9dd]/10">
           {normalizedResults.length === 0 ? (
             <div className="px-4 py-6 text-center text-xs font-mono uppercase tracking-wider text-[#8d857b]">
-              Nenhum registro localizado para{' '}
+              {isEn ? 'No record found for ' : 'Nenhum registro localizado para '}
               <span className="text-[#d9141e]">&ldquo;{query}&rdquo;</span>
             </div>
           ) : (
@@ -194,7 +212,10 @@ export default function CharacterSearch({
                       )}
                     </div>
                     <p className="text-[11px] font-mono text-[#8d857b] truncate">
-                      {char.affiliations.slice(0, 2).join(' · ')}
+                      {char.affiliations
+                        .slice(0, 2)
+                        .map((a) => translateAttr(a, lang))
+                        .join(' · ')}
                     </p>
                   </div>
                   <span className="text-[10px] font-mono uppercase tracking-widest text-[#8d857b] hidden sm:inline">

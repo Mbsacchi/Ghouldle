@@ -2,6 +2,7 @@ import React from 'react';
 import { Check, X } from 'lucide-react';
 import CharacterSearch from './CharacterSearch';
 import CharacterAvatar from './visuals/CharacterAvatar';
+import { localizeCharacter, translateAttr } from '../utils/i18n';
 
 export default function QuoteMode({
   universe = 'tg',
@@ -14,8 +15,11 @@ export default function QuoteMode({
   editionNumber = 1,
   onGuess,
   onOpenVictoryModal,
+  lang = 'pt',
 }) {
   const isChoujin = universe === 'cx';
+  const isEn = lang === 'en';
+  const localizedTarget = localizeCharacter(target, lang);
   const wrongCount = guesses.filter((id) => id !== target.id).length;
 
   const clueArcUnlocked = wrongCount >= 1 || won;
@@ -53,7 +57,11 @@ export default function QuoteMode({
               }`}
             >
               {isChoujin
-                ? 'ZINE DE VOZES // CITAÇÕES DE CHOUJIN X'
+                ? isEn
+                  ? 'VOICE ZINE // CHOUJIN X QUOTES'
+                  : 'ZINE DE VOZES // CITAÇÕES DE CHOUJIN X'
+                : isEn
+                ? 'LITERARY TRANSCRIPT // VOICES OF THE WORK'
                 : 'TRANSCRIÇÃO LITERÁRIA // VOZES DA OBRA'}
             </span>
           </div>
@@ -62,22 +70,39 @@ export default function QuoteMode({
               isChoujin ? 'text-[#00F0FF] font-bold' : 'text-[#cfc6b6]'
             }`}
           >
-            {isDaily ? `EXPEDIENTE GLOBAL #${editionNumber}` : 'TREINO LIVRE'} · {guesses.length}{' '}
-            {guesses.length === 1 ? 'PALPITE' : 'PALPITES'}
+            {isDaily
+              ? isEn
+                ? `GLOBAL DOSSIER #${editionNumber}`
+                : `EXPEDIENTE GLOBAL #${editionNumber}`
+              : isEn
+              ? 'FREE PRACTICE'
+              : 'TREINO LIVRE'}{' '}
+            · {guesses.length}{' '}
+            {guesses.length === 1
+              ? isEn
+                ? 'GUESS'
+                : 'PALPITE'
+              : isEn
+              ? 'GUESSES'
+              : 'PALPITES'}
           </span>
         </div>
 
         <div className="text-center space-y-1">
           <h2 className="font-display text-2xl sm:text-3xl uppercase tracking-[0.06em] text-[#efe9dd]">
-            Quem Proferiu Esta{' '}
+            {isEn ? 'Who Spoke This ' : 'Quem Proferiu Esta '}
             <span className={isChoujin ? 'text-[#FFE600] underline decoration-[#FF0055]' : 'text-[#d9141e]'}>
-              Fala
+              {isEn ? 'Line' : 'Fala'}
             </span>
             ?
           </h2>
           <p className="font-serif text-xs sm:text-sm text-[#cfc6b6]/80">
             {isChoujin
-              ? 'A cada tentativa incorreta, o sistema ⚡ RAISE! desperta novos fragmentos do arco e da afiliação.'
+              ? isEn
+                ? 'With each wrong guess, the ⚡ RAISE! system awakens new fragments of the arc and affiliation.'
+                : 'A cada tentativa incorreta, o sistema ⚡ RAISE! desperta novos fragmentos do arco e da afiliação.'
+              : isEn
+              ? 'New fragments of the context and narrative arc unlock as your attempts progress.'
               : 'Novos fragmentos do contexto e do arco narrativo são abertos conforme as tentativas avançam.'}
           </p>
         </div>
@@ -103,7 +128,7 @@ export default function QuoteMode({
               isChoujin ? 'text-[#0a0a0c] font-bold' : 'text-[#efe9dd]'
             }`}
           >
-            {target.quote.text}
+            {localizedTarget.quote.text}
           </p>
           <span
             aria-hidden="true"
@@ -141,10 +166,21 @@ export default function QuoteMode({
                   : 'text-[#d9141e]'
               }`}
             >
-              {isChoujin ? '⚡ RAISE I: ARCO' : 'ARCO'} {clueArcUnlocked ? '' : `(${wrongCount}/1)`}
+              {isChoujin
+                ? isEn
+                  ? '⚡ RAISE I: ARC'
+                  : '⚡ RAISE I: ARCO'
+                : isEn
+                ? 'ARC'
+                : 'ARCO'}{' '}
+              {clueArcUnlocked ? '' : `(${wrongCount}/1)`}
             </div>
             <p className="font-bold">
-              {clueArcUnlocked ? target.quote.arc : 'Bloqueado — 1 erro'}
+              {clueArcUnlocked
+                ? localizedTarget.quote.arc
+                : isEn
+                ? 'Locked — 1 wrong guess'
+                : 'Bloqueado — 1 erro'}
             </p>
           </div>
 
@@ -172,11 +208,21 @@ export default function QuoteMode({
                   : 'text-[#d9141e]'
               }`}
             >
-              {isChoujin ? '⚡ RAISE II: CONTEXTO' : 'CONTEXTO'}{' '}
+              {isChoujin
+                ? isEn
+                  ? '⚡ RAISE II: CONTEXT'
+                  : '⚡ RAISE II: CONTEXTO'
+                : isEn
+                ? 'CONTEXT'
+                : 'CONTEXTO'}{' '}
               {clueContextUnlocked ? '' : `(${wrongCount}/3)`}
             </div>
             <p className="font-bold">
-              {clueContextUnlocked ? target.quote.recipient : 'Bloqueado — 3 erros'}
+              {clueContextUnlocked
+                ? localizedTarget.quote.recipient
+                : isEn
+                ? 'Locked — 3 wrong guesses'
+                : 'Bloqueado — 3 erros'}
             </p>
           </div>
 
@@ -204,12 +250,20 @@ export default function QuoteMode({
                   : 'text-[#d9141e]'
               }`}
             >
-              {isChoujin ? '⚡ RAISE III: AFILIAÇÃO' : 'AFILIAÇÃO'}{' '}
+              {isChoujin
+                ? isEn
+                  ? '⚡ RAISE III: AFFILIATION'
+                  : '⚡ RAISE III: AFILIAÇÃO'
+                : isEn
+                ? 'AFFILIATION'
+                : 'AFILIAÇÃO'}{' '}
               {clueFactionUnlocked ? '' : `(${wrongCount}/5)`}
             </div>
             <p className="font-bold">
               {clueFactionUnlocked
-                ? target.affiliations.join(' · ')
+                ? target.affiliations.map((a) => translateAttr(a, lang)).join(' · ')
+                : isEn
+                ? 'Locked — 5 wrong guesses'
                 : 'Bloqueado — 5 erros'}
             </p>
           </div>
@@ -232,7 +286,7 @@ export default function QuoteMode({
                     isChoujin ? 'text-[#0a0a0c]' : 'text-[#86efac]'
                   }`}
                 >
-                  [AUTORIA CONFIRMADA]
+                  {isEn ? '[SPEAKER CONFIRMED]' : '[AUTORIA CONFIRMADA]'}
                 </p>
                 <p
                   className={`font-display text-xl uppercase tracking-wide font-bold ${
@@ -252,7 +306,7 @@ export default function QuoteMode({
                   : 'px-4 py-2.5 bg-[#efe9dd] hover:bg-white text-[#080709] font-display text-xs uppercase tracking-[0.14em] transition-colors'
               }
             >
-              Relatório &amp; Cópia »
+              {isEn ? 'Report & Share »' : 'Relatório & Cópia »'}
             </button>
           </div>
         ) : (
@@ -261,6 +315,8 @@ export default function QuoteMode({
             guessedIds={guesses}
             disabled={won}
             onSelectCharacter={onGuess}
+            lang={lang}
+            universe={universe}
           />
         )}
       </div>
@@ -269,7 +325,7 @@ export default function QuoteMode({
       {guesses.length > 0 && (
         <div className="space-y-2 max-w-xl mx-auto">
           <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#8d857b] px-1">
-            HISTÓRICO DE VERIFICAÇÃO ({guesses.length})
+            {isEn ? `VERIFICATION LOG (${guesses.length})` : `HISTÓRICO DE VERIFICAÇÃO (${guesses.length})`}
           </h3>
           {guesses.map((gId) => {
             const char = charactersById[gId];
@@ -302,7 +358,15 @@ export default function QuoteMode({
                   }`}
                 >
                   {isHit ? <Check className="w-3.5 h-3.5" /> : <X className="w-3.5 h-3.5" />}
-                  <span>{isHit ? 'AUTOR' : 'FALSO'}</span>
+                  <span>
+                    {isHit
+                      ? isEn
+                        ? 'SPEAKER'
+                        : 'AUTOR'
+                      : isEn
+                      ? 'WRONG'
+                      : 'FALSO'}
+                  </span>
                 </span>
               </div>
             );

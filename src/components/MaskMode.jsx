@@ -3,6 +3,7 @@ import { Check, X } from 'lucide-react';
 import CharacterSearch from './CharacterSearch';
 import CharacterAvatar from './visuals/CharacterAvatar';
 import MaskEyeVisualizer from './visuals/MaskEyeVisualizer';
+import { localizeCharacter } from '../utils/i18n';
 
 const MASK_ZOOM_STEPS = [3.15, 2.55, 2.05, 1.65, 1.32, 1.1, 1.0];
 
@@ -17,8 +18,11 @@ export default function MaskMode({
   editionNumber = 1,
   onGuess,
   onOpenVictoryModal,
+  lang = 'pt',
 }) {
   const isChoujin = universe === 'cx';
+  const isEn = lang === 'en';
+  const localizedTarget = localizeCharacter(target, lang);
   const wrongCount = guesses.filter((id) => id !== target.id).length;
   const currentZoom = won
     ? 1.0
@@ -58,7 +62,11 @@ export default function MaskMode({
               }`}
             >
               {isChoujin
-                ? 'ARQUIVO VISUAL // FORMA CHOUJIN & ESTADO DE CAOS'
+                ? isEn
+                  ? 'VISUAL ARCHIVE // CHOUJIN FORM & CHAOS STATE'
+                  : 'ARQUIVO VISUAL // FORMA CHOUJIN & ESTADO DE CAOS'
+                : isEn
+                ? 'HYSY ARTMASK CATALOG // FACIAL IDENTIFICATION'
                 : 'CATÁLOGO HYSY ARTMASK // IDENTIFICAÇÃO FACIAL'}
             </span>
           </div>
@@ -67,25 +75,41 @@ export default function MaskMode({
               isChoujin ? 'text-[#FFE600] font-bold' : 'text-[#cfc6b6]'
             }`}
           >
-            {isDaily ? `EXPEDIENTE GLOBAL #${editionNumber}` : 'TREINO LIVRE'} · LENTE{' '}
-            {currentZoom.toFixed(2)}x
+            {isDaily
+              ? isEn
+                ? `GLOBAL DOSSIER #${editionNumber}`
+                : `EXPEDIENTE GLOBAL #${editionNumber}`
+              : isEn
+              ? 'FREE PRACTICE'
+              : 'TREINO LIVRE'}{' '}
+            · {isEn ? 'LENS' : 'LENTE'} {currentZoom.toFixed(2)}x
           </span>
         </div>
 
         <div className="text-center space-y-1">
           <h2 className="font-display text-2xl sm:text-3xl uppercase tracking-[0.06em] text-[#efe9dd]">
-            Reconheça a{' '}
+            {isEn ? 'Recognize the ' : 'Reconheça a '}
             <span
               className={
                 isChoujin ? 'text-[#00F0FF] underline decoration-[#FFE600]' : 'text-[#d9141e]'
               }
             >
-              {isChoujin ? 'Forma Choujin / Estado de Caos' : 'Máscara ou Olhar'}
+              {isChoujin
+                ? isEn
+                  ? 'Choujin Form / Chaos State'
+                  : 'Forma Choujin / Estado de Caos'
+                : isEn
+                ? 'Mask or Gaze'
+                : 'Máscara ou Olhar'}
             </span>
           </h2>
           <p className="font-serif text-xs sm:text-sm text-[#cfc6b6]/80">
             {isChoujin
-              ? 'Examine o recorte da Forma Choujin, Estado de Caos ou Máscara Noh. O enquadramento abre a cada tentativa.'
+              ? isEn
+                ? 'Inspect the close-up of the Choujin Form, Chaos State, or Noh Mask. The frame zooms out with each guess.'
+                : 'Examine o recorte da Forma Choujin, Estado de Caos ou Máscara Noh. O enquadramento abre a cada tentativa.'
+              : isEn
+              ? 'Inspect the cropped fragment of the mask or Kakugan. The frame zooms out after each wrong guess.'
               : 'Examine o fragmento fotográfico do disfarce ou Kakugan. O quadro se expande a cada erro.'}
           </p>
         </div>
@@ -99,7 +123,7 @@ export default function MaskMode({
           }
         >
           <MaskEyeVisualizer
-            character={target}
+            character={localizedTarget}
             zoomScale={currentZoom}
             className="w-full h-full"
           />
@@ -121,7 +145,7 @@ export default function MaskMode({
                 : 'absolute bottom-2.5 left-3 px-2 py-0.5 bg-[#080709]/90 border border-[#efe9dd]/25 text-[10px] font-mono uppercase tracking-widest text-[#efe9dd]'
             }
           >
-            {isChoujin ? `CAOS-LENS ${currentZoom.toFixed(2)}x` : `HYSY-LENS ${currentZoom.toFixed(2)}x`}
+            {isChoujin ? `CHAOS-LENS ${currentZoom.toFixed(2)}x` : `HYSY-LENS ${currentZoom.toFixed(2)}x`}
           </div>
         </div>
 
@@ -152,12 +176,20 @@ export default function MaskMode({
               }`}
             >
               {isChoujin
-                ? `⚡ ATIVAR RAISE! I ${clueTypeUnlocked ? '// ATIVO' : `(${wrongCount}/2)`}`
+                ? isEn
+                  ? `⚡ ACTIVATE RAISE! I ${clueTypeUnlocked ? '// ACTIVE' : `(${wrongCount}/2)`}`
+                  : `⚡ ATIVAR RAISE! I ${clueTypeUnlocked ? '// ATIVO' : `(${wrongCount}/2)`}`
+                : isEn
+                ? `DETAIL I ${clueTypeUnlocked ? '// UNLOCKED' : `// LOCKED (${wrongCount}/2)`}`
                 : `DETALHE I ${clueTypeUnlocked ? '// LIBERADO' : `// BLOQUEADO (${wrongCount}/2)`}`}
             </span>
             <span className="font-bold">
               {clueTypeUnlocked
-                ? `Forma / Olhar: ${target.maskOrEye.type}`
+                ? isEn
+                  ? `Form / Gaze: ${localizedTarget.maskOrEye.type}`
+                  : `Forma / Olhar: ${localizedTarget.maskOrEye.type}`
+                : isEn
+                ? 'Requires 2 wrong guesses'
                 : 'Requer 2 palpites incorretos'}
             </span>
           </div>
@@ -187,12 +219,20 @@ export default function MaskMode({
               }`}
             >
               {isChoujin
-                ? `⚡ ATIVAR RAISE! II ${clueEpithetUnlocked ? '// ATIVO' : `(${wrongCount}/4)`}`
+                ? isEn
+                  ? `⚡ ACTIVATE RAISE! II ${clueEpithetUnlocked ? '// ACTIVE' : `(${wrongCount}/4)`}`
+                  : `⚡ ATIVAR RAISE! II ${clueEpithetUnlocked ? '// ATIVO' : `(${wrongCount}/4)`}`
+                : isEn
+                ? `DETAIL II ${clueEpithetUnlocked ? '// UNLOCKED' : `// LOCKED (${wrongCount}/4)`}`
                 : `DETALHE II ${clueEpithetUnlocked ? '// LIBERADO' : `// BLOQUEADO (${wrongCount}/4)`}`}
             </span>
             <span className="font-bold">
               {clueEpithetUnlocked
-                ? `Alcunha: ${target.epithet}`
+                ? isEn
+                  ? `Alias: ${localizedTarget.epithet}`
+                  : `Alcunha: ${localizedTarget.epithet}`
+                : isEn
+                ? 'Requires 4 wrong guesses'
                 : 'Requer 4 palpites incorretos'}
             </span>
           </div>
@@ -215,7 +255,7 @@ export default function MaskMode({
                     isChoujin ? 'text-[#0a0a0c]' : 'text-[#86efac]'
                   }`}
                 >
-                  {target.maskOrEye.title}
+                  {localizedTarget.maskOrEye.title}
                 </p>
                 <p
                   className={`font-display text-xl uppercase tracking-wide font-bold ${
@@ -235,7 +275,7 @@ export default function MaskMode({
                   : 'px-4 py-2.5 bg-[#efe9dd] hover:bg-white text-[#080709] font-display text-xs uppercase tracking-[0.14em] transition-colors'
               }
             >
-              Relatório &amp; Cópia »
+              {isEn ? 'Report & Share »' : 'Relatório & Cópia »'}
             </button>
           </div>
         ) : (
@@ -245,6 +285,8 @@ export default function MaskMode({
             disabled={won}
             hideAvatars
             onSelectCharacter={onGuess}
+            lang={lang}
+            universe={universe}
           />
         )}
       </div>
@@ -253,11 +295,12 @@ export default function MaskMode({
       {guesses.length > 0 && (
         <div className="space-y-2 max-w-xl mx-auto">
           <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#8d857b] px-1">
-            HISTÓRICO DE VERIFICAÇÃO ({guesses.length})
+            {isEn ? `VERIFICATION LOG (${guesses.length})` : `HISTÓRICO DE VERIFICAÇÃO (${guesses.length})`}
           </h3>
           {guesses.map((gId) => {
             const char = charactersById[gId];
             if (!char) return null;
+            const locChar = localizeCharacter(char, lang);
             const isHit = gId === target.id;
             return (
               <div
@@ -281,7 +324,7 @@ export default function MaskMode({
                         isChoujin ? 'opacity-90' : 'text-[#cfc6b6]/75'
                       }`}
                     >
-                      {char.epithet}
+                      {locChar.epithet}
                     </p>
                   </div>
                 </div>
@@ -295,7 +338,15 @@ export default function MaskMode({
                   }`}
                 >
                   {isHit ? <Check className="w-3.5 h-3.5" /> : <X className="w-3.5 h-3.5" />}
-                  <span>{isHit ? 'ALVO' : 'FALSO'}</span>
+                  <span>
+                    {isHit
+                      ? isEn
+                        ? 'TARGET'
+                        : 'ALVO'
+                      : isEn
+                      ? 'WRONG'
+                      : 'FALSO'}
+                  </span>
                 </span>
               </div>
             );

@@ -23,9 +23,22 @@ export default function ArenaHeader({
   streak,
   onOpenStats,
   onOpenHelp,
+  lang = 'pt',
 }) {
   const [countdown, setCountdown] = useState(getTimeUntilMidnight());
   const isChoujin = universe === 'cx';
+  const isEn = lang === 'en';
+
+  const getModeLabel = (mode) => {
+    if (isChoujin) {
+      if (mode.id === 'classic') return isEn ? 'Classic' : 'Clássico';
+      if (mode.id === 'quote') return isEn ? 'Quote' : 'Citação';
+      return isEn ? 'Choujin Form' : 'Forma / Caos';
+    }
+    if (mode.id === 'classic') return isEn ? 'Classic' : 'Clássico';
+    if (mode.id === 'quote') return isEn ? 'Quote' : 'Citação';
+    return isEn ? 'Mask & Eye' : 'Máscara & Olho';
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -39,10 +52,18 @@ export default function ArenaHeader({
       <header className="relative z-30 border-b-[3px] border-[#FFE600] bg-[#0a0a0c] bg-halftone select-none">
         {/* Top Hazard Strip */}
         <div className="border-b-2 border-[#0a0a0c] bg-[#FFE600] text-[#0a0a0c] px-4 py-1 text-[10px] font-mono font-extrabold tracking-[0.2em] uppercase flex flex-wrap items-center justify-between max-w-6xl mx-auto">
-          <span>⚡ YAMATO MORI // ARQUIVO DE CAMPO — ESTADO DE CAOS</span>
+          <span>
+            {isEn
+              ? '⚡ YAMATO MORI // FIELD ARCHIVE — CHAOS STATE'
+              : '⚡ YAMATO MORI // ARQUIVO DE CAMPO — ESTADO DE CAOS'}
+          </span>
           <span>
             {isDaily
-              ? `EDIÇÃO #${editionNumber} • NOVO ALVO EM ${countdown} (00:00 UTC)`
+              ? isEn
+                ? `EDITION #${editionNumber} • NEW TARGET IN ${countdown} (00:00 UTC)`
+                : `EDIÇÃO #${editionNumber} • NOVO ALVO EM ${countdown} (00:00 UTC)`
+              : isEn
+              ? 'INFINITE MODE // FREE CHAOS'
               : 'MODO INFINITO // CAOS LIVRE'}
           </span>
         </div>
@@ -56,7 +77,7 @@ export default function ArenaHeader({
                 type="button"
                 onClick={onBackToHub}
                 className="inline-flex items-center gap-1.5 px-3 py-2 bg-[#f4f1ea] hover:bg-[#FFE600] border-2 border-[#0a0a0c] text-[#0a0a0c] text-xs font-mono font-extrabold uppercase tracking-wider transition-transform hover:-translate-y-0.5 shadow-[3px_3px_0_#FF0055] -skew-x-3"
-                title="Voltar à Entrada de ChoujinXdle"
+                title={isEn ? 'Back to ChoujinXdle Hub' : 'Voltar à Entrada de ChoujinXdle'}
               >
                 <ArrowLeft className="w-3.5 h-3.5 stroke-[2.8]" />
                 <span className="hidden sm:inline">Zine</span>
@@ -66,7 +87,7 @@ export default function ArenaHeader({
                 type="button"
                 onClick={onBackToHub}
                 className="focus:outline-none"
-                title="Voltar à Entrada de ChoujinXdle"
+                title={isEn ? 'Back to ChoujinXdle Hub' : 'Voltar à Entrada de ChoujinXdle'}
               >
                 <ChoujindleCrestLogo compact />
               </button>
@@ -96,8 +117,7 @@ export default function ArenaHeader({
             {GAME_MODES.map((mode) => {
               const isActive = activeMode === mode.id;
               const isSolved = Boolean(completedModes[mode.id]);
-              const modeLabel =
-                mode.id === 'mask' ? 'Forma / Caos' : mode.label;
+              const modeLabel = getModeLabel(mode);
 
               return (
                 <button
@@ -127,7 +147,7 @@ export default function ArenaHeader({
 
                   {isSolved && (
                     <span
-                      title="Concluído"
+                      title={isEn ? 'Solved' : 'Concluído'}
                       className="absolute -top-2 -right-2 px-1 bg-[#A3FF00] border-2 border-[#0a0a0c] text-[9px] font-mono font-black text-[#0a0a0c] leading-tight"
                     >
                       ✓
@@ -150,7 +170,7 @@ export default function ArenaHeader({
                     : 'text-[#f4f1ea]/70 hover:text-[#FFE600]'
                 }`}
               >
-                Diário
+                {isEn ? 'Daily' : 'Diário'}
               </button>
               <button
                 type="button"
@@ -161,7 +181,7 @@ export default function ArenaHeader({
                     : 'text-[#f4f1ea]/70 hover:text-[#00F0FF]'
                 }`}
               >
-                Infinito
+                {isEn ? 'Infinite' : 'Infinito'}
               </button>
             </div>
 
@@ -170,10 +190,10 @@ export default function ArenaHeader({
                 type="button"
                 onClick={onNewInfiniteRound}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FF0055] hover:bg-[#FFE600] hover:text-[#0a0a0c] border-2 border-[#0a0a0c] text-[11px] font-mono font-extrabold uppercase tracking-wider text-[#f4f1ea] shadow-[3px_3px_0_#A3FF00] -skew-x-3 transition-colors"
-                title="Sortear outro Choujin neste modo"
+                title={isEn ? 'Roll another Choujin in this mode' : 'Sortear outro Choujin neste modo'}
               >
                 <RotateCcw className="w-3.5 h-3.5 stroke-[2.5]" />
-                <span>Novo Alvo</span>
+                <span>{isEn ? 'New Target' : 'Novo Alvo'}</span>
               </button>
             )}
 
@@ -183,7 +203,7 @@ export default function ArenaHeader({
                 onClick={onOpenStats}
                 className="px-3 py-1.5 bg-[#16161a] hover:bg-[#FFE600] hover:text-[#0a0a0c] border-2 border-[#f4f1ea] text-xs font-mono font-bold uppercase tracking-wider text-[#f4f1ea] shadow-[3px_3px_0_#FF0055] -skew-x-3 transition-colors flex items-center gap-1.5"
               >
-                <span>Registro</span>
+                <span>{isEn ? 'Records' : 'Registro'}</span>
                 {streak > 0 && (
                   <span className="px-1.5 py-0.2 bg-[#A3FF00] text-[#0a0a0c] text-[10px] font-black">
                     {streak}
@@ -196,7 +216,7 @@ export default function ArenaHeader({
                 onClick={onOpenHelp}
                 className="px-2.5 py-1.5 bg-[#f4f1ea] hover:bg-[#00F0FF] border-2 border-[#0a0a0c] text-xs font-mono font-extrabold text-[#0a0a0c] shadow-[3px_3px_0_#FFE600] -skew-x-3 transition-colors"
               >
-                則 Guia
+                {isEn ? '則 Guide' : '則 Guia'}
               </button>
             </div>
           </div>
@@ -212,9 +232,19 @@ export default function ArenaHeader({
     <header className="relative z-30 border-b border-[#efe9dd]/18 bg-[#0b0a0e]">
       {/* Top Hairline Info Strip */}
       <div className="border-b border-[#efe9dd]/10 bg-[#070608] px-4 py-1 text-[10px] font-mono tracking-[0.2em] uppercase text-[#8d857b] flex items-center justify-between max-w-6xl mx-auto">
-        <span>CCG // ARQUIVO DE INVESTIGAÇÃO — 20ª ALA</span>
+        <span>
+          {isEn
+            ? 'CCG // INVESTIGATION ARCHIVE — 20TH WARD'
+            : 'CCG // ARQUIVO DE INVESTIGAÇÃO — 20ª ALA'}
+        </span>
         <span className="text-[#cfc6b6]">
-          {isDaily ? `EXPEDIENTE DIÁRIO #${editionNumber} • NOVO ALVO EM ${countdown} (00:00 UTC)` : 'MODO INFINITO // TREINO INDIVIDUAL'}
+          {isDaily
+            ? isEn
+              ? `DAILY DOSSIER #${editionNumber} • NEW TARGET IN ${countdown} (00:00 UTC)`
+              : `EXPEDIENTE DIÁRIO #${editionNumber} • NOVO ALVO EM ${countdown} (00:00 UTC)`
+            : isEn
+            ? 'INFINITE MODE // SOLO TRAINING'
+            : 'MODO INFINITO // TREINO INDIVIDUAL'}
         </span>
       </div>
 
@@ -227,17 +257,17 @@ export default function ArenaHeader({
               type="button"
               onClick={onBackToHub}
               className="inline-flex items-center gap-1.5 px-2.5 py-2 bg-[#141218] hover:bg-[#b80f17] border border-[#efe9dd]/30 hover:border-[#efe9dd] text-[#efe9dd] text-xs font-mono uppercase tracking-wider transition-colors shadow-[2px_2px_0_#000]"
-              title="Voltar à Entrada Principal"
+              title={isEn ? 'Back to Main Hub' : 'Voltar à Entrada Principal'}
             >
               <ArrowLeft className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Entrada</span>
+              <span className="hidden sm:inline">{isEn ? 'Hub' : 'Entrada'}</span>
             </button>
 
             <button
               type="button"
               onClick={onBackToHub}
               className="focus:outline-none"
-              title="Voltar à Entrada Principal"
+              title={isEn ? 'Back to Main Hub' : 'Voltar à Entrada Principal'}
             >
               <GhouldleCrestLogo compact />
             </button>
@@ -249,7 +279,7 @@ export default function ArenaHeader({
               type="button"
               onClick={onOpenStats}
               className="px-2.5 py-1.5 bg-[#141218] border border-[#efe9dd]/25 text-xs font-serif font-bold text-[#efe9dd] hover:border-[#d9141e]"
-              title="Registro da CCG"
+              title={isEn ? 'CCG Records' : 'Registro da CCG'}
             >
               録 {streak > 0 ? `(${streak})` : ''}
             </button>
@@ -257,7 +287,7 @@ export default function ArenaHeader({
               type="button"
               onClick={onOpenHelp}
               className="px-2.5 py-1.5 bg-[#141218] border border-[#efe9dd]/25 text-xs font-serif font-bold text-[#efe9dd] hover:border-[#d9141e]"
-              title="Manual"
+              title={isEn ? 'Manual' : 'Manual'}
             >
               則
             </button>
@@ -269,6 +299,7 @@ export default function ArenaHeader({
           {GAME_MODES.map((mode) => {
             const isActive = activeMode === mode.id;
             const isSolved = Boolean(completedModes[mode.id]);
+            const modeLabel = getModeLabel(mode);
 
             return (
               <button
@@ -289,7 +320,7 @@ export default function ArenaHeader({
                 />
                 <div className="hidden sm:block text-left min-w-0">
                   <span className="block font-display text-xs uppercase tracking-[0.08em] leading-none truncate">
-                    {mode.label}
+                    {modeLabel}
                   </span>
                 </div>
                 <span className="sm:hidden font-serif text-[11px] font-bold">
@@ -298,7 +329,7 @@ export default function ArenaHeader({
 
                 {isSolved && (
                   <span
-                    title="Concluído"
+                    title={isEn ? 'Solved' : 'Concluído'}
                     className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-[#166534] border border-[#86efac] text-[9px] font-serif font-bold text-[#efe9dd] flex items-center justify-center leading-none"
                   >
                     済
@@ -321,7 +352,7 @@ export default function ArenaHeader({
                   : 'text-[#8d857b] hover:text-[#efe9dd]'
               }`}
             >
-              Diário
+              {isEn ? 'Daily' : 'Diário'}
             </button>
             <button
               type="button"
@@ -332,7 +363,7 @@ export default function ArenaHeader({
                   : 'text-[#8d857b] hover:text-[#efe9dd]'
               }`}
             >
-              Infinito
+              {isEn ? 'Infinite' : 'Infinito'}
             </button>
           </div>
 
@@ -341,10 +372,10 @@ export default function ArenaHeader({
               type="button"
               onClick={onNewInfiniteRound}
               className="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-[#1b080b] hover:bg-[#b80f17] border border-[#d9141e]/60 text-[11px] font-mono uppercase tracking-wider text-[#efe9dd] transition-colors"
-              title="Sortear outro personagem neste modo"
+              title={isEn ? 'Roll another character in this mode' : 'Sortear outro personagem neste modo'}
             >
               <RotateCcw className="w-3.5 h-3.5" />
-              <span>Novo Alvo</span>
+              <span>{isEn ? 'New Target' : 'Novo Alvo'}</span>
             </button>
           )}
 
@@ -353,10 +384,10 @@ export default function ArenaHeader({
               type="button"
               onClick={onOpenStats}
               className="px-3 py-1.5 bg-[#121116] hover:bg-[#1a1820] border border-[#efe9dd]/25 hover:border-[#d9141e] text-xs font-mono uppercase tracking-wider text-[#efe9dd] transition-colors flex items-center gap-1.5"
-              title="Estatísticas"
+              title={isEn ? 'Statistics' : 'Estatísticas'}
             >
               <span className="font-serif text-[#d9141e] font-bold">録</span>
-              <span>Registro</span>
+              <span>{isEn ? 'Records' : 'Registro'}</span>
               {streak > 0 && (
                 <span className="px-1.5 py-0.5 bg-[#b80f17] text-[#efe9dd] text-[10px] font-bold">
                   {streak}
@@ -368,9 +399,9 @@ export default function ArenaHeader({
               type="button"
               onClick={onOpenHelp}
               className="px-2.5 py-1.5 bg-[#121116] hover:bg-[#1a1820] border border-[#efe9dd]/25 hover:border-[#d9141e] text-xs font-serif font-bold text-[#efe9dd] transition-colors"
-              title="Manual de Regras e Cronologia de Arcos"
+              title={isEn ? 'Rules & Arc Chronology' : 'Manual de Regras e Cronologia de Arcos'}
             >
-              則 Guia
+              {isEn ? '則 Guide' : '則 Guia'}
             </button>
           </div>
         </div>

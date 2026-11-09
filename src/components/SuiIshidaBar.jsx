@@ -7,10 +7,13 @@ export default function SuiIshidaBar({
   onSelectUniverse,
   tgCompletedCount = 0,
   cxCompletedCount = 0,
+  lang = 'pt',
+  onChangeLang,
 }) {
   const isLobby = view === 'lobby';
   const isCx = !isLobby && universe === 'cx';
   const isTg = !isLobby && universe === 'tg';
+  const isEn = lang === 'en';
 
   return (
     <div
@@ -73,7 +76,11 @@ export default function SuiIshidaBar({
               e.preventDefault();
               onSelectUniverse('tg');
             }}
-            title="Ghouldle (Ghoul Dle) — Jogo Diário de Tokyo Ghoul"
+            title={
+              isEn
+                ? 'Ghouldle (Ghoul Dle) — Tokyo Ghoul Daily Game'
+                : 'Ghouldle (Ghoul Dle) — Jogo Diário de Tokyo Ghoul'
+            }
             className={`relative inline-flex items-center gap-2 px-3 py-1 border text-xs transition-all duration-300 ${
               isTg
                 ? 'bg-[#1c070b] border-[#dc2626] text-[#efe9dd] shadow-[3px_3px_0_#991b1b] -translate-y-[1px]'
@@ -111,7 +118,11 @@ export default function SuiIshidaBar({
               e.preventDefault();
               onSelectUniverse('cx');
             }}
-            title="ChoujinXdle (Choujin X Dle) — Jogo Diário de Choujin X"
+            title={
+              isEn
+                ? 'ChoujinXdle (Choujin X Dle) — Choujin X Daily Game'
+                : 'ChoujinXdle (Choujin X Dle) — Jogo Diário de Choujin X'
+            }
             className={`relative inline-flex items-center gap-2 px-3 py-1 text-xs transition-all duration-300 ${
               isCx
                 ? 'bg-[#FFE600] text-[#0a0a0c] border-2 border-[#0a0a0c] shadow-[3px_3px_0_#FF0055] -skew-x-3 -translate-y-[1px] font-black'
@@ -148,6 +159,48 @@ export default function SuiIshidaBar({
               {cxCompletedCount}/3
             </span>
           </a>
+
+          {/* Language Selector (PT / EN) */}
+          {onChangeLang && (
+            <div
+              role="group"
+              aria-label={isEn ? 'Select Language' : 'Selecionar Idioma'}
+              className={`inline-flex items-center border p-0.5 text-[10px] font-mono font-bold uppercase tracking-wider ${
+                isCx
+                  ? 'bg-[#16161a] border-2 border-[#FFE600] -skew-x-3 shadow-[2px_2px_0_#FF0055]'
+                  : 'bg-[#0d0c10] border-[#efe9dd]/25'
+              }`}
+            >
+              <button
+                type="button"
+                onClick={() => onChangeLang('pt')}
+                title="Português (PT-BR)"
+                className={`px-2 py-0.5 transition-colors ${
+                  lang === 'pt'
+                    ? isCx
+                      ? 'bg-[#FFE600] text-[#0a0a0c] font-black'
+                      : 'bg-[#dc2626] text-[#efe9dd]'
+                    : 'text-[#8d857b] hover:text-[#efe9dd]'
+                }`}
+              >
+                PT
+              </button>
+              <button
+                type="button"
+                onClick={() => onChangeLang('en')}
+                title="English (EN)"
+                className={`px-2 py-0.5 transition-colors ${
+                  lang === 'en'
+                    ? isCx
+                      ? 'bg-[#00F0FF] text-[#0a0a0c] font-black'
+                      : 'bg-[#dc2626] text-[#efe9dd]'
+                    : 'text-[#8d857b] hover:text-[#efe9dd]'
+                }`}
+              >
+                EN
+              </button>
+            </div>
+          )}
         </div>
       </nav>
     </div>
