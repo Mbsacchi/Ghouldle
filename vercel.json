@@ -1,6 +1,22 @@
 {
   "rewrites": [
     {
+      "source": "/ghouldle",
+      "destination": "/ghouldle/index.html"
+    },
+    {
+      "source": "/ghouldle/(.*)",
+      "destination": "/ghouldle/index.html"
+    },
+    {
+      "source": "/choujinxdle",
+      "destination": "/choujinxdle/index.html"
+    },
+    {
+      "source": "/choujinxdle/(.*)",
+      "destination": "/choujinxdle/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

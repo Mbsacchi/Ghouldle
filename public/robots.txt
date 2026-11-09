@@ -1,0 +1,41 @@
+# robots.txt for Sui Ichida Dle (Sui Ishida Dle) — https://suiichidadle.vercel.app/
+# Main Hub: https://suiichidadle.vercel.app/
+# Ghouldle (Tokyo Ghoul Dle): https://suiichidadle.vercel.app/ghouldle
+# ChoujinXdle (Choujin X Dle): https://suiichidadle.vercel.app/choujinxdle
+
+User-agent: *
+Allow: /
+Allow: /ghouldle
+Allow: /choujinxdle
+
+# Traditional Search Engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Generative Engine Optimization (GEO) — AI Search Crawlers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://suiichidadle.vercel.app/sitemap.xml
+Host: https://suiichidadle.vercel.app

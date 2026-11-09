@@ -263,8 +263,8 @@ export function generateShareSummary({
   const gameTag = universe === 'cx' ? '⚡ CHOUJINXDLE' : '🩸 GHOULDLE';
   const shareUrl =
     universe === 'cx'
-      ? 'https://ghouldle.vercel.app/choujinxdle'
-      : 'https://ghouldle.vercel.app/ghouldle';
+      ? 'https://suiichidadle.vercel.app/choujinxdle'
+      : 'https://suiichidadle.vercel.app/ghouldle';
   const header = isDaily
     ? `${gameTag} #${editionNumber} — Modo ${modeNames[mode]}`
     : `${gameTag} (Infinito) — Modo ${modeNames[mode]}`;

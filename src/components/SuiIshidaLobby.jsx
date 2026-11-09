@@ -177,15 +177,18 @@ export default function SuiIshidaLobby({
               ))}
             </div>
 
-            {/* Enter /ghouldle Hub Button */}
-            <button
-              type="button"
-              onClick={() => onEnterUniverseHub('tg')}
+            {/* Enter /ghouldle Hub Link */}
+            <a
+              href="/ghouldle"
+              onClick={(e) => {
+                e.preventDefault();
+                onEnterUniverseHub('tg');
+              }}
               className="w-full py-3.5 px-5 bg-[#dc2626] hover:bg-[#b91c1c] border-2 border-[#efe9dd] text-[#efe9dd] font-display text-base uppercase tracking-[0.16em] shadow-[5px_5px_0_#000] flex items-center justify-between transition-all hover:-translate-y-0.5"
             >
               <span>🩸 ENTRAR EM /GHOULDLE (56 PERSONAGENS)</span>
               <span className="font-mono text-xl">»</span>
-            </button>
+            </a>
 
             {/* Quick Mode Selector for Ghouldle */}
             <div className="space-y-1.5">
@@ -344,15 +347,18 @@ export default function SuiIshidaLobby({
               </div>
             </div>
 
-            {/* Enter /choujinxdle Zine Lobby Button */}
-            <button
-              type="button"
-              onClick={() => onEnterUniverseHub('cx')}
+            {/* Enter /choujinxdle Zine Lobby Link */}
+            <a
+              href="/choujinxdle"
+              onClick={(e) => {
+                e.preventDefault();
+                onEnterUniverseHub('cx');
+              }}
               className="w-full py-3.5 px-5 bg-[#FFE600] hover:bg-[#A3FF00] text-[#0a0a0c] border-[3px] border-[#0a0a0c] font-display font-bold text-base uppercase tracking-[0.16em] shadow-[6px_6px_0_#FF0055] flex items-center justify-between transition-all hover:-translate-y-0.5 -skew-x-2"
             >
               <span>⚡ ABRIR ZINE /CHOUJINXDLE (30 PERSONAGENS)</span>
               <span className="font-mono text-xl font-black">»</span>
-            </button>
+            </a>
 
             {/* Quick Mode Cutouts for ChoujinXdle */}
             <div className="space-y-1.5">
@@ -401,6 +407,50 @@ export default function SuiIshidaLobby({
           </div>
         </section>
       </div>
+
+      {/* Semantic SEO & GEO Directory Footer (Crawlable Sitelinks for Google & AI Search) */}
+      <footer
+        aria-label="Diretório Oficial Sui Ichida Dle"
+        className="w-full bg-[#050507] border-t border-[#efe9dd]/15 px-4 py-3 text-[11px] font-mono text-[#8d857b]"
+      >
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+          <h1 className="text-[11px] font-mono font-semibold text-[#cfc6b6]">
+            <strong>Sui Ichida Dle (Sui Ishida Dle)</strong> — Jogos Diários e Infinitos de{' '}
+            <em>Tokyo Ghoul</em> &amp; <em>Choujin X</em>:
+          </h1>
+          <nav aria-label="Links Diretos dos Jogos" className="flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="https://suiichidadle.vercel.app/"
+              onClick={(e) => e.preventDefault()}
+              className="text-[#efe9dd] hover:text-white underline decoration-[#efe9dd]/30"
+            >
+              suiichidadle.vercel.app
+            </a>
+            <span>•</span>
+            <a
+              href="/ghouldle"
+              onClick={(e) => {
+                e.preventDefault();
+                onEnterUniverseHub('tg');
+              }}
+              className="text-[#f87171] hover:text-[#dc2626] underline decoration-[#dc2626]/40"
+            >
+              Ghouldle (Ghoul Dle) — /ghouldle
+            </a>
+            <span>•</span>
+            <a
+              href="/choujinxdle"
+              onClick={(e) => {
+                e.preventDefault();
+                onEnterUniverseHub('cx');
+              }}
+              className="text-[#FFE600] hover:text-[#A3FF00] underline decoration-[#FFE600]/40"
+            >
+              ChoujinXdle (Choujin X Dle) — /choujinxdle
+            </a>
+          </nav>
+        </div>
+      </footer>
     </div>
   );
 }

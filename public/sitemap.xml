@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+  <!-- 1. Main Portal: Sui Ichida Dle / Sui Ishida Dle -->
+  <url>
+    <loc>https://suiichidadle.vercel.app/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://suiichidadle.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suiichidadle.vercel.app/" />
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 2. Ghouldle (Tokyo Ghoul Dle / Ghoul Dle) Primary Sitelink -->
+  <url>
+    <loc>https://suiichidadle.vercel.app/ghouldle</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://suiichidadle.vercel.app/ghouldle" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suiichidadle.vercel.app/ghouldle" />
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- 3. ChoujinXdle (Choujin X Dle / Choujindle) Primary Sitelink -->
+  <url>
+    <loc>https://suiichidadle.vercel.app/choujinxdle</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://suiichidadle.vercel.app/choujinxdle" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suiichidadle.vercel.app/choujinxdle" />
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Ghouldle Modes -->
+  <url>
+    <loc>https://suiichidadle.vercel.app/ghouldle/classic</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://suiichidadle.vercel.app/ghouldle/quote</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://suiichidadle.vercel.app/ghouldle/mask</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- ChoujinXdle Modes -->
+  <url>
+    <loc>https://suiichidadle.vercel.app/choujinxdle/classic</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://suiichidadle.vercel.app/choujinxdle/quote</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://suiichidadle.vercel.app/choujinxdle/mask</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+</urlset>

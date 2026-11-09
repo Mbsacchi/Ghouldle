@@ -22,13 +22,19 @@ export default function SuiIshidaBar({
           : 'bg-[#050507] border-b border-[#efe9dd]/25'
       } px-3 sm:px-6 py-1.5`}
     >
-      <div className="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between gap-2">
+      <nav
+        aria-label="Navegação Principal Sui Ichida Dle"
+        className="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between gap-2"
+      >
         {/* Left: Sui Ishida Dle Brand Seal -> Returns to Central Lobby */}
-        <button
-          type="button"
-          onClick={onGoToLobby}
+        <a
+          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            onGoToLobby();
+          }}
           className="group inline-flex items-center gap-2 text-left focus:outline-none"
-          title="Voltar ao Lobby Central (Sui Ishida Dle)"
+          title="Sui Ichida Dle (Sui Ishida Dle) — Lobby Principal"
         >
           <span
             className={`px-1.5 py-0.5 font-serif text-[11px] font-extrabold tracking-widest leading-none transition-all duration-300 ${
@@ -57,13 +63,17 @@ export default function SuiIshidaBar({
           >
             [LOBBY]
           </span>
-        </button>
+        </a>
 
-        {/* Right: Dual Game Switcher Tabs (Ghouldle vs ChoujinXdle) with impactful transition */}
+        {/* Right: Dual Game Switcher Tabs (Ghouldle vs ChoujinXdle) with crawlable hrefs */}
         <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={() => onSelectUniverse('tg')}
+          <a
+            href="/ghouldle"
+            onClick={(e) => {
+              e.preventDefault();
+              onSelectUniverse('tg');
+            }}
+            title="Ghouldle (Ghoul Dle) — Jogo Diário de Tokyo Ghoul"
             className={`relative inline-flex items-center gap-2 px-3 py-1 border text-xs transition-all duration-300 ${
               isTg
                 ? 'bg-[#1c070b] border-[#dc2626] text-[#efe9dd] shadow-[3px_3px_0_#991b1b] -translate-y-[1px]'
@@ -93,11 +103,15 @@ export default function SuiIshidaBar({
             >
               {tgCompletedCount}/3
             </span>
-          </button>
+          </a>
 
-          <button
-            type="button"
-            onClick={() => onSelectUniverse('cx')}
+          <a
+            href="/choujinxdle"
+            onClick={(e) => {
+              e.preventDefault();
+              onSelectUniverse('cx');
+            }}
+            title="ChoujinXdle (Choujin X Dle) — Jogo Diário de Choujin X"
             className={`relative inline-flex items-center gap-2 px-3 py-1 text-xs transition-all duration-300 ${
               isCx
                 ? 'bg-[#FFE600] text-[#0a0a0c] border-2 border-[#0a0a0c] shadow-[3px_3px_0_#FF0055] -skew-x-3 -translate-y-[1px] font-black'
@@ -133,9 +147,9 @@ export default function SuiIshidaBar({
             >
               {cxCompletedCount}/3
             </span>
-          </button>
+          </a>
         </div>
-      </div>
+      </nav>
     </div>
   );
 }

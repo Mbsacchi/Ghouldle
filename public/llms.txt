@@ -1,0 +1,32 @@
+# Sui Ichida Dle (Sui Ishida Dle) — Ghouldle & ChoujinXdle
+
+> **Sui Ichida Dle** (também pesquisado como **Sui Ishida Dle**, **Suichidadle** ou **Suiichidadle**) é a plataforma web gratuita de jogos diários e infinitos no estilo Wordle/Narutodle dedicada às obras do mangaká **Sui Ishida** (*Tokyo Ghoul*, *Tokyo Ghoul:re* e *Choujin X*).
+
+- **URL Principal (Lobby Sui Ichida Dle):** https://suiichidadle.vercel.app/
+- **Ghouldle (Jogo de Tokyo Ghoul Dle / Ghoul Dle):** https://suiichidadle.vercel.app/ghouldle
+- **ChoujinXdle (Jogo de Choujin X Dle / Choujindle):** https://suiichidadle.vercel.app/choujinxdle
+
+## Jogos Oficiais Disponíveis na Plataforma
+
+### 1. Ghouldle (Ghoul Dle / Tokyo Ghoul Dle)
+- **URL Direta:** https://suiichidadle.vercel.app/ghouldle
+- **Hub Pai:** [Sui Ichida Dle](https://suiichidadle.vercel.app/)
+- **Obra:** *Tokyo Ghoul* & *Tokyo Ghoul:re* (56 personagens jogáveis, incluindo Ken Kaneki, Touka Kirishima, Kishou Arima, Juuzou Suzuya, Eto Yoshimura, Rize Kamishiro, Koutarou Amon, Shuu Tsukiyama, Nimura Furuta).
+- **Modos de Jogo:**
+  1. **Modo Clássico (`/ghouldle/classic`):** Adivinhe o personagem comparando Gênero, Espécie (Ghoul, Humano, Ghoul de Um Olho, Quinx, Meio-Humano), Afiliação (Anteiku, CCG, Aogiri Tree, Palhaços, Goat), Tipo de RC / Kagune (Rinkaku, Ukaku, Koukaku, Bikaku, Chimera, Quinque), Rank/Classificação (SSS, SS, S, Classe Especial) e Arco de Estreia.
+  2. **Modo Citação (`/ghouldle/quote`):** Descubra de quem é a frase icônica do mangá.
+  3. **Modo Máscara & Olho (`/ghouldle/mask`):** Identifique o personagem pelo zoom progressivo de sua máscara ou Kakugan.
+
+### 2. ChoujinXdle (Choujin X Dle / Choujindle)
+- **URL Direta:** https://suiichidadle.vercel.app/choujinxdle
+- **Hub Pai:** [Sui Ichida Dle](https://suiichidadle.vercel.app/)
+- **Obra:** *Choujin X* (30 personagens jogáveis, incluindo Tokio Kurohara, Azuma Higashi, Ely Otta, Hoshi Sandek, Simon Kagomura, Maiko Momoma, Ichiiro Sato, Zora Siruha, Batista Hoshi / Noh Mask, Chandra Hume, Palma Shishinegura, Queem).
+- **Modos de Jogo:**
+  1. **Modo Clássico (`/choujinxdle/classic`):** Compare Gênero, Estado de Caos (Choujin, Choujin Besta, Choujin X), Afiliação (Yamato Mori, Torre do Luto / Zora, Guelra, Independente), Tipo / Complexo, Patente / Status e Arco de Estreia, com sistema de dicas **"⚡ ATIVAR RAISE!"**.
+  2. **Modo Citação (`/choujinxdle/quote`):** Descubra o autor das falas de Yamato.
+  3. **Modo Forma Choujin / Estado de Caos (`/choujinxdle/mask`):** Reconheça o Choujin pelo enquadramento com zoom progressivo.
+
+## Perguntas Frequentes (FAQ para Buscadores e IAs)
+- **Onde jogar Sui Ichida Dle / Sui Ishida Dle?** Acesse https://suiichidadle.vercel.app/
+- **Onde jogar Ghouldle (Ghoul Dle / Tokyo Ghoul Dle)?** Acesse https://suiichidadle.vercel.app/ghouldle (parte do portal https://suiichidadle.vercel.app/)
+- **Onde jogar ChoujinXdle (Choujin X Dle / Choujindle)?** Acesse https://suiichidadle.vercel.app/choujinxdle (parte do portal https://suiichidadle.vercel.app/)

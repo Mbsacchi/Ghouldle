@@ -18,6 +18,7 @@ import {
   getTodayKey,
   pickRandomCharacter,
 } from './utils/gameLogic';
+import { syncDocumentSeo } from './utils/seo';
 import {
   loadDailyState,
   saveDailyState,
@@ -148,17 +149,10 @@ export default function App() {
     };
   }, []);
 
-  // Dynamically update document title based on active route (/ , /ghouldle , /choujinxdle)
+  // Dynamically update document title, canonical URL, and OpenGraph meta tags based on active route
   useEffect(() => {
-    if (typeof document === 'undefined') return;
-    if (view === 'lobby') {
-      document.title = 'SUI ISHIDA DLE — /ghouldle & /choujinxdle';
-    } else if (universe === 'cx') {
-      document.title = 'CHOUJINXDLE — 超人X | Sui Ishida Dle (/choujinxdle)';
-    } else {
-      document.title = 'GHOULDLE — 東京喰種 | Sui Ishida Dle (/ghouldle)';
-    }
-  }, [view, universe]);
+    syncDocumentSeo({ view, universe, mode: activeMode });
+  }, [view, universe, activeMode]);
 
   // Re-check midnight UTC rollover automatically for both games
   useEffect(() => {

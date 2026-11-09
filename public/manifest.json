@@ -1,0 +1,33 @@
+{
+  "name": "Sui Ichida Dle (Sui Ishida Dle) — Ghouldle & ChoujinXdle",
+  "short_name": "Sui Ichida Dle",
+  "description": "Jogue Sui Ichida Dle (Sui Ishida Dle): o portal oficial de jogos diários e infinitos de adivinhação de Tokyo Ghoul (Ghouldle) e Choujin X (ChoujinXdle).",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#080709",
+  "theme_color": "#dc2626",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ghouldle — Tokyo Ghoul Dle",
+      "short_name": "Ghouldle",
+      "description": "Jogue Ghouldle: adivinhe o personagem diário de Tokyo Ghoul & Tokyo Ghoul:re",
+      "url": "/ghouldle"
+    },
+    {
+      "name": "ChoujinXdle — Choujin X Dle",
+      "short_name": "ChoujinXdle",
+      "description": "Jogue ChoujinXdle: adivinhe o personagem diário de Choujin X",
+      "url": "/choujinxdle"
+    }
+  ]
+}
