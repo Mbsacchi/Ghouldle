@@ -186,7 +186,7 @@ export default function SuiIshidaLobby({
               }}
               className="w-full py-3.5 px-5 bg-[#dc2626] hover:bg-[#b91c1c] border-2 border-[#efe9dd] text-[#efe9dd] font-display text-base uppercase tracking-[0.16em] shadow-[5px_5px_0_#000] flex items-center justify-between transition-all hover:-translate-y-0.5"
             >
-              <span>🩸 ENTRAR EM /GHOULDLE (55 PERSONAGENS)</span>
+              <span>🩸 ENTRAR EM /GHOULDLE</span>
               <span className="font-mono text-xl">»</span>
             </a>
 
@@ -358,7 +358,7 @@ export default function SuiIshidaLobby({
               }}
               className="w-full py-3.5 px-5 bg-[#FFE600] hover:bg-[#A3FF00] text-[#0a0a0c] border-[3px] border-[#0a0a0c] font-display font-bold text-base uppercase tracking-[0.16em] shadow-[6px_6px_0_#FF0055] flex items-center justify-between transition-all hover:-translate-y-0.5 -skew-x-2"
             >
-              <span>⚡ ABRIR ZINE /CHOUJINXDLE (23 PERSONAGENS)</span>
+              <span>⚡ ABRIR ZINE /CHOUJINXDLE</span>
               <span className="font-mono text-xl font-black">»</span>
             </a>
 
