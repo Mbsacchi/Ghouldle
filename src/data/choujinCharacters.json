@@ -470,6 +470,8 @@
     "debutArc": "Arco Besta da Lua (Nari)",
     "debutArcOrder": 3,
     "epithet": "Choujin Besta da Cobra Branca",
+    "imageUrl": "/characters/nari-tsumuji.png",
+    "imagePosition": "center 18%",
     "quote": {
       "text": "Venha, passarinho... vamos ver se suas penas conseguem escapar quando a serpente aperta!",
       "arc": "Arco Besta da Lua (Nari)",
@@ -482,8 +484,9 @@
     "maskOrEye": {
       "type": "Fenda Reptiliana & Língua Bífida",
       "title": "Pupilas verticais de serpente branca de Nari Tsumuji",
+      "imageUrl": "/characters/nari-tsumuji.png",
       "preset": "nari-snake",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 68, "y": 18 }
     },
     "avatarStyle": {
       "hairColor": "#f4f4f5",
@@ -548,6 +551,8 @@
     "debutArc": "Arco Besta da Lua (Nari)",
     "debutArcOrder": 3,
     "epithet": "Choujin do Papel",
+    "imageUrl": "/characters/ririka-umezawa.png",
+    "imagePosition": "center 18%",
     "quote": {
       "text": "Fininho como uma folha de papel... é assim que a gente desliza por qualquer fresta e corta sua garganta!",
       "arc": "Arco Besta da Lua (Nari)",
@@ -560,8 +565,9 @@
     "maskOrEye": {
       "type": "Máscara de Papel Dobrado & Olhar Afiado",
       "title": "Lâminas de papel branco envolvendo o rosto de Ririka Umezawa",
+      "imageUrl": "/characters/ririka-umezawa.png",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 50, "y": 20 }
     },
     "avatarStyle": {
       "hairColor": "#ec4899",
@@ -587,6 +593,8 @@
     "debutArc": "Arco Besta da Lua (Nari)",
     "debutArcOrder": 3,
     "epithet": "Choujin do Terror Noturno",
+    "imageUrl": "/characters/ricardo-terror.png",
+    "imagePosition": "center 24%",
     "quote": {
       "text": "Peço desculpas pelo susto... meu rosto assume a forma exata daquilo que você mais teme.",
       "arc": "Arco Besta da Lua (Nari)",
@@ -599,8 +607,9 @@
     "maskOrEye": {
       "type": "Quatro Olhos & Tentáculos Faciais",
       "title": "Face tentacular de Ricardo Terror alimentada pelo medo",
+      "imageUrl": "/characters/ricardo-terror.png",
       "preset": "ricardo-terror",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 48, "y": 25 }
     },
     "avatarStyle": {
       "hairColor": "#31102f",
@@ -1031,6 +1040,8 @@
     "debutArc": "Arco da Papoula (Opium)",
     "debutArcOrder": 6,
     "epithet": "Executor do Corte Espacial",
+    "imageUrl": "/characters/jing-guelra.png",
+    "imagePosition": "center 24%",
     "quote": {
       "text": "Não importa a dureza da sua armadura quando é o próprio espaço ao seu redor que se divide em dois.",
       "arc": "Arco da Papoula (Opium)",
@@ -1043,8 +1054,9 @@
     "maskOrEye": {
       "type": "Olhar Gélido & Fenda no Espaço",
       "title": "Distorção linear cortando o quadro diante do olhar de Jing",
+      "imageUrl": "/characters/jing-guelra.png",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 48, "y": 24 }
     },
     "avatarStyle": {
       "hairColor": "#0f172a",
@@ -1061,7 +1073,7 @@
   {
     "id": "bacie-gelo",
     "name": "Bacie",
-    "aliases": ["Bacie da Torre", "Choujin do Gelo"],
+    "aliases": ["Bacie da Torre", "Igor Craft", "I.C. Ice", "Choujin do Gelo"],
     "gender": "Feminino",
     "species": ["Choujin"],
     "affiliations": ["Torre do Luto (Zora)"],
@@ -1070,6 +1082,8 @@
     "debutArc": "Arco da Papoula (Opium)",
     "debutArcOrder": 6,
     "epithet": "Sentinela Glacial da Torre do Luto",
+    "imageUrl": "/characters/bacie-gelo.png",
+    "imagePosition": "center 15%",
     "quote": {
       "text": "Aquele que profanar os degraus da Madre Zora terá o sangue congelado antes de dar o segundo passo.",
       "arc": "Invasão à Torre do Luto",
@@ -1082,8 +1096,9 @@
     "maskOrEye": {
       "type": "Cílios Congelados & Véu da Torre",
       "title": "Olhar glacial de Bacie nos salões de Zora",
+      "imageUrl": "/characters/bacie-gelo.png",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 50, "y": 24 }
     },
     "avatarStyle": {
       "hairColor": "#bae6fd",
