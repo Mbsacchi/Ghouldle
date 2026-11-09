@@ -12,10 +12,10 @@
 
 1. **Ghouldle (`https://suiichidadle.vercel.app/ghouldle`):**
    - Jogo diário e infinito de *Tokyo Ghoul* e *Tokyo Ghoul:re*.
-   - 56 personagens da CCG, Anteiku, Aogiri Tree, Quinx Squad, Palhaços e Família Tsukiyama.
+   - 55 personagens da CCG, Anteiku, Aogiri Tree, Quinx Squad, Palhaços e Família Tsukiyama.
    - 3 modos: Clássico (tabela de 7 atributos com dicas da CCG), Citação e Máscara & Olho.
 
 2. **ChoujinXdle (`https://suiichidadle.vercel.app/choujinxdle`):**
    - Jogo diário e infinito de *Choujin X* com estética Pop-Punk / Neo-Brutalista inspirada nas capas de Sui Ishida.
-   - 30 personagens de Yamato Mori, Torre do Luto (Zora) e Guelra.
+   - 23 personagens de Yamato Mori, Torre do Luto (Zora) e Guelra.
    - 3 modos: Clássico (com sistema de dicas **⚡ ATIVAR RAISE!**), Citação e Forma Choujin / Estado de Caos.

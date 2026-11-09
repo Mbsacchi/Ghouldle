@@ -1913,68 +1913,6 @@
     "imagePosition": "center 26%"
   },
   {
-    "id": "karren-von-rosewald",
-    "name": "Karren von Rosewald",
-    "aliases": [
-      "Kanae von Rosewald",
-      "Servo de Shuu"
-    ],
-    "gender": "Feminino",
-    "species": [
-      "Ghoul"
-    ],
-    "affiliations": [
-      "Família Tsukiyama",
-      "Aogiri Tree"
-    ],
-    "rcTypes": [
-      "Rinkaku"
-    ],
-    "rank": "Rank S",
-    "debutArc": "Leilão (:re)",
-    "debutArcOrder": 7,
-    "epithet": "Kanae (Rosa Devota dos Tsukiyama)",
-    "imageUrl": "",
-    "kaguneOrQuinque": {
-      "name": "Rinkaku Carmesim Enxertada de Eto",
-      "category": "Kagune",
-      "imageUrl": "",
-      "preset": "rose-rinkaku",
-      "primaryColor": "#be123c",
-      "secondaryColor": "#881337",
-      "focalPoint": {
-        "x": 54,
-        "y": 42
-      }
-    },
-    "quote": {
-      "text": "Durma e viva, Senhor Shuu... Mesmo que meu nome seja esquecido, eu finalmente pude ser amada como quem eu sou.",
-      "arc": "Extermínio dos Tsukiyama (:re)",
-      "recipient": "Dita ao salvar Shuu Tsukiyama na queda do edifício Lunatic Eclipse"
-    },
-    "maskOrEye": {
-      "title": "Olhos Costurados por Eto & Rosa Sangrenta",
-      "type": "Máscara & Kakugan",
-      "imageUrl": "",
-      "preset": "rosewald-stitches",
-      "focalPoint": {
-        "x": 50,
-        "y": 46
-      }
-    },
-    "avatarStyle": {
-      "hairColor": "#881337",
-      "hairSecondary": "#9f1239",
-      "hairStyle": "parted-neat",
-      "skinTone": "#f7e7dc",
-      "eyeColor": "#9f1239",
-      "kakugan": "both",
-      "accessory": "none",
-      "outfit": "suit",
-      "accentColor": "#be123c"
-    }
-  },
-  {
     "id": "touma-higemaru",
     "name": "Touma Higemaru",
     "aliases": [

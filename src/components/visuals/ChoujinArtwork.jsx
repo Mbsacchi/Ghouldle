@@ -196,9 +196,7 @@ export function ChoujindleCrestLogo({ compact = false, lightBg = false, classNam
 }
 
 /**
- * Chaotic Street-Art / Zine Poster Illustration for Choujin X:
- * Combines Shattered Dry-Brush "X", Crossed Xember Syringes, Chaotic Smoke,
- * Asymmetric Beast Eyes & Tokio's Vulture Feathers / Paper Blades.
+ * Street-Art / Zine Tankobon Cover for Choujin X featuring official Sui Ishida character art
  */
 export function ChoujinTankobonCover({ editionNumber = 1, className = '' }) {
   return (
@@ -221,107 +219,25 @@ export function ChoujinTankobonCover({ editionNumber = 1, className = '' }) {
           )}
         </g>
 
-        {/* Chaotic Swirling Smoke (Ely Otta / Chandra Hume) */}
-        <g fill="none" stroke="#0a0a0c" strokeWidth="4" opacity="0.35">
-          <path d="M-10 310 C90 250, 140 370, 250 290 C340 230, 390 320, 460 260" />
-          <path d="M-10 350 C110 290, 180 400, 290 320 C360 270, 410 360, 460 300" />
-        </g>
-
         {/* Giant Shattered Dry-Brush "X" in Background */}
-        <g transform="translate(30, 35) scale(0.64)">
+        <g transform="translate(30, 35) scale(0.64)" opacity="0.28">
           <path
             d="M68 48 L138 34 L312 248 L478 38 L546 72 L362 302 L552 528 L484 566 L304 352 L126 562 L58 518 L248 298 Z"
             fill="#0a0a0c"
             stroke="#FF0055"
             strokeWidth="10"
           />
-          <path
-            d="M84 62 L134 50 L304 260 L470 54 L530 82 L348 302 L534 514 L474 548 L300 338 L130 546 L72 508 L260 298 Z"
-            fill="none"
-            stroke="#A3FF00"
-            strokeWidth="5"
-            strokeDasharray="24 10"
-          />
         </g>
 
-        {/* Crossed Xember Syringes Behind Vulture Beast */}
-        <g stroke="#0a0a0c" strokeWidth="4">
-          {/* Left-to-Right Syringe */}
-          <line x1="42" y1="95" x2="395" y2="410" stroke="#00F0FF" strokeWidth="8" />
-          <rect
-            x="68"
-            y="108"
-            width="78"
-            height="24"
-            fill="#A3FF00"
-            stroke="#0a0a0c"
-            strokeWidth="3.5"
-            transform="rotate(41 107 120)"
-          />
-          {/* Right-to-Left Syringe */}
-          <line x1="398" y1="95" x2="45" y2="410" stroke="#FF0055" strokeWidth="8" />
-          <rect
-            x="294"
-            y="108"
-            width="78"
-            height="24"
-            fill="#FFE600"
-            stroke="#0a0a0c"
-            strokeWidth="3.5"
-            transform="rotate(-41 333 120)"
-          />
-        </g>
-
-        {/* Flying Vulture Feathers & Ririka/Azuma Paper/Cloth Shards */}
-        <g stroke="#0a0a0c" strokeWidth="2.5">
-          <path d="M28 245 Q68 215 104 238 Q66 262 28 245 Z" fill="#0a0a0c" />
-          <path d="M336 225 Q378 195 416 222 Q376 248 336 225 Z" fill="#0a0a0c" />
-          <polygon points="52,155 96,142 82,178" fill="#00F0FF" />
-          <polygon points="355,152 398,136 384,174" fill="#A3FF00" />
-        </g>
-
-        {/* Central Tokio Vulture Beast Skull + Asymmetric Chaos Eyes */}
-        <g>
-          {/* Feathered Beast Mantle */}
-          <path
-            d="M35 455 L78 278 L135 305 L165 258 L220 285 L275 258 L305 305 L362 278 L405 455 Z"
-            fill="#0a0a0c"
-            stroke="#A3FF00"
-            strokeWidth="3"
-          />
-
-          {/* Jagged Vulture Skull & Curved Harpe Beak */}
-          <polygon
-            points="134,132 306,132 332,232 220,388 108,232"
-            fill="#f4f1ea"
-            stroke="#0a0a0c"
-            strokeWidth="5.5"
-          />
-          <polygon
-            points="220,175 270,265 220,388 170,265"
-            fill="#0a0a0c"
-            stroke="#FF0055"
-            strokeWidth="2.5"
-          />
-          <line x1="220" y1="175" x2="220" y2="375" stroke="#FFE600" strokeWidth="3.5" />
-
-          {/* ASYMMETRIC BEAST EYES (Left: Giant Wild Radioactive Ring; Right: Slit Magenta Chaos Eye) */}
-          <ellipse cx="164" cy="202" rx="30" ry="18" fill="#0a0a0c" stroke="#0a0a0c" strokeWidth="2" />
-          <circle cx="164" cy="202" r="13" fill="#A3FF00" />
-          <circle cx="164" cy="202" r="5" fill="#0a0a0c" />
-          <circle cx="159" cy="197" r="2.5" fill="#f4f1ea" />
-
-          <ellipse cx="276" cy="202" rx="26" ry="11" fill="#0a0a0c" />
-          <circle cx="276" cy="202" r="9" fill="#FF0055" />
-          <ellipse cx="276" cy="202" rx="2" ry="7" fill="#FFE600" />
-
-          {/* Batista Noh Stitches across Brow */}
-          <g stroke="#0a0a0c" strokeWidth="3.5">
-            <line x1="142" y1="152" x2="195" y2="165" />
-            <line x1="155" y1="144" x2="150" y2="168" />
-            <line x1="175" y1="148" x2="170" y2="172" />
-          </g>
-        </g>
+        {/* Real Choujin X Character Art (Hoshi Sandek by Sui Ishida) */}
+        <image
+          href="/characters/hoshi-sandek-cover.png"
+          x="45"
+          y="14"
+          width="350"
+          height="428"
+          preserveAspectRatio="xMidYMax meet"
+        />
 
         {/* Top Left Stamped Badge */}
         <g transform="rotate(-3 75 40)">

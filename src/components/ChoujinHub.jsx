@@ -235,7 +235,7 @@ export default function ChoujinHub({
                     </span>
                   ) : (
                     <span className="inline-block mt-1 px-2.5 py-1 bg-[#0a0a0c] text-[#00F0FF] font-bold">
-                      30 CHOUJINS
+                      23 CHOUJINS
                     </span>
                   )}
                 </div>
