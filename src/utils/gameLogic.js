@@ -260,7 +260,11 @@ export function generateShareSummary({
           mask: 'Máscara & Olho',
         };
 
-  const gameTag = universe === 'cx' ? '⚡ CHOUJINDLE' : '🩸 GHOULDLE';
+  const gameTag = universe === 'cx' ? '⚡ CHOUJINXDLE' : '🩸 GHOULDLE';
+  const shareUrl =
+    universe === 'cx'
+      ? 'https://ghouldle.vercel.app/choujinxdle'
+      : 'https://ghouldle.vercel.app/ghouldle';
   const header = isDaily
     ? `${gameTag} #${editionNumber} — Modo ${modeNames[mode]}`
     : `${gameTag} (Infinito) — Modo ${modeNames[mode]}`;
@@ -289,7 +293,7 @@ export function generateShareSummary({
     });
 
     const prefix = chronological.length > 8 ? `(... +${chronological.length - 8} palpites)\n` : '';
-    return `${header}\n${attemptsLine}\n\n${prefix}${gridLines.join('\n')}\n\n☕ Jogue em: https://ghouldle.vercel.app`;
+    return `${header}\n${attemptsLine}\n\n${prefix}${gridLines.join('\n')}\n\n☕ Jogue em: ${shareUrl}`;
   }
 
   // Visual / Quote modes: show attempt trail
@@ -298,5 +302,5 @@ export function generateShareSummary({
     .map((gId) => (gId === target.id ? '🟩' : '🟥'))
     .join('');
 
-  return `${header}\n${attemptsLine}\n\n${trail}\n\n☕ Jogue em: https://ghouldle.vercel.app`;
+  return `${header}\n${attemptsLine}\n\n${trail}\n\n☕ Jogue em: ${shareUrl}`;
 }

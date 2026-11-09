@@ -29,18 +29,52 @@ import {
 
 const VALID_MODES = ['classic', 'quote', 'mask'];
 
+function buildPath(view, universe, mode) {
+  if (view === 'lobby') return '/';
+  const slug = universe === 'cx' ? '/choujinxdle' : '/ghouldle';
+  if (view === 'hub') return slug;
+  if (view === 'game' && VALID_MODES.includes(mode)) {
+    return `${slug}/${mode}`;
+  }
+  return slug;
+}
+
 function readInitialRoute() {
   if (typeof window === 'undefined') {
     return { universe: 'tg', view: 'lobby', mode: 'classic' };
   }
-  const hash = window.location.hash.replace('#', '').trim().toLowerCase();
-  if (!hash || hash === 'lobby') {
-    return { universe: 'tg', view: 'lobby', mode: 'classic' };
+
+  const pathname = (window.location.pathname || '/')
+    .toLowerCase()
+    .replace(/\/+$/, '');
+  const segments = pathname.split('/').filter(Boolean);
+
+  // 1. Check clean URL path (/ghouldle, /ghouldle/classic, /choujinxdle, /choujinxdle/classic)
+  if (segments.length > 0) {
+    const first = segments[0];
+    const second = segments[1];
+
+    if (first === 'ghouldle' || first === 'tg') {
+      if (second && VALID_MODES.includes(second)) {
+        return { universe: 'tg', view: 'game', mode: second };
+      }
+      return { universe: 'tg', view: 'hub', mode: 'classic' };
+    }
+
+    if (first === 'choujinxdle' || first === 'choujindle' || first === 'choujinx' || first === 'cx') {
+      if (second && VALID_MODES.includes(second)) {
+        return { universe: 'cx', view: 'game', mode: second };
+      }
+      return { universe: 'cx', view: 'hub', mode: 'classic' };
+    }
   }
+
+  // 2. Fallback support for legacy hash URLs if bookmarked
+  const hash = window.location.hash.replace('#', '').trim().toLowerCase();
   if (hash === 'tg' || hash === 'ghoul' || hash === 'ghouldle') {
     return { universe: 'tg', view: 'hub', mode: 'classic' };
   }
-  if (hash === 'cx' || hash === 'choujin' || hash === 'choujindle') {
+  if (hash === 'cx' || hash === 'choujin' || hash === 'choujindle' || hash === 'choujinxdle') {
     return { universe: 'cx', view: 'hub', mode: 'classic' };
   }
   if (hash.startsWith('cx-')) {
@@ -49,15 +83,10 @@ function readInitialRoute() {
       return { universe: 'cx', view: 'game', mode: subMode };
     }
   }
-  if (hash.startsWith('tg-')) {
-    const subMode = hash.replace('tg-', '');
-    if (VALID_MODES.includes(subMode)) {
-      return { universe: 'tg', view: 'game', mode: subMode };
-    }
-  }
   if (VALID_MODES.includes(hash)) {
     return { universe: 'tg', view: 'game', mode: hash };
   }
+
   return { universe: 'tg', view: 'lobby', mode: 'classic' };
 }
 
@@ -101,9 +130,9 @@ export default function App() {
     return map;
   }, [activeCharacters]);
 
-  // Sync with browser Back / Forward buttons via hashchange
+  // Sync with browser Back / Forward buttons via popstate and hashchange
   useEffect(() => {
-    const onHashChange = () => {
+    const syncFromUrl = () => {
       const next = readInitialRoute();
       setUniverse(next.universe);
       setView(next.view);
@@ -111,9 +140,25 @@ export default function App() {
       setVictoryModalOpen(false);
       setLastAnimatedGuessId(null);
     };
-    window.addEventListener('hashchange', onHashChange);
-    return () => window.removeEventListener('hashchange', onHashChange);
+    window.addEventListener('popstate', syncFromUrl);
+    window.addEventListener('hashchange', syncFromUrl);
+    return () => {
+      window.removeEventListener('popstate', syncFromUrl);
+      window.removeEventListener('hashchange', syncFromUrl);
+    };
   }, []);
+
+  // Dynamically update document title based on active route (/ , /ghouldle , /choujinxdle)
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    if (view === 'lobby') {
+      document.title = 'SUI ISHIDA DLE — /ghouldle & /choujinxdle';
+    } else if (universe === 'cx') {
+      document.title = 'CHOUJINXDLE — 超人X | Sui Ishida Dle (/choujinxdle)';
+    } else {
+      document.title = 'GHOULDLE — 東京喰種 | Sui Ishida Dle (/ghouldle)';
+    }
+  }, [view, universe]);
 
   // Re-check midnight UTC rollover automatically for both games
   useEffect(() => {
@@ -187,15 +232,21 @@ export default function App() {
     };
   }, []);
 
+  const navigateUrl = (nextView, nextUniverse, nextMode) => {
+    if (typeof window === 'undefined') return;
+    const nextPath = buildPath(nextView, nextUniverse, nextMode);
+    if (window.location.pathname !== nextPath || window.location.hash) {
+      window.history.pushState({ view: nextView, universe: nextUniverse, mode: nextMode }, '', nextPath);
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handleGoToLobby = () => {
     if (victoryTimerRef.current) clearTimeout(victoryTimerRef.current);
     setVictoryModalOpen(false);
     setLastAnimatedGuessId(null);
     setView('lobby');
-    if (typeof window !== 'undefined') {
-      window.history.pushState('', document.title, window.location.pathname + window.location.search);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    navigateUrl('lobby', universe, activeMode);
   };
 
   const handleSelectUniverse = (nextUniverse) => {
@@ -205,10 +256,7 @@ export default function App() {
     setLastAnimatedGuessId(null);
     setUniverse(nextUniverse);
     setView('hub');
-    if (typeof window !== 'undefined') {
-      window.location.hash = nextUniverse;
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    navigateUrl('hub', nextUniverse, activeMode);
   };
 
   const handleEnterUniverseMode = (targetUniverse, nextMode) => {
@@ -218,10 +266,7 @@ export default function App() {
     setUniverse(targetUniverse);
     setActiveMode(nextMode);
     setView('game');
-    if (typeof window !== 'undefined') {
-      window.location.hash = targetUniverse === 'cx' ? `cx-${nextMode}` : nextMode;
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    navigateUrl('game', targetUniverse, nextMode);
   };
 
   const handleEnterMode = (nextMode) => {
@@ -233,10 +278,7 @@ export default function App() {
     setVictoryModalOpen(false);
     setLastAnimatedGuessId(null);
     setView('hub');
-    if (typeof window !== 'undefined') {
-      window.location.hash = universe;
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    navigateUrl('hub', universe, activeMode);
   };
 
   const handleTogglePlayType = (nextIsDaily) => {
@@ -481,7 +523,7 @@ export default function App() {
           <footer className="border-t border-[#efe9dd]/12 py-4 px-4 text-center text-xs text-[#8d857b] bg-[#080709]">
             {universe === 'cx' ? (
               <p className="font-serif">
-                <strong className="font-display tracking-[0.12em] text-[#efe9dd]">CHOUJINDLE</strong>{' '}
+                <strong className="font-display tracking-[0.12em] text-[#efe9dd]">CHOUJINXDLE</strong>{' '}
                 — Arquivo não-oficial de <em className="text-[#a3e635]">Choujin X</em> (Sui Ishida Dle)
               </p>
             ) : (

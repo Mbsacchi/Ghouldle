@@ -189,7 +189,7 @@ export default function SuiIshidaLobby({
                 onClick={() => onEnterUniverseHub('tg')}
                 className="w-full py-3 px-4 bg-[#b80f17] hover:bg-[#d9141e] border border-[#efe9dd] text-[#efe9dd] font-display text-sm sm:text-base uppercase tracking-[0.16em] shadow-[4px_4px_0_#000] flex items-center justify-between transition-all hover:-translate-y-0.5"
               >
-                <span>Entrar na Entrada do Ghouldle (56 Personagens)</span>
+                <span>Abrir /ghouldle (56 Personagens)</span>
                 <span className="font-mono text-lg">»</span>
               </button>
 
@@ -279,7 +279,7 @@ export default function SuiIshidaLobby({
                 onClick={() => onEnterUniverseHub('cx')}
                 className="w-full py-3 px-4 bg-[#65a30d] hover:bg-[#84cc16] border border-[#efe9dd] text-[#080907] font-display font-bold text-sm sm:text-base uppercase tracking-[0.16em] shadow-[4px_4px_0_#000] flex items-center justify-between transition-all hover:-translate-y-0.5"
               >
-                <span>Entrar na Entrada do Choujindle (30 Personagens)</span>
+                <span>Abrir /choujinxdle (30 Personagens)</span>
                 <span className="font-mono text-lg">»</span>
               </button>
 

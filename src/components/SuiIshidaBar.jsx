@@ -63,6 +63,9 @@ export default function SuiIshidaBar({
             <span className="font-display uppercase tracking-[0.1em] font-bold">
               GHOULDLE
             </span>
+            <span className="hidden lg:inline font-mono text-[9px] text-[#8d857b]">
+              /ghouldle
+            </span>
             <span
               className={`font-mono text-[9px] px-1 py-0.2 border ${
                 tgCompletedCount === 3
@@ -88,7 +91,10 @@ export default function SuiIshidaBar({
               超人X
             </span>
             <span className="font-display uppercase tracking-[0.1em] font-bold">
-              CHOUJINDLE
+              CHOUJINXDLE
+            </span>
+            <span className="hidden lg:inline font-mono text-[9px] text-[#8d857b]">
+              /choujinxdle
             </span>
             <span
               className={`font-mono text-[9px] px-1 py-0.2 border ${
