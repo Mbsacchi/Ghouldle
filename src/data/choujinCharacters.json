@@ -212,7 +212,7 @@
   {
     "id": "momoma-moegi",
     "name": "Momoma Moegi",
-    "aliases": ["Momoma", "Moegi", "Choujin da Superforça"],
+    "aliases": ["Momoma", "Moegi", "Maiko Momoma", "Choujin da Superforça"],
     "gender": "Feminino",
     "species": ["Choujin"],
     "affiliations": ["Yamato Mori"],
@@ -221,6 +221,8 @@
     "debutArc": "Arco Sinker (Beisebol)",
     "debutArcOrder": 2,
     "epithet": "Choujin da Força Hercúlea",
+    "imageUrl": "/characters/momoma-moegi.jpg",
+    "imagePosition": "center 12%",
     "quote": {
       "text": "Se o problema for parar um arremesso mortal, basta rebater com o dobro de força!",
       "arc": "Arco Sinker (Beisebol)",
@@ -233,19 +235,20 @@
     "maskOrEye": {
       "type": "Grampos Duplos & Olhar Calmo",
       "title": "Franja presa com grampos de Momoma Moegi",
+      "imageUrl": "/characters/momoma-moegi.jpg",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 50, "y": 14 }
     },
     "avatarStyle": {
-      "hairColor": "#451a03",
-      "hairSecondary": "#290f02",
+      "hairColor": "#f472b6",
+      "hairSecondary": "#db2777",
       "hairStyle": "side-bang-bob",
       "skinTone": "#f6e5d7",
       "eyeColor": "#10b981",
       "kakugan": "none",
       "accessory": "none",
       "outfit": "casual",
-      "accentColor": "#10b981"
+      "accentColor": "#f472b6"
     }
   },
   {
@@ -260,6 +263,8 @@
     "debutArc": "Treinamento em Yamato Mori",
     "debutArcOrder": 4,
     "epithet": "Choujin da Transmissão Mental",
+    "imageUrl": "/characters/ichiiro-sato.png",
+    "imagePosition": "center 12%",
     "quote": {
       "text": "A mente humana quebra muito antes da carne quando você projeta o terror correto dentro dela.",
       "arc": "Arco da Papoula (Opium)",
@@ -272,8 +277,9 @@
     "maskOrEye": {
       "type": "SorrisoCalculista & Ondas Psíquicas",
       "title": "Olhar hipnótico de Ichiiro Sato projetando visões mentais",
+      "imageUrl": "/characters/ichiiro-sato.png",
       "preset": "sato-psyche",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 42, "y": 24 }
     },
     "avatarStyle": {
       "hairColor": "#d6d3d1",
@@ -602,7 +608,7 @@
   {
     "id": "mado-oraculo",
     "name": "Mado",
-    "aliases": ["Oráculo Mado", "Profetisa de Yamato Mori"],
+    "aliases": ["Oráculo Mado", "Tsukiko Mado", "Profetisa de Yamato Mori"],
     "gender": "Feminino",
     "species": ["Choujin"],
     "affiliations": ["Yamato Mori", "Antiga Yamato"],
@@ -611,6 +617,8 @@
     "debutArc": "Treinamento em Yamato Mori",
     "debutArcOrder": 4,
     "epithet": "Oráculo Supremo de Yamato Mori",
+    "imageUrl": "/characters/mado-oraculo.png",
+    "imagePosition": "center 15%",
     "quote": {
       "text": "Meus sonhos mostram o que deve ser podado. Zora perdeu a razão e sua Torre precisa cair.",
       "arc": "Arco Ilhas das Bestas",
@@ -623,8 +631,9 @@
     "maskOrEye": {
       "type": "Véu Cerimonial & Olhos Cegos de Vidente",
       "title": "Rosto enrugado e olhar profético de Mado",
+      "imageUrl": "/characters/mado-oraculo.png",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 50, "y": 26 }
     },
     "avatarStyle": {
       "hairColor": "#e4e4e7",
@@ -641,7 +650,7 @@
   {
     "id": "arthur-yamato",
     "name": "Arthur",
-    "aliases": ["Instrutor Arthur", "Arthur de Yamato Mori"],
+    "aliases": ["Instrutor Arthur", "Arthur One", "Arthur de Yamato Mori"],
     "gender": "Masculino",
     "species": ["Choujin"],
     "affiliations": ["Yamato Mori"],
@@ -650,6 +659,8 @@
     "debutArc": "Treinamento em Yamato Mori",
     "debutArcOrder": 4,
     "epithet": "Instrutor-Chefe de Yamato Mori",
+    "imageUrl": "/characters/arthur-yamato.png",
+    "imagePosition": "center 30%",
     "quote": {
       "text": "Raise não é um milagre gratuito: toda vez que vocês levantam da morte, deixam um pedaço da humanidade para trás.",
       "arc": "Treinamento em Yamato Mori",
@@ -662,8 +673,9 @@
     "maskOrEye": {
       "type": "Óculos Escuros & Queixo Quadrado",
       "title": "Olhar disciplinador do instrutor Arthur em Yamato Mori",
+      "imageUrl": "/characters/arthur-yamato.png",
       "preset": "arima-glasses",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 58, "y": 32 }
     },
     "avatarStyle": {
       "hairColor": "#78350f",
@@ -680,7 +692,7 @@
   {
     "id": "vlad-sangue",
     "name": "Vlad",
-    "aliases": ["Choujin do Sangue", "Comandante Vlad"],
+    "aliases": ["Choujin do Sangue", "Bador Vlad", "Comandante Vlad"],
     "gender": "Masculino",
     "species": ["Choujin"],
     "affiliations": ["Yamato Mori"],
@@ -689,6 +701,8 @@
     "debutArc": "Invasão à Torre do Luto",
     "debutArcOrder": 7,
     "epithet": "Choujin Carmesim da Linha de Frente",
+    "imageUrl": "/characters/vlad-sangue.jpg",
+    "imagePosition": "center 30%",
     "quote": {
       "text": "Abram caminho até o topo da Torre! O sangue derramado aqui será a nossa lança!",
       "arc": "Invasão à Torre do Luto",
@@ -701,8 +715,9 @@
     "maskOrEye": {
       "type": "Cicatrizes de Guerra & Olhar Sanguíneo",
       "title": "Olhar feroz de Vlad durante o cerco à Torre do Luto",
+      "imageUrl": "/characters/vlad-sangue.jpg",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 50, "y": 42 }
     },
     "avatarStyle": {
       "hairColor": "#991b1b",
