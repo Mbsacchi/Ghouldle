@@ -22,6 +22,35 @@ export const CHOUJIN_ARCS_CHRONOLOGY = [
   { order: 7, name: 'Invasão à Torre do Luto', part: 'Choujin X' },
 ];
 
+// Hierarquia numérica de Patentes / Status para indicar setas Maior/Menor (⬆️ / ⬇️)
+export const TG_RANK_ORDER = {
+  'Civil': 1,
+  'Rank 1 (Investigador)': 2,
+  'Primeira Classe': 3,
+  'Classe Especial': 4,
+  'Rank A': 2,
+  'Rank S': 3,
+  'Rank SS': 4,
+  'Rank SSS': 5,
+};
+
+export const CX_RANK_ORDER = {
+  'Civil': 1,
+  'Infiltrado / Nômade': 2,
+  'Mercenário': 3,
+  'Guardião Júnior': 3,
+  'Guardião': 4,
+  'Guardião Sênior': 5,
+  'Mestre da Torre': 5,
+  'Choujin X': 6,
+};
+
+export function getRankTier(rank, universe = 'tg') {
+  if (!rank) return 0;
+  const map = universe === 'cx' ? CX_RANK_ORDER : TG_RANK_ORDER;
+  return map[rank] || 0;
+}
+
 export const GAME_MODES = [
   {
     id: 'classic',
@@ -166,7 +195,7 @@ export function formatRcTypes(rcTypes) {
 }
 
 // Full 7-column comparison for Classic Mode
-export function compareCharacters(guess, target) {
+export function compareCharacters(guess, target, universe = 'tg') {
   const speciesStatus = compareSets(guess.species, target.species, (gList, tList) => {
     const gOneEyed = gList.some((s) => s.startsWith('Ghoul de Um Olho'));
     const tOneEyed = tList.some((s) => s.startsWith('Ghoul de Um Olho'));
@@ -176,11 +205,22 @@ export function compareCharacters(guess, target) {
   const affiliationStatus = compareSets(guess.affiliations, target.affiliations);
   const rcStatus = compareSets(guess.rcTypes, target.rcTypes);
 
+  // Debut Arc chronology comparison (up = secret character debuted later)
   let arcDirection = 'equal';
   if (target.debutArcOrder > guess.debutArcOrder) {
-    arcDirection = 'up'; // Secret character debuted later
+    arcDirection = 'up';
   } else if (target.debutArcOrder < guess.debutArcOrder) {
-    arcDirection = 'down'; // Secret character debuted earlier
+    arcDirection = 'down';
+  }
+
+  // Rank / Status comparison (up = secret character has higher rank/tier)
+  let rankDirection = 'equal';
+  const targetRankTier = getRankTier(target.rank, universe);
+  const guessRankTier = getRankTier(guess.rank, universe);
+  if (targetRankTier > guessRankTier) {
+    rankDirection = 'up'; // Secret character has higher rank
+  } else if (targetRankTier < guessRankTier) {
+    rankDirection = 'down'; // Secret character has lower rank
   }
 
   return {
@@ -217,6 +257,7 @@ export function compareCharacters(guess, target) {
         key: 'rank',
         label: guess.rank,
         status: guess.rank === target.rank ? 'correct' : 'wrong',
+        direction: rankDirection,
       },
       {
         key: 'debutArc',
@@ -277,12 +318,15 @@ export function generateShareSummary({
     const gridLines = chronological.slice(-8).map((gId) => {
       const gChar = charactersById[gId];
       if (!gChar) return '';
-      const comp = compareCharacters(gChar, target);
+      const comp = compareCharacters(gChar, target, universe);
       // Skip column 0 (portrait) or include columns 1..6 (6 attributes) -> let's include all 6 attributes!
       return comp.cells
         .slice(1)
         .map((cell) => {
-          if (cell.key === 'debutArc' && cell.status !== 'correct') {
+          if (cell.key === 'debutArc' && cell.status !== 'correct' && cell.direction !== 'equal') {
+            return cell.direction === 'up' ? '⬆️' : '⬇️';
+          }
+          if (cell.key === 'rank' && cell.status !== 'correct' && cell.direction !== 'equal') {
             return cell.direction === 'up' ? '⬆️' : '⬇️';
           }
           if (cell.status === 'correct') return '🟩';

@@ -367,7 +367,7 @@ export default function ClassicMode({
               const guessChar = charactersById[guessId];
               if (!guessChar) return null;
 
-              const comparison = compareCharacters(guessChar, target);
+              const comparison = compareCharacters(guessChar, target, universe);
               const shouldAnimate = lastAnimatedGuessId === guessId;
 
               return (
@@ -433,7 +433,7 @@ export default function ClassicMode({
                               </div>
                             ) : cell.key === 'debutArc' ? (
                               <div className="relative z-10 flex flex-col items-center justify-center gap-1">
-                                {cell.status !== 'correct' && (
+                                {cell.status !== 'correct' && cell.direction !== 'equal' && (
                                   <div
                                     className={`inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider ${
                                       isChoujin
@@ -450,6 +450,33 @@ export default function ClassicMode({
                                       <>
                                         <ArrowDown className="w-3 h-3 stroke-[2.8]" />
                                         <span>Antes</span>
+                                      </>
+                                    )}
+                                  </div>
+                                )}
+                                <span className="text-xs font-bold leading-snug line-clamp-3">
+                                  {cell.label}
+                                </span>
+                              </div>
+                            ) : cell.key === 'rank' ? (
+                              <div className="relative z-10 flex flex-col items-center justify-center gap-1">
+                                {cell.status !== 'correct' && cell.direction !== 'equal' && (
+                                  <div
+                                    className={`inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider ${
+                                      isChoujin
+                                        ? 'bg-[#0a0a0c] text-[#A3FF00] border border-[#0a0a0c]'
+                                        : 'bg-black/45 border border-current/25'
+                                    }`}
+                                  >
+                                    {cell.direction === 'up' ? (
+                                      <>
+                                        <ArrowUp className="w-3 h-3 stroke-[2.8]" />
+                                        <span>Maior</span>
+                                      </>
+                                    ) : (
+                                      <>
+                                        <ArrowDown className="w-3 h-3 stroke-[2.8]" />
+                                        <span>Menor</span>
                                       </>
                                     )}
                                   </div>
@@ -515,11 +542,11 @@ export default function ClassicMode({
         </span>
         <span className="inline-flex items-center gap-1 text-[#cfc6b6]">
           <ArrowUp className={`w-3.5 h-3.5 ${isChoujin ? 'text-[#FFE600]' : 'text-[#d9141e]'}`} />
-          <span>Estreou depois</span>
+          <span>Depois / Patente Maior</span>
         </span>
         <span className="inline-flex items-center gap-1 text-[#cfc6b6]">
           <ArrowDown className={`w-3.5 h-3.5 ${isChoujin ? 'text-[#FFE600]' : 'text-[#d9141e]'}`} />
-          <span>Estreou antes</span>
+          <span>Antes / Patente Menor</span>
         </span>
       </div>
     </section>
