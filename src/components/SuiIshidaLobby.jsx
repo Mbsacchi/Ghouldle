@@ -4,7 +4,14 @@ import {
   HiganbanaCluster,
   ModeEmblem,
 } from './visuals/TgArtwork';
-import { ShatteredGlassOverlay } from './visuals/ChoujinArtwork';
+import {
+  ChoujindleCrestLogo,
+  ChoujinTankobonCover,
+  ChoujinModeEmblem,
+  ChoujinSplatterX,
+  XemberSyringeArt,
+  ShatteredGlassOverlay,
+} from './visuals/ChoujinArtwork';
 import { getTimeUntilMidnight } from '../utils/gameLogic';
 
 const TG_MODES = [
@@ -14,9 +21,30 @@ const TG_MODES = [
 ];
 
 const CX_MODES = [
-  { id: 'classic', issue: '01', label: 'Clássico', desc: 'Atributos' },
-  { id: 'quote', issue: '02', label: 'Citação', desc: 'Falas' },
-  { id: 'mask', issue: '03', label: 'Forma / Caos', desc: 'Recorte da arte' },
+  {
+    id: 'classic',
+    issue: '#01',
+    label: 'CLÁSSICO',
+    desc: 'Complexo & Caos',
+    bg: 'bg-[#FFE600] hover:bg-[#A3FF00] text-[#0a0a0c]',
+    shadow: 'shadow-[4px_4px_0_#FF0055]',
+  },
+  {
+    id: 'quote',
+    issue: '#02',
+    label: 'CITAÇÃO',
+    desc: 'Vozes de Yamato',
+    bg: 'bg-[#FF0055] hover:bg-[#ff2970] text-[#f4f1ea]',
+    shadow: 'shadow-[4px_4px_0_#FFE600]',
+  },
+  {
+    id: 'mask',
+    issue: '#03',
+    label: 'FORMA / CAOS',
+    desc: 'Forma Choujin & Raise',
+    bg: 'bg-[#00F0FF] hover:bg-[#A3FF00] text-[#0a0a0c]',
+    shadow: 'shadow-[4px_4px_0_#FFE600]',
+  },
 ];
 
 export default function SuiIshidaLobby({
@@ -208,99 +236,136 @@ export default function SuiIshidaLobby({
         </section>
 
         {/* ===================================================================
-            RIGHT REALM: CHOUJIN X (/choujinxdle)
+            RIGHT REALM: CHOUJIN X (/choujinxdle) — EXPLOSIVE POP-PUNK NEO-BRUTALIST ZINE
            =================================================================== */}
         <section
           aria-label="Universo Choujin X — ChoujinXdle"
-          className="relative overflow-hidden bg-[#0a0a0c] text-[#f4f1ea] p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col justify-between"
+          className="relative overflow-hidden bg-[#0a0a0c] bg-halftone text-[#f4f1ea] p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col justify-between"
         >
-          {/* Top line */}
-          <div className="relative z-10 flex items-center justify-between border-b border-[#f4f1ea]/25 pb-3">
-            <span className="font-mono text-[11px] tracking-[0.2em] uppercase text-[#f4f1ea]/70">
-              超人X · 2021 — presente
-            </span>
-            <span className="font-mono text-[11px] text-[#FFE600]">
-              {cxSolvedCount}/3 hoje · {cxStats.gamesWon} vitórias
+          {/* Giant Dry-Brush / Spray-Paint Shattered "X" & Xember Syringe */}
+          <ChoujinSplatterX className="pointer-events-none absolute -right-16 top-6 w-[430px] h-[430px] opacity-30 z-0" />
+          <XemberSyringeArt className="hidden sm:block pointer-events-none absolute -left-8 bottom-12 w-52 h-52 opacity-25 -rotate-12 z-0" />
+
+          {/* Diagonal Acid Yellow & Shocking Magenta Hazard Cuts */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-16 -right-16 w-64 h-28 bg-[#FFE600] border-[3px] border-[#0a0a0c] rotate-12 shadow-[6px_6px_0_#FF0055] z-0"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute bottom-12 -right-14 w-60 h-20 bg-[#FF0055] border-[3px] border-[#0a0a0c] -rotate-6 shadow-[5px_5px_0_#A3FF00] z-0"
+          />
+
+          {/* Top Pop-Punk Zine Header */}
+          <div className="relative z-10 flex items-center justify-between border-b-[3px] border-[#FFE600] pb-3">
+            <div className="flex items-center gap-2">
+              <span className="px-2 py-0.5 bg-[#FFE600] text-[#0a0a0c] border-2 border-[#0a0a0c] font-mono text-[10px] font-black -skew-x-6 shadow-[2px_2px_0_#FF0055]">
+                超人X
+              </span>
+              <span className="font-mono text-[10px] font-black tracking-[0.2em] uppercase text-[#FFE600]">
+                2021–PRESENTE // CHOUJIN X (YAMATO 1998)
+              </span>
+            </div>
+            <span className="px-2.5 py-0.5 bg-[#FF0055] border-2 border-[#0a0a0c] font-mono text-[10px] font-black text-[#f4f1ea] shadow-[3px_3px_0_#FFE600] -skew-x-3">
+              {cxSolvedCount}/3 HOJE • {cxStats.gamesWon}V
             </span>
           </div>
 
-          <div className="relative z-10 my-auto py-6 max-w-lg mx-auto w-full space-y-6">
-            <div className="space-y-3">
-              <h2 className="font-display text-5xl sm:text-6xl font-bold uppercase leading-[0.95] tracking-tight">
-                Choujin<span className="text-[#FFE600]">X</span>dle
-              </h2>
-              <p className="text-[15px] leading-relaxed text-[#cfc9bd] max-w-sm">
-                Adivinhe o personagem de Choujin X. Um alvo novo por dia em cada modo.
+          {/* Center Pop-Punk Street-Art & Tankobon Showcase */}
+          <div className="relative z-10 my-auto py-6 max-w-lg mx-auto w-full space-y-5">
+            <div className="flex flex-col items-center text-center space-y-2">
+              <ChoujindleCrestLogo />
+              <p className="font-mono text-xs font-black uppercase tracking-wider text-[#0a0a0c] bg-[#A3FF00] border-[2.5px] border-[#0a0a0c] px-3 py-0.5 shadow-[4px_4px_0_#FF0055] -skew-x-3">
+                ⚡ ATIVAR RAISE! • POP-PUNK NEO-BRUTALIST ZINE
               </p>
             </div>
 
-            {/* Real artwork panels */}
-            <div className="grid grid-cols-3 gap-1.5 p-1.5 bg-[#f4f1ea]">
-              {[
-                { name: 'Tokio Kurohara', img: '/characters/tokio-kurohara.png', bg: 'bg-[#FFE600]', pos: 'center 8%' },
-                { name: 'Azuma Higashi', img: '/characters/azuma-higashi.png', bg: 'bg-[#1d1d22]', pos: 'center 10%' },
-                { name: 'Ely Otta', img: '/characters/ely-otta.png', bg: 'bg-[#FF0055]', pos: 'center 14%' },
-              ].map((c) => (
-                <figure key={c.name} className={`relative m-0 h-36 sm:h-44 overflow-hidden ${c.bg}`}>
-                  <img
-                    src={c.img}
-                    alt={c.name}
-                    loading="lazy"
-                    style={{ objectPosition: c.pos }}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                  <figcaption className="absolute left-0 bottom-0 px-1.5 py-0.5 bg-[#0a0a0c] text-[#f4f1ea] text-[9px] font-mono uppercase tracking-wider">
-                    {c.name}
-                  </figcaption>
-                </figure>
-              ))}
+            {/* Mini Tankobon Spread + Off-White Manga Paper Block */}
+            <div className="grid grid-cols-12 gap-3 items-stretch">
+              <div className="col-span-5">
+                <ChoujinTankobonCover
+                  editionNumber={editionNumber}
+                  className="h-44 sm:h-48 w-full"
+                />
+              </div>
+              <div className="col-span-7 flex flex-col justify-between gap-2">
+                <div className="p-3 bg-[#f4f1ea] bg-halftone-dark text-[#0a0a0c] border-[3px] border-[#0a0a0c] shadow-[5px_5px_0_#FFE600] -rotate-[0.5deg]">
+                  <span className="inline-block px-1.5 py-0.5 bg-[#FF0055] text-[#f4f1ea] font-mono text-[9px] font-black uppercase tracking-widest -skew-x-3">
+                    SERINGA XEMBER &amp; ESTADO DE CAOS
+                  </span>
+                  <p className="font-display text-lg font-bold uppercase tracking-wide leading-tight mt-1 text-[#0a0a0c]">
+                    YAMATO MORI VS. TORRE DO LUTO
+                  </p>
+                  <div className="grid grid-cols-3 gap-1.5 mt-2">
+                    {[
+                      { name: 'Tokio', img: '/characters/tokio-kurohara.png', bg: 'bg-[#FFE600]' },
+                      { name: 'Azuma', img: '/characters/azuma-higashi.png', bg: 'bg-[#A3FF00]' },
+                      { name: 'Ely', img: '/characters/ely-otta.png', bg: 'bg-[#FF0055]' },
+                    ].map((c) => (
+                      <div
+                        key={c.name}
+                        className={`relative h-14 border-2 border-[#0a0a0c] ${c.bg} overflow-hidden shadow-[2px_2px_0_#0a0a0c]`}
+                      >
+                        <img
+                          src={c.img}
+                          alt={c.name}
+                          className="w-full h-full object-cover object-top"
+                        />
+                        <span className="absolute bottom-0 inset-x-0 bg-[#0a0a0c]/90 text-[#f4f1ea] font-mono text-[8px] font-black uppercase text-center leading-tight py-0.5">
+                          {c.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Daily vs Infinite Toggle on Right Zine Side */}
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => onTogglePlayType(true)}
+                    className={`py-2 px-2 border-[2.5px] border-[#0a0a0c] font-display text-xs font-bold uppercase tracking-wider transition-all -skew-x-3 ${
+                      isDaily
+                        ? 'bg-[#FFE600] text-[#0a0a0c] shadow-[4px_4px_0_#FF0055]'
+                        : 'bg-[#16161a] text-[#f4f1ea]/75 border-[#f4f1ea]/35 hover:border-[#FFE600] hover:text-[#FFE600]'
+                    }`}
+                  >
+                    Diário #{editionNumber}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => onTogglePlayType(false)}
+                    className={`py-2 px-2 border-[2.5px] border-[#0a0a0c] font-display text-xs font-bold uppercase tracking-wider transition-all -skew-x-3 ${
+                      !isDaily
+                        ? 'bg-[#A3FF00] text-[#0a0a0c] shadow-[4px_4px_0_#FF0055]'
+                        : 'bg-[#16161a] text-[#f4f1ea]/75 border-[#f4f1ea]/35 hover:border-[#A3FF00] hover:text-[#A3FF00]'
+                    }`}
+                  >
+                    Modo Infinito
+                  </button>
+                </div>
+              </div>
             </div>
 
-            {/* Daily vs Infinite */}
-            <div className="flex items-center gap-5 font-display text-sm uppercase tracking-[0.12em]">
-              <button
-                type="button"
-                onClick={() => onTogglePlayType(true)}
-                className={`pb-1 border-b-2 transition-colors ${
-                  isDaily
-                    ? 'border-[#FFE600] text-[#f4f1ea]'
-                    : 'border-transparent text-[#8d857b] hover:text-[#f4f1ea]'
-                }`}
-              >
-                Diário #{editionNumber}
-              </button>
-              <button
-                type="button"
-                onClick={() => onTogglePlayType(false)}
-                className={`pb-1 border-b-2 transition-colors ${
-                  !isDaily
-                    ? 'border-[#FFE600] text-[#f4f1ea]'
-                    : 'border-transparent text-[#8d857b] hover:text-[#f4f1ea]'
-                }`}
-              >
-                Infinito
-              </button>
-            </div>
-
-            {/* Enter /choujinxdle */}
+            {/* Enter /choujinxdle Zine Lobby Link */}
             <a
               href="/choujinxdle"
               onClick={(e) => {
                 e.preventDefault();
                 onEnterUniverseHub('cx');
               }}
-              className="w-full py-3.5 px-5 bg-[#FFE600] hover:bg-[#f4f1ea] text-[#0a0a0c] font-display font-bold text-base uppercase tracking-[0.14em] flex items-center justify-between transition-colors"
+              className="w-full py-3.5 px-5 bg-[#FFE600] hover:bg-[#A3FF00] text-[#0a0a0c] border-[3px] border-[#0a0a0c] font-display font-bold text-base uppercase tracking-[0.16em] shadow-[6px_6px_0_#FF0055] flex items-center justify-between transition-all hover:-translate-y-0.5 -skew-x-2"
             >
-              <span>Entrar em ChoujinXdle · 30 personagens</span>
-              <span className="font-mono text-xl">→</span>
+              <span>⚡ ABRIR ZINE /CHOUJINXDLE (30 PERSONAGENS)</span>
+              <span className="font-mono text-xl font-black">»</span>
             </a>
 
-            {/* Quick mode shortcuts */}
+            {/* Quick Mode Cutouts for ChoujinXdle */}
             <div className="space-y-1.5">
-              <span className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#8d857b]">
-                Ir direto para um modo
+              <span className="block font-mono text-[9px] font-black uppercase tracking-[0.22em] text-[#FFE600]">
+                ATALHO DIRETO PARA OS MODOS DE CHOUJIN X:
               </span>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-3 gap-2.5">
                 {CX_MODES.map((m) => {
                   const done = Boolean(cxCompletedModes[m.id]);
                   return (
@@ -308,19 +373,24 @@ export default function SuiIshidaLobby({
                       key={m.id}
                       type="button"
                       onClick={() => onEnterUniverseMode('cx', m.id)}
-                      className={`p-2.5 border text-left transition-colors ${
+                      className={`p-2.5 border-[2.5px] border-[#0a0a0c] text-left transition-transform hover:-translate-y-0.5 -skew-x-2 ${
                         done
-                          ? 'border-[#A3FF00] text-[#A3FF00]'
-                          : 'border-[#f4f1ea]/35 text-[#f4f1ea] hover:bg-[#FFE600] hover:text-[#0a0a0c] hover:border-[#FFE600]'
+                          ? 'bg-[#A3FF00] text-[#0a0a0c] shadow-[4px_4px_0_#000000]'
+                          : `${m.bg} ${m.shadow}`
                       }`}
                     >
-                      <span className="block font-mono text-[10px] opacity-70">{m.issue}</span>
-                      <span className="block font-display text-xs uppercase tracking-wider truncate">
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="font-mono text-[10px] font-black">
+                          {m.issue}
+                        </span>
+                        <ChoujinModeEmblem modeId={m.id} className="w-4 h-4" />
+                      </div>
+                      <p className="font-display text-xs font-bold uppercase tracking-wider truncate">
                         {m.label}
-                      </span>
-                      <span className="block font-mono text-[10px] opacity-70 truncate">
-                        {done ? 'Resolvido' : m.desc}
-                      </span>
+                      </p>
+                      <p className="font-mono text-[9px] font-bold opacity-90 truncate">
+                        {done ? '✓ RAISE OK' : m.desc}
+                      </p>
                     </button>
                   );
                 })}
@@ -328,9 +398,12 @@ export default function SuiIshidaLobby({
             </div>
           </div>
 
-          <div className="relative z-10 pt-3 border-t border-[#f4f1ea]/25 flex items-center justify-between text-[11px] font-mono text-[#8d857b] uppercase tracking-widest">
-            <span>Yamato Mori vs. Torre do Luto</span>
-            <span className="text-[#FFE600]">/choujinxdle</span>
+          {/* Bottom Punk Zine Caption */}
+          <div className="relative z-10 pt-3 border-t-[3px] border-[#FFE600] flex items-center justify-between text-[10px] font-mono font-black text-[#f4f1ea] uppercase tracking-widest">
+            <span>YAMATO PREFECTURE // 1998 • XEMBER</span>
+            <span className="px-2 py-0.5 bg-[#FFE600] text-[#0a0a0c] border border-[#0a0a0c] -skew-x-3">
+              ROTA: /CHOUJINXDLE
+            </span>
           </div>
         </section>
       </div>

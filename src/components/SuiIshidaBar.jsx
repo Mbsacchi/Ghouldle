@@ -41,7 +41,7 @@ export default function SuiIshidaBar({
               isLobby
                 ? 'bg-[#efe9dd] text-[#050507]'
                 : isCx
-                ? 'bg-[#FFE600] text-[#0a0a0c] border border-[#0a0a0c] '
+                ? 'bg-[#FFE600] text-[#0a0a0c] border border-[#0a0a0c] -skew-x-6 shadow-[2px_2px_0_#FF0055]'
                 : 'bg-[#1a1820] text-[#efe9dd] border border-[#efe9dd]/30 group-hover:bg-[#efe9dd] group-hover:text-[#050507]'
             }`}
           >
@@ -57,7 +57,7 @@ export default function SuiIshidaBar({
               isLobby
                 ? 'bg-[#efe9dd]/15 border-[#efe9dd]/50 text-[#efe9dd]'
                 : isCx
-                ? 'bg-[#16161a] border-[#FFE600] text-[#FFE600] group-hover:bg-[#FFE600] group-hover:text-[#0a0a0c]'
+                ? 'bg-[#16161a] border-[#FFE600] text-[#FFE600] -skew-x-3 group-hover:bg-[#FFE600] group-hover:text-[#0a0a0c]'
                 : 'border-[#efe9dd]/18 text-[#8d857b] group-hover:border-[#efe9dd]/45 group-hover:text-[#efe9dd]'
             }`}
           >
@@ -114,13 +114,13 @@ export default function SuiIshidaBar({
             title="ChoujinXdle (Choujin X Dle) — Jogo Diário de Choujin X"
             className={`relative inline-flex items-center gap-2 px-3 py-1 text-xs transition-all duration-300 ${
               isCx
-                ? 'bg-[#FFE600] text-[#0a0a0c] border-2 border-[#0a0a0c] -translate-y-[1px] font-black'
+                ? 'bg-[#FFE600] text-[#0a0a0c] border-2 border-[#0a0a0c] shadow-[3px_3px_0_#FF0055] -skew-x-3 -translate-y-[1px] font-black'
                 : 'bg-[#0d0c10] border border-[#efe9dd]/18 text-[#8d857b] hover:text-[#FFE600] hover:border-[#FFE600]/80'
             }`}
           >
             <span
               className={`w-2 h-2 transition-transform duration-300 ${
-                isCx ? 'bg-[#FF0055] scale-125' : 'bg-[#A3FF00]'
+                isCx ? 'bg-[#FF0055] rotate-45 scale-125' : 'bg-[#A3FF00]'
               }`}
             />
             <span className="font-serif text-[10px] opacity-90 hidden sm:inline font-bold">

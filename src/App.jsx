@@ -456,7 +456,7 @@ export default function App() {
         <div
           key={`game-${universe}`}
           className={`min-h-screen flex flex-col animate-universe-switch ${
-            universe === 'cx' ? 'bg-[#0a0a0c] text-[#f4f1ea]' : 'bg-kaneki-subtle'
+            universe === 'cx' ? 'bg-[#0a0a0c] bg-halftone text-[#f4f1ea]' : 'bg-kaneki-subtle'
           }`}
         >
           <ArenaHeader
@@ -527,14 +527,16 @@ export default function App() {
           <footer
             className={
               universe === 'cx'
-                ? 'border-t border-[#f4f1ea]/20 py-4 px-4 text-center text-xs text-[#8d857b] bg-[#0a0a0c]'
+                ? 'border-t-[3px] border-[#FFE600] py-4 px-4 text-center text-xs text-[#f4f1ea] bg-[#0a0a0c]'
                 : 'border-t border-[#efe9dd]/12 py-4 px-4 text-center text-xs text-[#8d857b] bg-[#080709]'
             }
           >
             {universe === 'cx' ? (
-              <p className="font-mono">
-                <strong className="font-display tracking-[0.12em] text-[#f4f1ea]">CHOUJINXDLE</strong>{' '}
-                — jogo não-oficial de Choujin X
+              <p className="font-mono font-bold uppercase tracking-wider">
+                <strong className="px-2 py-0.5 bg-[#FFE600] text-[#0a0a0c] font-display tracking-[0.14em] mr-1">
+                  CHOUJINXDLE
+                </strong>{' '}
+                — Zine Pop-Punk de <em className="text-[#A3FF00] not-italic">Choujin X</em> (Sui Ishida Dle)
               </p>
             ) : (
               <p className="font-serif">

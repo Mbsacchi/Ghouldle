@@ -41,7 +41,7 @@ export default function QuoteMode({
             <span
               className={
                 isChoujin
-                  ? 'px-2 py-0.5 bg-[#FF0055] text-[#f4f1ea] border border-[#0a0a0c] font-mono text-xs font-black leading-none '
+                  ? 'px-2 py-0.5 bg-[#FF0055] text-[#f4f1ea] border border-[#0a0a0c] font-mono text-xs font-black leading-none -skew-x-6'
                   : 'px-1.5 py-0.5 bg-[#b80f17] text-[#efe9dd] font-serif text-xs font-bold leading-none'
               }
             >
@@ -77,7 +77,7 @@ export default function QuoteMode({
           </h2>
           <p className="font-serif text-xs sm:text-sm text-[#cfc6b6]/80">
             {isChoujin
-              ? 'A cada tentativa incorreta, o sistema RAISE! desperta novos fragmentos do arco e da afiliação.'
+              ? 'A cada tentativa incorreta, o sistema ⚡ RAISE! desperta novos fragmentos do arco e da afiliação.'
               : 'Novos fragmentos do contexto e do arco narrativo são abertos conforme as tentativas avançam.'}
           </p>
         </div>
@@ -86,7 +86,7 @@ export default function QuoteMode({
         <blockquote
           className={
             isChoujin
-              ? 'relative p-7 sm:p-9 bg-[#f4f1ea] text-[#0a0a0c] border-[3px] border-[#0a0a0c] '
+              ? 'relative p-7 sm:p-9 bg-[#f4f1ea] text-[#0a0a0c] border-[3px] border-[#0a0a0c] shadow-[6px_6px_0_#FF0055] -rotate-[0.4deg]'
               : 'relative p-7 sm:p-9 bg-[#0a090d] border border-[#efe9dd]/35 shadow-[5px_5px_0_#7d090f]'
           }
         >
@@ -115,14 +115,14 @@ export default function QuoteMode({
           </span>
         </blockquote>
 
-        {/* Progressive Clues (Styled as RAISE! in Choujin X) */}
+        {/* Progressive Clues (Styled as ⚡ RAISE! in Choujin X) */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <div
             className={
               isChoujin
-                ? `p-3 border-2 text-xs space-y-1  ${
+                ? `p-3 border-2 text-xs space-y-1 -skew-x-2 ${
                     clueArcUnlocked
-                      ? 'bg-[#A3FF00] border-[#0a0a0c] text-[#0a0a0c] '
+                      ? 'bg-[#A3FF00] border-[#0a0a0c] text-[#0a0a0c] shadow-[4px_4px_0_#FFE600]'
                       : 'bg-[#0a0a0c] border-[#f4f1ea]/20 text-[#8d857b]'
                   }`
                 : `p-3 border text-xs space-y-1 ${
@@ -141,7 +141,7 @@ export default function QuoteMode({
                   : 'text-[#d9141e]'
               }`}
             >
-              {isChoujin ? 'RAISE I: ARCO' : 'ARCO'} {clueArcUnlocked ? '' : `(${wrongCount}/1)`}
+              {isChoujin ? '⚡ RAISE I: ARCO' : 'ARCO'} {clueArcUnlocked ? '' : `(${wrongCount}/1)`}
             </div>
             <p className="font-bold">
               {clueArcUnlocked ? target.quote.arc : 'Bloqueado — 1 erro'}
@@ -151,9 +151,9 @@ export default function QuoteMode({
           <div
             className={
               isChoujin
-                ? `p-3 border-2 text-xs space-y-1  ${
+                ? `p-3 border-2 text-xs space-y-1 -skew-x-2 ${
                     clueContextUnlocked
-                      ? 'bg-[#FFE600] border-[#0a0a0c] text-[#0a0a0c] '
+                      ? 'bg-[#FFE600] border-[#0a0a0c] text-[#0a0a0c] shadow-[4px_4px_0_#FF0055]'
                       : 'bg-[#0a0a0c] border-[#f4f1ea]/20 text-[#8d857b]'
                   }`
                 : `p-3 border text-xs space-y-1 ${
@@ -172,7 +172,7 @@ export default function QuoteMode({
                   : 'text-[#d9141e]'
               }`}
             >
-              {isChoujin ? 'RAISE II: CONTEXTO' : 'CONTEXTO'}{' '}
+              {isChoujin ? '⚡ RAISE II: CONTEXTO' : 'CONTEXTO'}{' '}
               {clueContextUnlocked ? '' : `(${wrongCount}/3)`}
             </div>
             <p className="font-bold">
@@ -183,9 +183,9 @@ export default function QuoteMode({
           <div
             className={
               isChoujin
-                ? `p-3 border-2 text-xs space-y-1  ${
+                ? `p-3 border-2 text-xs space-y-1 -skew-x-2 ${
                     clueFactionUnlocked
-                      ? 'bg-[#00F0FF] border-[#0a0a0c] text-[#0a0a0c] '
+                      ? 'bg-[#00F0FF] border-[#0a0a0c] text-[#0a0a0c] shadow-[4px_4px_0_#A3FF00]'
                       : 'bg-[#0a0a0c] border-[#f4f1ea]/20 text-[#8d857b]'
                   }`
                 : `p-3 border text-xs space-y-1 ${
@@ -204,7 +204,7 @@ export default function QuoteMode({
                   : 'text-[#d9141e]'
               }`}
             >
-              {isChoujin ? 'RAISE III: AFILIAÇÃO' : 'AFILIAÇÃO'}{' '}
+              {isChoujin ? '⚡ RAISE III: AFILIAÇÃO' : 'AFILIAÇÃO'}{' '}
               {clueFactionUnlocked ? '' : `(${wrongCount}/5)`}
             </div>
             <p className="font-bold">
@@ -220,7 +220,7 @@ export default function QuoteMode({
           <div
             className={
               isChoujin
-                ? 'p-4 bg-[#A3FF00] text-[#0a0a0c] border-[3px] border-[#0a0a0c] flex flex-col sm:flex-row items-center justify-between gap-3 '
+                ? 'p-4 bg-[#A3FF00] text-[#0a0a0c] border-[3px] border-[#0a0a0c] flex flex-col sm:flex-row items-center justify-between gap-3 shadow-[6px_6px_0_#FF0055]'
                 : 'p-4 bg-[#0d2417] border border-[#4ade80]/70 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-[4px_4px_0_#000]'
             }
           >
@@ -248,7 +248,7 @@ export default function QuoteMode({
               onClick={onOpenVictoryModal}
               className={
                 isChoujin
-                  ? 'px-4 py-2.5 bg-[#0a0a0c] hover:bg-[#FF0055] text-[#FFE600] hover:text-[#f4f1ea] font-display font-bold text-xs uppercase tracking-[0.14em] transition-colors '
+                  ? 'px-4 py-2.5 bg-[#0a0a0c] hover:bg-[#FF0055] text-[#FFE600] hover:text-[#f4f1ea] font-display font-bold text-xs uppercase tracking-[0.14em] transition-colors -skew-x-3'
                   : 'px-4 py-2.5 bg-[#efe9dd] hover:bg-white text-[#080709] font-display text-xs uppercase tracking-[0.14em] transition-colors'
               }
             >
@@ -281,8 +281,8 @@ export default function QuoteMode({
                 className={`flex items-center justify-between p-3 animate-fade-sharp ${
                   isChoujin
                     ? isHit
-                      ? 'bg-[#A3FF00] text-[#0a0a0c] border-[3px] border-[#0a0a0c] font-bold'
-                      : 'bg-[#FF0055] text-[#f4f1ea] border-[3px] border-[#0a0a0c] font-bold'
+                      ? 'bg-[#A3FF00] text-[#0a0a0c] border-[3px] border-[#0a0a0c] shadow-[5px_5px_0_#000000] font-bold'
+                      : 'bg-[#FF0055] text-[#f4f1ea] border-[3px] border-[#0a0a0c] shadow-[5px_5px_0_#000000] font-bold'
                     : isHit
                     ? 'bg-[#0e2a19] border border-[#4ade80]/75 text-[#efe9dd] shadow-[3px_3px_0_#000]'
                     : 'bg-[#1c070a] border border-[#dc2626]/55 text-[#efe9dd] shadow-[3px_3px_0_#000]'

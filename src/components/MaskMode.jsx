@@ -46,7 +46,7 @@ export default function MaskMode({
             <span
               className={
                 isChoujin
-                  ? 'px-2 py-0.5 bg-[#00F0FF] text-[#0a0a0c] border border-[#0a0a0c] font-mono text-xs font-black leading-none '
+                  ? 'px-2 py-0.5 bg-[#00F0FF] text-[#0a0a0c] border border-[#0a0a0c] font-mono text-xs font-black leading-none -skew-x-6'
                   : 'px-1.5 py-0.5 bg-[#b80f17] text-[#efe9dd] font-serif text-xs font-bold leading-none'
               }
             >
@@ -94,7 +94,7 @@ export default function MaskMode({
         <div
           className={
             isChoujin
-              ? 'relative mx-auto w-full max-w-lg aspect-[16/9] border-[3px] border-[#FFE600] bg-[#0a0a0c] overflow-hidden'
+              ? 'relative mx-auto w-full max-w-lg aspect-[16/9] border-[3px] border-[#FFE600] bg-[#0a0a0c] shadow-[6px_6px_0_#FF0055] overflow-hidden'
               : 'relative mx-auto w-full max-w-lg aspect-[16/9] border-2 border-[#efe9dd]/80 bg-[#080709] shadow-[5px_5px_0_#8f0a11] overflow-hidden'
           }
         >
@@ -117,7 +117,7 @@ export default function MaskMode({
           <div
             className={
               isChoujin
-                ? 'absolute bottom-2.5 left-3 px-2.5 py-0.5 bg-[#0a0a0c] border-2 border-[#FFE600] text-[10px] font-mono font-extrabold uppercase tracking-widest text-[#FFE600] '
+                ? 'absolute bottom-2.5 left-3 px-2.5 py-0.5 bg-[#0a0a0c] border-2 border-[#FFE600] text-[10px] font-mono font-extrabold uppercase tracking-widest text-[#FFE600] -skew-x-6'
                 : 'absolute bottom-2.5 left-3 px-2 py-0.5 bg-[#080709]/90 border border-[#efe9dd]/25 text-[10px] font-mono uppercase tracking-widest text-[#efe9dd]'
             }
           >
@@ -125,14 +125,14 @@ export default function MaskMode({
           </div>
         </div>
 
-        {/* Progressive Clues (Styled with ATIVAR RAISE! in Choujin X) */}
+        {/* Progressive Clues (Styled with ⚡ ATIVAR RAISE! in Choujin X) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div
             className={
               isChoujin
-                ? `px-4 py-2.5 border-2 text-xs  ${
+                ? `px-4 py-2.5 border-2 text-xs -skew-x-2 ${
                     clueTypeUnlocked
-                      ? 'bg-[#A3FF00] border-[#0a0a0c] text-[#0a0a0c] '
+                      ? 'bg-[#A3FF00] border-[#0a0a0c] text-[#0a0a0c] shadow-[4px_4px_0_#FFE600]'
                       : 'bg-[#0a0a0c] border-[#f4f1ea]/20 text-[#8d857b]'
                   }`
                 : `px-3.5 py-2.5 border text-xs ${
@@ -152,7 +152,7 @@ export default function MaskMode({
               }`}
             >
               {isChoujin
-                ? `Dica I · Raise ${clueTypeUnlocked ? '(ativa)' : `(${wrongCount}/2)`}`
+                ? `⚡ ATIVAR RAISE! I ${clueTypeUnlocked ? '// ATIVO' : `(${wrongCount}/2)`}`
                 : `DETALHE I ${clueTypeUnlocked ? '// LIBERADO' : `// BLOQUEADO (${wrongCount}/2)`}`}
             </span>
             <span className="font-bold">
@@ -165,9 +165,9 @@ export default function MaskMode({
           <div
             className={
               isChoujin
-                ? `px-4 py-2.5 border-2 text-xs  ${
+                ? `px-4 py-2.5 border-2 text-xs -skew-x-2 ${
                     clueEpithetUnlocked
-                      ? 'bg-[#FFE600] border-[#0a0a0c] text-[#0a0a0c] '
+                      ? 'bg-[#FFE600] border-[#0a0a0c] text-[#0a0a0c] shadow-[4px_4px_0_#FF0055]'
                       : 'bg-[#0a0a0c] border-[#f4f1ea]/20 text-[#8d857b]'
                   }`
                 : `px-3.5 py-2.5 border text-xs ${
@@ -187,7 +187,7 @@ export default function MaskMode({
               }`}
             >
               {isChoujin
-                ? `Dica II · Raise ${clueEpithetUnlocked ? '(ativa)' : `(${wrongCount}/4)`}`
+                ? `⚡ ATIVAR RAISE! II ${clueEpithetUnlocked ? '// ATIVO' : `(${wrongCount}/4)`}`
                 : `DETALHE II ${clueEpithetUnlocked ? '// LIBERADO' : `// BLOQUEADO (${wrongCount}/4)`}`}
             </span>
             <span className="font-bold">
@@ -203,7 +203,7 @@ export default function MaskMode({
           <div
             className={
               isChoujin
-                ? 'p-4 bg-[#A3FF00] text-[#0a0a0c] border-[3px] border-[#0a0a0c] flex flex-col sm:flex-row items-center justify-between gap-3 '
+                ? 'p-4 bg-[#A3FF00] text-[#0a0a0c] border-[3px] border-[#0a0a0c] flex flex-col sm:flex-row items-center justify-between gap-3 shadow-[6px_6px_0_#FF0055]'
                 : 'p-4 bg-[#0d2417] border border-[#4ade80]/70 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-[4px_4px_0_#000]'
             }
           >
@@ -231,7 +231,7 @@ export default function MaskMode({
               onClick={onOpenVictoryModal}
               className={
                 isChoujin
-                  ? 'px-4 py-2.5 bg-[#0a0a0c] hover:bg-[#FF0055] text-[#FFE600] hover:text-[#f4f1ea] font-display font-bold text-xs uppercase tracking-[0.14em] transition-colors '
+                  ? 'px-4 py-2.5 bg-[#0a0a0c] hover:bg-[#FF0055] text-[#FFE600] hover:text-[#f4f1ea] font-display font-bold text-xs uppercase tracking-[0.14em] transition-colors -skew-x-3'
                   : 'px-4 py-2.5 bg-[#efe9dd] hover:bg-white text-[#080709] font-display text-xs uppercase tracking-[0.14em] transition-colors'
               }
             >
@@ -265,8 +265,8 @@ export default function MaskMode({
                 className={`flex items-center justify-between p-3 animate-fade-sharp ${
                   isChoujin
                     ? isHit
-                      ? 'bg-[#A3FF00] text-[#0a0a0c] border-[3px] border-[#0a0a0c] font-bold'
-                      : 'bg-[#FF0055] text-[#f4f1ea] border-[3px] border-[#0a0a0c] font-bold'
+                      ? 'bg-[#A3FF00] text-[#0a0a0c] border-[3px] border-[#0a0a0c] shadow-[5px_5px_0_#000000] font-bold'
+                      : 'bg-[#FF0055] text-[#f4f1ea] border-[3px] border-[#0a0a0c] shadow-[5px_5px_0_#000000] font-bold'
                     : isHit
                     ? 'bg-[#0e2a19] border border-[#4ade80]/75 text-[#efe9dd] shadow-[3px_3px_0_#000]'
                     : 'bg-[#1c070a] border border-[#dc2626]/55 text-[#efe9dd] shadow-[3px_3px_0_#000]'

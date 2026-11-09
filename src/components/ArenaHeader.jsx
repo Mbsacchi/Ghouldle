@@ -39,7 +39,7 @@ export default function ArenaHeader({
       <header className="relative z-30 border-b-[3px] border-[#FFE600] bg-[#0a0a0c] bg-halftone select-none">
         {/* Top Hazard Strip */}
         <div className="border-b-2 border-[#0a0a0c] bg-[#FFE600] text-[#0a0a0c] px-4 py-1 text-[10px] font-mono font-extrabold tracking-[0.2em] uppercase flex flex-wrap items-center justify-between max-w-6xl mx-auto">
-          <span>Yamato Mori · Arquivo de campo</span>
+          <span>⚡ YAMATO MORI // ARQUIVO DE CAMPO — ESTADO DE CAOS</span>
           <span>
             {isDaily
               ? `EDIÇÃO #${editionNumber} • NOVO ALVO EM ${countdown} (00:00 UTC)`
@@ -55,7 +55,7 @@ export default function ArenaHeader({
               <button
                 type="button"
                 onClick={onBackToHub}
-                className="inline-flex items-center gap-1.5 px-3 py-2 bg-[#f4f1ea] hover:bg-[#FFE600] border-2 border-[#0a0a0c] text-[#0a0a0c] text-xs font-mono font-extrabold uppercase tracking-wider transition-transform hover:-translate-y-0.5  "
+                className="inline-flex items-center gap-1.5 px-3 py-2 bg-[#f4f1ea] hover:bg-[#FFE600] border-2 border-[#0a0a0c] text-[#0a0a0c] text-xs font-mono font-extrabold uppercase tracking-wider transition-transform hover:-translate-y-0.5 shadow-[3px_3px_0_#FF0055] -skew-x-3"
                 title="Voltar à Entrada de ChoujinXdle"
               >
                 <ArrowLeft className="w-3.5 h-3.5 stroke-[2.8]" />
@@ -77,14 +77,14 @@ export default function ArenaHeader({
               <button
                 type="button"
                 onClick={onOpenStats}
-                className="px-2.5 py-1.5 bg-[#16161a] border-2 border-[#FFE600] text-xs font-mono font-bold text-[#FFE600]  "
+                className="px-2.5 py-1.5 bg-[#16161a] border-2 border-[#FFE600] text-xs font-mono font-bold text-[#FFE600] shadow-[2px_2px_0_#FF0055] -skew-x-3"
               >
                 録 {streak > 0 ? `(${streak})` : ''}
               </button>
               <button
                 type="button"
                 onClick={onOpenHelp}
-                className="px-2.5 py-1.5 bg-[#16161a] border-2 border-[#00F0FF] text-xs font-mono font-bold text-[#00F0FF]  "
+                className="px-2.5 py-1.5 bg-[#16161a] border-2 border-[#00F0FF] text-xs font-mono font-bold text-[#00F0FF] shadow-[2px_2px_0_#FFE600] -skew-x-3"
               >
                 則
               </button>
@@ -104,9 +104,9 @@ export default function ArenaHeader({
                   key={mode.id}
                   type="button"
                   onClick={() => onSelectMode(mode.id)}
-                  className={`group relative flex items-center justify-center sm:justify-start gap-2 px-3 py-2 border-2 transition-all  ${
+                  className={`group relative flex items-center justify-center sm:justify-start gap-2 px-3 py-2 border-2 transition-all -skew-x-3 ${
                     isActive
-                      ? 'bg-[#FFE600] border-[#0a0a0c] text-[#0a0a0c] -translate-y-0.5 font-extrabold'
+                      ? 'bg-[#FFE600] border-[#0a0a0c] text-[#0a0a0c] shadow-[4px_4px_0_#FF0055] -translate-y-0.5 font-extrabold'
                       : 'bg-[#16161a] border-[#f4f1ea]/40 text-[#f4f1ea] hover:border-[#FFE600] hover:text-[#FFE600]'
                   }`}
                 >
@@ -140,7 +140,7 @@ export default function ArenaHeader({
 
           {/* Right: Daily/Infinite Controls + Seals */}
           <div className="flex flex-wrap items-center justify-between lg:justify-end gap-2.5">
-            <div className="inline-flex border-2 border-[#f4f1ea] bg-[#16161a] p-0.5  ">
+            <div className="inline-flex border-2 border-[#f4f1ea] bg-[#16161a] p-0.5 shadow-[3px_3px_0_#FFE600] -skew-x-3">
               <button
                 type="button"
                 onClick={() => onTogglePlayType(true)}
@@ -169,7 +169,7 @@ export default function ArenaHeader({
               <button
                 type="button"
                 onClick={onNewInfiniteRound}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FF0055] hover:bg-[#FFE600] hover:text-[#0a0a0c] border-2 border-[#0a0a0c] text-[11px] font-mono font-extrabold uppercase tracking-wider text-[#f4f1ea] transition-colors"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FF0055] hover:bg-[#FFE600] hover:text-[#0a0a0c] border-2 border-[#0a0a0c] text-[11px] font-mono font-extrabold uppercase tracking-wider text-[#f4f1ea] shadow-[3px_3px_0_#A3FF00] -skew-x-3 transition-colors"
                 title="Sortear outro Choujin neste modo"
               >
                 <RotateCcw className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -181,7 +181,7 @@ export default function ArenaHeader({
               <button
                 type="button"
                 onClick={onOpenStats}
-                className="px-3 py-1.5 bg-[#16161a] hover:bg-[#FFE600] hover:text-[#0a0a0c] border-2 border-[#f4f1ea] text-xs font-mono font-bold uppercase tracking-wider text-[#f4f1ea] transition-colors flex items-center gap-1.5"
+                className="px-3 py-1.5 bg-[#16161a] hover:bg-[#FFE600] hover:text-[#0a0a0c] border-2 border-[#f4f1ea] text-xs font-mono font-bold uppercase tracking-wider text-[#f4f1ea] shadow-[3px_3px_0_#FF0055] -skew-x-3 transition-colors flex items-center gap-1.5"
               >
                 <span>Registro</span>
                 {streak > 0 && (
@@ -194,7 +194,7 @@ export default function ArenaHeader({
               <button
                 type="button"
                 onClick={onOpenHelp}
-                className="px-2.5 py-1.5 bg-[#f4f1ea] hover:bg-[#00F0FF] border-2 border-[#0a0a0c] text-xs font-mono font-extrabold text-[#0a0a0c] transition-colors"
+                className="px-2.5 py-1.5 bg-[#f4f1ea] hover:bg-[#00F0FF] border-2 border-[#0a0a0c] text-xs font-mono font-extrabold text-[#0a0a0c] shadow-[3px_3px_0_#FFE600] -skew-x-3 transition-colors"
               >
                 則 Guia
               </button>
