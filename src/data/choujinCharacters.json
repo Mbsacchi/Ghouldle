@@ -2,17 +2,31 @@
   {
     "id": "tokio-kurohara",
     "name": "Tokio Kurohara",
-    "aliases": ["Tokio", "Abutre", "Besta do Abutre", "Harpe", "Kurohara"],
+    "aliases": [
+      "Tokio",
+      "Abutre",
+      "Besta do Abutre",
+      "Harpe",
+      "Kurohara"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin Besta"],
-    "affiliations": ["Yamato Mori", "Colégio Yamato"],
-    "rcTypes": ["Besta (Zoan)", "Bélico / Criação"],
+    "species": [
+      "Choujin Besta"
+    ],
+    "affiliations": [
+      "Yamato Mori",
+      "Colégio Yamato"
+    ],
+    "rcTypes": [
+      "Besta (Zoan)",
+      "Bélico / Criação"
+    ],
     "rank": "Guardião",
     "debutArc": "Prefeitura de Yamato (Intro)",
     "debutArcOrder": 1,
     "epithet": "Choujin Besta do Abutre",
     "imageUrl": "/characters/tokio-kurohara.png",
-    "imagePosition": "center 20%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Eu sempre caminhei dois passos atrás do Azuma... mas agora só eu posso carregar essas asas.",
       "arc": "Arco Ilhas das Bestas",
@@ -27,7 +41,10 @@
       "title": "Crânio emplumado do Choujin Abutre em estado de Caos",
       "imageUrl": "/characters/tokio-kurohara.png",
       "preset": "tokio-vulture",
-      "focalPoint": { "x": 64, "y": 33 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#18181b",
@@ -44,17 +61,30 @@
   {
     "id": "azuma-higashi",
     "name": "Azuma Higashi",
-    "aliases": ["Azuma", "Higashi", "Choujin do Ferro", "Choujin da Guerra"],
+    "aliases": [
+      "Azuma",
+      "Higashi",
+      "Choujin do Ferro",
+      "Choujin da Guerra"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin"],
-    "affiliations": ["Yamato Mori", "Colégio Yamato"],
-    "rcTypes": ["Bélico / Criação", "Força / Corpo"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Yamato Mori",
+      "Colégio Yamato"
+    ],
+    "rcTypes": [
+      "Bélico / Criação",
+      "Força / Corpo"
+    ],
     "rank": "Guardião Júnior",
     "debutArc": "Prefeitura de Yamato (Intro)",
     "debutArcOrder": 1,
     "epithet": "Choujin do Ferro",
     "imageUrl": "/characters/azuma-higashi.png",
-    "imagePosition": "center 16%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Se eu não for aquele que salva a todos, então quem sou eu diante do Tokio?",
       "arc": "Arco Besta da Lua (Nari)",
@@ -69,7 +99,10 @@
       "title": "Rosto coberto pelo manto de guerra do Choujin do Ferro",
       "imageUrl": "/characters/azuma-higashi.png",
       "preset": "azuma-iron",
-      "focalPoint": { "x": 50, "y": 27 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#facc15",
@@ -86,17 +119,27 @@
   {
     "id": "ely-otta",
     "name": "Ely Otta",
-    "aliases": ["Ely", "Otta", "Choujin da Fumaça"],
+    "aliases": [
+      "Ely",
+      "Otta",
+      "Choujin da Fumaça"
+    ],
     "gender": "Feminino",
-    "species": ["Choujin"],
-    "affiliations": ["Yamato Mori"],
-    "rcTypes": ["Elemental / Fumaça"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Yamato Mori"
+    ],
+    "rcTypes": [
+      "Elemental / Fumaça"
+    ],
     "rank": "Guardião Júnior",
     "debutArc": "Prefeitura de Yamato (Intro)",
     "debutArcOrder": 1,
     "epithet": "Choujin da Fumaça & Colheita",
     "imageUrl": "/characters/ely-otta.png",
-    "imagePosition": "center 22%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Eu vou trabalhar duro, juntar minha fortuna honesta e nunca deixar um amigo ser engolido pela escuridão!",
       "arc": "Prefeitura de Yamato (Intro)",
@@ -111,7 +154,10 @@
       "title": "Fumaça incandescente escapando das têmporas de Ely Otta",
       "imageUrl": "/characters/ely-otta.png",
       "preset": "ely-smoke",
-      "focalPoint": { "x": 48, "y": 31 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#3f2e21",
@@ -128,17 +174,27 @@
   {
     "id": "hoshi-sandek",
     "name": "Hoshi Sandek",
-    "aliases": ["Sandek", "Hoshi", "Choujin da Gravidade"],
+    "aliases": [
+      "Sandek",
+      "Hoshi",
+      "Choujin da Gravidade"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin"],
-    "affiliations": ["Yamato Mori"],
-    "rcTypes": ["Gravidade / Espaço"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Yamato Mori"
+    ],
+    "rcTypes": [
+      "Gravidade / Espaço"
+    ],
     "rank": "Guardião Sênior",
     "debutArc": "Prefeitura de Yamato (Intro)",
     "debutArcOrder": 1,
     "epithet": "Choujin da Gravidade",
     "imageUrl": "/characters/hoshi-sandek.png",
-    "imagePosition": "center 8%",
+    "imagePosition": "center center",
     "quote": {
       "text": "O poder de um Choujin reflete a forma do seu coração. Não deixem que o medo dite quem vocês são.",
       "arc": "Treinamento em Yamato Mori",
@@ -153,7 +209,10 @@
       "title": "Olhar severo de Hoshi Sandek sob distorção gravitacional",
       "imageUrl": "/characters/hoshi-sandek.png",
       "preset": "sandek-gravity",
-      "focalPoint": { "x": 55, "y": 14 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#27272a",
@@ -170,17 +229,27 @@
   {
     "id": "simon-kagomura",
     "name": "Simon Kagomura",
-    "aliases": ["Simon", "Kagomura", "Choujin da Espada"],
+    "aliases": [
+      "Simon",
+      "Kagomura",
+      "Choujin da Espada"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin"],
-    "affiliations": ["Yamato Mori"],
-    "rcTypes": ["Bélico / Criação"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Yamato Mori"
+    ],
+    "rcTypes": [
+      "Bélico / Criação"
+    ],
     "rank": "Guardião",
     "debutArc": "Arco Sinker (Beisebol)",
     "debutArcOrder": 2,
     "epithet": "Choujin da Espada",
     "imageUrl": "/characters/simon-kagomura.png",
-    "imagePosition": "center 10%",
+    "imagePosition": "center center",
     "quote": {
       "text": "O clã Kagomura foi massacrado... cada lâmina gravada na minha pele carrega o peso dos que caíram.",
       "arc": "Arco Ilhas das Bestas",
@@ -195,7 +264,10 @@
       "title": "Olhar frio de Simon Kagomura com selos de lâminas no pescoço",
       "imageUrl": "/characters/simon-kagomura.png",
       "preset": "simon-blade",
-      "focalPoint": { "x": 46, "y": 18 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#1e293b",
@@ -212,17 +284,28 @@
   {
     "id": "momoma-moegi",
     "name": "Momoma Moegi",
-    "aliases": ["Momoma", "Moegi", "Maiko Momoma", "Choujin da Superforça"],
+    "aliases": [
+      "Momoma",
+      "Moegi",
+      "Maiko Momoma",
+      "Choujin da Superforça"
+    ],
     "gender": "Feminino",
-    "species": ["Choujin"],
-    "affiliations": ["Yamato Mori"],
-    "rcTypes": ["Força / Corpo"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Yamato Mori"
+    ],
+    "rcTypes": [
+      "Força / Corpo"
+    ],
     "rank": "Guardião",
     "debutArc": "Arco Sinker (Beisebol)",
     "debutArcOrder": 2,
     "epithet": "Choujin da Força Hercúlea",
     "imageUrl": "/characters/momoma-moegi.jpg",
-    "imagePosition": "center 12%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Se o problema for parar um arremesso mortal, basta rebater com o dobro de força!",
       "arc": "Arco Sinker (Beisebol)",
@@ -237,7 +320,10 @@
       "title": "Franja presa com grampos de Momoma Moegi",
       "imageUrl": "/characters/momoma-moegi.jpg",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 14 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#f472b6",
@@ -254,17 +340,27 @@
   {
     "id": "ichiiro-sato",
     "name": "Ichiiro Sato",
-    "aliases": ["Sato", "Ichiiro", "Choujin da Psicocinese"],
+    "aliases": [
+      "Sato",
+      "Ichiiro",
+      "Choujin da Psicocinese"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin"],
-    "affiliations": ["Yamato Mori"],
-    "rcTypes": ["Psíquico / Oráculo"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Yamato Mori"
+    ],
+    "rcTypes": [
+      "Psíquico / Oráculo"
+    ],
     "rank": "Guardião Sênior",
     "debutArc": "Treinamento em Yamato Mori",
     "debutArcOrder": 4,
     "epithet": "Choujin da Transmissão Mental",
     "imageUrl": "/characters/ichiiro-sato.png",
-    "imagePosition": "center 12%",
+    "imagePosition": "center center",
     "quote": {
       "text": "A mente humana quebra muito antes da carne quando você projeta o terror correto dentro dela.",
       "arc": "Arco da Papoula (Opium)",
@@ -279,7 +375,10 @@
       "title": "Olhar hipnótico de Ichiiro Sato projetando visões mentais",
       "imageUrl": "/characters/ichiiro-sato.png",
       "preset": "sato-psyche",
-      "focalPoint": { "x": 42, "y": 24 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#d6d3d1",
@@ -296,17 +395,33 @@
   {
     "id": "zora-siruha",
     "name": "Zora Siruha",
-    "aliases": ["Zora", "Sora", "Sora Siruha", "Mãe das Bestas", "Dama da Torre"],
+    "aliases": [
+      "Zora",
+      "Sora",
+      "Sora Siruha",
+      "Mãe das Bestas",
+      "Dama da Torre"
+    ],
     "gender": "Feminino",
-    "species": ["Choujin X", "Choujin Besta"],
-    "affiliations": ["Torre do Luto (Zora)", "Antiga Yamato"],
-    "rcTypes": ["Besta (Zoan)", "Psíquico / Oráculo", "Bélico / Criação"],
+    "species": [
+      "Choujin X",
+      "Choujin Besta"
+    ],
+    "affiliations": [
+      "Torre do Luto (Zora)",
+      "Antiga Yamato"
+    ],
+    "rcTypes": [
+      "Besta (Zoan)",
+      "Psíquico / Oráculo",
+      "Bélico / Criação"
+    ],
     "rank": "Choujin X",
     "debutArc": "Arco Ilhas das Bestas",
     "debutArcOrder": 5,
     "epithet": "Antiga Choujin X & Mãe das Bestas",
     "imageUrl": "/characters/zora-siruha.png",
-    "imagePosition": "center 12%",
+    "imagePosition": "center center",
     "quote": {
       "text": "A Calamidade negra engolirá Yamato... Somente aquele que herdar a minha Marca poderá impedir o fim.",
       "arc": "Arco Ilhas das Bestas",
@@ -321,7 +436,10 @@
       "title": "Olhos abertos nas palmas das mãos sagradas de Zora Siruha",
       "imageUrl": "/characters/zora-siruha.png",
       "preset": "zora-hand-eyes",
-      "focalPoint": { "x": 52, "y": 14 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#f4f4f5",
@@ -338,17 +456,30 @@
   {
     "id": "batista-hoshi",
     "name": "Batista Hoshi",
-    "aliases": ["Batista", "Nue", "Máscara Noh", "Homem da Máscara Noh"],
+    "aliases": [
+      "Batista",
+      "Nue",
+      "Máscara Noh",
+      "Homem da Máscara Noh"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin"],
-    "affiliations": ["Torre do Luto (Zora)", "Yamato Mori"],
-    "rcTypes": ["Enxerto (Nue)", "Gravidade / Espaço"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Torre do Luto (Zora)",
+      "Yamato Mori"
+    ],
+    "rcTypes": [
+      "Enxerto (Nue)",
+      "Gravidade / Espaço"
+    ],
     "rank": "Mestre da Torre",
     "debutArc": "Arco Besta da Lua (Nari)",
     "debutArcOrder": 3,
     "epithet": "O Nue — Quimera de Enxertos",
     "imageUrl": "/characters/batista-hoshi.jpg",
-    "imagePosition": "center 18%",
+    "imagePosition": "center center",
     "quote": {
       "text": "O destino é apenas uma peça mal escrita... e eu costurei meu próprio corpo para reescrever o ato final.",
       "arc": "Arco da Papoula (Opium)",
@@ -363,7 +494,10 @@
       "title": "Máscara Noh branca ocultando o rosto costurado de Batista Hoshi",
       "imageUrl": "/characters/batista-hoshi.jpg",
       "preset": "batista-noh",
-      "focalPoint": { "x": 50, "y": 20 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#18181b",
@@ -380,17 +514,28 @@
   {
     "id": "chandra-hume",
     "name": "Chandra Hume",
-    "aliases": ["Chandra", "Hume", "Choujin da Fumaça"],
+    "aliases": [
+      "Chandra",
+      "Hume",
+      "Choujin da Fumaça"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin"],
-    "affiliations": ["Torre do Luto (Zora)", "Independente"],
-    "rcTypes": ["Elemental / Fumaça"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Torre do Luto (Zora)",
+      "Independente"
+    ],
+    "rcTypes": [
+      "Elemental / Fumaça"
+    ],
     "rank": "Mestre da Torre",
     "debutArc": "Prefeitura de Yamato (Intro)",
     "debutArcOrder": 1,
     "epithet": "Arauto da Fumaça Cinzenta",
     "imageUrl": "/characters/chandra-hume.png",
-    "imagePosition": "center 18%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Eu queimei aviões, cidades e até a mim mesmo procurando a Besta prometida pela Madre!",
       "arc": "Prefeitura de Yamato (Intro)",
@@ -405,7 +550,10 @@
       "title": "Rosto fumegante e olhar insano de Chandra Hume",
       "imageUrl": "/characters/chandra-hume.png",
       "preset": "chandra-smoke",
-      "focalPoint": { "x": 54, "y": 22 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#e4e4e7",
@@ -422,17 +570,29 @@
   {
     "id": "palma-shishinegura",
     "name": "Palma Shishinegura",
-    "aliases": ["Palma", "Choujin Hiena", "Shishinegura"],
+    "aliases": [
+      "Palma",
+      "Choujin Hiena",
+      "Shishinegura"
+    ],
     "gender": "Feminino",
-    "species": ["Choujin Besta"],
-    "affiliations": ["Independente", "Yamato Mori"],
-    "rcTypes": ["Besta (Zoan)", "Sangue / Necromancia"],
+    "species": [
+      "Choujin Besta"
+    ],
+    "affiliations": [
+      "Independente",
+      "Yamato Mori"
+    ],
+    "rcTypes": [
+      "Besta (Zoan)",
+      "Sangue / Necromancia"
+    ],
     "rank": "Infiltrado / Nômade",
     "debutArc": "Arco da Papoula (Opium)",
     "debutArcOrder": 6,
     "epithet": "Choujin Besta da Hiena",
     "imageUrl": "/characters/palma-shishinegura.jpg",
-    "imagePosition": "center 16%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Os mortos sempre conversaram comigo... Eu só queria que eles não ficassem tão sozinhos no frio.",
       "arc": "Arco da Papoula (Opium)",
@@ -447,7 +607,10 @@
       "title": "Olhar exausto e presas bestiais de Palma Shishinegura",
       "imageUrl": "/characters/palma-shishinegura.jpg",
       "preset": "palma-hyena",
-      "focalPoint": { "x": 50, "y": 20 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#fef08a",
@@ -464,17 +627,28 @@
   {
     "id": "nari-tsumuji",
     "name": "Nari Tsumuji",
-    "aliases": ["Nari", "Cobra Branca", "Besta da Lua"],
+    "aliases": [
+      "Nari",
+      "Cobra Branca",
+      "Besta da Lua"
+    ],
     "gender": "Feminino",
-    "species": ["Choujin Besta"],
-    "affiliations": ["Torre do Luto (Zora)", "Independente"],
-    "rcTypes": ["Besta (Zoan)"],
+    "species": [
+      "Choujin Besta"
+    ],
+    "affiliations": [
+      "Torre do Luto (Zora)",
+      "Independente"
+    ],
+    "rcTypes": [
+      "Besta (Zoan)"
+    ],
     "rank": "Infiltrado / Nômade",
     "debutArc": "Arco Besta da Lua (Nari)",
     "debutArcOrder": 3,
     "epithet": "Choujin Besta da Cobra Branca",
     "imageUrl": "/characters/nari-tsumuji.png",
-    "imagePosition": "center 18%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Venha, passarinho... vamos ver se suas penas conseguem escapar quando a serpente aperta!",
       "arc": "Arco Besta da Lua (Nari)",
@@ -489,7 +663,10 @@
       "title": "Pupilas verticais de serpente branca de Nari Tsumuji",
       "imageUrl": "/characters/nari-tsumuji.png",
       "preset": "nari-snake",
-      "focalPoint": { "x": 68, "y": 18 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#f4f4f5",
@@ -506,17 +683,30 @@
   {
     "id": "kouta-shiozaki",
     "name": "Kouta Shiozaki",
-    "aliases": ["Shiozaki", "Tezuya Shiozaki", "Tetsuya Shiozaki", "Sinker", "Choujin do Arremesso"],
+    "aliases": [
+      "Shiozaki",
+      "Tezuya Shiozaki",
+      "Tetsuya Shiozaki",
+      "Sinker",
+      "Choujin do Arremesso"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin"],
-    "affiliations": ["Independente", "Yamato Mori"],
-    "rcTypes": ["Gravidade / Espaço"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Independente",
+      "Yamato Mori"
+    ],
+    "rcTypes": [
+      "Gravidade / Espaço"
+    ],
     "rank": "Infiltrado / Nômade",
     "debutArc": "Arco Sinker (Beisebol)",
     "debutArcOrder": 2,
     "epithet": "Sinker — Choujin do Arremesso",
     "imageUrl": "/characters/kouta-shiozaki.png",
-    "imagePosition": "center 18%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Mais um arremesso... só mais um inning! Eu ainda não saí do montinho!",
       "arc": "Arco Sinker (Beisebol)",
@@ -531,7 +721,10 @@
       "title": "Cabeça transfigurada em bola de beisebol costurada no estado Sinker",
       "imageUrl": "/characters/kouta-shiozaki.png",
       "preset": "shiozaki-baseball",
-      "focalPoint": { "x": 46, "y": 20 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#27272a",
@@ -548,17 +741,28 @@
   {
     "id": "ririka-umezawa",
     "name": "Ririka Umezawa",
-    "aliases": ["Ririka", "Umezawa", "Choujin do Papel"],
+    "aliases": [
+      "Ririka",
+      "Umezawa",
+      "Choujin do Papel"
+    ],
     "gender": "Feminino",
-    "species": ["Choujin"],
-    "affiliations": ["Torre do Luto (Zora)", "Independente"],
-    "rcTypes": ["Bélico / Criação"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Torre do Luto (Zora)",
+      "Independente"
+    ],
+    "rcTypes": [
+      "Bélico / Criação"
+    ],
     "rank": "Mercenário",
     "debutArc": "Arco Besta da Lua (Nari)",
     "debutArcOrder": 3,
     "epithet": "Choujin do Papel",
     "imageUrl": "/characters/ririka-umezawa.png",
-    "imagePosition": "center 18%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Fininho como uma folha de papel... é assim que a gente desliza por qualquer fresta e corta sua garganta!",
       "arc": "Arco Besta da Lua (Nari)",
@@ -573,7 +777,10 @@
       "title": "Lâminas de papel branco envolvendo o rosto de Ririka Umezawa",
       "imageUrl": "/characters/ririka-umezawa.png",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 20 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#ec4899",
@@ -590,17 +797,29 @@
   {
     "id": "ricardo-terror",
     "name": "Ricardo Terror",
-    "aliases": ["Ricardo", "Choujin do Terror"],
+    "aliases": [
+      "Ricardo",
+      "Choujin do Terror"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin", "Choujin Besta"],
-    "affiliations": ["Torre do Luto (Zora)", "Independente"],
-    "rcTypes": ["Psíquico / Oráculo", "Besta (Zoan)"],
+    "species": [
+      "Choujin",
+      "Choujin Besta"
+    ],
+    "affiliations": [
+      "Torre do Luto (Zora)",
+      "Independente"
+    ],
+    "rcTypes": [
+      "Psíquico / Oráculo",
+      "Besta (Zoan)"
+    ],
     "rank": "Mercenário",
     "debutArc": "Arco Besta da Lua (Nari)",
     "debutArcOrder": 3,
     "epithet": "Choujin do Terror Noturno",
     "imageUrl": "/characters/ricardo-terror.png",
-    "imagePosition": "center 24%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Peço desculpas pelo susto... meu rosto assume a forma exata daquilo que você mais teme.",
       "arc": "Arco Besta da Lua (Nari)",
@@ -615,7 +834,10 @@
       "title": "Face tentacular de Ricardo Terror alimentada pelo medo",
       "imageUrl": "/characters/ricardo-terror.png",
       "preset": "ricardo-terror",
-      "focalPoint": { "x": 48, "y": 25 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#31102f",
@@ -632,17 +854,28 @@
   {
     "id": "mado-oraculo",
     "name": "Mado",
-    "aliases": ["Oráculo Mado", "Tsukiko Mado", "Profetisa de Yamato Mori"],
+    "aliases": [
+      "Oráculo Mado",
+      "Tsukiko Mado",
+      "Profetisa de Yamato Mori"
+    ],
     "gender": "Feminino",
-    "species": ["Choujin"],
-    "affiliations": ["Yamato Mori", "Antiga Yamato"],
-    "rcTypes": ["Psíquico / Oráculo"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Yamato Mori",
+      "Antiga Yamato"
+    ],
+    "rcTypes": [
+      "Psíquico / Oráculo"
+    ],
     "rank": "Guardião Sênior",
     "debutArc": "Treinamento em Yamato Mori",
     "debutArcOrder": 4,
     "epithet": "Oráculo Supremo de Yamato Mori",
     "imageUrl": "/characters/mado-oraculo.png",
-    "imagePosition": "center 15%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Meus sonhos mostram o que deve ser podado. Zora perdeu a razão e sua Torre precisa cair.",
       "arc": "Arco Ilhas das Bestas",
@@ -657,7 +890,10 @@
       "title": "Rosto enrugado e olhar profético de Mado",
       "imageUrl": "/characters/mado-oraculo.png",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 26 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#e4e4e7",
@@ -674,17 +910,27 @@
   {
     "id": "arthur-yamato",
     "name": "Arthur",
-    "aliases": ["Instrutor Arthur", "Arthur One", "Arthur de Yamato Mori"],
+    "aliases": [
+      "Instrutor Arthur",
+      "Arthur One",
+      "Arthur de Yamato Mori"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin"],
-    "affiliations": ["Yamato Mori"],
-    "rcTypes": ["Bélico / Criação"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Yamato Mori"
+    ],
+    "rcTypes": [
+      "Bélico / Criação"
+    ],
     "rank": "Guardião Sênior",
     "debutArc": "Treinamento em Yamato Mori",
     "debutArcOrder": 4,
     "epithet": "Instrutor-Chefe de Yamato Mori",
     "imageUrl": "/characters/arthur-yamato.png",
-    "imagePosition": "center 30%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Raise não é um milagre gratuito: toda vez que vocês levantam da morte, deixam um pedaço da humanidade para trás.",
       "arc": "Treinamento em Yamato Mori",
@@ -699,7 +945,10 @@
       "title": "Olhar disciplinador do instrutor Arthur em Yamato Mori",
       "imageUrl": "/characters/arthur-yamato.png",
       "preset": "arima-glasses",
-      "focalPoint": { "x": 58, "y": 32 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#78350f",
@@ -716,17 +965,28 @@
   {
     "id": "vlad-sangue",
     "name": "Vlad",
-    "aliases": ["Choujin do Sangue", "Bador Vlad", "Comandante Vlad"],
+    "aliases": [
+      "Choujin do Sangue",
+      "Bador Vlad",
+      "Comandante Vlad"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin"],
-    "affiliations": ["Yamato Mori"],
-    "rcTypes": ["Sangue / Necromancia", "Força / Corpo"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Yamato Mori"
+    ],
+    "rcTypes": [
+      "Sangue / Necromancia",
+      "Força / Corpo"
+    ],
     "rank": "Guardião Sênior",
     "debutArc": "Invasão à Torre do Luto",
     "debutArcOrder": 7,
     "epithet": "Choujin Carmesim da Linha de Frente",
     "imageUrl": "/characters/vlad-sangue.jpg",
-    "imagePosition": "center 30%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Abram caminho até o topo da Torre! O sangue derramado aqui será a nossa lança!",
       "arc": "Invasão à Torre do Luto",
@@ -741,7 +1001,10 @@
       "title": "Olhar feroz de Vlad durante o cerco à Torre do Luto",
       "imageUrl": "/characters/vlad-sangue.jpg",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 42 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#991b1b",
@@ -758,17 +1021,27 @@
   {
     "id": "yubiko-guerra",
     "name": "Yubiko",
-    "aliases": ["Yubiko da Mandala", "Mercenária Yubiko"],
+    "aliases": [
+      "Yubiko da Mandala",
+      "Mercenária Yubiko"
+    ],
     "gender": "Feminino",
-    "species": ["Choujin"],
-    "affiliations": ["Torre do Luto (Zora)", "Guelra"],
-    "rcTypes": ["Força / Corpo"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Torre do Luto (Zora)",
+      "Guelra"
+    ],
+    "rcTypes": [
+      "Força / Corpo"
+    ],
     "rank": "Mercenário",
     "debutArc": "Arco Ilhas das Bestas",
     "debutArcOrder": 5,
     "epithet": "Choujin da Multiplicação Corporal",
     "imageUrl": "/characters/yubiko-guerra.jpg",
-    "imagePosition": "center 22%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Que delícia de carnificina! Mais braços, mais pernas, mais guerra até o meu corpo transbordar!",
       "arc": "Arco Ilhas das Bestas",
@@ -783,7 +1056,10 @@
       "title": "Rosto eufórico de Yubiko em transe de combate",
       "imageUrl": "/characters/yubiko-guerra.jpg",
       "preset": "yubiko-mandala",
-      "focalPoint": { "x": 48, "y": 30 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#18181b",
@@ -800,17 +1076,28 @@
   {
     "id": "queem-choujin-x",
     "name": "Queem",
-    "aliases": ["Lorde Queem", "Choujin da Guerra", "Primeiro Choujin X"],
+    "aliases": [
+      "Lorde Queem",
+      "Choujin da Guerra",
+      "Primeiro Choujin X"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin X"],
-    "affiliations": ["Guelra"],
-    "rcTypes": ["Bélico / Criação", "Força / Corpo"],
+    "species": [
+      "Choujin X"
+    ],
+    "affiliations": [
+      "Guelra"
+    ],
+    "rcTypes": [
+      "Bélico / Criação",
+      "Força / Corpo"
+    ],
     "rank": "Choujin X",
     "debutArc": "Arco Ilhas das Bestas",
     "debutArcOrder": 5,
     "epithet": "Tirano Bélico de Guelra — Choujin X",
     "imageUrl": "/characters/queem-choujin-x.jpg",
-    "imagePosition": "center 16%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Deus não está nos céus, Zora... Deus é o rugido da artilharia que esmaga nações inteiras!",
       "arc": "Arco Ilhas das Bestas",
@@ -825,7 +1112,10 @@
       "title": "Couraça militar pesada de Queem, o Choujin X de Guelra",
       "imageUrl": "/characters/queem-choujin-x.jpg",
       "preset": "queem-war",
-      "focalPoint": { "x": 64, "y": 14 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#52525b",
@@ -842,11 +1132,20 @@
   {
     "id": "antitise-relampago",
     "name": "Antitise",
-    "aliases": ["Rei Antitise", "Choujin do Relâmpago"],
+    "aliases": [
+      "Rei Antitise",
+      "Choujin do Relâmpago"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin X"],
-    "affiliations": ["Antiga Yamato"],
-    "rcTypes": ["Elemental / Fumaça"],
+    "species": [
+      "Choujin X"
+    ],
+    "affiliations": [
+      "Antiga Yamato"
+    ],
+    "rcTypes": [
+      "Elemental / Fumaça"
+    ],
     "rank": "Choujin X",
     "debutArc": "Arco Ilhas das Bestas",
     "debutArcOrder": 5,
@@ -864,7 +1163,10 @@
       "type": "Coroa de Raios & Olhos Fulgurantes",
       "title": "Olhar eletrizado do lendário Antitise",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": {
+        "x": 50,
+        "y": 46
+      }
     },
     "avatarStyle": {
       "hairColor": "#fde047",
@@ -881,17 +1183,30 @@
   {
     "id": "bebe-ilha",
     "name": "BB (Bebe)",
-    "aliases": ["BB", "Bebe", "BB Banshee", "Caçadora das Ilhas"],
+    "aliases": [
+      "BB",
+      "Bebe",
+      "BB Banshee",
+      "Caçadora das Ilhas"
+    ],
     "gender": "Feminino",
-    "species": ["Choujin"],
-    "affiliations": ["Yamato Mori", "Ilhas das Bestas"],
-    "rcTypes": ["Bélico / Criação", "Força / Corpo"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Yamato Mori",
+      "Ilhas das Bestas"
+    ],
+    "rcTypes": [
+      "Bélico / Criação",
+      "Força / Corpo"
+    ],
     "rank": "Guardião",
     "debutArc": "Arco Ilhas das Bestas",
     "debutArcOrder": 5,
     "epithet": "Guardiã das Ilhas das Bestas",
     "imageUrl": "/characters/bebe-ilha.jpg",
-    "imagePosition": "center 12%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Nas Ilhas das Bestas, quem hesita por um segundo vira jantar antes do pôr do sol!",
       "arc": "Arco Ilhas das Bestas",
@@ -906,7 +1221,10 @@
       "title": "Olhar aguerrido de BB nas Ilhas das Bestas",
       "imageUrl": "/characters/bebe-ilha.jpg",
       "preset": "default",
-      "focalPoint": { "x": 52, "y": 18 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#f97316",
@@ -923,11 +1241,19 @@
   {
     "id": "uru-yamato",
     "name": "Uru",
-    "aliases": ["Guardião Uru"],
+    "aliases": [
+      "Guardião Uru"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin"],
-    "affiliations": ["Yamato Mori"],
-    "rcTypes": ["Força / Corpo"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Yamato Mori"
+    ],
+    "rcTypes": [
+      "Força / Corpo"
+    ],
     "rank": "Guardião",
     "debutArc": "Treinamento em Yamato Mori",
     "debutArcOrder": 4,
@@ -945,7 +1271,10 @@
       "type": "Uniforme de Guardião & Olhar Vigilante",
       "title": "Rosto atento do guardião Uru em missão",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": {
+        "x": 50,
+        "y": 46
+      }
     },
     "avatarStyle": {
       "hairColor": "#334155",
@@ -962,11 +1291,19 @@
   {
     "id": "roall-yamato",
     "name": "Roall",
-    "aliases": ["Guardião Roall"],
+    "aliases": [
+      "Guardião Roall"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin"],
-    "affiliations": ["Yamato Mori"],
-    "rcTypes": ["Elemental / Fumaça"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Yamato Mori"
+    ],
+    "rcTypes": [
+      "Elemental / Fumaça"
+    ],
     "rank": "Guardião",
     "debutArc": "Arco Ilhas das Bestas",
     "debutArcOrder": 5,
@@ -984,7 +1321,10 @@
       "type": "Visor de Patrulha & Cicatriz Nasal",
       "title": "Perfil tático do guardião Roall",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": {
+        "x": 50,
+        "y": 46
+      }
     },
     "avatarStyle": {
       "hairColor": "#a16207",
@@ -1001,11 +1341,20 @@
   {
     "id": "takeru-monda",
     "name": "Takeru Monda",
-    "aliases": ["Monda", "Takeru"],
+    "aliases": [
+      "Monda",
+      "Takeru"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin"],
-    "affiliations": ["Yamato Mori"],
-    "rcTypes": ["Força / Corpo"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Yamato Mori"
+    ],
+    "rcTypes": [
+      "Força / Corpo"
+    ],
     "rank": "Guardião",
     "debutArc": "Arco Ilhas das Bestas",
     "debutArcOrder": 5,
@@ -1023,7 +1372,10 @@
       "type": "Olhar Firme & Gola de Yamato Mori",
       "title": "Retrato de serviço de Takeru Monda",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": {
+        "x": 50,
+        "y": 46
+      }
     },
     "avatarStyle": {
       "hairColor": "#18181b",
@@ -1040,17 +1392,27 @@
   {
     "id": "jing-guelra",
     "name": "Jing",
-    "aliases": ["Jing da Guelra", "Cortador Espacial"],
+    "aliases": [
+      "Jing da Guelra",
+      "Cortador Espacial"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin"],
-    "affiliations": ["Guelra", "Torre do Luto (Zora)"],
-    "rcTypes": ["Gravidade / Espaço"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Guelra",
+      "Torre do Luto (Zora)"
+    ],
+    "rcTypes": [
+      "Gravidade / Espaço"
+    ],
     "rank": "Mercenário",
     "debutArc": "Arco da Papoula (Opium)",
     "debutArcOrder": 6,
     "epithet": "Executor do Corte Espacial",
     "imageUrl": "/characters/jing-guelra.png",
-    "imagePosition": "center 24%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Não importa a dureza da sua armadura quando é o próprio espaço ao seu redor que se divide em dois.",
       "arc": "Arco da Papoula (Opium)",
@@ -1065,7 +1427,10 @@
       "title": "Distorção linear cortando o quadro diante do olhar de Jing",
       "imageUrl": "/characters/jing-guelra.png",
       "preset": "default",
-      "focalPoint": { "x": 48, "y": 24 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#0f172a",
@@ -1082,17 +1447,28 @@
   {
     "id": "bacie-gelo",
     "name": "Bacie",
-    "aliases": ["Bacie da Torre", "Igor Craft", "I.C. Ice", "Choujin do Gelo"],
+    "aliases": [
+      "Bacie da Torre",
+      "Igor Craft",
+      "I.C. Ice",
+      "Choujin do Gelo"
+    ],
     "gender": "Feminino",
-    "species": ["Choujin"],
-    "affiliations": ["Torre do Luto (Zora)"],
-    "rcTypes": ["Elemental / Fumaça"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Torre do Luto (Zora)"
+    ],
+    "rcTypes": [
+      "Elemental / Fumaça"
+    ],
     "rank": "Mestre da Torre",
     "debutArc": "Arco da Papoula (Opium)",
     "debutArcOrder": 6,
     "epithet": "Sentinela Glacial da Torre do Luto",
     "imageUrl": "/characters/bacie-gelo.png",
-    "imagePosition": "center 15%",
+    "imagePosition": "center center",
     "quote": {
       "text": "Aquele que profanar os degraus da Madre Zora terá o sangue congelado antes de dar o segundo passo.",
       "arc": "Invasão à Torre do Luto",
@@ -1107,7 +1483,10 @@
       "title": "Olhar glacial de Bacie nos salões de Zora",
       "imageUrl": "/characters/bacie-gelo.png",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 24 }
+      "focalPoint": {
+        "x": 50,
+        "y": 44
+      }
     },
     "avatarStyle": {
       "hairColor": "#bae6fd",
@@ -1124,11 +1503,21 @@
   {
     "id": "soya-maestro",
     "name": "Soya (Maestro)",
-    "aliases": ["Maestro", "Soya Kagomura"],
+    "aliases": [
+      "Maestro",
+      "Soya Kagomura"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin"],
-    "affiliations": ["Torre do Luto (Zora)"],
-    "rcTypes": ["Psíquico / Oráculo", "Bélico / Criação"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Torre do Luto (Zora)"
+    ],
+    "rcTypes": [
+      "Psíquico / Oráculo",
+      "Bélico / Criação"
+    ],
     "rank": "Mestre da Torre",
     "debutArc": "Invasão à Torre do Luto",
     "debutArcOrder": 7,
@@ -1146,7 +1535,10 @@
       "type": "Meia-Máscara Teatral & Olhar de Regente",
       "title": "Rosto cerimonial do Maestro na Torre do Luto",
       "preset": "crescent-moon-mask",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": {
+        "x": 50,
+        "y": 46
+      }
     },
     "avatarStyle": {
       "hairColor": "#e4e4e7",
@@ -1163,11 +1555,20 @@
   {
     "id": "johnny-flex",
     "name": "Johnny Kiyoshi",
-    "aliases": ["Johnny", "Choujin da Elasticidade"],
+    "aliases": [
+      "Johnny",
+      "Choujin da Elasticidade"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin"],
-    "affiliations": ["Independente"],
-    "rcTypes": ["Força / Corpo"],
+    "species": [
+      "Choujin"
+    ],
+    "affiliations": [
+      "Independente"
+    ],
+    "rcTypes": [
+      "Força / Corpo"
+    ],
     "rank": "Civil",
     "debutArc": "Prefeitura de Yamato (Intro)",
     "debutArcOrder": 1,
@@ -1185,7 +1586,10 @@
       "type": "Pescoço Alongado & Sorriso Debochado",
       "title": "Rosto distorcido de Johnny no início do surto em Yamato",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": {
+        "x": 50,
+        "y": 46
+      }
     },
     "avatarStyle": {
       "hairColor": "#eab308",
@@ -1202,11 +1606,21 @@
   {
     "id": "gori-besta",
     "name": "Gori",
-    "aliases": ["Choujin Gorila", "Besta Gori"],
+    "aliases": [
+      "Choujin Gorila",
+      "Besta Gori"
+    ],
     "gender": "Masculino",
-    "species": ["Choujin Besta"],
-    "affiliations": ["Independente"],
-    "rcTypes": ["Besta (Zoan)", "Força / Corpo"],
+    "species": [
+      "Choujin Besta"
+    ],
+    "affiliations": [
+      "Independente"
+    ],
+    "rcTypes": [
+      "Besta (Zoan)",
+      "Força / Corpo"
+    ],
     "rank": "Infiltrado / Nômade",
     "debutArc": "Arco Besta da Lua (Nari)",
     "debutArcOrder": 3,
@@ -1224,7 +1638,10 @@
       "type": "Mandíbula de Primate & Sobrancelha Franzida",
       "title": "Focinho bestial de Gori durante o ataque noturno",
       "preset": "default",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": {
+        "x": 50,
+        "y": 46
+      }
     },
     "avatarStyle": {
       "hairColor": "#292524",

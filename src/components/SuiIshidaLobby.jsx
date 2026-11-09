@@ -285,7 +285,7 @@ export default function SuiIshidaLobby({
               <div className="col-span-5">
                 <ChoujinTankobonCover
                   editionNumber={editionNumber}
-                  className="h-44 sm:h-48 w-full"
+                  className="h-52 sm:h-56 w-full"
                 />
               </div>
               <div className="col-span-7 flex flex-col justify-between gap-2">
@@ -304,14 +304,16 @@ export default function SuiIshidaLobby({
                     ].map((c) => (
                       <div
                         key={c.name}
-                        className={`relative h-14 border-2 border-[#0a0a0c] ${c.bg} overflow-hidden shadow-[2px_2px_0_#0a0a0c]`}
+                        className={`flex flex-col border-2 border-[#0a0a0c] ${c.bg} overflow-hidden shadow-[2px_2px_0_#0a0a0c]`}
                       >
-                        <img
-                          src={c.img}
-                          alt={c.name}
-                          className="w-full h-full object-cover object-top"
-                        />
-                        <span className="absolute bottom-0 inset-x-0 bg-[#0a0a0c]/90 text-[#f4f1ea] font-mono text-[8px] font-black uppercase text-center leading-tight py-0.5">
+                        <div className="relative h-20 sm:h-24 w-full overflow-hidden">
+                          <img
+                            src={c.img}
+                            alt={c.name}
+                            className="w-full h-full object-cover object-center"
+                          />
+                        </div>
+                        <span className="shrink-0 bg-[#0a0a0c] text-[#f4f1ea] font-mono text-[8px] font-black uppercase text-center leading-tight py-1 border-t border-[#0a0a0c]">
                           {c.name}
                         </span>
                       </div>
