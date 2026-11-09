@@ -38,11 +38,11 @@ function getTgCellStampStyle(status) {
 function getCxCellBrutalStyle(status) {
   switch (status) {
     case 'correct':
-      return 'bg-[#A3FF00] border-[3px] border-[#0a0a0c] text-[#0a0a0c] shadow-[5px_5px_0_#000000] font-extrabold';
+      return 'bg-[#A3FF00] border-[3px] border-[#0a0a0c] text-[#0a0a0c] font-extrabold';
     case 'partial':
-      return 'bg-[#FFE600] border-[3px] border-[#0a0a0c] text-[#0a0a0c] shadow-[5px_5px_0_#000000] font-extrabold';
+      return 'bg-[#FFE600] border-[3px] border-[#0a0a0c] text-[#0a0a0c] font-extrabold';
     default:
-      return 'bg-[#FF0055] border-[3px] border-[#0a0a0c] text-[#f4f1ea] shadow-[5px_5px_0_#000000] font-extrabold';
+      return 'bg-[#FF0055] border-[3px] border-[#0a0a0c] text-[#f4f1ea] font-extrabold';
   }
 }
 
@@ -89,7 +89,7 @@ export default function ClassicMode({
             <span
               className={
                 isChoujin
-                  ? 'px-2 py-0.5 bg-[#FFE600] text-[#0a0a0c] border border-[#0a0a0c] font-mono text-xs font-black leading-none -skew-x-6'
+                  ? 'px-2 py-0.5 bg-[#FFE600] text-[#0a0a0c] border border-[#0a0a0c] font-mono text-xs font-black leading-none '
                   : 'px-1.5 py-0.5 bg-[#b80f17] text-[#efe9dd] font-serif text-xs font-bold leading-none'
               }
             >
@@ -134,7 +134,7 @@ export default function ClassicMode({
           </p>
         </div>
 
-        {/* Hints Strip: "⚡ ATIVAR RAISE! (Dica)" in Choujin X vs CCG Confidential in Tokyo Ghoul */}
+        {/* Hints Strip: "ATIVAR RAISE! (Dica)" in Choujin X vs CCG Confidential in Tokyo Ghoul */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <button
             type="button"
@@ -144,10 +144,10 @@ export default function ClassicMode({
               isChoujin
                 ? `flex items-center justify-between px-4 py-2.5 border-2 text-left transition-all ${
                     hint1Open
-                      ? 'bg-[#FFE600] border-[#0a0a0c] text-[#0a0a0c] shadow-[4px_4px_0_#FF0055] -skew-x-3'
+                      ? 'bg-[#FFE600] border-[#0a0a0c] text-[#0a0a0c] '
                       : hint1Unlocked
-                      ? 'bg-[#A3FF00] hover:bg-[#FFE600] border-[#0a0a0c] text-[#0a0a0c] cx-raise-btn'
-                      : 'bg-[#0a0a0c] border-[#f4f1ea]/25 text-[#8d857b] cursor-not-allowed -skew-x-2'
+                      ? 'bg-[#A3FF00] hover:bg-[#FFE600] border-[#0a0a0c] text-[#0a0a0c] '
+                      : 'bg-[#0a0a0c] border-[#f4f1ea]/25 text-[#8d857b] cursor-not-allowed '
                   }`
                 : `flex items-center justify-between px-3.5 py-2.5 border text-left transition-colors ${
                     hint1Open
@@ -168,7 +168,7 @@ export default function ClassicMode({
                     : 'text-[#d9141e]'
                 }`}
               >
-                {isChoujin ? '⚡ ATIVAR RAISE! (Dica I)' : 'ANEXO CONFIDENCIAL I'}
+                {isChoujin ? 'Dica I · Raise' : 'ANEXO CONFIDENCIAL I'}
               </span>
               <span className="font-display text-xs uppercase tracking-[0.08em] font-bold">
                 {isChoujin ? 'Alcunha Choujin & Voz' : 'Epíteto & Registro de Voz'}
@@ -179,7 +179,7 @@ export default function ClassicMode({
                 ? hint1Open
                   ? 'RAISE ATIVO'
                   : isChoujin
-                  ? '⚡ RAISE!'
+                  ? 'RAISE!'
                   : 'ABRIR'
                 : `${wrongGuessesCount}/5`}
             </span>
@@ -193,10 +193,10 @@ export default function ClassicMode({
               isChoujin
                 ? `flex items-center justify-between px-4 py-2.5 border-2 text-left transition-all ${
                     hint2Open
-                      ? 'bg-[#FFE600] border-[#0a0a0c] text-[#0a0a0c] shadow-[4px_4px_0_#FF0055] -skew-x-3'
+                      ? 'bg-[#FFE600] border-[#0a0a0c] text-[#0a0a0c] '
                       : hint2Unlocked
-                      ? 'bg-[#A3FF00] hover:bg-[#FFE600] border-[#0a0a0c] text-[#0a0a0c] cx-raise-btn'
-                      : 'bg-[#0a0a0c] border-[#f4f1ea]/25 text-[#8d857b] cursor-not-allowed -skew-x-2'
+                      ? 'bg-[#A3FF00] hover:bg-[#FFE600] border-[#0a0a0c] text-[#0a0a0c] '
+                      : 'bg-[#0a0a0c] border-[#f4f1ea]/25 text-[#8d857b] cursor-not-allowed '
                   }`
                 : `flex items-center justify-between px-3.5 py-2.5 border text-left transition-colors ${
                     hint2Open
@@ -217,7 +217,7 @@ export default function ClassicMode({
                     : 'text-[#d9141e]'
                 }`}
               >
-                {isChoujin ? '⚡ ATIVAR RAISE! (Dica II)' : 'ANEXO CONFIDENCIAL II'}
+                {isChoujin ? 'Dica II · Raise' : 'ANEXO CONFIDENCIAL II'}
               </span>
               <span className="font-display text-xs uppercase tracking-[0.08em] font-bold">
                 {isChoujin ? 'Habilidade / Arma & Inicial' : 'Arma / Quinque & Inicial'}
@@ -228,7 +228,7 @@ export default function ClassicMode({
                 ? hint2Open
                   ? 'RAISE ATIVO'
                   : isChoujin
-                  ? '⚡ RAISE!'
+                  ? 'RAISE!'
                   : 'ABRIR'
                 : `${wrongGuessesCount}/8`}
             </span>
@@ -242,7 +242,7 @@ export default function ClassicMode({
               <div
                 className={
                   isChoujin
-                    ? 'p-3.5 bg-[#0a0a0c] border-2 border-[#A3FF00] shadow-[4px_4px_0_#A3FF00] space-y-1 animate-fade-sharp'
+                    ? 'p-3.5 bg-[#0a0a0c] border-2 border-[#A3FF00] space-y-1 animate-fade-sharp'
                     : 'p-3.5 bg-[#0a090c] border-l-2 border-l-[#d9141e] border border-[#efe9dd]/20 space-y-1 animate-fade-sharp'
                 }
               >
@@ -251,7 +251,7 @@ export default function ClassicMode({
                     isChoujin ? 'text-[#A3FF00]' : 'text-[#d9141e]'
                   }`}
                 >
-                  {isChoujin ? '⚡ RAISE I // ALCUNHA & VOZ' : 'CODINOME // VOZ'}
+                  {isChoujin ? 'RAISE I // ALCUNHA & VOZ' : 'CODINOME // VOZ'}
                 </p>
                 <p className="font-display text-sm uppercase tracking-wide text-[#efe9dd]">
                   {target.epithet}
@@ -266,7 +266,7 @@ export default function ClassicMode({
               <div
                 className={
                   isChoujin
-                    ? 'p-3.5 bg-[#0a0a0c] border-2 border-[#FFE600] shadow-[4px_4px_0_#FFE600] space-y-1 animate-fade-sharp'
+                    ? 'p-3.5 bg-[#0a0a0c] border-2 border-[#FFE600] space-y-1 animate-fade-sharp'
                     : 'p-3.5 bg-[#0a090c] border-l-2 border-l-[#d9141e] border border-[#efe9dd]/20 space-y-1 animate-fade-sharp'
                 }
               >
@@ -275,7 +275,7 @@ export default function ClassicMode({
                     isChoujin ? 'text-[#FFE600]' : 'text-[#d9141e]'
                   }`}
                 >
-                  {isChoujin ? '⚡ RAISE II // COMPLEXO & INICIAL' : 'ARSENAL // INICIAL'}
+                  {isChoujin ? 'RAISE II // COMPLEXO & INICIAL' : 'ARSENAL // INICIAL'}
                 </p>
                 <p className="font-display text-sm uppercase tracking-wide text-[#efe9dd]">
                   {target.kaguneOrQuinque.name} ({target.kaguneOrQuinque.category})
@@ -296,7 +296,7 @@ export default function ClassicMode({
           <div
             className={
               isChoujin
-                ? 'flex flex-col sm:flex-row items-center justify-between gap-4 p-4 bg-[#A3FF00] text-[#0a0a0c] border-[3px] border-[#0a0a0c] shadow-[6px_6px_0_#FF0055]'
+                ? 'flex flex-col sm:flex-row items-center justify-between gap-4 p-4 bg-[#A3FF00] text-[#0a0a0c] border-[3px] border-[#0a0a0c] '
                 : 'flex flex-col sm:flex-row items-center justify-between gap-4 p-4 bg-[#0d2417] border border-[#4ade80]/70 shadow-[4px_4px_0_#000]'
             }
           >
@@ -325,7 +325,7 @@ export default function ClassicMode({
               onClick={onOpenVictoryModal}
               className={
                 isChoujin
-                  ? 'px-4 py-2.5 bg-[#0a0a0c] hover:bg-[#FF0055] text-[#FFE600] hover:text-[#f4f1ea] font-display font-bold text-xs uppercase tracking-[0.14em] transition-colors shadow-[4px_4px_0_#0a0a0c] -skew-x-3'
+                  ? 'px-4 py-2.5 bg-[#0a0a0c] hover:bg-[#FF0055] text-[#FFE600] hover:text-[#f4f1ea] font-display font-bold text-xs uppercase tracking-[0.14em] transition-colors shadow-[4px_4px_0_#0a0a0c] '
                   : 'px-4 py-2.5 bg-[#efe9dd] hover:bg-white text-[#080709] font-display text-xs uppercase tracking-[0.14em] transition-colors shadow-[3px_3px_0_#000]'
               }
             >
@@ -353,7 +353,7 @@ export default function ClassicMode({
                   key={col.key}
                   className={
                     isChoujin
-                      ? 'py-2.5 px-2 text-center font-display text-xs font-bold uppercase tracking-[0.1em] text-[#0a0a0c] bg-[#FFE600] border-[2.5px] border-[#0a0a0c] shadow-[4px_4px_0_#FF0055] -skew-x-3'
+                      ? 'py-2.5 px-2 text-center font-display text-xs font-bold uppercase tracking-[0.1em] text-[#0a0a0c] bg-[#FFE600] border-[2.5px] border-[#0a0a0c] '
                       : 'py-2 px-2 text-center font-display text-xs uppercase tracking-[0.12em] text-[#efe9dd] bg-[#0e0d12] border-y border-x border-[#efe9dd]/25 border-b-2 border-b-[#b80f17]'
                   }
                 >
@@ -389,7 +389,7 @@ export default function ClassicMode({
                           <div
                             className={
                               isChoujin
-                                ? 'flip-card-front bg-[#16161a] bg-halftone border-[3px] border-[#FFE600] flex flex-col items-center justify-center p-2 shadow-[4px_4px_0_#000000]'
+                                ? 'flip-card-front bg-[#16161a] bg-halftone border-[3px] border-[#FFE600] flex flex-col items-center justify-center p-2 '
                                 : 'flip-card-front bg-[#100f14] bg-manga-halftone border border-[#efe9dd]/25 flex flex-col items-center justify-center p-2'
                             }
                           >
@@ -410,7 +410,7 @@ export default function ClassicMode({
                             className={`flip-card-back p-2 flex flex-col items-center justify-center text-center relative overflow-hidden ${
                               cell.key === 'character'
                                 ? isChoujin
-                                  ? 'bg-[#f4f1ea] text-[#0a0a0c] border-[3px] border-[#0a0a0c] shadow-[5px_5px_0_#000000]'
+                                  ? 'bg-[#f4f1ea] text-[#0a0a0c] border-[3px] border-[#0a0a0c] '
                                   : 'bg-[#121116] border border-[#efe9dd]/45 shadow-[3px_3px_0_#000]'
                                 : isChoujin
                                 ? getCxCellBrutalStyle(cell.status)
@@ -464,7 +464,7 @@ export default function ClassicMode({
                                   <div
                                     className={`inline-flex items-center gap-0.5 px-2 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider ${
                                       isChoujin
-                                        ? 'bg-[#0a0a0c] text-[#A3FF00] border-2 border-[#0a0a0c] shadow-[2px_2px_0_#FFE600] -skew-x-3'
+                                        ? 'bg-[#0a0a0c] text-[#A3FF00] border-2 border-[#0a0a0c] '
                                         : 'bg-[#150508] border border-[#dc2626] text-[#f87171] shadow-[0_0_8px_rgba(220,38,38,0.4)]'
                                     }`}
                                   >
@@ -506,7 +506,7 @@ export default function ClassicMode({
       <div
         className={
           isChoujin
-            ? 'max-w-3xl mx-auto px-4 py-3 bg-[#16161a] border-2 border-[#f4f1ea] shadow-[4px_4px_0_#FFE600] flex flex-wrap items-center justify-center gap-5 text-xs font-mono font-bold uppercase tracking-wider text-[#f4f1ea]'
+            ? 'max-w-3xl mx-auto px-4 py-3 bg-[#16161a] border-2 border-[#f4f1ea] flex flex-wrap items-center justify-center gap-5 text-xs font-mono font-bold uppercase tracking-wider text-[#f4f1ea]'
             : 'max-w-3xl mx-auto px-4 py-3 bg-[#0e0d11] border border-[#efe9dd]/18 flex flex-wrap items-center justify-center gap-5 text-xs font-mono uppercase tracking-wider text-[#cfc6b6]'
         }
       >
