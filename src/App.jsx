@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import tgCharactersData from './data/characters.json';
 import cxCharactersData from './data/choujinCharacters.json';
 import SuiIshidaBar from './components/SuiIshidaBar';
+import SuiIshidaLobby from './components/SuiIshidaLobby';
 import HomeHub from './components/HomeHub';
 import ChoujinHub from './components/ChoujinHub';
 import ArenaHeader from './components/ArenaHeader';
@@ -30,9 +31,15 @@ const VALID_MODES = ['classic', 'quote', 'mask'];
 
 function readInitialRoute() {
   if (typeof window === 'undefined') {
-    return { universe: 'tg', view: 'hub', mode: 'classic' };
+    return { universe: 'tg', view: 'lobby', mode: 'classic' };
   }
   const hash = window.location.hash.replace('#', '').trim().toLowerCase();
+  if (!hash || hash === 'lobby') {
+    return { universe: 'tg', view: 'lobby', mode: 'classic' };
+  }
+  if (hash === 'tg' || hash === 'ghoul' || hash === 'ghouldle') {
+    return { universe: 'tg', view: 'hub', mode: 'classic' };
+  }
   if (hash === 'cx' || hash === 'choujin' || hash === 'choujindle') {
     return { universe: 'cx', view: 'hub', mode: 'classic' };
   }
@@ -42,10 +49,16 @@ function readInitialRoute() {
       return { universe: 'cx', view: 'game', mode: subMode };
     }
   }
+  if (hash.startsWith('tg-')) {
+    const subMode = hash.replace('tg-', '');
+    if (VALID_MODES.includes(subMode)) {
+      return { universe: 'tg', view: 'game', mode: subMode };
+    }
+  }
   if (VALID_MODES.includes(hash)) {
     return { universe: 'tg', view: 'game', mode: hash };
   }
-  return { universe: 'tg', view: 'hub', mode: 'classic' };
+  return { universe: 'tg', view: 'lobby', mode: 'classic' };
 }
 
 export default function App() {
@@ -138,30 +151,52 @@ export default function App() {
     return charactersById[targetId] || activeCharacters[0];
   }, [isDaily, activeMode, dailyTargets, infiniteState, charactersById, activeCharacters]);
 
-  const completedModes = useMemo(() => {
-    const src = isDaily ? dailyState.modes : infiniteState.modes;
+  const tgCompletedModes = useMemo(() => {
+    const src = isDaily ? dailyStates.tg.modes : infiniteStates.tg.modes;
     return {
       classic: Boolean(src.classic?.won),
       quote: Boolean(src.quote?.won),
       mask: Boolean(src.mask?.won),
     };
-  }, [isDaily, dailyState, infiniteState]);
-
-  const tgCompletedCount = useMemo(() => {
-    const src = isDaily ? dailyStates.tg.modes : infiniteStates.tg.modes;
-    return ['classic', 'quote', 'mask'].filter((m) => Boolean(src[m]?.won)).length;
   }, [isDaily, dailyStates.tg, infiniteStates.tg]);
 
-  const cxCompletedCount = useMemo(() => {
+  const cxCompletedModes = useMemo(() => {
     const src = isDaily ? dailyStates.cx.modes : infiniteStates.cx.modes;
-    return ['classic', 'quote', 'mask'].filter((m) => Boolean(src[m]?.won)).length;
+    return {
+      classic: Boolean(src.classic?.won),
+      quote: Boolean(src.quote?.won),
+      mask: Boolean(src.mask?.won),
+    };
   }, [isDaily, dailyStates.cx, infiniteStates.cx]);
+
+  const completedModes = universe === 'cx' ? cxCompletedModes : tgCompletedModes;
+
+  const tgCompletedCount = useMemo(
+    () => Object.values(tgCompletedModes).filter(Boolean).length,
+    [tgCompletedModes]
+  );
+
+  const cxCompletedCount = useMemo(
+    () => Object.values(cxCompletedModes).filter(Boolean).length,
+    [cxCompletedModes]
+  );
 
   useEffect(() => {
     return () => {
       if (victoryTimerRef.current) clearTimeout(victoryTimerRef.current);
     };
   }, []);
+
+  const handleGoToLobby = () => {
+    if (victoryTimerRef.current) clearTimeout(victoryTimerRef.current);
+    setVictoryModalOpen(false);
+    setLastAnimatedGuessId(null);
+    setView('lobby');
+    if (typeof window !== 'undefined') {
+      window.history.pushState('', document.title, window.location.pathname + window.location.search);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   const handleSelectUniverse = (nextUniverse) => {
     if (nextUniverse !== 'tg' && nextUniverse !== 'cx') return;
@@ -171,25 +206,26 @@ export default function App() {
     setUniverse(nextUniverse);
     setView('hub');
     if (typeof window !== 'undefined') {
-      if (nextUniverse === 'cx') {
-        window.location.hash = 'cx';
-      } else {
-        window.history.pushState('', document.title, window.location.pathname + window.location.search);
-      }
+      window.location.hash = nextUniverse;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleEnterUniverseMode = (targetUniverse, nextMode) => {
+    if (victoryTimerRef.current) clearTimeout(victoryTimerRef.current);
+    setVictoryModalOpen(false);
+    setLastAnimatedGuessId(null);
+    setUniverse(targetUniverse);
+    setActiveMode(nextMode);
+    setView('game');
+    if (typeof window !== 'undefined') {
+      window.location.hash = targetUniverse === 'cx' ? `cx-${nextMode}` : nextMode;
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   const handleEnterMode = (nextMode) => {
-    if (victoryTimerRef.current) clearTimeout(victoryTimerRef.current);
-    setVictoryModalOpen(false);
-    setLastAnimatedGuessId(null);
-    setActiveMode(nextMode);
-    setView('game');
-    if (typeof window !== 'undefined') {
-      window.location.hash = universe === 'cx' ? `cx-${nextMode}` : nextMode;
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    handleEnterUniverseMode(universe, nextMode);
   };
 
   const handleBackToHub = () => {
@@ -198,11 +234,7 @@ export default function App() {
     setLastAnimatedGuessId(null);
     setView('hub');
     if (typeof window !== 'undefined') {
-      if (universe === 'cx') {
-        window.location.hash = 'cx';
-      } else {
-        window.history.pushState('', document.title, window.location.pathname + window.location.search);
-      }
+      window.location.hash = universe;
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
@@ -334,16 +366,29 @@ export default function App() {
       {/* Subtle Tactile Print Grain Overlay across entire application */}
       <div aria-hidden="true" className="fixed inset-0 z-40 tg-grain-overlay" />
 
-      {/* Top Sui Ishida Dle Dual-Universe Switcher Bar */}
+      {/* Top Sui Ishida Dle Dual-Universe & Lobby Bar */}
       <SuiIshidaBar
+        view={view}
         universe={universe}
+        onGoToLobby={handleGoToLobby}
         onSelectUniverse={handleSelectUniverse}
         tgCompletedCount={tgCompletedCount}
         cxCompletedCount={cxCompletedCount}
-        editionNumber={editionNumber}
       />
 
-      {view === 'hub' ? (
+      {view === 'lobby' ? (
+        <SuiIshidaLobby
+          onEnterUniverseHub={handleSelectUniverse}
+          onEnterUniverseMode={handleEnterUniverseMode}
+          isDaily={isDaily}
+          onTogglePlayType={handleTogglePlayType}
+          editionNumber={editionNumber}
+          tgCompletedModes={tgCompletedModes}
+          cxCompletedModes={cxCompletedModes}
+          tgStats={statsByUniverse.tg}
+          cxStats={statsByUniverse.cx}
+        />
+      ) : view === 'hub' ? (
         universe === 'cx' ? (
           <ChoujinHub
             onEnterMode={handleEnterMode}
