@@ -462,20 +462,20 @@ export default function ClassicMode({
                               <div className="relative z-10 flex flex-col items-center justify-center gap-1">
                                 {cell.status !== 'correct' && cell.direction !== 'equal' && (
                                   <div
-                                    className={`inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider ${
+                                    className={`inline-flex items-center gap-0.5 px-2 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider ${
                                       isChoujin
-                                        ? 'bg-[#0a0a0c] text-[#A3FF00] border border-[#0a0a0c]'
-                                        : 'bg-black/45 border border-current/25'
+                                        ? 'bg-[#0a0a0c] text-[#A3FF00] border-2 border-[#0a0a0c] shadow-[2px_2px_0_#FFE600] -skew-x-3'
+                                        : 'bg-[#150508] border border-[#dc2626] text-[#f87171] shadow-[0_0_8px_rgba(220,38,38,0.4)]'
                                     }`}
                                   >
                                     {cell.direction === 'up' ? (
                                       <>
-                                        <ArrowUp className="w-3 h-3 stroke-[2.8]" />
+                                        <ArrowUp className="w-3.5 h-3.5 stroke-[3] text-[#ef4444]" />
                                         <span>Maior</span>
                                       </>
                                     ) : (
                                       <>
-                                        <ArrowDown className="w-3 h-3 stroke-[2.8]" />
+                                        <ArrowDown className="w-3.5 h-3.5 stroke-[3] text-[#ef4444]" />
                                         <span>Menor</span>
                                       </>
                                     )}
