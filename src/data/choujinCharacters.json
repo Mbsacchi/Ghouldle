@@ -11,6 +11,8 @@
     "debutArc": "Prefeitura de Yamato (Intro)",
     "debutArcOrder": 1,
     "epithet": "Choujin Besta do Abutre",
+    "imageUrl": "/characters/tokio-kurohara.png",
+    "imagePosition": "center 20%",
     "quote": {
       "text": "Eu sempre caminhei dois passos atrás do Azuma... mas agora só eu posso carregar essas asas.",
       "arc": "Arco Ilhas das Bestas",
@@ -23,8 +25,9 @@
     "maskOrEye": {
       "type": "Bico de Abutre & Olhar Dourado no Caos",
       "title": "Crânio emplumado do Choujin Abutre em estado de Caos",
+      "imageUrl": "/characters/tokio-kurohara.png",
       "preset": "tokio-vulture",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 64, "y": 33 }
     },
     "avatarStyle": {
       "hairColor": "#18181b",
@@ -50,6 +53,8 @@
     "debutArc": "Prefeitura de Yamato (Intro)",
     "debutArcOrder": 1,
     "epithet": "Choujin do Ferro",
+    "imageUrl": "/characters/azuma-higashi.png",
+    "imagePosition": "center 16%",
     "quote": {
       "text": "Se eu não for aquele que salva a todos, então quem sou eu diante do Tokio?",
       "arc": "Arco Besta da Lua (Nari)",
@@ -62,8 +67,9 @@
     "maskOrEye": {
       "type": "Capuz de Pano Branco & Algemas de Ferro",
       "title": "Rosto coberto pelo manto de guerra do Choujin do Ferro",
+      "imageUrl": "/characters/azuma-higashi.png",
       "preset": "azuma-iron",
-      "focalPoint": { "x": 50, "y": 44 }
+      "focalPoint": { "x": 50, "y": 27 }
     },
     "avatarStyle": {
       "hairColor": "#facc15",
@@ -89,6 +95,8 @@
     "debutArc": "Prefeitura de Yamato (Intro)",
     "debutArcOrder": 1,
     "epithet": "Choujin da Fumaça & Colheita",
+    "imageUrl": "/characters/ely-otta.png",
+    "imagePosition": "center 22%",
     "quote": {
       "text": "Eu vou trabalhar duro, juntar minha fortuna honesta e nunca deixar um amigo ser engolido pela escuridão!",
       "arc": "Prefeitura de Yamato (Intro)",
@@ -101,8 +109,9 @@
     "maskOrEye": {
       "type": "Coroa de Fumaça & Olhar Determinado",
       "title": "Fumaça incandescente escapando das têmporas de Ely Otta",
+      "imageUrl": "/characters/ely-otta.png",
       "preset": "ely-smoke",
-      "focalPoint": { "x": 50, "y": 46 }
+      "focalPoint": { "x": 48, "y": 31 }
     },
     "avatarStyle": {
       "hairColor": "#3f2e21",
@@ -128,6 +137,8 @@
     "debutArc": "Prefeitura de Yamato (Intro)",
     "debutArcOrder": 1,
     "epithet": "Choujin da Gravidade",
+    "imageUrl": "/characters/hoshi-sandek.png",
+    "imagePosition": "center 8%",
     "quote": {
       "text": "O poder de um Choujin reflete a forma do seu coração. Não deixem que o medo dite quem vocês são.",
       "arc": "Treinamento em Yamato Mori",
@@ -140,8 +151,9 @@
     "maskOrEye": {
       "type": "Queixo Marcado & Aura de Gravidade",
       "title": "Olhar severo de Hoshi Sandek sob distorção gravitacional",
+      "imageUrl": "/characters/hoshi-sandek.png",
       "preset": "sandek-gravity",
-      "focalPoint": { "x": 50, "y": 48 }
+      "focalPoint": { "x": 55, "y": 14 }
     },
     "avatarStyle": {
       "hairColor": "#27272a",
@@ -167,6 +179,8 @@
     "debutArc": "Arco Sinker (Beisebol)",
     "debutArcOrder": 2,
     "epithet": "Choujin da Espada",
+    "imageUrl": "/characters/simon-kagomura.png",
+    "imagePosition": "center 10%",
     "quote": {
       "text": "O clã Kagomura foi massacrado... cada lâmina gravada na minha pele carrega o peso dos que caíram.",
       "arc": "Arco Ilhas das Bestas",
@@ -179,8 +193,9 @@
     "maskOrEye": {
       "type": "Gola Alta & Tatuagem de Espada no Pescoço",
       "title": "Olhar frio de Simon Kagomura com selos de lâminas no pescoço",
+      "imageUrl": "/characters/simon-kagomura.png",
       "preset": "simon-blade",
-      "focalPoint": { "x": 50, "y": 50 }
+      "focalPoint": { "x": 46, "y": 18 }
     },
     "avatarStyle": {
       "hairColor": "#1e293b",

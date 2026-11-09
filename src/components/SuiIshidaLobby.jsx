@@ -293,9 +293,27 @@ export default function SuiIshidaLobby({
                   <p className="font-display text-lg font-bold uppercase tracking-wide leading-tight mt-1 text-[#0a0a0c]">
                     YAMATO MORI VS. TORRE DO LUTO
                   </p>
-                  <p className="font-sans text-[11px] font-semibold text-[#0a0a0c]/85 mt-1">
-                    Tokio Kurohara, Azuma Higashi, Ely Otta, Zora e Noh Mask em estética Street-Art/Punk.
-                  </p>
+                  <div className="grid grid-cols-3 gap-1.5 mt-2">
+                    {[
+                      { name: 'Tokio', img: '/characters/tokio-kurohara.png', bg: 'bg-[#FFE600]' },
+                      { name: 'Azuma', img: '/characters/azuma-higashi.png', bg: 'bg-[#A3FF00]' },
+                      { name: 'Ely', img: '/characters/ely-otta.png', bg: 'bg-[#FF0055]' },
+                    ].map((c) => (
+                      <div
+                        key={c.name}
+                        className={`relative h-14 border-2 border-[#0a0a0c] ${c.bg} overflow-hidden shadow-[2px_2px_0_#0a0a0c]`}
+                      >
+                        <img
+                          src={c.img}
+                          alt={c.name}
+                          className="w-full h-full object-cover object-top"
+                        />
+                        <span className="absolute bottom-0 inset-x-0 bg-[#0a0a0c]/90 text-[#f4f1ea] font-mono text-[8px] font-black uppercase text-center leading-tight py-0.5">
+                          {c.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Daily vs Infinite Toggle on Right Zine Side */}
