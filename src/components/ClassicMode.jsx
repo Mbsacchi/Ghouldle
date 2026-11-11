@@ -99,6 +99,16 @@ export default function ClassicMode({
   const hint1Open = revealedHints.includes('hint1');
   const hint2Open = revealedHints.includes('hint2');
 
+  const matchingTraitsGuesses = !won
+    ? guesses
+        .map((id) => charactersById[id])
+        .filter((char) => {
+          if (!char || char.id === target.id) return false;
+          const comp = compareCharacters(char, target, universe, lang);
+          return comp.cells.slice(1).every((cell) => cell.status === 'correct');
+        })
+    : [];
+
   return (
     <section className="max-w-6xl mx-auto px-4 py-6 space-y-6">
       {/* Investigation / Zine Dossier Header */}
@@ -449,6 +459,47 @@ export default function ClassicMode({
           />
         )}
       </div>
+
+      {/* Identical Attributes Notice (when all 6 columns match, yet character ID differs) */}
+      {matchingTraitsGuesses.length > 0 && (
+        <div
+          role="status"
+          className={
+            isChoujin
+              ? 'max-w-3xl mx-auto p-4 bg-[#FFE600] text-[#0a0a0c] border-[3px] border-[#0a0a0c] shadow-[6px_6px_0_#FF0055] -skew-x-1 animate-fade-sharp'
+              : 'max-w-3xl mx-auto p-4 bg-[#261808] text-[#efe9dd] border border-[#f59e0b]/80 border-l-4 border-l-[#f59e0b] shadow-[4px_4px_0_#000] animate-fade-sharp'
+          }
+        >
+          <p
+            className={`font-mono text-[10px] font-black uppercase tracking-[0.2em] mb-1 ${
+              isChoujin ? 'text-[#FF0055]' : 'text-[#fbbf24]'
+            }`}
+          >
+            {isChoujin
+              ? isEn
+                ? '⚡ SO CLOSE! IDENTICAL ATTRIBUTES'
+                : '⚡ QUASE LÁ! ATRIBUTOS IDÊNTICOS'
+              : isEn
+              ? 'IDENTICAL PROFILE DETECTED'
+              : 'PERFIL IDÊNTICO DETECTADO'}
+          </p>
+          <p className="text-xs sm:text-sm font-semibold leading-relaxed">
+            {(() => {
+              const names = matchingTraitsGuesses.map((c) => c.name).join(' / ');
+              if (isEn) {
+                const targetLabel = isDaily ? "today's character" : 'the hidden character';
+                return matchingTraitsGuesses.length === 1
+                  ? `It isn't ${names}, but ${targetLabel} shares these exact same traits. Try another character with this same profile!`
+                  : `It isn't any of those (${names}), yet ${targetLabel} shares these exact same traits. Try another character with this same profile!`;
+              }
+              const targetLabel = isDaily ? 'o personagem de hoje' : 'o personagem secreto';
+              return matchingTraitsGuesses.length === 1
+                ? `Não é ${names}, mas ${targetLabel} possui exatamente essas mesmas características. Tente outro nome com esse mesmo perfil!`
+                : `Não é nenhum desses (${names}), mas ${targetLabel} possui exatamente essas mesmas características. Tente outro nome com esse mesmo perfil!`;
+            })()}
+          </p>
+        </div>
+      )}
 
       {/* 7-Column Attribute Comparison Board */}
       {guesses.length > 0 && (
